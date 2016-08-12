@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tablero AMX Indicadores &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="TABLEROS" href="../tableros.html"/>
+        <link rel="next" title="GESTIÓN" href="../gestion.html"/>
+        <link rel="prev" title="TABLEROS" href="../tableros.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tableros.html">TABLEROS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 1. Tablero AMX Indicadores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.  OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.  ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.  DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.  DESCRIPCION GENERAL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-de-los-campos-para-tecnologia-1-gsm">Descripción de los campos para Tecnología 1 (GSM):</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-de-los-campos-para-tecnologia-2-umts">Descripción de los campos para Tecnología 2 (UMTS):</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.  MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.  DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#el-proceso-shell-script-bd-amx-indicadores-sh-se-transcribe-a-continuacion">El proceso Shell Script bd_amx_indicadores.sh se transcribe a continuación:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#el-proceso-sql-gsm-amx-indicadores-sql-se-transcribe-a-continuacion">El proceso SQL gsm_amx_indicadores.sql se transcribe a continuación:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#el-proceso-amx-indicadores-sql-se-transcribe-a-continuacion">El proceso amx_indicadores.sql se transcribe a continuación:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#la-ejecucion-manual-del-script-bd-amx-sh-se-transcribe-a-continuacion">La ejecución manual del script bd_amx.sh se transcribe a continuación:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
+      
+    <li>Tablero AMX Indicadores</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tablero-amx-indicadores">
+<h1>Tablero AMX Indicadores<a class="headerlink" href="#tablero-amx-indicadores" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.  OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Tablero AMX Indicadores y que envía el correo correspondiente.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.  ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red, procesos de operaciones y mantenimiento.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.  DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Smart: Base de datos Oracle donde se encuentran las tablas de datos para la red de acceso, incluido GSM y GPRS</li>
+<li>Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.  El nombre es perdido.claro.amx y la dirección ip física es 10.92.50.83</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.  DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>Descripción: el tablero amx_indicadores contiene información mensual sobre Tráfico, Inaccesibilidad y Retenebilidad, de Voz y de Datos, de las tecnologías gsm y umts, agrupado por país. Todos los campos corresponden a la hora pico mensual, salvo 2 que son el máximo horario del mes (gsm inacc/no reten) y el acumulado mensual (data traffic).  Los campos son los siguientes:</p>
+<div class="section" id="descripcion-de-los-campos-para-tecnologia-1-gsm">
+<h3>Descripción de los campos para Tecnología 1 (GSM):<a class="headerlink" href="#descripcion-de-los-campos-para-tecnologia-1-gsm" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ID_REGISTRO: Es la fecha yyyymmm y el último dígito identifica al país (Argentina=3, Uruguay=5, Paraguay=4)</li>
+<li>ID_TECNOLOGIA: Tecnologia 1=GSM y 2=UMTS</li>
+<li>VOICE_INACC: Inaccesibilidad de Voz (%).  ISABH MONTH.  100 - ACCESS_RATE</li>
+<li>VOICE_NONRET: No Retenibilidad de Voz (%).  ISABH MONTH.  TCH_DROP8E_RATE</li>
+<li>VOICE_SPEECHQUALITY: Calidad de Voz.  ISABH MONTH.  FER_UL_RATE</li>
+<li>VOICE_TRAFFIC: Tráfico de Voz [Erlangs].  ISABH MONTH.  TCH_ERLANG</li>
+<li>DATA_INACC: Inaccesibilidad de Datos (%).  MAX HOUR  del PDP_ACT_FAIL_2G</li>
+<li>DATA_NONRET: No Retenibilidad de Datos (%).  MAX HOUR del PDP_CON_CUT_OFF_6B</li>
+<li>DATA_THR1: Velocidad de Descarga ISABH MONTH.</li>
+<li>DATA_THR2: Velocidad de Descarga ISABH MONTH.</li>
+<li>DATA_TRAFFIC: Tráfico de Datos de Subida y Bajada.  DAY MONTH.  (TRAFFIC_GPRS + TRAFFIC_EDGE) / 1024)</li>
+</ul>
+</div>
+<div class="section" id="descripcion-de-los-campos-para-tecnologia-2-umts">
+<h3>Descripción de los campos para Tecnología 2 (UMTS):<a class="headerlink" href="#descripcion-de-los-campos-para-tecnologia-2-umts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ID_REGISTRO: Es la fecha yyyymmm y el último dígito identifica al país (Argentina=3, Uruguay=5, Paraguay=4)</li>
+<li>ID_TECNOLOGIA: Tecnologia 1=GSM y 2=UMTS</li>
+<li>VOICE_INACC: Inaccesibilidad de Voz (%).  ISABH MONTH.  100 - ACCESSIBILITY_VOICE VOICE_INACC</li>
+<li>VOICE_NONRET: No Retenibilidad de Voz (%).  ISABH MONTH.  RAB_DROP_VOICE VOICE_NONRET</li>
+<li>VOICE_SPEECHQUALITY: Calidad de Voz.  ISABH MONTH.  BLER_VOICE_UL VOICE_SPEECHQUALITY</li>
+<li>VOICE_TRAFFIC: Tráfico de Voz [Erlangs].  ISABHMONTHC.  CS_ERL VOICE_TRAFFIC</li>
+<li>DATA_INACC: Inaccesibilidad de Datos (%).  ISABH MONTH.  100 - ACCESSIBILITY_PACKET DATA_INACC</li>
+<li>DATA_NONRET: No Retenibilidad de Datos (%).  ISABH MONTH   RAB_DROP_PACKET DATA_NON_RET</li>
+<li>DATA_THR1: Velocidad de Descarga R99.  ISABH MONTH.  R99_DL_PS_THROUGHPUT_SDU_KBPS R99</li>
+<li>DATA_THR2: Velocidad de Descarga HSDPA.  ISABH MONTH.  THROUGHPUT_HSDPA_MACD</li>
+<li>DATA_TRAFFIC: Tráfico de Datos de Subida y Bajada.  DAY MONTH.  (HSDPA_DATA_DL_MBYTES + UMTS_PS_DATA_DL_MBYTES) /1024 DATA_TRAFFIC</li>
+</ul>
+<img alt="../_images/pag33.png" class="align-center" src="../_images/pag33.png" />
+<img alt="../_images/pag3.23.png" class="align-center" src="../_images/pag3.23.png" />
+<p>Server: perdido.claro.amx (10.92.50.83).
+Base de Datos: Oracle 10G.  Instancia WILLY
+Proceso que genera el tablero: el proceso tiene nombre &#8220;bd_amx.sh&#8221; y actualiza la tabla mensualmente y se lo puede encontrar en el crontab del equipo perdido, a continuación se lo transcribe:
+# Procesos Spool
+45 14 1 1,2,3,4,5,6,7,8,9,10,11,12 * /calidad/ps_spool/amx/bd_amx.sh &gt; /dev/null 2&gt;&amp;1</p>
+<blockquote>
+<div>O sea que su ejecución es el minuto 45 , de la hora 14, del día 1, de los 12 meses.</div></blockquote>
+<p>Frecuencia del proceso: MENSUAL
+Duración del proceso:
+Ubicación del proceso: /calidad/psspool/amx/bd_amx.sh</p>
+<img alt="../_images/pag44.png" class="align-center" src="../_images/pag44.png" />
+</div>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag4.2.png" class="align-center" src="../_images/pag4.2.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.  DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="el-proceso-shell-script-bd-amx-indicadores-sh-se-transcribe-a-continuacion">
+<h3>El proceso Shell Script bd_amx_indicadores.sh se transcribe a continuación:<a class="headerlink" href="#el-proceso-shell-script-bd-amx-indicadores-sh-se-transcribe-a-continuacion" title="Permalink to this headline">¶</a></h3>
+<p>#!/usr/bin/ksh</p>
+<p># Declaracion de Funciones
+. /calidad/control/unix.sh
+. /calidad/control/include.sh
+. /calidad/control/variables.sh
+. /calidad/control/f_spool.sh</p>
+<p># Variables de entorno Oracle
+export ORACLE_HOME=$oracleHome
+export ORACLE_SID=$oracleSid
+export ORACLE_TERM=$oracleTerm
+export PATH=$path</p>
+<p># Comentarios
+# Creacion de los txt que se envian mensualmente a AMX
+# Autor: Mario Heredia - 08.04.2009
+# &#8211; Actualizacion: Mario Heredia - 02.06.2009
+# Actualizacion: Mario Heredia. Fecha: 10.03.2014. Motivo: Ya no es necesario el aux. Los Updates dejaron de tener validez a inicios del 2010.</p>
+<p># Declaracion de Variables</p>
+<p>MES_ATRAS=`sqlplus -S / &lt;&lt; EOF
+SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF;
+SELECT DECODE(&#8216;$1&#8217;, NULL, 1, &#8216;$1&#8217;) FECHA_DESDE FROM DUAL;
+EXIT;
+EOF`</p>
+<p>primerDiaMes=`f_primer_dia_mes $MES_ATRAS`
+fileIndicadores=amx_indicadores.txt</p>
+<p>cd $WorkDirSpoolAmx/scripts</p>
+<p>sqlplus -S / &#64; gsm_amx_indicadores.sql $primerDiaMes</p>
+<p>sqlplus -S / &#64; umts_amx_indicadores.sql $primerDiaMes</p>
+<p># sqlplus -S / &#64; aux_umts_indicadores.sql $primerDiaMes</p>
+<p>cd $WorkDirSpoolAmx</p>
+<p>rm $fileIndicadores</p>
+<p>sqlplus -S / &#64; amx_indicadores.sql $primerDiaMes $fileIndicadores</p>
+<p>f_mail_attach &#8220;Informe AMX - Indicadores $primerDiaMes&#8221; UX $WorkDirSpoolAmx $fileIndicadores</p>
+<p>Logueo del proceso: no hay logueo del proceso</p>
+</div>
+<div class="section" id="el-proceso-sql-gsm-amx-indicadores-sql-se-transcribe-a-continuacion">
+<h3>El proceso SQL gsm_amx_indicadores.sql se transcribe a continuación:<a class="headerlink" href="#el-proceso-sql-gsm-amx-indicadores-sql-se-transcribe-a-continuacion" title="Permalink to this headline">¶</a></h3>
+<p>&#8211; Autor: Mario Heredia
+&#8211; Actualizacion: Mario Heredia - 23.12.2009
+&#8211; Actualizacion: Mario Heredia - 05.07.2011</p>
+<dl class="docutils">
+<dt>DELETE FROM AMX_INDICADORES</dt>
+<dd><dl class="first last docutils">
+<dt>WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;</dt>
+<dd>AND ID_TECNOLOGIA = 1;</dd>
+</dl>
+</dd>
+</dl>
+<p>COMMIT;</p>
+<p>INSERT INTO AMX_INDICADORES
+(</p>
+<blockquote>
+<div>PK_ID_CVECALIDAD,
+ID_REGISTRO,
+ID_TECNOLOGIA,
+VOICE_INACC,
+VOICE_NONRET,
+VOICE_SPEECHQUALITY,
+VOICE_TRAFFIC,
+DATA_INACC,
+DATA_NONRET,
+DATA_THR1,
+DATA_THR2,
+DATA_TRAFFIC</div></blockquote>
+<p>)
+SELECT ROW_NUMBER () OVER(ORDER BY A.ID_REGISTRO ASC) PK_ID_CVECALIDAD,</p>
+<blockquote>
+<div><blockquote>
+<div>A.ID_REGISTRO,
+A.ID_TECNOLOGIA,
+VOICE_INACC,
+VOICE_NONRET,
+VOICE_SPEECHQUALITY,
+VOICE_TRAFFIC,
+DATA_INACC,
+DATA_NON_RET,
+DATA_THR1,
+DATA_THR2,
+DATA_TRAFFIC</div></blockquote>
+<p>FROM (</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>DECODE(PAIS, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,
+1                                                         ID_TECNOLOGIA,
+100 - ACCESS_RATE                                         VOICE_INACC,
+TCH_DROP8E_RATE                                           VOICE_NONRET,
+FER_UL_RATE                                               VOICE_SPEECHQUALITY,
+TCH_ERLANG                                                VOICE_TRAFFIC</div></blockquote>
+<p>FROM TABLERO_REGION_MONTH</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)</dt>
+<dd><p class="first">AND REGION = &#8216;PAIS&#8217;
+AND SUMMARY = &#8216;ISABH_MONTH&#8217;</p>
+<blockquote class="last">
+<div>) A,
+(</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>DECODE(MERCADO, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,
+1                                                            ID_TECNOLOGIA,
+ROUND((TRAFFIC_GPRS + TRAFFIC_EDGE) / 1024, 2)               DATA_TRAFFIC</div></blockquote>
+<p>FROM TABLERO_MOUS_DAYM</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)</dt>
+<dd><dl class="first last docutils">
+<dt>AND REGION = &#8216;PAIS&#8217;</dt>
+<dd>) C,
+(</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>SELECT ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div>ID_TECNOLOGIA,
+MAX(DATA_THR1) DATA_THR1,
+MAX(DATA_THR2) DATA_THR2</div></blockquote>
+<p class="last">FROM (</p>
+</dd>
+<dt>SELECT TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><dl class="docutils">
+<dt>CASE WHEN SIGN(INSTR(PRM_DESCRIPTION, &#8216;Argentina&#8217;)) = 1 THEN &#8216;3&#8217;</dt>
+<dd>WHEN SIGN(INSTR(PRM_DESCRIPTION, &#8216;Uruguay&#8217;)) = 1 THEN &#8216;5&#8217;
+WHEN SIGN(INSTR(PRM_DESCRIPTION, &#8216;Paraguay&#8217;)) = 1 THEN &#8216;4&#8217; END ID_REGISTRO,</dd>
+</dl>
+<p>1 ID_TECNOLOGIA,
+CASE WHEN SIGN(INSTR(PRM_DESCRIPTION, &#8216;GPRS&#8217;)) = 1 THEN PRM_VALUE END DATA_THR1,
+CASE WHEN SIGN(INSTR(PRM_DESCRIPTION, &#8216;EDGE&#8217;)) = 1 THEN PRM_VALUE END DATA_THR2</p>
+</div></blockquote>
+<p>FROM CALIDAD_PARAMETROS</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE PRM_ID BETWEEN 136 AND 141</dt>
+<dd>)</dd>
+<dt>GROUP BY ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div>ID_TECNOLOGIA</div></blockquote>
+<p class="last">) D,
+(</p>
+</dd>
+</dl>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||</dt>
+<dd><blockquote class="first">
+<div>DECODE(PAIS, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,
+PDP_ACT_FAIL_2G                                           DATA_INACC,
+PDP_CON_CUT_OFF_6B                                        DATA_NON_RET</div></blockquote>
+<p class="last">FROM  (</p>
+</dd>
+<dt>SELECT TRUNC(D.FECHA, &#8216;MM&#8217;) FECHA,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><dl class="docutils">
+<dt>DECODE(D.SGSN_GID, 699591001, &#8216;Paraguay&#8217;,</dt>
+<dd>119081001, &#8216;Uruguay&#8217;, &#8216;Argentina&#8217;) PAIS,</dd>
+<dt>ROUND(SUM(D.PDP_ACT_FAIL_NUM) /</dt>
+<dd>SUM(D.PDP_ACT_FAIL_DEN) * 100, 2) PDP_ACT_FAIL_2G,</dd>
+<dt>ROUND(SUM(D.PDP_CON_CUT_OFF_6B_NUM) /</dt>
+<dd>SUM(D.PDP_CON_CUT_OFF_6B_DEN) * 100, 2) PDP_CON_CUT_OFF_6B</dd>
+</dl>
+</div></blockquote>
+<p>FROM NOKIA_CORE_SGSN_CELL_HOUR D</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE D.FECHA BETWEEN TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)</dt>
+<dd><blockquote class="first">
+<div>AND ADD_MONTHS(TRUNC(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;MM&#8217;), 1) - 1</div></blockquote>
+<p class="last">AND TO_CHAR(D.FECHA,&#8217;HH24&#8217;) &gt; 6
+AND TO_CHAR(D.FECHA,&#8217;HH24&#8217;) &lt;= 23</p>
+</dd>
+<dt>GROUP BY TRUNC(D.FECHA, &#8216;MM&#8217;), DECODE(D.SGSN_GID, 699591001, &#8216;Paraguay&#8217;,</dt>
+<dd><blockquote class="first">
+<div>119081001, &#8216;Uruguay&#8217;, &#8216;Argentina&#8217;)</div></blockquote>
+<p class="last">)</p>
+</dd>
+<dt>ORDER BY PAIS</dt>
+<dd>) E</dd>
+<dt>WHERE A.ID_REGISTRO = C.ID_REGISTRO (+)</dt>
+<dd>AND A.ID_REGISTRO = D.ID_REGISTRO (+)
+AND A.ID_REGISTRO = E.ID_REGISTRO (+);</dd>
+</dl>
+</dd>
+</dl>
+<p>COMMIT;</p>
+<p>EXIT;</p>
+<p>El proceso SQL umts_amx_indicadores.sql se transcribe a continuación:
+&#8211;Actualizacion 19/07/2010 - Mauro Arraigada
+&#8211;Se modifica el DATA_THR2 para que traiga de MACD.
+DELETE FROM AMX_INDICADORES</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;</dt>
+<dd>AND ID_TECNOLOGIA = 2;</dd>
+</dl>
+</div></blockquote>
+<p>COMMIT;</p>
+<p>INSERT INTO AMX_INDICADORES
+(</p>
+<blockquote>
+<div>PK_ID_CVECALIDAD,
+ID_REGISTRO,
+ID_TECNOLOGIA,
+VOICE_INACC,
+VOICE_NONRET,
+VOICE_SPEECHQUALITY,
+VOICE_TRAFFIC,
+DATA_INACC,
+DATA_NONRET,
+DATA_THR1,
+DATA_THR2,
+DATA_TRAFFIC</div></blockquote>
+<p>)
+SELECT ROW_NUMBER () OVER(ORDER BY A.ID_REGISTRO ASC) PK_ID_CVECALIDAD,</p>
+<blockquote>
+<div><blockquote>
+<div>A.ID_REGISTRO,
+A.ID_TECNOLOGIA,
+VOICE_INACC,
+VOICE_NONRET,
+VOICE_SPEECHQUALITY,
+VOICE_TRAFFIC,
+DATA_INACC,
+DATA_NON_RET,
+DATA_THR1,
+DATA_THR2,
+DATA_TRAFFIC</div></blockquote>
+<p>FROM (</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||DECODE(MERCADO, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>2 ID_TECNOLOGIA,
+100 - ACCESSIBILITY_VOICE VOICE_INACC,
+RAB_DROP_VOICE VOICE_NONRET,
+BLER_VOICE_UL VOICE_SPEECHQUALITY</div></blockquote>
+<p>FROM TABLERO_UMTS_REGION_MONTH</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)</dt>
+<dd><p class="first">AND SUMMARY = &#8216;ISABH_MONTH&#8217;
+AND REGION = &#8216;PAIS&#8217;</p>
+<blockquote class="last">
+<div>) A,
+(</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||DECODE(MERCADO, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>2 ID_TECNOLOGIA,
+100 - ACCESSIBILITY_PACKET DATA_INACC,
+RAB_DROP_PACKET DATA_NON_RET,
+R99_DL_PS_THROUGHPUT_SDU_KBPS DATA_THR1,
+THROUGHPUT_HSDPA_MACD DATA_THR2 &#8211;THROUGHPUT_HSDPA_MACD</div></blockquote>
+<p>FROM TABLERO_UMTS_REGION_MONTH</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)</dt>
+<dd><p class="first">AND SUMMARY = &#8216;ISABH_MONTH&#8217;
+AND REGION = &#8216;PAIS&#8217;</p>
+<blockquote class="last">
+<div>) B,
+(</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||DECODE(PAIS, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>2 ID_TECNOLOGIA,
+CS_ERL VOICE_TRAFFIC</div></blockquote>
+<p>FROM UMTS_NSN_SERVICE_PAIS_ISABHMC</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)</dt>
+<dd>) C,
+(</dd>
+</dl>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;YYYYMM&#8217;)||DECODE(MERCADO, &#8216;Argentina&#8217;, 3, &#8216;Uruguay&#8217;, 5, &#8216;Paraguay&#8217;, 4) ID_REGISTRO,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>2 ID_TECNOLOGIA,
+(HSDPA_DATA_DL_MBYTES + UMTS_PS_DATA_DL_MBYTES) /1024 DATA_TRAFFIC</div></blockquote>
+<p>FROM TABLERO_MOUS_DAYM</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)</dt>
+<dd><dl class="first last docutils">
+<dt>AND REGION = &#8216;PAIS&#8217;</dt>
+<dd>) D</dd>
+</dl>
+</dd>
+<dt>WHERE A.ID_REGISTRO = B.ID_REGISTRO (+)</dt>
+<dd>AND A.ID_REGISTRO = C.ID_REGISTRO (+)
+AND A.ID_REGISTRO = D.ID_REGISTRO (+);</dd>
+</dl>
+</dd>
+</dl>
+<p>COMMIT;</p>
+<p>EXIT;</p>
+</div>
+<div class="section" id="el-proceso-amx-indicadores-sql-se-transcribe-a-continuacion">
+<h3>El proceso amx_indicadores.sql se transcribe a continuación:<a class="headerlink" href="#el-proceso-amx-indicadores-sql-se-transcribe-a-continuacion" title="Permalink to this headline">¶</a></h3>
+<p>SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF LINESIZE 140;
+SPOOL ./&amp;2</p>
+<p>SELECT &#8216;id_Registro|id_Tecnologia|voice_Inacc|voice_NonRet|voice_SpeechQuality|voice_Traffic|data_Inacc|data_NonRet|data_Thr1|data_Thr2|data_Traffic&#8217;
+CAMPO FROM DUAL</p>
+<blockquote>
+<div>UNION ALL</div></blockquote>
+<dl class="docutils">
+<dt>SELECT CAMPO</dt>
+<dd>FROM (</dd>
+<dt>SELECT A.ID_REGISTRO||&#8217;|&#8217;||</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>ID_TECNOLOGIA||&#8217;|&#8217;||
+VOICE_INACC||&#8217;|&#8217;||
+VOICE_NONRET||&#8217;|&#8217;||
+VOICE_SPEECHQUALITY||&#8217;|&#8217;||
+VOICE_TRAFFIC||&#8217;|&#8217;||
+DATA_INACC||&#8217;|&#8217;||
+DATA_NONRET||&#8217;|&#8217;||
+DATA_THR1||&#8217;|&#8217;||
+DATA_THR2||&#8217;|&#8217;||
+DATA_TRAFFIC CAMPO</div></blockquote>
+<dl class="docutils">
+<dt>FROM AMX_INDICADORES A,</dt>
+<dd>AMX_REGISTRO    B</dd>
+</dl>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE A.ID_REGISTRO = B.ID_REGISTRO</dt>
+<dd>AND TO_DATE(B.ANIO||B.MES, &#8216;YYYYMM&#8217;) = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)</dd>
+<dt>ORDER BY ID_TECNOLOGIA, A.ID_REGISTRO</dt>
+<dd>);</dd>
+</dl>
+</dd>
+</dl>
+<p>SPOOL OFF;</p>
+<p>EXIT;</p>
+</div>
+<div class="section" id="la-ejecucion-manual-del-script-bd-amx-sh-se-transcribe-a-continuacion">
+<h3>La ejecución manual del script bd_amx.sh se transcribe a continuación:<a class="headerlink" href="#la-ejecucion-manual-del-script-bd-amx-sh-se-transcribe-a-continuacion" title="Permalink to this headline">¶</a></h3>
+<p>/calidad&gt;# cd ps_spool
+/calidad/ps_spool&gt;# cd amx
+/calidad/ps_spool/amx&gt;# bd_amx.sh
+old   2:  WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;
+new   2:  WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;</p>
+<p>3 rows deleted.</p>
+<p>Commit complete.</p>
+<p>old  37:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)
+new  37:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;)
+old  47:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)
+new  47:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;,&#8217;DD.MM.YYYY&#8217;)
+old  56: SELECT TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||
+new  56: SELECT TO_CHAR(TO_DATE(&#8216;01.06.2016&#8217;,&#8217;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||
+old  83:  WHERE D.FECHA BETWEEN TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)
+new  83:  WHERE D.FECHA BETWEEN TO_DATE(&#8216;01.06.2016&#8217;,&#8217;DD.MM.YYYY&#8217;)
+old  84:                    AND ADD_MONTHS(TRUNC(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;MM&#8217;), 1) - 1
+new  84:                    AND ADD_MONTHS(TRUNC(TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;MM&#8217;), 1) - 1</p>
+<p>3 rows created.</p>
+<p>Commit complete.</p>
+<p>old   2:  WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;
+new   2:  WHERE ID_REGISTRO LIKE TO_CHAR(TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMM&#8217;)||&#8217;%&#8217;</p>
+<p>4 rows deleted.</p>
+<p>Commit complete.</p>
+<p>old  35:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)
+new  35:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;)
+old  47:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;, &#8216;DD.MM.YYYY&#8217;)
+new  47:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;, &#8216;DD.MM.YYYY&#8217;)
+old  56:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)
+new  56:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;,&#8217;DD.MM.YYYY&#8217;)
+old  63:  WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;)
+new  63:  WHERE FECHA = TO_DATE(&#8216;01.06.2016&#8217;,&#8217;DD.MM.YYYY&#8217;)</p>
+<p>4 rows created.</p>
+<p>Commit complete.</p>
+<p>id_Registro|id_Tecnologia|voice_Inacc|voice_NonRet|voice_SpeechQuality|voice_Traffic|data_Inacc|data_NonRet|data_Thr1|data_Thr2|data_Traffic
+2016063|1|5.22|1.99|1.68|89130.83||||67.3|334872.41
+2016064|1|.69|.25|.62|3046.68|||||30791.39
+2016065|1|.91|.6|.53|2541.67|||||13035.42
+2016063|2|1.199|.7609||163971.8939|.9785|1.1944|||7849705.313076171875
+2016064|2|.5404|.4761||8496.9608|.7856|.9187|||891083.8277734375
+2016065|2|.3106|.6223||5685.3008|.4835|.5224|||351959.47357421875
+/calidad/ps_spool/amx&gt;#</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tableros.html" class="btn btn-neutral" title="TABLEROS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

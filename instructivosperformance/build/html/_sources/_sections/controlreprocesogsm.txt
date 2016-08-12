@@ -150,7 +150,7 @@ La consulta nos muestra como resultado:
 .. image:: ../_static/images/instructivo-gsm/pag12.png
   :align: center
 
-2
+
 En caso de que haya faltante por regional, ejecutar en Perdido las siguientes instrucciones:
 
 2.	a. Para GPRS: Ejecutar el siguiente comando en la consola:
@@ -220,6 +220,8 @@ cd /calidad/multivendor/gsm/hourly
 
 	sqlplus -S / @ gsm_nsn_hour.sql &1 &2 &3 &4  PAIS
 
+Luego de completar las horas faltantes a nivel Hour, se debe recalcular los niveles superiores y tableros.
+
 En consola, nos muestra el contenido de run2.sh: 
 
 .. image:: ../_static/images/instructivo-gsm/pag16.2.png
@@ -234,3 +236,8 @@ Nos muestra como resultado:
 
 .. image:: ../_static/images/instructivo-gsm/pag18.png
   :align: center
+
+
+
+
+

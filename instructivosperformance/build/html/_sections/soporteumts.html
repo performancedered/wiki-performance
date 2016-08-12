@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SOPORTE UMTS &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="INSTRUCTIVOS TECNOLOGIA 3G" href="tecnologia3g.html"/>
+        <link rel="next" title="INSTRUCTIVOS TECNOLOGIA 4G" href="tecnologia4g.html"/>
+        <link rel="prev" title="Instructivo Control y Reproceso de tablas UMTS" href="controlreprocesoumts.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../acceso.html">ACCESO</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tecnologia2g.html">     1. INSTRUCTIVOS TECNOLOGIA 2G</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tecnologia3g.html">     2. INSTRUCTIVOS TECNOLOGIA 3G</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="controlreprocesoumts.html">1. Instructivo Control y Reproceso de tablas UMTS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. Soporte UMTS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCION DETALLADA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
+      
+          <li><a href="tecnologia3g.html">INSTRUCTIVOS TECNOLOGIA 3G</a> &raquo;</li>
+      
+    <li>SOPORTE UMTS</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="soporte-umts">
+<h1>SOPORTE UMTS<a class="headerlink" href="#soporte-umts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera el archivo Soporte UMTS</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red, procesos de operaciones y mantenimiento.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Smart: Base de datos Oracle donde se encuentran las tablas de datos para la red de acceso, incluido GSM y GPRS</li>
+<li>Perdido: Servidor UNIX en donde se aloja la base de datos Smart.  El nombre es perdido.claro.amx y la dirección ip física es 10.92.50.83</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>El archivo de texto “Soporte Umts” se genera diariamente con un proceso Shell Script en el server Perdido, y toma como input la base de datos Smart.  Es utilizado por las herramientas WdC (Web de Cobertura) y PRADERE.</p>
+<p>El archivo contiene la siguiente información diaria sobre cada una de las radiobases de la red.</p>
+<ul class="simple">
+<li>Fecha: el archivo es generado con la fecha del día en que corre el proceso</li>
+<li>Wcell_id: sector de la radiobase umts</li>
+<li>Accesibilidad HSDPA</li>
+<li>Ce_available</li>
+<li>Atm_load</li>
+<li>Disponibilidad</li>
+<li>Confiabilidad</li>
+<li>Thrhoughput hsdpa macd</li>
+</ul>
+<img alt="Archivo TXT soporte umts" class="align-center" src="../_images/pag24.png" />
+<img alt=": Herramienta PRADERE" class="align-center" src="../_images/pag32.png" />
+<p>Nombre del proceso: soporte_umts_indicadores.sh</p>
+<p>Path: /calidad/ps_spool/soporte/soporte_umts_indicadores.sh</p>
+<p>Server: perdido.claro.amx</p>
+<p>Frecuencia de ejecución: DIARIA</p>
+<p>Input: KPIs de 3G de la base de datos Smart</p>
+<p>Output: archivo TXT ubicado en /export/home/soporte/soporte_umts_yyyymmdd.txt</p>
+<p>Mecanismos de Control: si el archivo no se es generado, se recibe un mail del cliente indicando el faltante de datos</p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt=":" class="align-center" src="../_images/pag43.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubicacion-del-script-en-el-crontab">
+<h3>Ubicación del script en el CRONTAB:<a class="headerlink" href="#ubicacion-del-script-en-el-crontab" title="Permalink to this headline">¶</a></h3>
+<p># Procesos Spool
+30 08 * * * /calidad/ps_spool/soporte/soporte_umts_indicadores.sh    &gt; /dev/null 2&gt;&amp;1
+35 08 * * * /calidad/ps_spool/soporte/soporte_gsm_indicadores.sh     &gt; /dev/null 2&gt;&amp;1</p>
+</div>
+<div class="section" id="descripcion-del-shell-script-soporte-umts-indicadores-sh">
+<h3>Descripción del Shell Script: soporte_umts_indicadores.sh<a class="headerlink" href="#descripcion-del-shell-script-soporte-umts-indicadores-sh" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Este script ejecuta diferentes procesos SQL para obtener las últimas estadísticas de la red.</li>
+<li>Luego se ejecuta la función de confiabilidad de datos (f_check_confiabilidad_70_percent).</li>
+<li>Si la confiabilidad de datos es mayor al 70%, entonces:</li>
+<li>El archivo txt (soporte_umts_yyyymmdd.txt) es creado mediante un proceso SQL (soporte_umts_indicadores.sql).</li>
+<li>El archivo es movido al directorio final.</li>
+</ul>
+</div>
+<div class="section" id="shell-script-soporte-umts-indicadores-sh">
+<h3>Shell Script soporte_umts_indicadores.sh<a class="headerlink" href="#shell-script-soporte-umts-indicadores-sh" title="Permalink to this headline">¶</a></h3>
+<p>#!/usr/bin/ksh</p>
+<p># Declaracion de Funciones
+. /calidad/control/unix.sh
+. /calidad/control/include.sh
+. /calidad/control/variables.sh</p>
+<p># Variables de entorno Oracle
+export ORACLE_HOME=$oracleHome
+export ORACLE_SID=$oracleSid
+export ORACLE_TERM=$oracleTerm
+export PATH=$path</p>
+<p># Comentarios
+# Autor: Mario Heredia - 12.03.2010
+# Actualizacion: Mario Heredia. Fecha: 18.01.2012. Motivo: Se saca del if a soporte_umts_parametros.sql
+# Actualizacion: Mario Heredia. Fecha: 13.08.2012. Motivo: Se agregaron 5 .sql para asegurar siempre la mayor confiabilidad.</p>
+<p># Declaracion de Variables
+DIA_DESDE=3
+DIA_HASTA=1
+FECHA_DESDE=`f_fecha $DIA_DESDE`
+FECHA_HASTA=`f_fecha $DIA_HASTA`</p>
+<p>cd $workDirSpoolSoporte</p>
+<p>rm <a href="#id1"><span class="problematic" id="id2">*</span></a>.txt</p>
+<p>for i in <cite>f_CreateWindowDays $FECHA_DESDE $FECHA_HASTA</cite>
+do</p>
+<blockquote>
+<div><p># sqlplus -S / &#64; ${workDirUmtsHourly}/iu/umts_c_nsn_iu_hour_au6.sql $i 00 $i 23</p>
+<p>sqlplus -S / &#64; ${workDirUmtsDaily}/iub/umts_c_nsn_iub_bh.sql $i $i</p>
+<p>sqlplus -S / &#64; ${workDirUmtsDaily}/service/aux_umts_c_nsn_wcell_bh.sql $i $i hsdpa</p>
+<p>sqlplus -S / &#64; ${workDirUmtsDaily}/hsdpa/umts_c_nsn_hsdpa_wcell_bh.sql $i $i</p>
+<p>sqlplus -S / &#64; ${workDirUmtsDaily}/hsdpa/umts_nsn_hsdpa_wcell.sql $i $i BH</p>
+<p>sqlplus -S / &#64; soporte_umts_indicadores_wcel_bh.sql $i $i</p>
+<p>if [ <cite>f_check_confiabilidad_70_percent $i</cite> = &#8216;S&#8217; ]; then</p>
+<blockquote>
+<div><p>file=&#8221;soporte_umts_`f_fecha_soporte $i`.txt&#8221;</p>
+<p>sqlplus -S / &#64; soporte_umts_indicadores.sql $i $file</p>
+<p>mv $file $workDirSpoolStorageSoporte</p>
+</div></blockquote>
+<p>fi</p>
+<p>fil2=&#8221;Parametros_Fisicos_RF_`f_fecha_soporte $i`.txt&#8221;</p>
+<p>sqlplus -S / &#64; soporte_umts_parametros.sql $i $fil2</p>
+<p>mv $fil2 $workDirSpoolStorageSoporte</p>
+</div></blockquote>
+<p>done</p>
+</div>
+<div class="section" id="proceso-sql-soporte-umts-indicadores-sql">
+<h3>Proceso SQL soporte_umts_indicadores.sql<a class="headerlink" href="#proceso-sql-soporte-umts-indicadores-sql" title="Permalink to this headline">¶</a></h3>
+<p>&#8211; Autor: Mario Heredia
+&#8211; Actalizacion: Mario Heredia - 29.07.2010
+&#8211; Actalizacion: Mario Heredia - 16.06.2011
+&#8211; Actalizacion: Mario Heredia - 05.07.2013. Motivo: Se deja en 0 el campo de CE.
+&#8211; Actualizacion: Monica Pellegrini Fecha: 04.01.2016. Motivo: se cambia atm_load por load_amx
+&#8211; Actualizacion: Mario Heredia. Fecha: 28.01.2016. Motivo: Implementacion de multivendorObject2.</p>
+<p>SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF LINESIZE 140;
+SPOOL ./&amp;2</p>
+<p>SELECT &#8216;fecha, wcell_id, accesibilidad_hsdpa, ce_available, load_amx, disponibilidad, confiabilidad, throughput_hsdpa_macd&#8217; CAMPO FROM DUAL UNION ALL
+SELECT FECHA||&#8217;, &#8216;||</p>
+<blockquote>
+<div><blockquote>
+<div>WCELL_NAME||&#8217;, &#8216;||
+ACCESIBILIDAD_HSDPA||&#8217;, &#8216;||
+CE_AVG_AVAILABLE||&#8217;, &#8216;||
+LOAD_AMX||&#8217;, &#8216;||
+DISPONIBILIDAD||&#8217;, &#8216;||
+CONFIABILIDAD||&#8217;, &#8216;||
+THROUGHPUT_HSDPA_MACD SE</div></blockquote>
+<p>FROM (</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>SELECT A.FECHA,</dt>
+<dd><blockquote class="first">
+<div>A.WCELL_NAME,
+A.ACCESIBILIDAD_HSDPA,
+A.CE_AVG_AVAILABLE,
+A.LOAD_AMX,
+A.DISPONIBILIDAD,
+A.CONFIABILIDAD,
+A.THROUGHPUT_HSDPA_MACD,
+NVL(B.ESTADO, &#8216;Comercial&#8217;) ESTADO</div></blockquote>
+<p class="last">FROM (</p>
+</dd>
+<dt>SELECT TO_CHAR(FECHA, &#8216;DD.MM.YYYY&#8217;) FECHA,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>WCELL_NAME,
+ACCESIBILIDAD_HSDPA,
+CE_AVG_AVAILABLE,
+LOAD_AMX,
+DISPONIBILIDAD,
+CONFIABILIDAD,
+NVL(THROUGHPUT_HSDPA_MACD, 0) THROUGHPUT_HSDPA_MACD</div></blockquote>
+<p>FROM NOC_UMTS_KPI_WCEL_BH</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>WHERE FECHA = TO_DATE(&#8216;&amp;1&#8217;,&#8217;DD.MM.YYYY&#8217;) &#8211;9462</dt>
+<dd>) A,
+(</dd>
+</dl>
+</dd>
+<dt>SELECT WCELL_ID,</dt>
+<dd><blockquote class="first">
+<div>WCELL_NAME,
+WBTS_ID,
+WBTS_NAME,
+RNC_ID,
+RNC_NAME,
+ALM,
+MERCADO,
+PAIS,
+MR_ID,
+D.MR_NAME,
+FECHA_DESDE_MR,
+FECHA_HASTA_MR,
+DECODE(D.MR_NAME, NC.MR_NAME, &#8216;No Comercial&#8217;, &#8216;Comercial&#8217;) ESTADO,
+COUNT(*) OVER(PARTITION BY WCELL_NAME) CANTIDAD</div></blockquote>
+<p class="last">FROM (</p>
+</dd>
+<dt>SELECT WCELL_ID,</dt>
+<dd><blockquote class="first">
+<div>WCELL_NAME,
+WBTS_ID,
+WBTS_NAME,
+RNC_ID,
+RNC_NAME,
+ALM,
+MERCADO,
+PAIS,
+MR_ID,
+MR_NAME,
+FECHA_DESDE_MR,
+FECHA_HASTA_MR,
+ROW_NUMBER() OVER(PARTITION BY WCELL_NAME ORDER BY FECHA_DESDE_MR DESC) ORDEN</div></blockquote>
+<p class="last">FROM (</p>
+</dd>
+<dt>SELECT B.WCELL_ID,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>B.WCELL_NAME,
+B.WBTS_ID,
+B.WBTS_NAME,
+B.RNC_ID,
+B.RNC_NAME,
+B.ALM,
+B.MERCADO,
+B.PAIS,
+MR_ID,
+C.ELEMENT_NAME MR_NAME,
+FECHA_INICIO FECHA_DESDE_MR,
+FECHA_FIN FECHA_HASTA_MR</div></blockquote>
+<dl class="docutils">
+<dt>FROM NOC_UMTS_MR_OBJECTS A,</dt>
+<dd>OBJECTS_SP_UMTS     B,
+MULTIVENDOR_OBJECT2 PARTITION (MR) C</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>WHERE B.WCELL_ID = A.WCELL_ID (+)</dt>
+<dd><p class="first">AND A.MR_ID = C.ELEMENT_ID (+)
+AND (TRUNC(SYSDATE) BETWEEN FECHA_INICIO</p>
+<blockquote>
+<div><blockquote>
+<div>AND FECHA_FIN</div></blockquote>
+<p>OR FECHA_INICIO &gt;= TRUNC(SYSDATE))</p>
+</div></blockquote>
+<dl class="last docutils">
+<dt>AND REAL_FECHA_INICIO &gt;= TO_DATE(&#8216;01.01.2016&#8217;, &#8216;DD.MM.YYYY&#8217;)</dt>
+<dd>)</dd>
+</dl>
+</dd>
+<dt>WHERE (TRUNC(SYSDATE) BETWEEN FECHA_DESDE_MR</dt>
+<dd><blockquote class="first">
+<div>AND FECHA_HASTA_MR</div></blockquote>
+<dl class="last docutils">
+<dt>OR FECHA_HASTA_MR &lt;= TRUNC(SYSDATE))</dt>
+<dd>) D, NOC_MR_NO_COMERCIALES NC</dd>
+</dl>
+</dd>
+<dt>WHERE ORDEN = 1</dt>
+<dd><dl class="first last docutils">
+<dt>AND D.MR_NAME = NC.MR_NAME (+)</dt>
+<dd>) B</dd>
+</dl>
+</dd>
+<dt>WHERE A.WCELL_NAME = B.WCELL_NAME (+)</dt>
+<dd>)</dd>
+</dl>
+<p class="last">WHERE ESTADO &lt;&gt; &#8216;No Comercial&#8217;;</p>
+</dd>
+</dl>
+<p>SPOOL OFF;</p>
+<p>EXIT;</p>
+</div>
+<div class="section" id="funciones-utilizadas">
+<h3>Funciones utilizadas:<a class="headerlink" href="#funciones-utilizadas" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>f_CreateWindowDays () {</dt>
+<dd><p class="first">fechaDesde=&#8221;$1&#8221;
+fechaHasta=&#8221;$2&#8221;</p>
+<p># Autor: Mario Heredia.
+# Actualizacion: Mario Heredia. Fecha: 13.08.2012. Motivo: Optimizacion.</p>
+<p>echo <a href="#id3"><span class="problematic" id="id4">`</span></a>sqlplus -S / &lt;&lt;EOF
+SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF;
+SELECT TO_CHAR(FECHA, &#8216;DD.MM.YYYY&#8217;)</p>
+<blockquote>
+<div><blockquote>
+<div>FROM CALIDAD_STATUS_REFERENCES</div></blockquote>
+<dl class="docutils">
+<dt>WHERE FECHA BETWEEN TO_DATE(&#8216;$fechaDesde&#8217;, &#8216;DD.MM.YYYY&#8217;)</dt>
+<dd><blockquote class="first">
+<div>AND TO_DATE(&#8216;$fechaHasta&#8217;, &#8216;DD.MM.YYYY&#8217;) + 86399 / 86400</div></blockquote>
+<p class="last">AND HORA = &#8216;00&#8217;</p>
+</dd>
+</dl>
+<p>ORDER BY FECHA;</p>
+</div></blockquote>
+<p class="last">EXIT;
+EOF`</p>
+</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>f_check_confiabilidad_70_percent () {</dt>
+<dd><blockquote class="first">
+<div>echo <a href="#id5"><span class="problematic" id="id6">`</span></a>sqlplus -S / &lt;&lt;EOF
+SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF;</div></blockquote>
+<dl class="last docutils">
+<dt>SELECT CASE WHEN INDICE &lt; PRM_VALUE THEN &#8216;N&#8217; ELSE &#8216;S&#8217; END FLAG</dt>
+<dd><blockquote class="first">
+<div>FROM (</div></blockquote>
+<dl class="last docutils">
+<dt>SELECT FECHA,</dt>
+<dd><blockquote class="first">
+<div>CONFIABILIDAD,
+CANTIDAD,
+SUM(CANTIDAD) OVER(PARTITION BY FECHA) TOTAL,
+100 * ROUND((CANTIDAD / SUM(CANTIDAD) OVER(PARTITION BY FECHA)), 4) INDICE</div></blockquote>
+<p class="last">FROM (</p>
+</dd>
+<dt>SELECT FECHA,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>CONFIABILIDAD,
+COUNT(*) CANTIDAD</div></blockquote>
+<p>FROM NOC_UMTS_KPI_WCEL_BH</p>
+</div></blockquote>
+<p>WHERE FECHA BETWEEN TO_DATE(&#8216;$1&#8217;, &#8216;DD.MM.YYYY&#8217;) AND TO_DATE(&#8216;$1&#8217;, &#8216;DD.MM.YYYY&#8217;) + 86399/86400
+GROUP BY FECHA, CONFIABILIDAD</p>
+<blockquote>
+<div>)</div></blockquote>
+<dl class="docutils">
+<dt>GROUP BY FECHA,</dt>
+<dd><blockquote class="first">
+<div>CONFIABILIDAD,
+CANTIDAD</div></blockquote>
+<p class="last">),
+(
+SELECT PRM_VALUE FROM CALIDAD_PARAMETROS WHERE PRM_ID = 278)</p>
+</dd>
+</dl>
+<p class="last">WHERE CONFIABILIDAD = 100;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>EXIT;</dt>
+<dd>EOF`</dd>
+</dl>
+<p>}</p>
+<dl class="docutils">
+<dt>f_fecha_soporte () {</dt>
+<dd>echo <cite>sqlplus -S / &lt;&lt;EOF
+SET HEADING OFF PAGES 0 FEEDBACK OFF VERIFY OFF ECHO OFF HEAD OFF;
+SELECT TO_CHAR(TO_DATE(&#8216;$1&#8217;, &#8216;DD.MM.YYYY&#8217;), &#8216;YYYYMMDD&#8217;) FECHA FROM DUAL;
+EXIT;
+EOF</cite></dd>
+</dl>
+<p>}</p>
+</div>
+<div class="section" id="descripcion-de-las-variables">
+<h3>Descripción de las variables:<a class="headerlink" href="#descripcion-de-las-variables" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>A continuación se incrusta el documento variables.sh utilizado en la definición de funciones</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tecnologia4g.html" class="btn btn-neutral float-right" title="INSTRUCTIVOS TECNOLOGIA 4G" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controlreprocesoumts.html" class="btn btn-neutral" title="Instructivo Control y Reproceso de tablas UMTS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
