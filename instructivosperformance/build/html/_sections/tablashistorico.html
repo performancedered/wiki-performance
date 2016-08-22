@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Migrar Historico de Smart a Data Warehouse &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="INSTRUCTIVOS TECNOLOGIA 3G" href="tecnologia3g.html"/>
+        <link rel="next" title="INSTRUCTIVOS TECNOLOGIA 4G" href="tecnologia4g.html"/>
+        <link rel="prev" title="SOPORTE UMTS" href="soporteumts.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../acceso.html">ACCESO</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tecnologia2g.html">     1. INSTRUCTIVOS TECNOLOGIA 2G</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tecnologia3g.html">     2. INSTRUCTIVOS TECNOLOGIA 3G</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="controlreprocesoumts.html">1. Instructivo Control y Reproceso de tablas UMTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="soporteumts.html">2. Soporte UMTS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Migrar Historico de Smart a Data Warehouse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definiciones">2.DEFINICIONES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#instrucciones">2.INSTRUCCIONES</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
+      
+          <li><a href="tecnologia3g.html">INSTRUCTIVOS TECNOLOGIA 3G</a> &raquo;</li>
+      
+    <li>Migrar Historico de Smart a Data Warehouse</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="migrar-historico-de-smart-a-data-warehouse">
+<h1>Migrar Historico de Smart a Data Warehouse<a class="headerlink" href="#migrar-historico-de-smart-a-data-warehouse" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1. OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente instructivo busca detallar la migracion de tablas historicas de UMTS de Smart a Data Warehouse, con la finalidad de liberar espacio en el servidor Perdido.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>2.DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<p><strong>Data WareHouse:</strong> Almacén de datos orientada a un determinado ámbito, en este caso para almacenar el historico de tablas UMTS</p>
+</div>
+<div class="section" id="instrucciones">
+<h2>2.INSTRUCCIONES<a class="headerlink" href="#instrucciones" title="Permalink to this headline">¶</a></h2>
+<p>Las 20 tablas históricas creadas son las siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_CELLRES_WCEL_BHC_short.sql">UMTS_C_NSN_CELLRES_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_CELLRES_WCEL_BHP_short.sql">UMTS_C_NSN_CELLRES_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_HSDPAW_WCEL_BHC_short.sql">UMTS_C_NSN_HSDPAW_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_HSDPAW_WCEL_BHC_short.sql">UMTS_C_NSN_HSDPAW_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_HSDPAW_WCEL_DAY_short.sql">UMTS_C_NSN_HSDPAW_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_SERVLEV_WCEL_BHC_short.sql">UMTS_C_NSN_SERVLEV_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_SERVLEV_WCEL_BHP_short.sql">UMTS_C_NSN_SERVLEV_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_SERVLEV_WCEL_DAY_short.sql">UMTS_C_NSN_SERVLEV_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_TRAFFIC_WCEL_BHC_short.sql">UMTS_C_NSN_TRAFFIC_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_TRAFFIC_WCEL_BHC_short.sql">UMTS_C_NSN_TRAFFIC_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_C_NSN_TRAFFIC_WCEL_DAY_short.sql">UMTS_C_NSN_TRAFFIC_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_D_NSN_SERVICE_WCEL_BHC_short.sql">UMTS_D_NSN_SERVICE_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_D_NSN_SERVICE_WCEL_BHP_short.sql">UMTS_D_NSN_SERVICE_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTS_D_NSN_SERVICE_WCEL_DAY_short.sql">UMTS_D_NSN_SERVICE_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_HO_WCEL_DAY_short.sql">UMTSC_NSN_HO_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_HSDPA_WCEL_DAY_short.sql">UMTSC_NSN_HSDPA_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_SERVICE_WCEL_BHC_short.sql">UMTSC_NSN_SERVICE_WCEL_BHC</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_SERVICE_WCEL_BHP_short.sql">UMTSC_NSN_SERVICE_WCEL_BHP</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_SERVICE_WCEL_DAY_short.sql">UMTSC_NSN_SERVICE_WCEL_DAY</a>.</li>
+<li><a class="reference external" href="../_static/images/querieshistoricoumts/UMTSC_NSN_TRAFFIC_WCEL_DAY_short.sql">UMTSC_NSN_TRAFFIC_WCEL_DAY</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tecnologia4g.html" class="btn btn-neutral float-right" title="INSTRUCTIVOS TECNOLOGIA 4G" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="soporteumts.html" class="btn btn-neutral" title="SOPORTE UMTS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -97,6 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="soporteumts.html">2. Soporte UMTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tablashistorico.html">3. Migrar Historico de Smart a Data Warehouse</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
@@ -359,10 +360,36 @@ La misma recibe los siguientes parámetros:</p>
 <img alt="../_images/pag20.png" class="align-center" src="../_images/pag20.png" />
 <p>El script nos da como resultado:</p>
 <img alt="../_images/pag211.png" class="align-center" src="../_images/pag211.png" />
-<p>Si se han recuperado tablas a nivel day/bh, es necesario reprocesar las tablas semanales. Entonces nos situamos en la carpeta /calidad/nokia/umts/summary/, donde ejecutamos el siguiente script:</p>
+<p>Si se han recuperado tablas a nivel day/bh, es necesario reprocesar los tableros diarios ejecutando los scripts ubicados en:</p>
+<ul class="simple">
+<li>/calidad/tablero/minutos/tablero_minutos.sh</li>
+<li>/calidad/tablero/geometria/daily/geometriaIndicadores.</li>
+<li>/calidad/tablero/radar/daily/umtsCldd_RadarIndicador.sh</li>
+<li>/calidad/tablero/nqi/daily/nqi_day_ins.sh</li>
+</ul>
+<p>Si se han recuperado tablas a nivel day/bh correspondientes a la semana anterior, es necesario reprocesar las tablas semanales y los tableros semanales.</p>
+<p>Para reprocesar tablas semanales nos situamos en la carpeta /calidad/nokia/umts/summary/, donde ejecutamos el siguiente script:</p>
 <blockquote>
-<div>nokia_umts_week.sh</div></blockquote>
-<p>El cual no recibe parámetros y calcula automáticamente la semana anterior a la fecha del dia. Este script carga las tablas de isabh week y de day week.</p>
+<div><ul class="simple">
+<li>nokia_umts_week.sh.</li>
+</ul>
+</div></blockquote>
+<p>El cual no recibe parámetros y calcula automáticamente la semana anterior a la fecha del dia.  Este script carga las tablas de isabh week y de day week.</p>
+<p>Para reprocesar los tableros semanales ejecutar los siguientes scripts:</p>
+<ul class="simple">
+<li>/calidad/tablero/region/tablero_region_week.sh</li>
+<li>/calidad/tablero/minutos/tablero_minutos_week.sh</li>
+<li>/calidad/tablero/umts/tablero_umts_week.sh</li>
+<li>/calidad/tablero/indicators/analisis_indicadores.sh</li>
+<li>/calidad/tablero/dashboard/dashboard_week.sh</li>
+<li>/calidad/tablero/gestion/tablero_alarm_gestion_week.sh</li>
+<li>/calidad/tablero/taskforce/tablero_taskfoce.sh</li>
+<li>/calidad/tablero/radar/summary/umtsClddRadarIndicadorDayW.sh</li>
+<li>/calidad/tablero/iur/tablero_iur.sh</li>
+<li>/calidad/tablero/geometria/summary/geometriaIndicadoresWeekly.sh</li>
+<li>/calidad/tablero/nqi/summary/tablero_nqi_week.sh</li>
+</ul>
+<p>Si se han recuperado tablas a nivel day/bh del mes anterior, es necesario reprocesar DAY_MONTH y todos los tableros mensuales.</p>
 </div>
 </div>
 </div>
