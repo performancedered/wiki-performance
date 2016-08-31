@@ -306,6 +306,38 @@ Para reprocesar los tableros semanales ejecutar los siguientes scripts:
 + /calidad/tablero/nqi/summary/tablero_nqi_week.sh 
  
 Si se han recuperado tablas a nivel day/bh del mes anterior, es necesario reprocesar DAY_MONTH y todos los tableros mensuales.
- 
 
 
+Reinserción de tablas UMTS
+--------------------------
+
+Este proceso es semiautomático y se deben realizar los siguientes pasos para reinsertar datos: 
+
+1° Para construir el set de datos primero se debe ejecutar la query:
+
+.. _insertarTablaAuxRawUMTS: ../_static/images/queries/insertarTablaAuxRawUMTS.sql
+
+insertarTablaAuxRawUMTS_
+  
+2° Ejecutar la query del constructor: 
+
+.. _constructorCallConstructorProcedureReInsert_Umts: ../_static/images/queries/constructorCallConstructorProcedureReInsert_Umts.sql 
+
+constructorCallConstructorProcedureReInsert_Umts_
+
+Nos muestra como resultado: 
+
+.. image:: ../_static/images/instructivo-umts/pag23.png
+  :align: center
+
+3° Se debe tomar el resultado que nos muestra en la pestaña “Output” para crear el bloque PL/SQL anónimo, ejecutar el bloque PL/SQL anónimo:
+
+.. image:: ../_static/images/instructivo-umts/pag24.png
+  :align: center
+
+En el bloque PL/SQL define los siguientes parámetros: 
+
+.. image:: ../_static/images/instructivo-umts/pag24.2.png
+  :align: center
+
+Al finalizar los pasos detallados anteriormente los datos son reinsertados con éxito. 

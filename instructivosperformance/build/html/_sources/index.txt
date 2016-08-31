@@ -59,7 +59,11 @@
 
   MAPA <mapa.rst> 
 
+  .. toctree::
+  :hidden:
+  :maxdepth: 8
 
+  PROYECTOS <proyectos.rst> 
 
 PERFORMANCE
 ===========

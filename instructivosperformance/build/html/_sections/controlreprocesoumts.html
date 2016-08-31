@@ -94,6 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#definiciones">2.      DEFINICIONES</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#instrucciones-operativas">3.      INSTRUCCIONES OPERATIVAS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reinsercion-de-tablas-umts">Reinserción de tablas UMTS</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="soporteumts.html">2. Soporte UMTS</a></li>
@@ -117,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
 </ul>
 
             
@@ -184,13 +186,13 @@
 <div class="section" id="instrucciones-operativas">
 <h2>3.      INSTRUCCIONES OPERATIVAS<a class="headerlink" href="#instrucciones-operativas" title="Permalink to this headline">¶</a></h2>
 <p>Para realizar este instructivo, se requiere acceso por SSH a Perdido, y el programa PL/SQL Developer con acceso a Smart.</p>
-<img alt="../_images/pag21.png" class="align-center" src="../_images/pag21.png" />
+<img alt="../_images/pag22.png" class="align-center" src="../_images/pag22.png" />
 <dl class="docutils">
 <dt>Ingresar al programa PL/SQL Developer   &#8211;&gt;Ingresar Username</dt>
 <dd>&#8211;&gt;  Ingresa Password</dd>
 </dl>
-<img alt="../_images/pag3.png" class="align-center" src="../_images/pag3.png" />
-<img alt="../_images/pag3.21.png" class="align-center" src="../_images/pag3.21.png" />
+<img alt="../_images/pag31.png" class="align-center" src="../_images/pag31.png" />
+<img alt="../_images/pag3.22.png" class="align-center" src="../_images/pag3.22.png" />
 <p>Aquí se referenciarán las consultas presentes en los scripts:</p>
 <ul class="simple">
 <li>Control 1 UMTS.sql</li>
@@ -206,11 +208,11 @@
 <div class="section" id="a-control-1-umts-sql">
 <h3>a.      Control 1 UMTS.sql<a class="headerlink" href="#a-control-1-umts-sql" title="Permalink to this headline">¶</a></h3>
 <p>Se ejecuta la consulta Control 1 UMTS.sql.</p>
-<img alt="../_images/pag41.png" class="align-center" src="../_images/pag41.png" />
-<img alt="../_images/pag51.png" class="align-center" src="../_images/pag51.png" />
+<img alt="../_images/pag42.png" class="align-center" src="../_images/pag42.png" />
+<img alt="../_images/pag52.png" class="align-center" src="../_images/pag52.png" />
 <img alt="../_images/pag5.2.png" class="align-center" src="../_images/pag5.2.png" />
-<img alt="../_images/pag61.png" class="align-center" src="../_images/pag61.png" />
-<img alt="../_images/pag6.2.png" class="align-center" src="../_images/pag6.2.png" />
+<img alt="../_images/pag62.png" class="align-center" src="../_images/pag62.png" />
+<img alt="../_images/pag6.21.png" class="align-center" src="../_images/pag6.21.png" />
 <p>La misma recibe los siguientes parámetros:</p>
 <blockquote>
 <div><ul class="simple">
@@ -227,11 +229,11 @@
 <li>Fecha hasta</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag7.png" class="align-center" src="../_images/pag7.png" />
+<img alt="../_images/pag71.png" class="align-center" src="../_images/pag71.png" />
 <p>La busqueda a traves de las variables ingresadas muestra como resultado:</p>
-<img alt="../_images/pag7.21.png" class="align-center" src="../_images/pag7.21.png" />
+<img alt="../_images/pag7.22.png" class="align-center" src="../_images/pag7.22.png" />
 <p>En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta, en donde deberemos ajustar el FILENAME según el RC que nos interese, y la fecha/hora que nos importe:</p>
-<img alt="../_images/pag8.png" class="align-center" src="../_images/pag8.png" />
+<img alt="../_images/pag81.png" class="align-center" src="../_images/pag81.png" />
 <img alt="../_images/pag8.21.png" class="align-center" src="../_images/pag8.21.png" />
 <p>Los valores en Status pueden ser tres posibles:</p>
 <blockquote>
@@ -243,7 +245,7 @@
 </div></blockquote>
 <p>Nótese que hay 13 elementos, que corresponden a las 13 mediciones diferentes, para el RC seleccionado, en la hora seleccionada.</p>
 <p>En caso de que necesitar reprocesar lo único que se debe hacer el dejar el archivo en estado PENDIENTE. Para ello ejecutar la siguiente sentencia, siempre ajustando el valor del RC y de la fecha/hora:</p>
-<img alt="../_images/pag9.png" class="align-center" src="../_images/pag9.png" />
+<img alt="../_images/pag91.png" class="align-center" src="../_images/pag91.png" />
 <p>Luego presiona commit &#8211;&gt; Yes</p>
 <img alt="../_images/pag9.21.png" class="align-center" src="../_images/pag9.21.png" />
 </div>
@@ -258,11 +260,11 @@
 <p>La consulta recibe los siguientes parámetros:
 •       &amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
 •       &amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</p>
-<img alt="../_images/pag101.png" class="align-center" src="../_images/pag101.png" />
+<img alt="../_images/pag102.png" class="align-center" src="../_images/pag102.png" />
 <img alt="../_images/pag10.2.png" class="align-center" src="../_images/pag10.2.png" />
-<img alt="../_images/pag11.png" class="align-center" src="../_images/pag11.png" />
+<img alt="../_images/pag111.png" class="align-center" src="../_images/pag111.png" />
 <img alt="../_images/pag11.21.png" class="align-center" src="../_images/pag11.21.png" />
-<img alt="../_images/pag121.png" class="align-center" src="../_images/pag121.png" />
+<img alt="../_images/pag122.png" class="align-center" src="../_images/pag122.png" />
 <p>Debe Ingresar:</p>
 <blockquote>
 <div><ul class="simple">
@@ -272,7 +274,7 @@
 </div></blockquote>
 <img alt="../_images/pag12.21.png" class="align-center" src="../_images/pag12.21.png" />
 <p>La Busqueda a traves de las variables ingresadas muestra como resultado:</p>
-<img alt="../_images/pag13.png" class="align-center" src="../_images/pag13.png" />
+<img alt="../_images/pag131.png" class="align-center" src="../_images/pag131.png" />
 <p>Si tenemos diferencias o faltantes pero tenemos datos en dichas horas en las tablas raw, debemos ingresar manualmente “nuevos pedidos de procesamiento” en las colas. Para ello, tenemos un script que permite generar la llamada a esos pedidos.
 Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:</p>
 <p>SERVICE</p>
@@ -295,13 +297,13 @@ Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:</p
 </div></blockquote>
 <p>De ahí que, en dicho script, se comente/descomente la línea de DBMS_OUTPUT, para lograr la salida deseada, para la tabla que necesitamos.
 En general, siempre procesar primero tablas detail wcell, luego master master wcell, y luego ídem con tablas NE.</p>
-<img alt="../_images/pag141.png" class="align-center" src="../_images/pag141.png" />
+<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
 <p>Este script genera la siguiente salida:</p>
-<img alt="../_images/pag14.2.png" class="align-center" src="../_images/pag14.2.png" />
+<img alt="../_images/pag14.21.png" class="align-center" src="../_images/pag14.21.png" />
 <p>Copiamos estos comandos, y los debemos ejecutar en Perdido, en la ruta /calidad/nokia/umts/aq/hourly/enqueue.</p>
 <img alt="../_images/pag151.png" class="align-center" src="../_images/pag151.png" />
 <p>Luego presiona &#8211;&gt; Open</p>
-<img alt="../_images/pag161.png" class="align-center" src="../_images/pag161.png" />
+<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
 <p>En dicha ruta existen a modo de ejemplo los siguientes scripts, los cuales pueden servir de referencia</p>
 <img alt="../_images/pag16.21.png" class="align-center" src="../_images/pag16.21.png" />
 <p>Luego, se deben controlar el estado de dichas colas, para ello ejecutar las consultas:</p>
@@ -325,7 +327,7 @@ En general, siempre procesar primero tablas detail wcell, luego master master wc
 </div></blockquote>
 <p>A modo ejemplo ejecutamos  la siguiente consulta: ReportUmtsNsnHourlyServiceDetailWcell.sql</p>
 <img alt="../_images/pag171.png" class="align-center" src="../_images/pag171.png" />
-<img alt="../_images/pag181.png" class="align-center" src="../_images/pag181.png" />
+<img alt="../_images/pag182.png" class="align-center" src="../_images/pag182.png" />
 </div>
 <div class="section" id="procedimiento-controles-daily-busy-hour-controles-semanales">
 <h3>2.      Procedimiento Controles Daily/Busy Hour – Controles Semanales:<a class="headerlink" href="#procedimiento-controles-daily-busy-hour-controles-semanales" title="Permalink to this headline">¶</a></h3>
@@ -339,7 +341,7 @@ La misma recibe los siguientes parámetros:</p>
 </div></blockquote>
 <img alt="../_images/pag18.2.png" class="align-center" src="../_images/pag18.2.png" />
 <p>[No adjuntamos la consulta dado que es muy extensa y se utiliza ocasionalmente].</p>
-<img alt="../_images/pag19.png" class="align-center" src="../_images/pag19.png" />
+<img alt="../_images/pag191.png" class="align-center" src="../_images/pag191.png" />
 <p>Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs.</p>
 <p>Para reprocesar debemos ir a la carpeta /calidad/nokia/umts/daily/, y ejecutar los siguientes scripts:</p>
 <blockquote>
@@ -348,7 +350,7 @@ La misma recibe los siguientes parámetros:</p>
 <li>Tablas busy hour (BH): nokia_umts_bh_rec.sh</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag19.2.png" class="align-center" src="../_images/pag19.2.png" />
+<img alt="../_images/pag19.21.png" class="align-center" src="../_images/pag19.21.png" />
 <p>Estos scripts reciben 3 parámetros:</p>
 <blockquote>
 <div><ul class="simple">
@@ -391,6 +393,21 @@ La misma recibe los siguientes parámetros:</p>
 </ul>
 <p>Si se han recuperado tablas a nivel day/bh del mes anterior, es necesario reprocesar DAY_MONTH y todos los tableros mensuales.</p>
 </div>
+</div>
+<div class="section" id="reinsercion-de-tablas-umts">
+<h2>Reinserción de tablas UMTS<a class="headerlink" href="#reinsercion-de-tablas-umts" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso es semiautomático y se deben realizar los siguientes pasos para reinsertar datos:</p>
+<p>1° Para construir el set de datos primero se debe ejecutar la query:</p>
+<p><a class="reference external" href="../_static/images/queries/insertarTablaAuxRawUMTS.sql">insertarTablaAuxRawUMTS</a></p>
+<p>2° Ejecutar la query del constructor:</p>
+<p><a class="reference external" href="../_static/images/queries/constructorCallConstructorProcedureReInsert_Umts.sql">constructorCallConstructorProcedureReInsert_Umts</a></p>
+<p>Nos muestra como resultado:</p>
+<img alt="../_images/pag231.png" class="align-center" src="../_images/pag231.png" />
+<p>3° Se debe tomar el resultado que nos muestra en la pestaña “Output” para crear el bloque PL/SQL anónimo, ejecutar el bloque PL/SQL anónimo:</p>
+<img alt="../_images/pag241.png" class="align-center" src="../_images/pag241.png" />
+<p>En el bloque PL/SQL define los siguientes parámetros:</p>
+<img alt="../_images/pag24.2.png" class="align-center" src="../_images/pag24.2.png" />
+<p>Al finalizar los pasos detallados anteriormente los datos son reinsertados con éxito.</p>
 </div>
 </div>
 
