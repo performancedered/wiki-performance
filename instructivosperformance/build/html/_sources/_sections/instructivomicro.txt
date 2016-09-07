@@ -1,5 +1,5 @@
-INSTRUCTIVO MICROSTRATEGY
-=========================
+INSTRUCTIVO DASHBOARD MICROSTRATEGY
+===================================
 
 1.	OBJETIVO
 ------------

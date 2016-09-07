@@ -11,4 +11,4 @@ TABLEROS
 
     2. Tablero Mous Day <../../_sections/tableromousday>
 
-    3.	Instructivo MicroStrategy <../../_sections/instructivomicro>
+    3.	Instructivo Dashboard MicroStrategy <../../_sections/instructivomicro>
