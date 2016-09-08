@@ -197,7 +197,6 @@
 <ul class="simple">
 <li>Control 1 UMTS.sql</li>
 <li>Control 2 UMTS.sql</li>
-<li>Control 3 UMTS.sql</li>
 </ul>
 <div class="section" id="procedimiento-controles-hour">
 <h3>Procedimiento Controles Hour:<a class="headerlink" href="#procedimiento-controles-hour" title="Permalink to this headline">¶</a></h3>
@@ -208,15 +207,12 @@
 <div class="section" id="a-control-1-umts-sql">
 <h3>a.      Control 1 UMTS.sql<a class="headerlink" href="#a-control-1-umts-sql" title="Permalink to this headline">¶</a></h3>
 <p>Se ejecuta la consulta Control 1 UMTS.sql.</p>
-<img alt="../_images/pag42.png" class="align-center" src="../_images/pag42.png" />
-<img alt="../_images/pag52.png" class="align-center" src="../_images/pag52.png" />
-<img alt="../_images/pag5.2.png" class="align-center" src="../_images/pag5.2.png" />
-<img alt="../_images/pag62.png" class="align-center" src="../_images/pag62.png" />
-<img alt="../_images/pag6.21.png" class="align-center" src="../_images/pag6.21.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-umts/Control1-UMTS.sql">Control_1_UMTS</a></li>
+</ul>
 <p>La misma recibe los siguientes parámetros:</p>
 <blockquote>
 <div><ul class="simple">
-<li>&amp;OSSRC: Regional Cluster, cuyos valores válidos son OSSRC1, OSSRC2, OSSRC3</li>
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 <li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 </ul>
@@ -224,7 +220,6 @@
 <p>Ingresar:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Región (OSSRC): Existen 3 tipos de regiones (OSSRC1, OSSRC2, OSSRC3)</li>
 <li>Fecha desde</li>
 <li>Fecha hasta</li>
 </ul>
@@ -253,18 +248,19 @@
 <h3>b.      Control 2 UMTS.sql.<a class="headerlink" href="#b-control-2-umts-sql" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Aquí se revisan las tablas hour, pero del denominado “modelo nuevo de UMTS”, el cual consiste en un conjunto de tablas maestro/detalle, separadas por medición, y agrupadas en tablas de celda (WCELL) y demás elementos (NE). Este modelo carga sus datos mediante un sistema de colas de procesamiento.</div></blockquote>
-<p>Las mediciones que se utilizan son:
-•       Service
-•       HO (Handover)</p>
+<p>Las mediciones que se utilizan son:</p>
+<ul class="simple">
+<li>Service</li>
+<li>CellRes</li>
+<li>HO (Handover)</li>
+</ul>
 <p>La siguiente consulta se utiliza para Service pero en formato se aplica de la misma manera para HO.</p>
 <p>La consulta recibe los siguientes parámetros:
 •       &amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
 •       &amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</p>
-<img alt="../_images/pag102.png" class="align-center" src="../_images/pag102.png" />
-<img alt="../_images/pag10.2.png" class="align-center" src="../_images/pag10.2.png" />
-<img alt="../_images/pag111.png" class="align-center" src="../_images/pag111.png" />
-<img alt="../_images/pag11.21.png" class="align-center" src="../_images/pag11.21.png" />
-<img alt="../_images/pag122.png" class="align-center" src="../_images/pag122.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-umts/Control2-UMTS.sql">Control_2_UMTS</a></li>
+</ul>
 <p>Debe Ingresar:</p>
 <blockquote>
 <div><ul class="simple">

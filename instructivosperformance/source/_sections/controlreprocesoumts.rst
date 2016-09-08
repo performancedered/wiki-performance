@@ -39,7 +39,6 @@ Aquí se referenciarán las consultas presentes en los scripts:
 
 •	Control 1 UMTS.sql
 •	Control 2 UMTS.sql
-•	Control 3 UMTS.sql
 
 Procedimiento Controles Hour:
 .............................
@@ -51,32 +50,18 @@ a.	Control 1 UMTS.sql
 
 Se ejecuta la consulta Control 1 UMTS.sql.
 
-.. image:: ../_static/images/instructivo-umts/pag4.png
-  :align: center
+.. _Control_1_UMTS: ../_static/images/instructivo-umts/Control1-UMTS.sql
 
-.. image:: ../_static/images/instructivo-umts/pag5.png
-  :align: center
-
-
-.. image:: ../_static/images/instructivo-umts/pag5.2.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-umts/pag6.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-umts/pag6.2.png
-  :align: center
++	Control_1_UMTS_
 
 
 La misma recibe los siguientes parámetros:
 
-	•	&OSSRC: Regional Cluster, cuyos valores válidos son OSSRC1, OSSRC2, OSSRC3
 	•	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
 	•	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)
 
 Ingresar:
 
-	•	Región (OSSRC): Existen 3 tipos de regiones (OSSRC1, OSSRC2, OSSRC3)
 	•	Fecha desde
 	•	Fecha hasta
 
@@ -123,8 +108,11 @@ b.	Control 2 UMTS.sql.
 
  Aquí se revisan las tablas hour, pero del denominado “modelo nuevo de UMTS”, el cual consiste en un conjunto de tablas maestro/detalle, separadas por medición, y agrupadas en tablas de celda (WCELL) y demás elementos (NE). Este modelo carga sus datos mediante un sistema de colas de procesamiento. 
 Las mediciones que se utilizan son:
+
 •	Service
+•	CellRes
 •	HO (Handover)
+
 
 La siguiente consulta se utiliza para Service pero en formato se aplica de la misma manera para HO. 
 
@@ -132,20 +120,9 @@ La consulta recibe los siguientes parámetros:
 •	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
 •	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)
 
-.. image:: ../_static/images/instructivo-umts/pag10.png
-  :align: center
+.. _Control_2_UMTS: ../_static/images/instructivo-umts/Control2-UMTS.sql
 
-.. image:: ../_static/images/instructivo-umts/pag10.2.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-umts/pag11.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-umts/pag11.2.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-umts/pag12.png
-  :align: center
++	Control_2_UMTS_
 
 Debe Ingresar:
 
