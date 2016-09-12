@@ -34,7 +34,7 @@
   
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
-        <link rel="next" title="GESTIÓN" href="../gestion.html"/>
+        <link rel="next" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" href="instructivomicro.html"/>
         <link rel="prev" title="Tablero AMX Indicadores" href="tableroindicadores.html"/> 
 
   
@@ -110,9 +110,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCION DETALLADA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#el-proceso-denominado-tablero-mous-day-sql-se-obtiene-a-continuacion">El proceso denominado tablero_mous_day.sql se obtiene a continuación:</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 3.  Instructivo Dashboard MicroStrategy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
@@ -290,25 +294,13 @@ LOG=$3</p>
 <p>Reclamos por Pais - Sumarizacion Diaria - PYPROD  08/07/2016 09:17:07</p>
 <p>Finish Reclamos por Sitio - Sumarizacion Diaria 08/07/2016 09:17:08</p>
 <p>Finish Reclamos Sitios Day 08/07/2016 09:17:08</p>
-<p>El proceso .sql denominado tablero_mous_day.sql se transcribe a continuación:</p>
-<p>&#8211; Autor: Mario Heredia</p>
-<p>&#8211; Actualizacion: Mario Heredia - Aug 27 2009</p>
-<p>&#8211; Actualizacion: Mario Heredia - 21.09.2010</p>
-<p>&#8211; Actualizacion: Mario Heredia - 27.01.2011</p>
-<p>&#8211; Actualizacion: Mario Heredia. Fecha: 04.12.2014. Motivo: Implementacion de funciones.</p>
-<p>VARIABLE FECHA_DESDE VARCHAR2(15);
-VARIABLE FECHA_HASTA VARCHAR2(15);</p>
-<p>EXEC :FECHA_DESDE := &#8216;&amp;1&#8217;;
-EXEC :FECHA_HASTA := &#8216;&amp;2&#8217;;</p>
-<p>SELECT &#8216;INI: &#8216;||:FECHA_DESDE||&#8217; &#8216;||:FECHA_HASTA||&#8217; &#8216;||TO_CHAR(SYSDATE, &#8216;DD.MM.YYYY HH24:MI:SS&#8217;) INI FROM DUAL;</p>
-<p>BEGIN</p>
-<p>P_TABLERO_MOUS_DAY_INS (:FECHA_DESDE, :FECHA_HASTA);
-P_TABLERO_MOUS_DAY_NE_INS (:FECHA_DESDE, :FECHA_HASTA);</p>
-<p>END;
-/</p>
-<p>SELECT &#8216;FIN: &#8216;||:FECHA_DESDE||&#8217; &#8216;||:FECHA_HASTA||&#8217; &#8216;||TO_CHAR(SYSDATE, &#8216;DD.MM.YYYY HH24:MI:SS&#8217;) FIN FROM DUAL;</p>
-<p>EXIT;</p>
+<div class="section" id="el-proceso-denominado-tablero-mous-day-sql-se-obtiene-a-continuacion">
+<h3>El proceso denominado tablero_mous_day.sql se obtiene a continuación:<a class="headerlink" href="#el-proceso-denominado-tablero-mous-day-sql-se-obtiene-a-continuacion" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="../_static/images/tableromousday/tablero_mous_day.sql">Tablero_mous_day</a></p>
 <p>Los procedimientos P_TABLERO_MOUS_DAY_INS y P_TABLERO_MOUS_DAY_NE_INS se transcriben a continuación:</p>
+<p><a class="reference external" href="../_static/images/tableromousday/P_TABLERO_MOUS_DAY_INS.sql">P_TABLERO_MOUS_DAY_INS</a></p>
+<p><a class="reference external" href="../_static/images/tableromousday/P_TABLERO_MOUS_DAY_NE_INS.sql">P_TABLERO_MOUS_DAY_NE_INS</a></p>
+</div>
 </div>
 </div>
 
@@ -319,7 +311,7 @@ P_TABLERO_MOUS_DAY_NE_INS (:FECHA_DESDE, :FECHA_HASTA);</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="instructivomicro.html" class="btn btn-neutral float-right" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tableroindicadores.html" class="btn btn-neutral" title="Tablero AMX Indicadores" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

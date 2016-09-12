@@ -270,17 +270,12 @@ El cual no recibe parámetros y calcula automáticamente la semana anterior a la
 
 Para reprocesar los tableros semanales ejecutar los siguientes scripts:
  
-+ /calidad/tablero/region/tablero_region_week.sh                       
-+ /calidad/tablero/minutos/tablero_minutos_week.sh                     
-+ /calidad/tablero/umts/tablero_umts_week.sh                          
+                     
 + /calidad/tablero/indicators/analisis_indicadores.sh                  
-+ /calidad/tablero/dashboard/dashboard_week.sh                         
-+ /calidad/tablero/gestion/tablero_alarm_gestion_week.sh               
++ /calidad/tablero/dashboard/dashboard_week.sh                                      
 + /calidad/tablero/taskforce/tablero_taskfoce.sh                      
-+ /calidad/tablero/radar/summary/umtsClddRadarIndicadorDayW.sh        
 + /calidad/tablero/iur/tablero_iur.sh                                  
-+ /calidad/tablero/geometria/summary/geometriaIndicadoresWeekly.sh     
-+ /calidad/tablero/nqi/summary/tablero_nqi_week.sh 
+
  
 Si se han recuperado tablas a nivel day/bh del mes anterior, es necesario reprocesar DAY_MONTH y todos los tableros mensuales.
 

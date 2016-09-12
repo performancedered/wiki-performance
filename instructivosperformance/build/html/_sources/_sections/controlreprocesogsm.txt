@@ -53,9 +53,15 @@ Pasos para los controles necesarios en los datos de GSM y GPRS:
 
 1.	Ejecutar la primera consulta en el archivo Control GSM/GPRS.sql. para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.
 
-.. _GPRS_GSM_primer_circulo_new:  ../_static/images/instructivo-gsm/GPRS_GSM_primer_circulo_new.sql
 
-GPRS_GSM_primer_circulo_new_
+.. image:: ../_static/images/instructivo-gsm/pag4.png
+  :align: center
+
+.. image:: ../_static/images/instructivo-gsm/pag5.png
+  :align: center
+
+.. image:: ../_static/images/instructivo-gsm/pag6.png
+  :align: center
 
 Esta consulta recibe los siguientes parámetros:
 
@@ -72,7 +78,7 @@ Luego de ejecutar la consulta, debe ingresar:
 •	Hora Desde
 •	Fecha Hasta
 •	Hora Hasta
-
+•	Regional Clúster
 
 .. image:: ../_static/images/instructivo-gsm/pag7.1.png
   :align: center

@@ -183,42 +183,20 @@ Finish Reclamos por Sitio - Sumarizacion Diaria 08/07/2016 09:17:08
 Finish Reclamos Sitios Day 08/07/2016 09:17:08
 
 
-El proceso .sql denominado tablero_mous_day.sql se transcribe a continuación:
+El proceso denominado tablero_mous_day.sql se obtiene a continuación:
+.....................................................................
 
--- Autor: Mario Heredia
+.. _Tablero_mous_day : ../_static/images/tableromousday/tablero_mous_day.sql
 
--- Actualizacion: Mario Heredia - Aug 27 2009
+Tablero_mous_day_
 
--- Actualizacion: Mario Heredia - 21.09.2010
-
--- Actualizacion: Mario Heredia - 27.01.2011
-
--- Actualizacion: Mario Heredia. Fecha: 04.12.2014. Motivo: Implementacion de funciones.
-
-VARIABLE FECHA_DESDE VARCHAR2(15);
-VARIABLE FECHA_HASTA VARCHAR2(15);
-
-EXEC :FECHA_DESDE := '&1';
-EXEC :FECHA_HASTA := '&2';
-
-SELECT 'INI: '||:FECHA_DESDE||' '||:FECHA_HASTA||' '||TO_CHAR(SYSDATE, 'DD.MM.YYYY HH24:MI:SS') INI FROM DUAL;
-
-BEGIN
-
-P_TABLERO_MOUS_DAY_INS (:FECHA_DESDE, :FECHA_HASTA);
-P_TABLERO_MOUS_DAY_NE_INS (:FECHA_DESDE, :FECHA_HASTA);
-
-END;
-/
-
-SELECT 'FIN: '||:FECHA_DESDE||' '||:FECHA_HASTA||' '||TO_CHAR(SYSDATE, 'DD.MM.YYYY HH24:MI:SS') FIN FROM DUAL;
-
-EXIT;
 
 Los procedimientos P_TABLERO_MOUS_DAY_INS y P_TABLERO_MOUS_DAY_NE_INS se transcriben a continuación:
 
+.. _P_TABLERO_MOUS_DAY_INS: ../_static/images/tableromousday/P_TABLERO_MOUS_DAY_INS.sql
 
+P_TABLERO_MOUS_DAY_INS_
 
+.. _P_TABLERO_MOUS_DAY_NE_INS: ../_static/images/tableromousday/P_TABLERO_MOUS_DAY_NE_INS.sql
 
-
-
+P_TABLERO_MOUS_DAY_NE_INS_
