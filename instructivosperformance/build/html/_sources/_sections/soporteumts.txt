@@ -224,6 +224,10 @@ Descripción de las variables:
 
  A continuación se incrusta el documento variables.sh utilizado en la definición de funciones
 
+ .. _Variables : ../_static/images/soporteumts/variables.sh
+
+ Variables_ 
+
  
 
 
