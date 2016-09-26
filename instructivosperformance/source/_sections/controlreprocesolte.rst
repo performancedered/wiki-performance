@@ -2,17 +2,17 @@
 Instructivo Control y Reproceso de tablas LTE_ENODEB  
 ====================================================
 
-I.	OBJETIVO
+1.	OBJETIVO
 ------------
 
 El presente instructivo busca explicar y detallar el control y reproceso de datos para las plataformas 4G (acceso), para mantener la consistencia de datos en situaciones en donde por algún motivo el proceso de recolección automático falla.
 
-II.	ALCANCE
+2.	ALCANCE
 -----------
 
 Áreas involucradas: performance y calidad de red, procesos de operaciones y mantenimiento.
 
-III.	DEFINICIONES
+3.	DEFINICIONES
 --------------------
 
 •	&FD : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
@@ -22,7 +22,7 @@ III.	DEFINICIONES
 •	&RC : Regional Cluster, cuyos valores válidos son RC2, RC3
 •	&tabla: valores validos  
 
-IV.	INSTRUCCIONES OPERATIVAS
+4.	INSTRUCCIONES OPERATIVAS
 ----------------------------
 
 .. image:: ../_static/images/instructivo-lte/pag2.png
