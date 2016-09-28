@@ -176,3 +176,43 @@ La querie fue actualizada con éxito, mostrando el siguiente mensaje:
 
 .. image:: ../_static/images/instructivo-micro/pag16.2.png
   :align: center
+
+d. Ejecución de la querie
+.........................
+
+Para que el reporte dashboard sea actualizado cada semana, se deben ejecutar manualmente c/u de las queries, de la siguiente manera:  
+
+Ingresar a la carpeta “Informes Compartidos”: 
+
+.. image:: ../_static/images/instructivo-micro/pag17.png
+  :align: center
+
+A modo de ejemplo, tomamos la querie “ZTE”: 
+
+.. image:: ../_static/images/instructivo-micro/pag17.2.png
+  :align: center
+
+Sobre la querie se debe hacer clic en  --> Editar
+
+.. image:: ../_static/images/instructivo-micro/pag18.png
+  :align: center
+
+Hacer clic sobre el botón “Continuar”
+
+.. image:: ../_static/images/instructivo-micro/pag18.2.png
+  :align: center
+
+En pantalla nos muestra: 
+
+.. image:: ../_static/images/instructivo-micro/pag19.png
+  :align: center
+
+
+.. image:: ../_static/images/instructivo-micro/pag19.2.png
+  :align: center
+
+
+La querie fue actualizada con éxito, mostrando el siguiente mensaje: 
+
+.. image:: ../_static/images/instructivo-micro/pag20.png
+  :align: center
