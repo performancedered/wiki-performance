@@ -34,7 +34,7 @@
   
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
-        <link rel="next" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" href="instructivomicro.html"/>
+        <link rel="next" title="TABLERO NQI" href="tableronqi.html"/>
         <link rel="prev" title="Tablero AMX Indicadores" href="tableroindicadores.html"/> 
 
   
@@ -116,6 +116,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3. Tablero NQI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 3.  Instructivo Dashboard MicroStrategy</a></li>
 </ul>
 </li>
@@ -216,7 +217,9 @@
 <li>TRAFFIC_UL_EDGE: Tráfico de Datos de Subida GSM de alta velocidad (edge).  UL=Up Link</li>
 <li>LTE_DATA_DL_MBYTES: Tráfico de Datos de Bajada LTE (4G).  DL=Down Link</li>
 <li>LTE_DATA_UL_MBYTES: Tráfico de Datos de Subida LTE (4G).  UL=Up Link</li>
-<li>TOT_SUBS_LAC_LTE: Cantidad de Suscriptores de la red LTE, registrados en MME-Mobile Management Entity</li>
+<li>TOT_SUBS_LAC_LTE: Cantidad de Suscriptores de la red LTE, registrados en MME-Mobile Management Entity, en el caso de región PAÍS y con datos connected users en el caso de región MERCADO.</li>
+<li>TOT_SUBS_LAC_LTE cuando la región es MERCADO, se debe completar con los Connected Users del mercado correspondiente</li>
+<li>TOT_SUBS_LAC_LTE cuando la región es PAIS, se debe completar con el MME REGISTERED USERS FLNS 5015A diario del Pais correspondiente. Solo aplica para Argentina y Paraguay. Para Uruguay quedará incompleto por el momento hasta que la red LTE Alcatel de Uruguay sea integrada a smart.</li>
 </ul>
 <p>Server: perdido.claro.amx (10.92.50.83).</p>
 <p>Base de Datos: Oracle 10G.  Instancia WILLY</p>
@@ -311,7 +314,7 @@ LOG=$3</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="instructivomicro.html" class="btn btn-neutral float-right" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tableronqi.html" class="btn btn-neutral float-right" title="TABLERO NQI" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tableroindicadores.html" class="btn btn-neutral" title="Tablero AMX Indicadores" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

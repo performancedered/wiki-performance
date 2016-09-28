@@ -56,7 +56,9 @@ Descripción de los campos:
 +	TRAFFIC_UL_EDGE: Tráfico de Datos de Subida GSM de alta velocidad (edge).  UL=Up Link
 +	LTE_DATA_DL_MBYTES: Tráfico de Datos de Bajada LTE (4G).  DL=Down Link
 +	LTE_DATA_UL_MBYTES: Tráfico de Datos de Subida LTE (4G).  UL=Up Link
-+	TOT_SUBS_LAC_LTE: Cantidad de Suscriptores de la red LTE, registrados en MME-Mobile Management Entity
++	TOT_SUBS_LAC_LTE: Cantidad de Suscriptores de la red LTE, registrados en MME-Mobile Management Entity, en el caso de región PAÍS y con datos connected users en el caso de región MERCADO.
++ TOT_SUBS_LAC_LTE cuando la región es MERCADO, se debe completar con los Connected Users del mercado correspondiente
++ TOT_SUBS_LAC_LTE cuando la región es PAIS, se debe completar con el MME REGISTERED USERS FLNS 5015A diario del Pais correspondiente. Solo aplica para Argentina y Paraguay. Para Uruguay quedará incompleto por el momento hasta que la red LTE Alcatel de Uruguay sea integrada a smart.
 
 Server: perdido.claro.amx (10.92.50.83).  
 
