@@ -30,6 +30,30 @@ Se debe hacer clic en el botón “Continuar”:
 .. image:: ../_static/images/instructivo-micro/pag4.2.png
   :align: center
 
+a. Organización de carpetas 
+...........................
+
+.. image:: ../_static/images/instructivo-micro/pag4bis.png
+  :align: center
+
+Dentro de cada jefatura se encuentran: 
+
+• Queries
+
+• Dashboard
+
+• Informes
+
+.. image:: ../_static/images/instructivo-micro/pag5bis1.png
+  :align: center
+
+
+.. image:: ../_static/images/instructivo-micro/pag5bis2.png
+  :align: center
+
+.. image:: ../_static/images/instructivo-micro/pag5bis3.png
+  :align: center
+
 
 4.	CREACIÓN DEL DOCUMENTO
 --------------------------
