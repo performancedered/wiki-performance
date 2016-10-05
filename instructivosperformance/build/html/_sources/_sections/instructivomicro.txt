@@ -216,9 +216,14 @@ A modo de ejemplo, tomamos la querie “ZTE”:
 .. image:: ../_static/images/instructivo-micro/pag17.2.png
   :align: center
 
-Sobre la querie se debe hacer clic en  --> Editar
+Sobre la querie se debe hacer clic derecho  --> Modificar
 
 .. image:: ../_static/images/instructivo-micro/pag18.png
+  :align: center
+
+Hacer clic sobre el botón “Play (Ejecutar SQL)” para que muestre el resultado que ha cambiado:
+
+.. image:: ../_static/images/instructivo-micro/pag18bis.png
   :align: center
 
 Hacer clic sobre el botón “Continuar”
