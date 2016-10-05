@@ -169,7 +169,7 @@ A modo de ejemplo, tomamos la querie “ZTE”
 
 Sobre la querie se debe hacer clic derecho --> Modificar
 
-.. image:: ../_static/images/instructivo-micro/pag13.2.png
+.. image:: ../_static/images/instructivo-micro/pag13.3.png
   :align: center
 
 Nos muestra la querie que deseamos modificar: 
