@@ -105,7 +105,25 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ciscoprime.html">1. CISCO PRIME</a></li>
 <li class="toctree-l2"><a class="reference internal" href="femtoalcatel.html">2. ALCATEL FEMTOCELL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3. TABLERO 4G</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. TABLERO 4G</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1)      Objetivo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2)      Alcance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3)      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-de-los-campos">4)      DESCRIPCIÓN DE LOS CAMPOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#server">SERVER</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#base-de-datos">BASE DE DATOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tiempo-de-ejecucion">TIEMPO DE EJECUCIÓN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frecuencia">FRECUENCIA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#duracion-del-proceso">DURACIÓN DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ubicacion-del-proceso">UBICACIÓN DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logueo-del-proceso">LOGUEO DEL PROCESO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo">5)      MACRO FLUJO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tablas-utilizadas">6)      TABLAS UTILIZADAS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">7)      DESCRIPCIÓN DETALLADA</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="lteregional.html">4. LTE REGIONAL</a></li>
 </ul>
 </li>
@@ -155,12 +173,122 @@
             
   <div class="section" id="tablero-participacion-4g-ciudad-y-mercado">
 <h1>TABLERO PARTICIPACIÓN 4G CIUDAD Y MERCADO<a class="headerlink" href="#tablero-participacion-4g-ciudad-y-mercado" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1)      Objetivo<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
 <p>El objetivo del tablero es poder comparar la evolución de las redes 3G y 4G del vendor Nokia, por ciudad y por mercado. Se espera ver una mejora en los diferentes KPIs de 3G a medida que evoluciona el despliegue de la red 4G y más sitios son puestos en servicio comercial.</p>
 <p>Los KPIs a visualizar son: tráfico de datos, usuarios simultáneos, accesibilidad de datos, throughput por celda, throuhgput por usuario, cantidad de nodos instalados.
 La sumarización de los KPIs es day week.
 Las ciudades a incluír son las capitales de provincia.
 Los mercados a incluír son los de Argentina y Paraguay.</p>
 <p><a class="reference external" href="../_static/images/documentos/Tablero_Participacion4G_Ciudad_Mercado.xlsx">Tablero_Participacion4G_Ciudad_Mercado</a></p>
+</div>
+<div class="section" id="alcance">
+<h2>2)      Alcance<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3)      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<p>FD: Fecha desde, en formato DD.MM.YYYY
+FH: Fecha hasta, en formato DD.MM.YYYY</p>
+</div>
+<div class="section" id="descripcion-de-los-campos">
+<h2>4)      DESCRIPCIÓN DE LOS CAMPOS<a class="headerlink" href="#descripcion-de-los-campos" title="Permalink to this headline">¶</a></h2>
+<p>El nombre del tablero ciudad es: Tablero_Participacion4Gciudad</p>
+<p>Campos para Ciudad:</p>
+<img alt="../_images/pag37.png" class="align-center" src="../_images/pag37.png" />
+<p>El nombre del tablero mercado es: Tablero_Participacion4gmercado</p>
+<p>Campos para Mercado:</p>
+<img alt="../_images/pag46.png" class="align-center" src="../_images/pag46.png" />
+<ul class="simple">
+<li>FECHA: FECHA DAYWEEK, corresponde al domingo de inicio de la semana, se considera que la semana comienza el domingo y finaliza el sábado.</li>
+<li>TRAFICO HSDPA (HSDPAMACDGB): Tráfico umts hsdpa gb</li>
+<li>DLR99MACDGB: Tráfico umts rl99 gb</li>
+<li>HSDPAACTUSERAVG: Usuarios activos umts hsdpa promedio</li>
+<li>ACCESIBILITYHSDPA: Accesibilidad umts hsdpa</li>
+<li>TRAFFICDLGPRS: Tráfico GSM GPRS DL GB</li>
+<li>TRAFFICDLEDGE: TRAFICO GSM EDGE DL GB</li>
+<li>TRAFICO LTE (TRAFFICDL4G): Tráfico LTE DL GB</li>
+<li>ACCESIBILITYLTE:   Accesibilidad lte</li>
+<li>LTEACTUSERAVG (CELL_LOAD_ACT_UE_AVG): Usuarios activos lte promedio</li>
+<li>TRAFICO TOTAL   : Tráfico umts hsdpa gb + Tráfico umts rl99 gb + Tráfico gsm gprs dl gb + Tráfico gsm edge dl gb + Tráfico lte dl gb</li>
+<li>PARTICIPACIÓN 4G: Trafico lte dl gb / Tráfico total</li>
+<li>SITIO3G_U: Cantidad de sitios 3g simple portadora</li>
+<li>SITIO3G_D: Cantidad de sitios 3g doble portadora</li>
+<li>SITIO3G_S:  Cantidad de sitios 3g 4 - 6 sectores</li>
+<li>SITIO3G_T:  Cantidad de sitios 3g tercera portadora</li>
+<li>SITIO3G: Cantidad de sitios 3g</li>
+<li>SITIO4G: Cantidad de sitios 4g</li>
+<li>THP_USER_3G: Throughput de usuario 3g</li>
+<li>THP_CELL_3G: Throughput de celda 3g</li>
+<li>THP_CELL_LTE: Throughput de celda 4g</li>
+<li>THP_USER_LTE:  Throughput de usuario 4g</li>
+</ul>
+<div class="section" id="server">
+<h3>SERVER<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p>perdido.claro.amx (10.92.50.83) a falda.claro.amx(10.92.56.198)</p>
+</div>
+<div class="section" id="base-de-datos">
+<h3>BASE DE DATOS<a class="headerlink" href="#base-de-datos" title="Permalink to this headline">¶</a></h3>
+<p>Oracle 10G. Instancia DSMART2</p>
+</div>
+<div class="section" id="tiempo-de-ejecucion">
+<h3>TIEMPO DE EJECUCIÓN<a class="headerlink" href="#tiempo-de-ejecucion" title="Permalink to this headline">¶</a></h3>
+<p>Se ejecuta los días lunes a las 15 pm (cada 7 dias)</p>
+</div>
+<div class="section" id="frecuencia">
+<h3>FRECUENCIA<a class="headerlink" href="#frecuencia" title="Permalink to this headline">¶</a></h3>
+<p>Semanal</p>
+</div>
+<div class="section" id="duracion-del-proceso">
+<h3>DURACIÓN DEL PROCESO<a class="headerlink" href="#duracion-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p>2 minutos aprox</p>
+</div>
+<div class="section" id="ubicacion-del-proceso">
+<h3>UBICACIÓN DEL PROCESO<a class="headerlink" href="#ubicacion-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p>calidad/Tableros/RunAllTableros.kjb</p>
+</div>
+<div class="section" id="logueo-del-proceso">
+<h3>LOGUEO DEL PROCESO<a class="headerlink" href="#logueo-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p>El logueo del proceso se realiza en la ubicación calidad/tableros/PentahoLogs</p>
+</div>
+</div>
+<div class="section" id="macro-flujo">
+<h2>5)      MACRO FLUJO<a class="headerlink" href="#macro-flujo" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag53.png" class="align-center" src="../_images/pag53.png" />
+</div>
+<div class="section" id="tablas-utilizadas">
+<h2>6)      TABLAS UTILIZADAS<a class="headerlink" href="#tablas-utilizadas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>SELECT * FROM ALM_MERCADO;</li>
+<li>SELECT * FROM LTE_NSN_SERVICE_NE_DAYW;</li>
+<li>SELECT * FROM MULTIVENDOR_GPRS_DAYW;</li>
+<li>SELECT * FROM OBJECTS_SP_GSM;</li>
+<li>SELECT * FROM OBJECTS_SP_LTE;</li>
+<li>SELECT * FROM OBJECTS_SP_LTE_NE;</li>
+<li>SELECT * FROM OBJECTS_SP_UMTS;</li>
+<li>SELECT * FROM OBJECTS_SP_UMTS_NE;</li>
+<li>SELECT * FROM UMTS_NSN_HSDPA_MKT_DAYW;</li>
+<li>SELECT * FROM UMTS_NSN_HSDPA_WCEL_DAYW;</li>
+<li>SELECT * FROM UMTS_NSN_SERVICE_MKT_DAYW;</li>
+<li>SELECT * FROM UMTS_NSN_SERVICE_WCEL_DAYW;</li>
+<li>SELECT * FROM UMTSC_NSN_HSDPA_MKT_DAYW;</li>
+<li>SELECT * FROM UMTSC_NSN_HSDPA_WCEL_DAYW;</li>
+<li>SELECT * FROM UMTSC_NSN_MACD_WCEL_DAYW;</li>
+</ul>
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>7)      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<p>El Shell Script:</p>
+<p><a class="reference external" href="../_static/images/tablero4g/tableroRun.sh">TableroRun</a></p>
+<p>Los  procesos .sql denominado ciudad.sql y mercado.sql:</p>
+<p><a class="reference external" href="../_static/images/tablero4g/consultaCiudad.sql">ConsultaCiudad</a></p>
+<p><a class="reference external" href="../_static/images/tablero4g/consultaMercado.sql">ConsultaMercado</a></p>
+<p>La ejecución de los procesos nos muestra los siguientes resultados:</p>
+<p>Cuidad:</p>
+<img alt="../_images/pag74.png" class="align-center" src="../_images/pag74.png" />
+<p>Mercado:</p>
+<img alt="../_images/pag7.24.png" class="align-center" src="../_images/pag7.24.png" />
+</div>
 </div>
 
 
