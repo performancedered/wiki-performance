@@ -204,44 +204,32 @@ La querie fue actualizada con éxito, mostrando el siguiente mensaje:
 d. Ejecución de la querie
 .........................
 
-Para que el reporte dashboard sea actualizado cada semana, se deben ejecutar manualmente c/u de las queries, de la siguiente manera:  
+Para que el reporte dashboard sea actualizado cada semana, se realiza de la siguiente manera:  
 
-Ingresar a la carpeta “Informes Compartidos”: 
-
-.. image:: ../_static/images/instructivo-micro/pag17.png
-  :align: center
-
-A modo de ejemplo, tomamos la querie “ZTE”: 
-
-.. image:: ../_static/images/instructivo-micro/pag17.2.png
-  :align: center
-
-Sobre la querie se debe hacer clic derecho  --> Modificar
-
-.. image:: ../_static/images/instructivo-micro/pag18.png
-  :align: center
-
-Hacer clic sobre el botón “Play (Ejecutar SQL)” para que muestre el resultado que ha cambiado:
-
-.. image:: ../_static/images/instructivo-micro/pag18bis.png
-  :align: center
-
-Hacer clic sobre el botón “Continuar”
-
-.. image:: ../_static/images/instructivo-micro/pag18.2.png
-  :align: center
-
-En pantalla nos muestra: 
+Ingresar a la carpeta “Informes Compartidos”
 
 .. image:: ../_static/images/instructivo-micro/pag19.png
   :align: center
 
+Ingresar a la carpeta “Dashboard Acceso”
 
 .. image:: ../_static/images/instructivo-micro/pag19.2.png
   :align: center
 
-
-La querie fue actualizada con éxito, mostrando el siguiente mensaje: 
+A modo de ejemplo, tomamos la querie “BSC_APERTURA CPU LOAD”
 
 .. image:: ../_static/images/instructivo-micro/pag20.png
+  :align: center
+
+Sobre la querie se debe hacer clic derecho --> Publicar Nuevamente
+
+.. image:: ../_static/images/instructivo-micro/pag20.2.png
+  :align: center
+
+.. image:: ../_static/images/instructivo-micro/pag21.png
+  :align: center
+
+Cuando la solicitud fue actualizada con éxito, muestra el siguiente mensaje: 
+
+.. image:: ../_static/images/instructivo-micro/pag21.2.png
   :align: center
