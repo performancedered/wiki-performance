@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introducción a Smart GSM UMTS LTE &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="INTRODUCCIÓN" href="../introduccion.html"/>
+        <link rel="next" title="ACCESO" href="../acceso.html"/>
+        <link rel="prev" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" href="nomenclatura.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="nomenclatura.html">     1. Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     2. Introducción a Smart GSM UMTS LTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mediciones-de-performance-para-la-red-movil-en-claro">Mediciones de Performance para la Red Móvil en Claro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oss-propietario">OSS Propietario</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sistema-de-estadisticas-smart">Sistema de Estadísticas Smart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preguntas-basicas-sobre-indicadores">Preguntas básicas sobre indicadores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parser-de-archivos-xml">Parser de archivos XML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nomenclatura-de-los-sitios-y-radiobases">Nomenclatura de los Sitios y Radiobases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#agrupaciones-logicas-y-geograficas">Agrupaciones Lógicas y Geográficas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sumarizaciones-de-tiempo-hour-busy-hour-isabh-week-isabh-month-day-week-day-month">Sumarizaciones de Tiempo: Hour, Busy Hour, Isabh Week, Isabh Month, Day Week, Day Month</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-hour">Tablas HOUR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-day">Tablas DAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-bh">Tablas BH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-day-week">Tablas DAY WEEK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-day-month">Tablas DAY MONTH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-isabh-week">Tablas ISABH WEEK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-isabh-month">Tablas ISABH MONTH</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-formulas-de-kpi">Ejemplo de fórmulas de KPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-kpi-en-la-documentacion-nokia">Ejemplo de KPI en la documentación Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-counter-en-la-documentacion-nokia">Ejemplo de Counter en la documentación Nokia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-reporte-de-smart-y-la-consulta-sql-correspondiente">Ejemplo de Reporte de Smart y la consulta SQL correspondiente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referentes">Referentes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../introduccion.html">INTRODUCCIÓN</a> &raquo;</li>
+      
+    <li>Introducción a Smart GSM UMTS LTE</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduccion-a-smart-gsm-umts-lte">
+<h1>Introducción a Smart GSM UMTS LTE<a class="headerlink" href="#introduccion-a-smart-gsm-umts-lte" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mediciones-de-performance-para-la-red-movil-en-claro">
+<h2>Mediciones de Performance para la Red Móvil en Claro<a class="headerlink" href="#mediciones-de-performance-para-la-red-movil-en-claro" title="Permalink to this headline">¶</a></h2>
+<p>Describiremos brevemente el proceso de generación de estadísticas de desempeño de la red móvil, su recolección centralizada y su procesamiento para monitoreo diario y presentación de informes y reportes.</p>
+<div class="section" id="oss-propietario">
+<h3>OSS Propietario<a class="headerlink" href="#oss-propietario" title="Permalink to this headline">¶</a></h3>
+<p>Todos y cada uno de los elementos de la red de telecomunicaciones móviles (radiobases y controladores, bts, bsc, nodeb, rnc, etc) son gerenciados por el sistema centralizado de gestión que brinda el proveedor de la tecnología (OSS-Operational Support System).  Este sistema brinda el control de inventario, control de configuración, provisión de servicios, monitoreo de fallas y el monitoreo de las estadísticas de desempeño; para una mejor administración de los numerosos elementos de red, los mismos son distribuidos entre diferentes OSS.</p>
+<img alt="../_images/pag38.png" class="align-center" src="../_images/pag38.png" />
+<img alt="../_images/pag47.png" class="align-center" src="../_images/pag47.png" />
+<img alt="../_images/pag54.png" class="align-center" src="../_images/pag54.png" />
+</div>
+<div class="section" id="sistema-de-estadisticas-smart">
+<h3>Sistema de Estadísticas Smart<a class="headerlink" href="#sistema-de-estadisticas-smart" title="Permalink to this headline">¶</a></h3>
+<p>Adicionalmente al mencionado sistema de gestión específico del proveedor de la tecnología, se utiliza un sistema de almacenamiento que toma la información del primero, el cual facilita y agiliza tanto el acceso vía web de uso diario como la confección de informes y reportes periódicos y estratégicos.  En este sistema la retención de información se realiza durante mucho mayor tiempo.  La información estadística se utiliza en diferentes procesos de calidad: monitoreo periódico y continuo de la calidad (horarios, diarios, semanales, mensuales, anuales), verificación de mejoras de calidad como consecuencia de tareas de optimización, verificación cumplimiento de calidad nuevos elementos de red incorporados, selección de zonas donde enfocar la optimización de elementos, reportes estratégicos de performance y capacidades a mediano y largo plazo, etc.</p>
+<img alt="../_images/pag75.png" class="align-center" src="../_images/pag75.png" />
+<img alt="../_images/pag84.png" class="align-center" src="../_images/pag84.png" />
+<img alt="../_images/pag8.23.png" class="align-center" src="../_images/pag8.23.png" />
+<p>El almacenamiento de estadísticas y preparación de reportes es realizada por un equipo de profesionales ingenieros dedicados exclusivamente a esta tarea y la información es compartida apropiadamente a otros equipos: Optimización de Red, Control de Mejoras y Procesos, Ingeniería de Red Acceso, Ingeniería de Transmisión, Implantación de Red, Operaciones y Mantenimiento, etc.</p>
+</div>
+<div class="section" id="preguntas-basicas-sobre-indicadores">
+<h3>Preguntas básicas sobre indicadores<a class="headerlink" href="#preguntas-basicas-sobre-indicadores" title="Permalink to this headline">¶</a></h3>
+<p>¿Cómo se computan los indicadores (2G y 3G)?  Se utiliza el monitoreo de estadísticas de desempeño que brinda el proveedor de la tecnología mediante su sistema de gestión.</p>
+<p>¿Cómo se computan los valores mensuales para los indicadores (2G y 3G)?  Estos valores representan la hora pico mensual promedio.</p>
+<p>¿Cómo se computa la “Inaccesibilidad 2G”?  Es el cociente entre la suma de llamadas denegadas por diferentes causas y el total de intentos.</p>
+<p>¿Cómo se computa la “No Retenibilidad 2G”?  Es el cociente entre la suma de llamadas finalizadas involuntariamente por diferentes causas y el total de llamadas (CSR=100-Drop).</p>
+<p>¿Qué incluye y cómo se computa la “Capacidad” en 2G?  Esta capacidad es indicada por los elementos de red mediante un KPI específico.</p>
+<p>¿Existe un concepto equivalente a la “Capacidad” de 2G en 3G?  En 3G no existe un concepto equivalente a la capacidad 2G que sea indicada para cada elemento de red como un KPI específico.</p>
+<p>¿Cómo se computa la “Inaccesibilidad 3G?  Es el cociente entre la suma de llamadas denegadas por diferentes causas y el total de intentos.</p>
+<p>¿Cómo se computa la “No Retenibilidad” en 3G?  Es el cociente entre la suma de llamadas finalizadas involuntariamente y el total de llamadas.  Se computan como causas de llamadas que no finalizaron exitosamente todas las fallas involuntarias.</p>
+</div>
+<div class="section" id="parser-de-archivos-xml">
+<h3>Parser de archivos XML<a class="headerlink" href="#parser-de-archivos-xml" title="Permalink to this headline">¶</a></h3>
+<p>En los OSS Regional Cluster los paths donde se encuentran los archivos de CM/PM son:</p>
+<p>CM-Configuration Management: /var/opt/nokia/oss/global/racops/export</p>
+<p>PM-Performance Management: /d/oss/global/var/mediation/north/pm/export/yyyymmddhh</p>
+<ul class="simple">
+<li>Netact RC5 rc5vm5 10.105.39.12</li>
+<li>Netact RC6 rc6vm5 10.105.39.140</li>
+<li>Netact RC7 rc6vm5 10.105.44.142</li>
+<li>Netact RC8 rc8vm5 10.105.44.140</li>
+</ul>
+<p>El nombre genérico de un archivo de PM es: etlexpmx_&lt;MEAS&gt;yymmddhhmmss&lt;SN&gt;.xml.gz donde:</p>
+<p>&lt;MEAS&gt; define el elemento de red e incluso la medición</p>
+<p>&lt;SN&gt; es un número de serie del archivo, que no se repite</p>
+</div>
+<div class="section" id="nomenclatura-de-los-sitios-y-radiobases">
+<h3>Nomenclatura de los Sitios y Radiobases<a class="headerlink" href="#nomenclatura-de-los-sitios-y-radiobases" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="nomenclatura-actual">
+<h4>Nomenclatura actual<a class="headerlink" href="#nomenclatura-actual" title="Permalink to this headline">¶</a></h4>
+<p>La nomenclatura actual de las radio bases está descripta en el documento Cell ID UMTS_V10.xls</p>
+<img alt="../_images/pag104.png" class="align-center" src="../_images/pag104.png" />
+</div>
+<div class="section" id="nueva-nomenclatura">
+<h4>Nueva Nomenclatura<a class="headerlink" href="#nueva-nomenclatura" title="Permalink to this headline">¶</a></h4>
+<p>La NUEVA nomenclatura de las radiobases está explicada en el documento “Nomenclatura_Draft V1.2.xls”</p>
+<img alt="../_images/pag112.png" class="align-center" src="../_images/pag112.png" />
+</div>
+</div>
+<div class="section" id="agrupaciones-logicas-y-geograficas">
+<h3>Agrupaciones Lógicas y Geográficas<a class="headerlink" href="#agrupaciones-logicas-y-geograficas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>BTS</li>
+<li>BCF</li>
+<li>BSC</li>
+<li>WCEL</li>
+<li>WBTS</li>
+<li>RNC</li>
+<li>LNCEL</li>
+<li>LNBTS</li>
+<li>ALM</li>
+<li>Localidad</li>
+<li>Mercado</li>
+<li>País</li>
+</ul>
+<div class="section" id="agrupaciones-geograficas">
+<h4>Agrupaciones Geográficas<a class="headerlink" href="#agrupaciones-geograficas" title="Permalink to this headline">¶</a></h4>
+<p>Las ALM, Localidades, Mercados y Países son agrupaciones geográficas.</p>
+</div>
+<div class="section" id="agrupaciones-logicas-de-gsm">
+<h4>Agrupaciones lógicas de GSM<a class="headerlink" href="#agrupaciones-logicas-de-gsm" title="Permalink to this headline">¶</a></h4>
+<p>Para GSM las agrupaciones lógicas o de topología, relacionan varias BTS en una misma BCF, y varias BCF en una misma BSC.</p>
+<img alt="../_images/pag123.png" class="align-center" src="../_images/pag123.png" />
+</div>
+<div class="section" id="agrupaciones-logicas-de-umts">
+<h4>Agrupaciones lógicas de UMTS<a class="headerlink" href="#agrupaciones-logicas-de-umts" title="Permalink to this headline">¶</a></h4>
+<p>Para UMTS las agrupaciones lógicas o de topología, relacionan varias WCELL en una misma WBTS, y varias WBTS en una misma RNC.</p>
+<img alt="../_images/pag12.23.png" class="align-center" src="../_images/pag12.23.png" />
+</div>
+<div class="section" id="agrupaciones-logicas-de-lte">
+<h4>Agrupaciones lógicas de LTE<a class="headerlink" href="#agrupaciones-logicas-de-lte" title="Permalink to this headline">¶</a></h4>
+<p>Para LTE las agrupaciones lógicas o de topología, relacionan varias LNCEL en una misma LNBTS, y el concepto de BTS/RNC desaparece.</p>
+<p><a class="reference external" href="../_static/images/introSmart/Introducción_Smart_GSM_UMTS_LTE_Agrupaciones_Espaciales.sql">Introducción_Smart_GSM_UMTS_LTE_Agrupaciones_Espaciales</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="sumarizaciones-de-tiempo-hour-busy-hour-isabh-week-isabh-month-day-week-day-month">
+<h2>Sumarizaciones de Tiempo: Hour, Busy Hour, Isabh Week, Isabh Month, Day Week, Day Month<a class="headerlink" href="#sumarizaciones-de-tiempo-hour-busy-hour-isabh-week-isabh-month-day-week-day-month" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tablas-hour">
+<h3>Tablas HOUR<a class="headerlink" href="#tablas-hour" title="Permalink to this headline">¶</a></h3>
+<p>Cada uno de las radio bases o celdas, generan estadísticas cada una hora.  Esta información es guardada en las tablas HOUR de la base de datos.  Así, para un elemento en particular, ej: UCO008A, tenemos 24 valores hour en un día en la tabla UMTS_NSN_SERVICE_WCEL_HOU2</p>
+<img alt="../_images/pag133.png" class="align-center" src="../_images/pag133.png" />
+</div>
+<div class="section" id="tablas-day">
+<h3>Tablas DAY<a class="headerlink" href="#tablas-day" title="Permalink to this headline">¶</a></h3>
+<p>En la tabla DAY se suman los contadores del día, o sea los 24 valores hour.  Así, para un elemento en particular, ej: UCO008A, tenemos 1 valor por día en la tabla DAY.</p>
+<p>Ejemplo: UMTS_NSN_SERVICE_WCEL_DAY</p>
+<img alt="../_images/pag13.21.png" class="align-center" src="../_images/pag13.21.png" />
+</div>
+<div class="section" id="tablas-bh">
+<h3>Tablas BH<a class="headerlink" href="#tablas-bh" title="Permalink to this headline">¶</a></h3>
+<p>En la tabla Busy Hour cada elemento muestra 1 valor por día, específicamente el valor de la hora de mayor tráfico del día.</p>
+<p>Ejemplo: UMTS_NSN_SERVICE_WCEL_BHC</p>
+<img alt="../_images/pag13.31.png" class="align-center" src="../_images/pag13.31.png" />
+</div>
+<div class="section" id="tablas-day-week">
+<h3>Tablas DAY WEEK<a class="headerlink" href="#tablas-day-week" title="Permalink to this headline">¶</a></h3>
+<p>Estas tablas suman los contadores de los 7 días de la semana.  El comienzo de semana es el día domingo, y el fin de la semana es el día sábado.</p>
+<p>Ejemplo: UMTS_NSN_SERVICE_WCEL_DAYW.</p>
+<p>El 23/10/2016 es un día domingo, el inicio de la semana</p>
+<img alt="../_images/pag13.4.png" class="align-center" src="../_images/pag13.4.png" />
+</div>
+<div class="section" id="tablas-day-month">
+<h3>Tablas DAY MONTH<a class="headerlink" href="#tablas-day-month" title="Permalink to this headline">¶</a></h3>
+<p>Estas tablas suman los contadores de los 30 días del mes respectivamente.</p>
+</div>
+<div class="section" id="tablas-isabh-week">
+<h3>Tablas ISABH WEEK<a class="headerlink" href="#tablas-isabh-week" title="Permalink to this headline">¶</a></h3>
+<p>Se define como ISABH WEEK el “Individual Sector Average Busy Hour Week”.  O sea es el promedio de las horas pico de la semana, de los sectores individuales (celdas).  Se toman los 3 busy hour más altos de la semana, de una celda, y se los promedia.
+El comienzo de semana es el día domingo, y el fin de la semana es el día sábado.</p>
+</div>
+<div class="section" id="tablas-isabh-month">
+<h3>Tablas ISABH MONTH<a class="headerlink" href="#tablas-isabh-month" title="Permalink to this headline">¶</a></h3>
+<p>Se define como ISABH MONTH el “Individual Sector Average Busy Hour Month”.  O sea es el promedio de las horas pico del mes, de los sectores individuales (celdas).  Se toman los 7 busy hour más altos del mes, de una celda, y se los promedia.</p>
+</div>
+</div>
+<div class="section" id="ejemplo-de-formulas-de-kpi">
+<h2>Ejemplo de fórmulas de KPI<a class="headerlink" href="#ejemplo-de-formulas-de-kpi" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag153.png" class="align-center" src="../_images/pag153.png" />
+<img alt="../_images/pag15.22.png" class="align-center" src="../_images/pag15.22.png" />
+<img alt="../_images/pag164.png" class="align-center" src="../_images/pag164.png" />
+</div>
+<div class="section" id="ejemplo-de-kpi-en-la-documentacion-nokia">
+<h2>Ejemplo de KPI en la documentación Nokia<a class="headerlink" href="#ejemplo-de-kpi-en-la-documentacion-nokia" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag16.23.png" class="align-center" src="../_images/pag16.23.png" />
+<img alt="../_images/pag172.png" class="align-center" src="../_images/pag172.png" />
+</div>
+<div class="section" id="ejemplo-de-counter-en-la-documentacion-nokia">
+<h2>Ejemplo de Counter en la documentación Nokia<a class="headerlink" href="#ejemplo-de-counter-en-la-documentacion-nokia" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag183.png" class="align-center" src="../_images/pag183.png" />
+<img alt="../_images/pag193.png" class="align-center" src="../_images/pag193.png" />
+</div>
+<div class="section" id="ejemplo-de-reporte-de-smart-y-la-consulta-sql-correspondiente">
+<h2>Ejemplo de Reporte de Smart y la consulta SQL correspondiente<a class="headerlink" href="#ejemplo-de-reporte-de-smart-y-la-consulta-sql-correspondiente" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag202.png" class="align-center" src="../_images/pag202.png" />
+<img alt="../_images/pag213.png" class="align-center" src="../_images/pag213.png" />
+<p><a class="reference external" href="../_static/images/introSmart/pag21y22.sql">Consulta_Ejemplo_Smart</a></p>
+</div>
+<div class="section" id="referentes">
+<h2>Referentes<a class="headerlink" href="#referentes" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag231.png" class="align-center" src="../_images/pag231.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../acceso.html" class="btn btn-neutral float-right" title="ACCESO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nomenclatura.html" class="btn btn-neutral" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
