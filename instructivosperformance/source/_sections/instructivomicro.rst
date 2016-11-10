@@ -233,3 +233,54 @@ Cuando la solicitud fue actualizada con éxito, muestra el siguiente mensaje:
 
 .. image:: ../_static/images/instructivo-micro/pag21.2.png
   :align: center
+
+e. Ejecución Automática de la querie 
+...................................
+
+Para que el reporte dashboard sea ejecutado automáticamente, se realiza de la siguiente manera: 
+
+Debe ingresar a la carpeta donde se encuentran los dashboard, como por ejemplo  DASHBOARD IPRAN 
+
+.. image:: ../_static/images/instructivo-micro/pag22.png
+  :align: center
+
+Luego ingresar a las carpeta de las consultas,  por ejemplo  --> CONSULTAS IPRAN
+
+.. image:: ../_static/images/instructivo-micro/pag22.2.png
+  :align: center
+
+Luego elegimos la querie que necesitamos actualizar automáticamente, por ejemplo --> IPRAN-CABECERO LAGS
+
+.. image:: ../_static/images/instructivo-micro/pag23.png
+  :align: center
+
+Luego se debe hacer clic en --> Agregar suscripción de listas de historiales 
+
+.. image:: ../_static/images/instructivo-micro/pag23.2.png
+  :align: center
+
+En pantalla nos muestran los siguientes datos: 
+
+.. image:: ../_static/images/instructivo-micro/pag23.3.png
+  :align: center
+
+Se debe modificar la planificación, seleccionando --> 950- Ingeniería 
+
+.. image:: ../_static/images/instructivo-micro/pag24.png
+  :align: center
+
+Luego de seleccionar la opción del paso anterior se debe hacer clic en el botón –> Aceptar
+
+.. image:: ../_static/images/instructivo-micro/pag24.2.png
+  :align: center
+
+En pantalla nos muestra el siguiente mensaje de confirmación: 
+
+.. image:: ../_static/images/instructivo-micro/pag24.3.png
+  :align: center
+
+Se debe hacer clic en el botón –>“Aceptar” 
+En pantalla nos muestra que la consulta será ejecutada automáticamente todos los días: 
+
+.. image:: ../_static/images/instructivo-micro/pag25.png
+  :align: center
