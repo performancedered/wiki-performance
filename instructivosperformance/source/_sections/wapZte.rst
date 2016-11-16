@@ -20,11 +20,6 @@ El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8
 La plataforma WAP ZTE es un internet Gateway que permite a los teléfonos que no son smart phones la posibilidad de navegar en internet. No sólo funciona como proxy, sino también como adaptador de contenido, y en casos donde se visita una página web que tiene imágenes en alta definición, le baja la resolución para que el viejo teléfono lo pueda mostrar".
 
 
-Campos de la tabla FILE:
-
-.. image:: ../_static/images/wapZte/pag3.png
-  :align: center 
-
 Campos de la tabla WAP_GATEWAY_KPI_ZTE_AUX: 
 
 .. image:: ../_static/images/wapZte/pag4.png
@@ -151,10 +146,16 @@ Los scripts son los siguientes:
 6.4.	Listado de Tablas Utilizadas
 ....................................
 
+Campos de la tabla FILE:
+
+.. image:: ../_static/images/wapZte/pag3.png
+  :align: center 
+
 Las tablas utilizadas son las siguientes: 
 
 .. image:: ../_static/images/wapZte/pag9.png
   :align: center 
+
 
 
 6.5.	Pentaho
@@ -241,4 +242,26 @@ Por consola se utiliza de la siguiente manera:
 •	./Pentaho61/data-integration/kitchen.sh  -file=/home/calidad/WapZte/Rework.kjb –param:FECHA_PROC= YYYYMMDD
 
 .. image:: ../_static/images/wapZte/pag12.png
+  :align: center
+
+
+8.	SMART
+---------
+
+Los reportes en la herramienta Smart se muestran de la siguiente manera:
+
+.. image:: ../_static/images/wapZte/pag13.png
+  :align: center
+
+
+.. image:: ../_static/images/wapZte/pag14.png
+  :align: center
+
+.. image:: ../_static/images/wapZte/pag14.2.png
+  :align: center
+
+.. image:: ../_static/images/wapZte/pag15.png
+  :align: center
+
+.. image:: ../_static/images/wapZte/pag15.2.png
   :align: center
