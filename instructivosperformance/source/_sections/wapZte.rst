@@ -202,6 +202,7 @@ Escribe los siguientes datos:
 
 
 Tabla auxiliar de la tabla WAP_GATEWAY_KPI_ZTE
+
 Tabla auxiliar de la tabla WAP_GATEWAY_SERVICE_ZTE_AUX
 
 .. image:: ../_static/images/wapZte/pag11.png
