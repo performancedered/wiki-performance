@@ -34,8 +34,8 @@
   
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="INTRODUCCIÓN" href="../introduccion.html"/>
-        <link rel="next" title="ACCESO" href="../acceso.html"/>
-        <link rel="prev" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" href="nomenclatura.html"/> 
+        <link rel="next" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" href="nomenclatura.html"/>
+        <link rel="prev" title="INTRODUCCIÓN" href="../introduccion.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,8 +85,7 @@
             
                 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="nomenclatura.html">     1. Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">     2. Introducción a Smart GSM UMTS LTE</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     1. Introducción a Smart GSM UMTS LTE</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mediciones-de-performance-para-la-red-movil-en-claro">Mediciones de Performance para la Red Móvil en Claro</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#oss-propietario">OSS Propietario</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sistema-de-estadisticas-smart">Sistema de Estadísticas Smart</a></li>
@@ -106,6 +105,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#tablas-isabh-month">Tablas ISABH MONTH</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#tabla-objetos-umts">Tabla Objetos UMTS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-formulas-de-kpi">Ejemplo de fórmulas de KPI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-kpi-en-la-documentacion-nokia">Ejemplo de KPI en la documentación Nokia</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ejemplo-de-counter-en-la-documentacion-nokia">Ejemplo de Counter en la documentación Nokia</a></li>
@@ -113,6 +113,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#referentes">Referentes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="nomenclatura.html">     2. Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART</a></li>
 </ul>
 </li>
 </ul>
@@ -313,6 +314,33 @@ El comienzo de semana es el día domingo, y el fin de la semana es el día sába
 <p>Se define como ISABH MONTH el “Individual Sector Average Busy Hour Month”.  O sea es el promedio de las horas pico del mes, de los sectores individuales (celdas).  Se toman los 7 busy hour más altos del mes, de una celda, y se los promedia.</p>
 </div>
 </div>
+<div class="section" id="tabla-objetos-umts">
+<h2>Tabla Objetos UMTS<a class="headerlink" href="#tabla-objetos-umts" title="Permalink to this headline">¶</a></h2>
+<p>Conceptualmente para qué se usa la tabla: la tabla es una vista materializada que se actualiza diariamente de manera dinámica según la información recolectada de archivos XML brindados por Nokia que contienen la configuración actual de la red, por esto se conoce el proceso como CM (Configuration Management). Está conformada a nivel de Celda (1 fila = 1 celda) y contiene toda la información relevante a cada uno de estos objetos por lo que se usa como interfaz en gran cantidad de consultas, reportes y a su vez en la mayoría de los reportes de la herramienta SMART y SMART Maps.</p>
+<p>La misma contiene además de la configuración actual de las Celdas, el histórico de aquellas celdas que por distintos motivos ya no se encuentran en los archivos XML (se mudaron de OSSRC, se dio de baja el sitio, etc.), esto se logra mediante los campos WCELL_VALID_START_DATE y WCELL_VALID_FINISH_DATE los cuales definen el rango de tiempo en el que el objeto celda está vigente.</p>
+<ul class="simple">
+<li>Nombre: OBJECTS_SP_UMTS.</li>
+<li>Columnas: 91.</li>
+<li>Cantidad de registros actual: 234.451 17/Nov/2016</li>
+</ul>
+<p>Para concentrar la información relevante de cada celda, esta vista se alimenta de 9 tablas en la Base de Datos:</p>
+<blockquote>
+<div><ul class="simple">
+<li>MULTIVENDOR_OBJECTS: Contiene la información histórica de CM (CELDAS, SITIOS, RNC)</li>
+<li>MULTIVENDOR_OBJECT2: Tabla principal en la que se deposita la información de configuración de la RED de los archivos XML de Nokia diariamente, de aquí se obtiene la base de la información que provee la SP para cada Celda.</li>
+<li>ALM_MERCADO: A nivel de ALM contiene toda la información de las diferentes agrupaciones geográficas. (ALM, LOCALIDAD, MERCADO, REGION, ZONA, PAIS)</li>
+<li>CTI_CIUDAD_RF_FISICO: A nivel celda, se actualiza diariamente consultando tablas mediante DBlink a la base de datos LEDZITE y concentrar para las 3 tecnologías la información de los parámetros físicos de cada celda. (Coordenadas de ubicación, Azimuth, LAC, RAC).</li>
+<li>CTI_CIUDAD, CTI_CIUDAD_CELLID, CTI_CIUDAD_APERTURAS: Contienen información de agrupación geográfica de la Celda.</li>
+<li>MVENDOR_GESTION_CLUSTER: Identifica el Clúster al que pertenece la Celda.</li>
+<li>OBJECTS_CNC_NEW: Identifica el área definida por ENACOM (Ex-CNC) al que pertenece la Celda.</li>
+</ul>
+</div></blockquote>
+<p>La definición de estas vistas se encuentra en archivos .sql en una carpeta compartida, en los cuales se mantiene el histórico de cambios/actualizaciones que se realizan sobre la misma ya que al ser una vista esto no se guarda en la Base de Datos:</p>
+<p>Z:EngineerCalidadPerformanceDesarrollo SmartBase de datosScriptsObjetos</p>
+<p>El proceso de CM se ejecuta automáticamente a las 5:01am cada día:</p>
+<p>/calidad/harriague/processFtp&gt;# vcron nsnProcessEtlCMDataDaily.sh</p>
+<p>01 05 * * * /calidad/harriague/processFtp/nsnProcessEtlCMDataDaily.sh &gt; /dev/null 2&gt;&amp;1</p>
+</div>
 <div class="section" id="ejemplo-de-formulas-de-kpi">
 <h2>Ejemplo de fórmulas de KPI<a class="headerlink" href="#ejemplo-de-formulas-de-kpi" title="Permalink to this headline">¶</a></h2>
 <img alt="../_images/pag153.png" class="align-center" src="../_images/pag153.png" />
@@ -348,10 +376,10 @@ El comienzo de semana es el día domingo, y el fin de la semana es el día sába
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../acceso.html" class="btn btn-neutral float-right" title="ACCESO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="nomenclatura.html" class="btn btn-neutral float-right" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nomenclatura.html" class="btn btn-neutral" title="Nomenclatura y Sintaxis en Procedimientos Almacenados- SMART" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../introduccion.html" class="btn btn-neutral" title="INTRODUCCIÓN" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

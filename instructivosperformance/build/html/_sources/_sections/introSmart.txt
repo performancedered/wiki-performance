@@ -200,6 +200,47 @@ Tablas ISABH MONTH
 
 Se define como ISABH MONTH el “Individual Sector Average Busy Hour Month”.  O sea es el promedio de las horas pico del mes, de los sectores individuales (celdas).  Se toman los 7 busy hour más altos del mes, de una celda, y se los promedia.
 
+
+Tabla Objetos UMTS
+------------------
+
+Conceptualmente para qué se usa la tabla: la tabla es una vista materializada que se actualiza diariamente de manera dinámica según la información recolectada de archivos XML brindados por Nokia que contienen la configuración actual de la red, por esto se conoce el proceso como CM (Configuration Management). Está conformada a nivel de Celda (1 fila = 1 celda) y contiene toda la información relevante a cada uno de estos objetos por lo que se usa como interfaz en gran cantidad de consultas, reportes y a su vez en la mayoría de los reportes de la herramienta SMART y SMART Maps.
+
+La misma contiene además de la configuración actual de las Celdas, el histórico de aquellas celdas que por distintos motivos ya no se encuentran en los archivos XML (se mudaron de OSSRC, se dio de baja el sitio, etc.), esto se logra mediante los campos WCELL_VALID_START_DATE y WCELL_VALID_FINISH_DATE los cuales definen el rango de tiempo en el que el objeto celda está vigente.
+
+* Nombre: OBJECTS_SP_UMTS.
+
+* Columnas: 91. 
+
+* Cantidad de registros actual: 234.451 17/Nov/2016
+
+Para concentrar la información relevante de cada celda, esta vista se alimenta de 9 tablas en la Base de Datos:
+
+  * MULTIVENDOR_OBJECTS: Contiene la información histórica de CM (CELDAS, SITIOS, RNC)
+
+  * MULTIVENDOR_OBJECT2: Tabla principal en la que se deposita la información de configuración de la RED de los archivos XML de Nokia diariamente, de aquí se obtiene la base de la información que provee la SP para cada Celda.
+
+  * ALM_MERCADO: A nivel de ALM contiene toda la información de las diferentes agrupaciones geográficas. (ALM, LOCALIDAD, MERCADO, REGION, ZONA, PAIS)
+
+  * CTI_CIUDAD_RF_FISICO: A nivel celda, se actualiza diariamente consultando tablas mediante DBlink a la base de datos LEDZITE y concentrar para las 3 tecnologías la información de los parámetros físicos de cada celda. (Coordenadas de ubicación, Azimuth, LAC, RAC).
+
+  * CTI_CIUDAD, CTI_CIUDAD_CELLID, CTI_CIUDAD_APERTURAS: Contienen información de agrupación geográfica de la Celda.
+
+  * MVENDOR_GESTION_CLUSTER: Identifica el Clúster al que pertenece la Celda.
+
+  * OBJECTS_CNC_NEW: Identifica el área definida por ENACOM (Ex-CNC) al que pertenece la Celda.
+
+La definición de estas vistas se encuentra en archivos .sql en una carpeta compartida, en los cuales se mantiene el histórico de cambios/actualizaciones que se realizan sobre la misma ya que al ser una vista esto no se guarda en la Base de Datos:
+
+Z:\Engineer\Calidad\Performance\Desarrollo Smart\Base de datos\Scripts\Objetos
+
+El proceso de CM se ejecuta automáticamente a las 5:01am cada día:
+
+/calidad/harriague/processFtp># vcron nsnProcessEtlCMDataDaily.sh
+
+01 05 * * * /calidad/harriague/processFtp/nsnProcessEtlCMDataDaily.sh > /dev/null 2>&1
+
+
 Ejemplo de fórmulas de KPI
 --------------------------
 
