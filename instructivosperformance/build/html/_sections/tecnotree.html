@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TECNOTREE COMMERCIAL ENGINE &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="prev" title="ANTISPAMMING MOBILEUM" href="mobileum.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ciscoprime.html">1. CISCO PRIME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="femtoalcatel.html">2. ALCATEL FEMTOCELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tablero4g.html">3. TABLERO 4G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lteregional.html">4. LTE REGIONAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wapZte.html">5. WAP ZTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobileum.html">6. ANTISPAMMING MOBILEUM</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7. TECNOTREE COMMERCIAL ENGINE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.  OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.  ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.  DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.  DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.  DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-de-origen">6.2 Datos de Origen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#datos-de-destino">6.3 Datos de Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.4 Shell Copiar Archivos Origen a Destino y limpieza de los mismos:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.5 Listado de tablas utilizadas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo-del-proceso">5.  MACROFLUJO DEL PROCESO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.6 Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.  REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">8.  SMART</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../proyectos.html">PROYECTOS</a> &raquo;</li>
+      
+    <li>TECNOTREE COMMERCIAL ENGINE</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tecnotree-commercial-engine">
+<h1>TECNOTREE COMMERCIAL ENGINE<a class="headerlink" href="#tecnotree-commercial-engine" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.  OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera Tecnotree Commercial Engine.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.  ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.  DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cortado: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es cortado.claro.amx y la dirección ip física es 10.105.146.8</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.  DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>La plataforma CE permite cobrar servicios de contenidos (suscripciones, votaciones, descargas, Claro Música, Claro Video, etc.) mediante webservices expuestos a los proveedores de contenidos.A su vez gestiona el ciclo de las suscripciones (la expiración, la entrega de contenidos, la renovación)</p>
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-de-origen">
+<h3>6.2 Datos de Origen<a class="headerlink" href="#datos-de-origen" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen y Path: 10.48.69.68 - /data1/uyce/data/tpsfiles</p>
+</li>
+<li><p class="first">Cantidad de archivos origen: 2 archivos</p>
+<blockquote>
+<div><ul class="simple">
+<li>CM_TPSReport_Individual</li>
+<li>CDC_TPSReport_Individual</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Frecuencia actualización: Frecuencia diaria</p>
+</li>
+<li><p class="first">Tipo de Archivo: csv</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="datos-de-destino">
+<h2>6.3 Datos de Destino<a class="headerlink" href="#datos-de-destino" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Server Destino: Cortado</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Files: Si</li>
+<li>Tabla Auxiliar: Si</li>
+<li>Frecuencia de corrida del proceso: 1 vez al día</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: Si</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: Si</li>
+<li>IBHW Si/No: Si</li>
+<li>Países: No</li>
+<li>Directorio Destino (File System): /home/calidad/TecnotreeCE</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h2>6.4 Shell Copiar Archivos Origen a Destino y limpieza de los mismos:<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h2>
+<p>Los Scripts tienen las siguientes funciones:</p>
+<p>1- Copiar los archivos</p>
+<p>2- Limpieza</p>
+<p>3- Ejecutar Pentaho</p>
+<p>El Script falta script es la raíz de proceso</p>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/tecnotree/cleanupFiles.sh">cleanupFiles</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/countLines.sh">countLines</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/firstLoad.sh">firstLoad</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/scpTecnotree.sh">scpTecnotree</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/scpTecnotreeDate.sh">scpTecnotreeDate</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/scpTecnotreeTest.sh">scpTecnotreeTest</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/tecnotree.sh">tecnotree</a></li>
+<li><a class="reference external" href="../_static/images/tecnotree/tecnotreeDiario.sh">tecnotreeDiario</a></li>
+</ul>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.5 Listado de tablas utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Campos de la tabla FILE:</p>
+<img alt="../_images/pag95.png" class="align-center" src="../_images/pag95.png" />
+<p>Las tablas utilizadas son las siguientes:</p>
+<img alt="../_images/pag9.24.png" class="align-center" src="../_images/pag9.24.png" />
+<p>Campos de la tabla SVA_OBJECTS:</p>
+<img alt="../_images/pag311.png" class="align-center" src="../_images/pag311.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_AUX:</p>
+<img alt="../_images/pag410.png" class="align-center" src="../_images/pag410.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_AUX_TEMPLATE:</p>
+<img alt="../_images/pag4.24.png" class="align-center" src="../_images/pag4.24.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_BH:</p>
+<img alt="../_images/pag4.32.png" class="align-center" src="../_images/pag4.32.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_DAY:</p>
+<img alt="../_images/pag4.4.png" class="align-center" src="../_images/pag4.4.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_HOUR:</p>
+<img alt="../_images/pag57.png" class="align-center" src="../_images/pag57.png" />
+<p>Campos de la tabla TEC_CE_CDC_TPS_IBHW:</p>
+<img alt="../_images/pag5.23.png" class="align-center" src="../_images/pag5.23.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_AUX:</p>
+<img alt="../_images/pag5.3.png" class="align-center" src="../_images/pag5.3.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_BH:</p>
+<img alt="../_images/pag66.png" class="align-center" src="../_images/pag66.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_DAY:</p>
+<img alt="../_images/pag6.24.png" class="align-center" src="../_images/pag6.24.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_HOUR:</p>
+<img alt="../_images/pag6.31.png" class="align-center" src="../_images/pag6.31.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_IBHW:</p>
+<img alt="../_images/pag6.4.png" class="align-center" src="../_images/pag6.4.png" />
+<p>Campos de la tabla TEC_CE_CM_TPS_RAW:</p>
+<img alt="../_images/pag77.png" class="align-center" src="../_images/pag77.png" />
+</div>
+</div>
+<div class="section" id="macroflujo-del-proceso">
+<h2>5.  MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag7.26.png" class="align-center" src="../_images/pag7.26.png" />
+<div class="section" id="pentaho">
+<h3>6.6 Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag9.31.png" class="align-center" src="../_images/pag9.31.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<p>Tenemos el Shell <a class="reference external" href="../_static/images/tecnotree/tecnotreeDiario.sh">tecnotreeDiario</a> que trae datos para el servidor Cortado. Luego setea variables de entorno, directorios donde se encuentran los datos para procesar los archivos disponibles.</p>
+<p>En la Carpeta File se encuentran todos los archivos a procesar.</p>
+<p>Los archivos a procesar dependen del status en que se encuentran:</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: Se procesó correctamente</li>
+<li>1: Se procesó pero tuvo error</li>
+<li>5: Para procesar</li>
+</ul>
+</div></blockquote>
+<img alt="../_images/pag106.png" class="align-center" src="../_images/pag106.png" />
+<ul class="simple">
+<li>Pentaho Inserción tabla Files</li>
+</ul>
+<p>Get File Names To Import: se encarga de buscar los archivos del sistema operativo y los envía a Populate FILES table para escribirlos en la tabla File. Escribe los siguientes datos:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Nombre del archivo</li>
+<li>Status</li>
+</ul>
+</div></blockquote>
+<img alt="../_images/pag10.22.png" class="align-center" src="../_images/pag10.22.png" />
+<p>Por cada archivo debe crearse un proceso específico:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Proceso CDC Data</li>
+</ul>
+</div></blockquote>
+<img alt="../_images/pag114.png" class="align-center" src="../_images/pag114.png" />
+<ul class="simple">
+<li>Proceso CM Data</li>
+</ul>
+<img alt="../_images/pag11.23.png" class="align-center" src="../_images/pag11.23.png" />
+<ul class="simple">
+<li>Pentaho Calculo Sumarizaciones</li>
+</ul>
+<p>Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento Call  DB Procedure.</p>
+<img alt="../_images/pag11.31.png" class="align-center" src="../_images/pag11.31.png" />
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Procedimiento de reproceso manual paso a paso:</li>
+</ul>
+<p>Se debe ejecutar el script <a class="reference external" href="../_static/images/tecnotree/scpTecnotreeDate.sh">scpTecnotreeDate</a> , el cual debe recibir por parámetro la Fecha solicitada, para realizar la limpieza, para luego ejecutar el TecnotreeCERework.kjb en Pentaho de manera manual.</p>
+<p>Ubicación de los scripts en la carpeta /home/calidad/TecnotreeCE/Scripts</p>
+<p>Ubicación del Rework de ejecución en Pentaho: /home/calidadTecnoTreeCE/Rework</p>
+<p>El Formato de la fecha es el siguiente:</p>
+<blockquote>
+<div><ul class="simple">
+<li>YYYYMMDD</li>
+</ul>
+</div></blockquote>
+<p>Por consola se utiliza de la siguiente manera:</p>
+<blockquote>
+<div><ul class="simple">
+<li>./Pentaho61/data-integration/kitchen.sh -file=/home/calidad/TecnotreeCE/ TecnotreeCERework.kjb –param:FECHA_PROC= YYYYMMDD</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="smart">
+<h2>8.  SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p>Interfaz de cobro (CM) - Comparativo por País: Histórico</p>
+<img alt="../_images/pag125.png" class="align-center" src="../_images/pag125.png" />
+<p>Interfaz de cobro(CM) - Comparativo por País: Diario</p>
+<img alt="../_images/pag135.png" class="align-center" src="../_images/pag135.png" />
+<p>Control de Contenido (CDC): Diario</p>
+<img alt="../_images/pag13.22.png" class="align-center" src="../_images/pag13.22.png" />
+<p>Control de Contenido (CDC): Histórico</p>
+<img alt="../_images/pag145.png" class="align-center" src="../_images/pag145.png" />
+<p>Control de Contenido (CDC) - Comparativo por País</p>
+<img alt="../_images/pag14.24.png" class="align-center" src="../_images/pag14.24.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="mobileum.html" class="btn btn-neutral" title="ANTISPAMMING MOBILEUM" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

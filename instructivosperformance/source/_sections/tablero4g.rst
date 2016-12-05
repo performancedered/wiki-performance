@@ -1,5 +1,5 @@
-TABLERO PARTICIPACIÓN 4G CIUDAD Y MERCADO
-=========================================
+TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO
+=======================================
 
 1)	Objetivo
 ------------
