@@ -103,10 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1. Tablero AMX Indicadores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2. Tablero Mous Day</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#"> 3. Tablero NQI</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tablero-nqi-day"><strong>TABLERO_NQI DAY</strong></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#descripcion">Descripción:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#descripcion-de-los-campos">Descripción de los campos:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#server">Server:</a></li>
@@ -116,10 +113,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#duracion-del-proceso">Duración del proceso:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ubicacion-del-proceso">Ubicación del proceso:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#logueo-del-proceso">Logueo del proceso:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macro-flujo-del-proceso">5.  MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-detallada">6.  DESCRIPCIÓN DETALLADA</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tablero-nqi-hourly"><strong>TABLERO NQI HOURLY</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5.  MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6.  DESCRIPCIÓN DETALLADA</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 3.  Instructivo Dashboard MicroStrategy</a></li>
@@ -174,26 +176,25 @@
             
   <div class="section" id="tablero-nqi">
 <h1>TABLERO NQI<a class="headerlink" href="#tablero-nqi" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="objetivo">
-<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>OBJETIVO</li>
+</ol>
 <p>El presente documento buscar explicar y detallar el proceso que genera el Tablero NQI DAY</p>
-</div>
-<div class="section" id="alcance">
-<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="2">
+<li>ALCANCE</li>
+</ol>
 <p>Áreas involucradas: Performance de Red</p>
-</div>
-<div class="section" id="definiciones">
-<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="3">
+<li>DEFINICIONES</li>
+</ol>
 <ul class="simple">
 <li>FD: Fecha desde, en formato DD.MM.YYYY</li>
 <li>FH: Fecha hasta, en formato DD.MM.YYYY</li>
 <li>Smart: Base de datos Oracle donde se encuentran las tablas de datos para la red de acceso, incluido GSM y GPRS</li>
 <li>Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.  El nombre es perdido.claro.amx y la dirección ip física es 10.92.50.83</li>
 </ul>
-</div>
-<div class="section" id="descripcion-general">
-<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
-<p><strong>TABLERO_NQI</strong></p>
+<div class="section" id="tablero-nqi-day">
+<h2><strong>TABLERO_NQI DAY</strong><a class="headerlink" href="#tablero-nqi-day" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="descripcion">
 <h3>Descripción:<a class="headerlink" href="#descripcion" title="Permalink to this headline">¶</a></h3>
 <p>El tablero_nqi_day contiene información diaria sobre el tráfico de voz y datos, de las tecnologías umts y lte, agrupado por mercado y país. Para ver el tablero, una vez conectados a la base de datos Smart, con el PL/SQL ejecutar select * from tablero_nqi_day.</p>
@@ -246,13 +247,12 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <p>El logueo del proceso se realiza en el archivo nqi_day_ins.log (ubicado en el path /calidad/tablero/nqi/daily/)</p>
 <img alt="../_images/pag45.png" class="align-center" src="../_images/pag45.png" />
 </div>
-</div>
 <div class="section" id="macro-flujo-del-proceso">
-<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h3>
 <img alt="../_images/pag4.1.png" class="align-center" src="../_images/pag4.1.png" />
 </div>
 <div class="section" id="descripcion-detallada">
-<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<h3>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h3>
 <p>El Shell Script <strong>nqi_day_ins.sh</strong> :</p>
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/tableronqi/nqi_day_ins.sh">nqi_day_ins</a></li>
@@ -294,6 +294,101 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <img alt="../_images/pag83.png" class="align-center" src="../_images/pag83.png" />
 <img alt="../_images/pag93.png" class="align-center" src="../_images/pag93.png" />
 <img alt="../_images/pag103.png" class="align-center" src="../_images/pag103.png" />
+</div>
+</div>
+<div class="section" id="tablero-nqi-hourly">
+<h2><strong>TABLERO NQI HOURLY</strong><a class="headerlink" href="#tablero-nqi-hourly" title="Permalink to this headline">¶</a></h2>
+<p>El tablero_nqi_hours contiene información diaria sobre el tráfico de voz y datos, de las tecnologías umts y lte, agrupado por mercado y país.</p>
+<p>Para ver el tablero, una vez conectados a la base de datos Smart, con el PL/SQL se debe ejecutar lo siguiente:</p>
+<blockquote>
+<div><ul class="simple">
+<li>SELECT * FROM tablero_nqi_hour</li>
+</ul>
+</div></blockquote>
+<p>Contiene los siguientes campos:</p>
+<img alt="../_images/pag411.png" class="align-center" src="../_images/pag411.png" />
+<img alt="../_images/pag4.25.png" class="align-center" src="../_images/pag4.25.png" />
+<ul class="simple">
+<li>Server:</li>
+</ul>
+<p>perdido.claro.amx (10.92.50.83).</p>
+<ul class="simple">
+<li>Base de Datos:</li>
+</ul>
+<p>Oracle 10G. Instancia WILLY</p>
+<ul class="simple">
+<li>Frecuencia del proceso:</li>
+</ul>
+<p>Por Hora.</p>
+<ul class="simple">
+<li>Proceso que genera el tablero:</li>
+</ul>
+<p>El proceso tiene nombre” pre_tablero_nqi_hourly.sh” y actualiza la tabla diariamente y se lo puede encontrar en el crontab del equipo perdido, a continuación se lo transcribe: 45 * * * * /calidad/tablero/radar/ pre_tablero_nqi_hourly.sh &gt; /dev/null 2&gt;&amp;1 La ejecución entonces se realiza el minuto 45, todos los días del año, todos los meses del año, todos los días de la semana (45 * * * <a href="#id3"><span class="problematic" id="id4">*</span></a>)</p>
+<ul class="simple">
+<li>Duración del proceso:</li>
+</ul>
+<p>20 minutos aproximadamente</p>
+<ul class="simple">
+<li>Ubicación del proceso:</li>
+</ul>
+<p>calidad/tablero/radar/ pre_tablero_nqi_hourly.sh
+Para poder ver el proceso se sugiere conectarse vía ftp al server perdido, con el usuario “calidad”,</p>
+<ul class="simple">
+<li>Logueo del proceso:</li>
+</ul>
+<p>El logueo del proceso se realiza en el archivo nqi_hourly_ins.log (ubicado en el path /calidad/tablero/radar)</p>
+<div class="section" id="id5">
+<h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/pag68.png" class="align-center" src="../_images/pag68.png" />
+</div>
+<div class="section" id="id6">
+<h3>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Shell Script <a class="reference external" href="../_static/images/tableronqihourly/tablero_nqi_hourly.sh">tablero_nqi_hourly</a></li>
+<li>La función denominada f_tablero_nqi_hourly:</li>
+</ul>
+<dl class="docutils">
+<dt>f_Tablero_Nqi_Hourly () {</dt>
+<dd><p class="first"># Autor: Monica Pellegrini. Fecha: 23.09.2016.
+# Actualizacion: Monica Pellegrini. Fecha:02.11.2016
+fechaDesde=&#8221;$1 $2&#8221;
+fechaHasta=&#8221;$3 $4&#8221;
+log=$5</p>
+<p class="last">f_log &#8216;Start NQI Hourly Ins&#8217; $LOG</p>
+</dd>
+</dl>
+<p>for k in <cite>f_MDT_Customize $fechaDesde $fechaHasta 2</cite>
+do
+l=`echo $k | sed &#8216;s/_/ /g&#8217;`
+sqlplus -S / &#64;${WorkDirNqiHourly}nqi_umts_hour_ins.sql $l
+sqlplus -S / &#64;${WorkDirNqiHourly}nqi_umts_hour_in2.sql  $l
+sqlplus -S / &#64;${WorkDirNqiHourly}nqi_lte_hour_ins.sql $l
+f_log &#8216;Finish NQI Hourly Ins&#8217; $LOG
+f_log &#8216;Start Tablero NQI Hourly&#8217; $LOG
+sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
+<blockquote>
+<div>done</div></blockquote>
+<p>f_log &#8216;Finish Tablero NQI Hourly &#8216; $LOG
+}</p>
+<ul>
+<li><p class="first">El logueo del proceso se realiza en el archivo <a class="reference external" href="../_static/images/tableronqihourly/nqi_hourly_ins.log">nqi_hourly_ins</a> (ubicado en el path calidad/tablero/minutos/)</p>
+</li>
+<li><p class="first">El proceso .sql está conformado de la siguiente manera:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_umts_hour_ins.sql">nqi_umts_hour_ins</a></li>
+<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_umts_hour_in2.sql">nqi_umts_hour_in2</a></li>
+<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_lte_hour_ins.sql">nqi_lte_hour_ins</a></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Los procedimientos  de las queries nqi_umts_hour_ins, nqi_umts_hour_in2,nqi_lte_hour_ins son los siguientes:</li>
+</ul>
+</li>
+</ul>
+<img alt="../_images/pag87.png" class="align-center" src="../_images/pag87.png" />
+<img alt="../_images/pag97.png" class="align-center" src="../_images/pag97.png" />
+</div>
 </div>
 </div>
 

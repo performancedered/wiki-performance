@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Uplink Interference (Nokia UMTS) &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="TABLEROS" href="../tableros.html"/>
+        <link rel="next" title="GESTIÓN" href="../gestion.html"/>
+        <link rel="prev" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" href="instructivomicro.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tableros.html">TABLEROS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1. Tablero AMX Indicadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2. Tablero Mous Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3. Tablero NQI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 4.  Instructivo Dashboard MicroStrategy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 5.  Uplink Interference (Nokia UMTS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.  OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.  ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.  DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.  DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.  MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.  DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-de-origen">6.1.  Datos de origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.  Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3. Listado de Tablas Utilizadas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.  REPROCESO MANUAL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
+      
+    <li>Uplink Interference (Nokia UMTS)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uplink-interference-nokia-umts">
+<h1>Uplink Interference (Nokia UMTS)<a class="headerlink" href="#uplink-interference-nokia-umts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.  OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera Uplink Interference (Nokia UMTS)</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.  ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.  DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cortado: Servidor LINUX en donde se importan los CSV desde el proveedor.</li>
+</ul>
+<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.  DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>Nokia UMTS Uplink Interference</strong></p>
+<p>Este desarrollo tiene la finalidad de detectar y clasificar la interferencia en las celdas UMTS tomando RTWP en función del tráfico de voz.
+Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con una regresión lineal, obteniendo así una pendiente y una ordenada al origen para cada celda. Esta información demuestra cómo evoluciona la interferencia según crece el tráfico. En función de estos valores se clasifica la celda dentro de 4 categorías que son indicadores de las acciones a tomar en cada caso.</p>
+<img alt="../_images/pag313.png" class="align-center" src="../_images/pag313.png" />
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag412.png" class="align-center" src="../_images/pag412.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-de-origen">
+<h3>6.1.  Datos de origen<a class="headerlink" href="#datos-de-origen" title="Permalink to this headline">¶</a></h3>
+<p>Server Origen: perdido.claro.amx</p>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.  Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: cortado.claro.amx</li>
+<li>BD: Smart2</li>
+<li>Frecuencia de corrida del proceso: 1 minuto</li>
+<li>RAW Si/No: No</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: No</li>
+<li>BH Si/No: Si</li>
+<li>ISABH Si/No: Si</li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.3. Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son:</p>
+<ul class="simple">
+<li>UMTS_UL_INTFRNC_WCEL_HOUR</li>
+</ul>
+<img alt="../_images/pag4.26.png" class="align-center" src="../_images/pag4.26.png" />
+<ul class="simple">
+<li>TABLERO_UMTS_ULINTFN_WCEL_WEEK</li>
+</ul>
+<img alt="../_images/pag510.png" class="align-center" src="../_images/pag510.png" />
+<p>Las Tablas utilizadas desde Perdido son:</p>
+<ul class="simple">
+<li><a class="reference external" href="mailto:UMTS_C_NSN_CELLRES_MNC1_RAW&#37;&#52;&#48;SMART&#46;WORLD">UMTS_C_NSN_CELLRES_MNC1_RAW<span>&#64;</span>SMART<span>&#46;</span>WORLD</a> T1</li>
+<li><a class="reference external" href="mailto:UMTS_C_NSN_TRAFFIC_MNC1_RAW&#37;&#52;&#48;SMART&#46;WORLD">UMTS_C_NSN_TRAFFIC_MNC1_RAW<span>&#64;</span>SMART<span>&#46;</span>WORLD</a> T2</li>
+<li><a class="reference external" href="mailto:UMTS_C_NSN_SERVLEV_MNC1_RAW&#37;&#52;&#48;SMART&#46;WORLD">UMTS_C_NSN_SERVLEV_MNC1_RAW<span>&#64;</span>SMART<span>&#46;</span>WORLD</a> T3</li>
+</ul>
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pendiente de agregar</strong></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="instructivomicro.html" class="btn btn-neutral" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

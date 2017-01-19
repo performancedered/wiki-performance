@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OCUDR &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="CORE DATOS" href="../coreDatos.html"/>
+        <link rel="next" title="ENLACES IP" href="../enlacesIp.html"/>
+        <link rel="prev" title="CORE DATOS" href="../coreDatos.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. OCUDR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.  OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.  ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.  DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.  DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">5.  DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">5.1.  Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">5.2.  Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">5.3.  Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">5.4.  Listado de tablas utilizadas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso">6.  REPROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">7.  SMART</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../coreDatos.html">CORE DATOS</a> &raquo;</li>
+      
+    <li>OCUDR</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ocudr">
+<h1>OCUDR<a class="headerlink" href="#ocudr" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.  OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera OCUDR- Calculo de sumarizaciones</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.  ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Áreas involucradas: Performance de Red</li>
+</ul>
+</div>
+<div class="section" id="definiciones">
+<h2>3.  DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Guerrero: Servidor LINUX en el cual el proveedor deposita los archivos csv.</li>
+<li>Ocudr: Oracle Communications user data repository (Repositorio de datos de usuarios)</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.  DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>OCUDR</strong></p>
+<p>¿Que es PCRF?</p>
+<p>PCRF (Policy and Charging Rules Funcion)</p>
+<p>Es un nodo dentro del EPC/Packet Core diseñado para establecer políticas en tiempo real, aplicadas a un usuario en particular, un grupo de usuarios o toda la red.  Las acciones del PCRF se basan las reglas previamente programadas llamadas políticas ,teniendo como referencia un perfil de usuario alojado en una base de datos llamada UDR (User Data Repository).
+Todas las reglas definidas (cuotas, tiempos fechas, QoS) se alojan y contabilizan en la base de datos interna y temporal del PCRF, y dependiendo de la política, se escriben de forma permanente en el UDR.
+El PCRF es un elemento de control (control plane) que define las acciones al P-GW (user plane) para que las realize.</p>
+<p>La plataforma PCRF de Oracle Communications, se llama OCPM.  Actualmente utilizamos la versión 11.5.1, compatible con los estándares de 3GPP release 11.</p>
+<p>La arquitectura básica de la plataforma consta de un manager en donde se programan las políticas, llamado Configuration and Management Platform (CMP) y un nodo que es quien se conecta vía Diameter con el P-GW (por la interfaz Gx) y el Core IMS (por la interfaz Rx). Este nodo se llama Multimedia Policy Engine: MPE. Como parte de la solución integral se cuenta con la base de datos UDR, llamada OCUDR donde también se utiliza una interfaz Diameter llamada Sh contra el MPE para operaciones de lectura y escritura.</p>
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>5.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>5.1.  Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen y Path: Desde el servidor guerrero.claro.amx</p>
+</li>
+<li><p class="first">Cantidad de archivos origen: 6 archivos</p>
+<blockquote>
+<div><p>o Provisioning_Performance_AAAAMMDD-hhmmss.csv</p>
+<p>o Sh_Performance_AAAAMMDD-hhmmss.csv</p>
+<p>o Subscription_Management_AAAAMMDD-hhmmss.csv</p>
+<p>o UDRFE_Performance_AAAAMMDD-hhmmss.csv</p>
+<p>o UDRBE_Performance_AAAAMMDD-hhmmss.csv</p>
+<p>o OAM.SYSTEM_AAAAMMDD-hhmmss.csv</p>
+</div></blockquote>
+</li>
+<li><p class="first">Tipo de Archivo: CSV</p>
+</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>5.2.  Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Destino: Perdido</p>
+</li>
+<li><p class="first">Conversión de Archivos: Si</p>
+</li>
+<li><p class="first">Tabla Files: No</p>
+</li>
+<li><p class="first">Tabla Auxiliar: No</p>
+</li>
+<li><p class="first">Frecuencia de corrida del proceso: 20 minutos (Nivel Hour), cada 24hs (Nivel Day), 1 vez a la semana</p>
+</li>
+<li><p class="first">Regionales: No</p>
+</li>
+<li><p class="first">RAW Si/No: Si</p>
+</li>
+<li><p class="first">Hour Si/No: Si</p>
+</li>
+<li><p class="first">Day Si/No: Si</p>
+</li>
+<li><p class="first">BH Si/No: Si</p>
+</li>
+<li><p class="first">ISABH Si/No: Si</p>
+</li>
+<li><p class="first">Países: No</p>
+</li>
+<li><p class="first">Directorio Destino (File System):</p>
+<blockquote>
+<div><p>o /calidad/sva/tekelec/ocudr/daily/sva_tekelec_ocudr_ins_day.sh
+o /calidad/sva/tekelec/ocudr/summary/sva_tekelec_ocudr_isabhw.
+o /calidad/sva/tekelec/ocudr/hourly/sva_ocudr_hour.sh</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>5.3.  Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ocudr/sva_ocudr_hour.sh">sva_ocudr_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/sva_tekelec_ocudr_ins_day.sh">sva_tekelec_ocudr_ins_day</a></li>
+<li><a href="#id4"><span class="problematic" id="id5">sva_tekelec_ocudr_isabhw_</span></a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>5.4.  Listado de tablas utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son:</p>
+<img alt="../_images/pag59.png" class="align-center" src="../_images/pag59.png" />
+<img alt="../_images/pag5.25.png" class="align-center" src="../_images/pag5.25.png" />
+<img alt="../_images/pag610.png" class="align-center" src="../_images/pag610.png" />
+<img alt="../_images/pag6.27.png" class="align-center" src="../_images/pag6.27.png" />
+<img alt="../_images/pag710.png" class="align-center" src="../_images/pag710.png" />
+<img alt="../_images/pag88.png" class="align-center" src="../_images/pag88.png" />
+<img alt="../_images/pag8.25.png" class="align-center" src="../_images/pag8.25.png" />
+<img alt="../_images/pag8.31.png" class="align-center" src="../_images/pag8.31.png" />
+<img alt="../_images/pag98.png" class="align-center" src="../_images/pag98.png" />
+<img alt="../_images/pag109.png" class="align-center" src="../_images/pag109.png" />
+<img alt="../_images/pag117.png" class="align-center" src="../_images/pag117.png" />
+<img alt="../_images/pag11.26.png" class="align-center" src="../_images/pag11.26.png" />
+<img alt="../_images/pag128.png" class="align-center" src="../_images/pag128.png" />
+<img alt="../_images/pag12.26.png" class="align-center" src="../_images/pag12.26.png" />
+<img alt="../_images/pag137.png" class="align-center" src="../_images/pag137.png" />
+<img alt="../_images/pag13.23.png" class="align-center" src="../_images/pag13.23.png" />
+<img alt="../_images/pag147.png" class="align-center" src="../_images/pag147.png" />
+<img alt="../_images/pag14.25.png" class="align-center" src="../_images/pag14.25.png" />
+<p>Las queries son las siguientes:</p>
+<p>TABLAS A NIVEL DAY/ BH:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ocudr/sva_tekelec_ocudr_bh.sql">sva_tekelec_ocudr_bh</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/sva_tekelec_ocudr_day.sql">sva_tekelec_ocudr_day</a></li>
+</ul>
+<p>TABLAS A NIVEL HOUR:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_udrfe_performance.sql">ocudr_udrfe_performance_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_comagent_hour.sql">ocudr_comagent_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_oam_hour.sql">ocudr_oam_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_provisioning_perf_hou2.sql">ocudr_provisioning_perf_hou2</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_provisioning_perf_hour.sql">ocudr_provisioning_perf_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_sh_performance_hour.sql">ocudr_sh_performance_hour</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_udrbe_performance_hou2.sql">ocudr_udrbe_performance_hou2</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/ocudr_udrbe_performance_hour.sql">ocudr_udrbe_performance_hour</a></li>
+</ul>
+<p>TABLAS A NIVEL ISABHWEEK:</p>
+<ul class="simple">
+<li><a href="#id6"><span class="problematic" id="id7">sva_tekelec_ocudr_isabhw_</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reproceso">
+<h2>6.  REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="smart">
+<h2>7.  SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p>En la plataforma Smart se ve de la siguiente manera:</p>
+<img alt="../_images/pag166.png" class="align-center" src="../_images/pag166.png" />
+<img alt="../_images/pag156.png" class="align-center" src="../_images/pag156.png" />
+<img alt="../_images/pag15.24.png" class="align-center" src="../_images/pag15.24.png" />
+<img alt="../_images/pag16.24.png" class="align-center" src="../_images/pag16.24.png" />
+<img alt="../_images/pag174.png" class="align-center" src="../_images/pag174.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../enlacesIp.html" class="btn btn-neutral float-right" title="ENLACES IP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../coreDatos.html" class="btn btn-neutral" title="CORE DATOS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

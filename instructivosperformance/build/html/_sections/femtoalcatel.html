@@ -33,9 +33,9 @@
 
   
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
-        <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
-        <link rel="next" title="TABLERO PARTICIPACIÓN 4G CIUDAD Y MERCADO" href="tablero4g.html"/>
-        <link rel="prev" title="CISCO PRIME" href="ciscoprime.html"/> 
+        <link rel="up" title="ACCESO" href="../acceso.html"/>
+        <link rel="next" title="CORE SWITCH" href="../coreSwitch.html"/>
+        <link rel="prev" title="Instructivo Control y Reproceso de tablas LTE_ENODEB" href="controlreprocesolte.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,8 +86,35 @@
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../acceso.html">ACCESO</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tecnologia2g.html">     1. INSTRUCTIVOS TECNOLOGIA 2G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia3g.html">     2. INSTRUCTIVOS TECNOLOGIA 3G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     4. ALCATEL FEMTOCELL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.      REPROCESO MANUAL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso-unico-directorio">1.      REPROCESO UNICO DIRECTORIO:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso-completo">2.      REPROCESO COMPLETO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">8.      SMART</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
@@ -95,20 +122,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ciscoprime.html">1. CISCO PRIME</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. ALCATEL FEMTOCELL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tablero4g.html">3. TABLERO 4G</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lteregional.html">4. LTE REGIONAL</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
 </ul>
 
             
@@ -139,7 +160,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../proyectos.html">PROYECTOS</a> &raquo;</li>
+          <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
       
     <li>ALCATEL FEMTOCELL</li>
       <li class="wy-breadcrumbs-aside">
@@ -155,6 +176,23 @@
             
   <div class="section" id="alcatel-femtocell">
 <h1>ALCATEL FEMTOCELL<a class="headerlink" href="#alcatel-femtocell" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera Alcatel Femtocell</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cortado: Servidor LINUX en donde se importan los CSV desde el proveedor.</li>
+</ul>
+<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
 <p>Las radiobases Alcatel Femto Cell de tecnología 3G, son equipos que brindan acceso de voz y datos a la red celular, y están pensados para dar servicios de cobertura indoor a un número más limitado de usuarios.  Pensados para instalar en oficinas de clientes corporativos, oficinas de gobierno, u otros lugares donde la cobertura de la red celular macro no es suficiente.</p>
 <p>La integración a Smart de esta plataforma consiste en recolectar los archivos CSV y XML del sistema de gestión SAM, y mostrarlos en Smart.</p>
 <p>Los KPIs son básicamente: accesibilidad, retenebilidad, movilidad (hand over), tráfico y disponibilidad.</p>
@@ -162,6 +200,249 @@
 <blockquote>
 <div></div></blockquote>
 <p><a class="reference external" href="../_static/images/documentos/MediciónPlataformaFEMTOCELLS_v1.xlsx">Medición_Plataforma_FEMTOCELLS_v1</a></p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag312.png" class="align-center" src="../_images/pag312.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen y Path: falda.claro.amx, /calidad/AlcatelFemtoCell/</p>
+</li>
+<li><p class="first">Cantidad de archivos origen: Si</p>
+<blockquote>
+<div><p>o       femtoCellAll_fecha</p>
+</div></blockquote>
+</li>
+<li><p class="first">Frecuencia actualización: Frecuencia diaria</p>
+</li>
+<li><p class="first">Tipo de Archivo: csv</p>
+</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: Cortado</li>
+<li>Conversión de Archivos: Si</li>
+<li>Tabla Files: Si</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 vez al día</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: Si</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: Si</li>
+<li>Isabhweek  Si/No: Si</li>
+<li>Países: No</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los Scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/femtoAlcatel/scpAlcatel.sh">scpAlcatel</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/scpAlcatelDate.sh">scpAlcatelDate</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/scpAlcatelrework.sh">scpAlcatelrework</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/scpObjectAlcatelFC.sh">scpObjectAlcatelFC</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/alc_fc_parser.jar">alc_fc_parser</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/contadores.properties">contadores</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/deleteEmptyLogs.sh">deleteEmptyLogs</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/Find_Counter.jar">Find_Counter</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/generarCsvAll.sh">generarCsvAll</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/generarCsvAllrework.sh">generarCsvAllrework</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/obj_alc_fc_1_0_0.jar">obj_alc_fc_1_0_0</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/objectFC.sh">objectFC</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/PopulateTable.jar">PopulateTable</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/PopulateTable.sh">PopulateTable_sh</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/runAlcatelFCrework.sh">runAlcatelFCrework</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/runAlcatelFemtoCell.sh">runAlcatelFemtoCell</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/runObjectFC.sh">runObjectFC</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/runObjparser.sh">runObjparser</a></li>
+<li><a class="reference external" href="../_static/images/femtoAlcatel/runParse.sh">runParse</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son las siguientes:</p>
+<img alt="../_images/pag58.png" class="align-center" src="../_images/pag58.png" />
+<p>Los campos de las tablas son los siguientes:</p>
+<ul class="simple">
+<li>Tabla Files</li>
+</ul>
+<img alt="../_images/pag5.24.png" class="align-center" src="../_images/pag5.24.png" />
+<ul class="simple">
+<li>Tabla Error_log_new</li>
+</ul>
+<img alt="../_images/pag5.31.png" class="align-center" src="../_images/pag5.31.png" />
+<ul class="simple">
+<li>Tabla Error_log_new</li>
+</ul>
+<img alt="../_images/pag67.png" class="align-center" src="../_images/pag67.png" />
+<ul class="simple">
+<li>Tabla Objects_alc_umts</li>
+</ul>
+<img alt="../_images/pag6.25.png" class="align-center" src="../_images/pag6.25.png" />
+<ul class="simple">
+<li>Tabla  UMTS_ALC_ACCESSIBILITY_FC_BH</li>
+</ul>
+<img alt="../_images/pag78.png" class="align-center" src="../_images/pag78.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_ACCESSIBILITY_FC_HOUR</li>
+</ul>
+<img alt="../_images/pag86.png" class="align-center" src="../_images/pag86.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_ACCESSIBILITY_FC_DAY</li>
+</ul>
+<img alt="../_images/pag96.png" class="align-center" src="../_images/pag96.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_ACCESSIBILITY_FC_IBHW</li>
+</ul>
+<img alt="../_images/pag108.png" class="align-center" src="../_images/pag108.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_AVAILABILITY_FC_BH</li>
+</ul>
+<img alt="../_images/pag116.png" class="align-center" src="../_images/pag116.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_AVAILABILITY_FC_HOUR</li>
+</ul>
+<img alt="../_images/pag11.25.png" class="align-center" src="../_images/pag11.25.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_AVAILABILITY_FC_DAY</li>
+</ul>
+<blockquote>
+<div><img alt="../_images/pag127.png" class="align-center" src="../_images/pag127.png" />
+</div></blockquote>
+<ul class="simple">
+<li>Tabla UMTS_ALC_AVAILABILITY_FC_IBHW</li>
+</ul>
+<blockquote>
+<div><img alt="../_images/pag12.25.png" class="align-center" src="../_images/pag12.25.png" />
+</div></blockquote>
+<ul class="simple">
+<li>Tabla UMTS_ALC_CAPACITY_FC_BH</li>
+</ul>
+<blockquote>
+<div><img alt="../_images/pag136.png" class="align-center" src="../_images/pag136.png" />
+</div></blockquote>
+<ul class="simple">
+<li>Tabla UMTS_ALC_CAPACITY_FC_HOUR</li>
+</ul>
+<img alt="../_images/pag146.png" class="align-center" src="../_images/pag146.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_CAPACITY_FC_DAY</li>
+</ul>
+<img alt="../_images/pag155.png" class="align-center" src="../_images/pag155.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_CAPACITY_FC_IBHW</li>
+</ul>
+<img alt="../_images/pag165.png" class="align-center" src="../_images/pag165.png" />
+<ul class="simple">
+<li>Tabla UMTS_ALC_DROP_FC_BH</li>
+</ul>
+<img alt="../_images/pag173.png" class="align-center" src="../_images/pag173.png" />
+<ul class="simple">
+<li>UMTS_ALC_DROP_FC_HOUR</li>
+</ul>
+<img alt="../_images/pag17.21.png" class="align-center" src="../_images/pag17.21.png" />
+<ul class="simple">
+<li>UMTS_ALC_DROP_FC_DAY</li>
+</ul>
+<img alt="../_images/pag184.png" class="align-center" src="../_images/pag184.png" />
+<ul class="simple">
+<li>UMTS_ALC_DROP_FC_IBHW</li>
+</ul>
+<img alt="../_images/pag18.21.png" class="align-center" src="../_images/pag18.21.png" />
+<ul class="simple">
+<li>UMTS_ALC_MOBILITY_FC_BH</li>
+</ul>
+<img alt="../_images/pag194.png" class="align-center" src="../_images/pag194.png" />
+<ul class="simple">
+<li>UMTS_ALC_MOBILITY_FC_HOUR</li>
+</ul>
+<img alt="../_images/pag203.png" class="align-center" src="../_images/pag203.png" />
+<ul class="simple">
+<li>UMTS_ALC_MOBILITY_FC_DAY</li>
+</ul>
+<img alt="../_images/pag214.png" class="align-center" src="../_images/pag214.png" />
+<ul class="simple">
+<li>UMTS_ALC_MOBILITY_FC_IBHW</li>
+</ul>
+<img alt="../_images/pag222.png" class="align-center" src="../_images/pag222.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/femtoAlcatel/UMTS_C_ALC_FC_RAW">UMTS_C_ALC_FC_RAW</a></li>
+</ul>
+</div>
+<div class="section" id="pentaho">
+<h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag233.png" class="align-center" src="../_images/pag233.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag23.21.png" class="align-center" src="../_images/pag23.21.png" />
+<ul class="simple">
+<li>Proceso Run Parser XML</li>
+</ul>
+<p>Este proceso se encarga de ejecutar el archivo .jar del paser para transformar los datos que se encuentran en el formato xml para crear los archivos con formato csv.</p>
+<p>Los archivos csv son:</p>
+<blockquote>
+<div><p>o       Femto_file0.csv</p>
+<p>o       Femto_file1.csv</p>
+<p>o       Femto_file2.csv</p>
+</div></blockquote>
+<p>Estos archivos se generan solo cuando superan los 100 archivos de origen (archivos xml), en caso de que  los archivos sean menores de 100 se genera un único archivo csv.
+Luego de ejecutar Parser.jar se ejecuta el script generarCsvAll.sh que genera un único archivo de formato csv.</p>
+<img alt="../_images/pag242.png" class="align-center" src="../_images/pag242.png" />
+<ul class="simple">
+<li>Proceso Popular Tabla FEMTO_RAW</li>
+</ul>
+<p>Este proceso se encarga de obtener el nombre del archivo  de formato csv (único archivo generado por el script) para llenar la tabla Raw.</p>
+<img alt="../_images/pag24.22.png" class="align-center" src="../_images/pag24.22.png" />
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reproceso-unico-directorio">
+<h3>1.      REPROCESO UNICO DIRECTORIO:<a class="headerlink" href="#reproceso-unico-directorio" title="Permalink to this headline">¶</a></h3>
+<p>Para reprocesar manualmente se debe ejecutar el proceso Rework de Pentaho, ingresando los siguientes parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li>DIR_XML: Directorio donde se encuentran los archivos con formato xml</li>
+<li>FECHA_DESDE: Formato (DD.MM.AAAA)</li>
+<li>FECHA_HASTA: Formato (DD.MM.AAAA)</li>
+</ul>
+</div></blockquote>
+<img alt="../_images/pag252.png" class="align-center" src="../_images/pag252.png" />
+<div class="section" id="macroflujo-de-reproceso">
+<h4>MACROFLUJO DE REPROCESO<a class="headerlink" href="#macroflujo-de-reproceso" title="Permalink to this headline">¶</a></h4>
+<img alt="../_images/pag25.2.png" class="align-center" src="../_images/pag25.2.png" />
+</div>
+</div>
+<div class="section" id="reproceso-completo">
+<h3>2.      REPROCESO COMPLETO<a class="headerlink" href="#reproceso-completo" title="Permalink to this headline">¶</a></h3>
+<p>Este reproceso se realiza para un directorio especifico pero trayendo los archivos de formato xml desde el servidor de origen.</p>
+<p>El script que debe ejecutarse es el siguiente:</p>
+<blockquote>
+<div>o       runAlcatelFCrework.sh</div></blockquote>
+<p>Se deben ingresar los siguientes parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li>DIR_XML: Directorio donde se encuentran los archivos con formato xml</li>
+<li>FECHA_DESDE: Formato (DD.MM.AAAA)</li>
+<li>FECHA_HASTA: Formato (DD.MM.AAAA)</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="smart">
+<h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag261.png" class="align-center" src="../_images/pag261.png" />
+<img alt="../_images/pag26.2.png" class="align-center" src="../_images/pag26.2.png" />
+</div>
 </div>
 
 
@@ -171,10 +452,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tablero4g.html" class="btn btn-neutral float-right" title="TABLERO PARTICIPACIÓN 4G CIUDAD Y MERCADO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../coreSwitch.html" class="btn btn-neutral float-right" title="CORE SWITCH" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ciscoprime.html" class="btn btn-neutral" title="CISCO PRIME" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="controlreprocesolte.html" class="btn btn-neutral" title="Instructivo Control y Reproceso de tablas LTE_ENODEB" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

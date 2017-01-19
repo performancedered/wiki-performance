@@ -1,0 +1,26 @@
+
+-- Autor: Monica Pellegrini. Fecha:29.11.2016
+
+VARIABLE FECHA_DESDE VARCHAR2(15);
+VARIABLE FECHA_HASTA  VARCHAR2(15);
+
+EXEC :FECHA_DESDE := '&1';
+EXEC :FECHA_HASTA := '&2';
+
+BEGIN
+
+P_TEKELEC_OCUDR_OAM_DAY(P_FECHA_DESDE => :FECHA_DESDE,
+                        P_FECHA_HASTA => :FECHA_HASTA);
+                          
+P_TEKELEC_OCUDR_PROVISION_DAY(P_FECHA_DESDE => :FECHA_DESDE,
+                              P_FECHA_HASTA => :FECHA_HASTA);
+                              
+P_TEKELEC_OCUDR_SH_PERF_DAY(P_FECHA_DESDE => :FECHA_DESDE,
+                            P_FECHA_HASTA => :FECHA_HASTA);
+
+P_TEKELEC_OCUDR_UDRBE_PERF_DAY(P_FECHA_DESDE => :FECHA_DESDE,
+                               P_FECHA_HASTA => :FECHA_HASTA);
+
+END;
+/
+EXIT;
