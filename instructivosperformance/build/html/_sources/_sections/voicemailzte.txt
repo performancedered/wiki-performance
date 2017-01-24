@@ -28,7 +28,7 @@ Y servicio de cliente visual de Correo de Voz a terminales iPhone.
 5.	DESCRIPCIÓN DETALLADA
 -------------------------
 
-6.1.	Datos Origen
+5.1.	Datos Origen
 ********************
 •	Server Origen y Path: 10.105.146.49, /home/sybase/zxinstat/data/usermailbox/report
 
@@ -50,7 +50,7 @@ Y servicio de cliente visual de Correo de Voz a terminales iPhone.
 
 •	Tipo de Archivo: CSV
 
-6.2.	Datos Destino
+5.2.	Datos Destino
 *********************
 
 •	Server Destino: Perdido
@@ -83,7 +83,7 @@ Y servicio de cliente visual de Correo de Voz a terminales iPhone.
 
 		o	/calidad/sva/zte/summary/sva_zte_summary.sh
 
-6.3.	Shell Copiar Archivos Origen a Destino y limpieza de los mismos
+5.3.	Shell Copiar Archivos Origen a Destino y limpieza de los mismos
 ***********************************************************************
 
 .. _sva_zte_hour: ../_static/images/voicemailzte/sva_zte_hour.sh
@@ -96,8 +96,8 @@ Los scripts son los siguientes:
 
 * sva_zte_summary_ 
 
-6.4.	Listado de tablas utilizadas
-
+5.4.	Listado de tablas utilizadas
+************************************
 Las tablas utilizadas son las siguientes:
 
 •	SVA_ZTE_TRAFFIC_DAY
@@ -149,7 +149,7 @@ Estas tablas se obtienen de las siguientes queries:
 *	sva_zte_weekly_ 
 
 
-7.	SMART
+6.	SMART
 ---------
 
 Los reportes en la herramienta Smart se muestran de la siguiente manera: 
@@ -168,3 +168,59 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
 
 .. image:: ../_static/images/voicemailzte/pag7.2.png
   :align: center
+
+
+7. CONTROL DE CAMBIOS
+---------------------
+
+
+
+.. _CL_621: http://jira.harriague.com.ar/jira/browse/CL-621
+
+.. _CMTM_1572: 
++------------+-------------------+-------------+----------------------------------------------------------------------------------+----------------------+
+| 22/12/2016 | Monica Pellegrini | CMTM_1572_. | Se cambiaron los ip 10.105.146.75 y 10.104.228.175 son las validas               |						 |  
++------------+-------------------+-------------+----------------------------------------------------------------------------------+----------------------+                     
+                                                                                                                                                                                                                                    
+
+
+
+.. raw:: html 
+
+	 <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+ 	</style>
+
+	<table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td> 26/12/2016 </td>
+    <td> Franco Rinaldi </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-621"> CL-621 </a></p>  </td>
+    <td> Se finaliza por que se valido por Luciano Dealbera que los datos estan correctos </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 22/12/2016 </td>
+    <td> Monica Pellegrini </td>
+    <td>  <p><a href="http://jira.harriague.com.ar/jira/browse/CMTM-1572"> CMTM-1572 </a></p>  </td>
+    <td> Se cambiaron los ip 10.105.146.75 y 10.104.228.175 son las validas   </td>
+    <td></td>
+    
+  </tr>
+	</table>
+
+	

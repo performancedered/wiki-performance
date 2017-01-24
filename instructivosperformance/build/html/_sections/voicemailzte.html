@@ -104,12 +104,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">5.      DESCRIPCIÓN DETALLADA</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.    Datos Origen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.    Datos Destino</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">5.1.    Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">5.2.    Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">5.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">5.4.    Listado de tablas utilizadas</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#smart">7.      SMART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">6.      SMART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">7. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 </ul>
@@ -189,7 +191,7 @@
 <div class="section" id="descripcion-detallada">
 <h2>5.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="datos-origen">
-<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Server Origen y Path: 10.105.146.49, /home/sybase/zxinstat/data/usermailbox/report</p>
 </li>
@@ -210,7 +212,7 @@
 </ul>
 </div>
 <div class="section" id="datos-destino">
-<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">Server Destino: Perdido</p>
 </li>
@@ -245,13 +247,15 @@
 </ul>
 </div>
 <div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
-<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<h3>5.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
 <p>Los scripts son los siguientes:</p>
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/voicemailzte/sva_zte_hour.sh">sva_zte_hour</a></li>
 <li><a class="reference external" href="../_static/images/voicemailzte/sva_zte_summary.sh">sva_zte_summary</a></li>
 </ul>
-<p>6.4.    Listado de tablas utilizadas</p>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>5.4.    Listado de tablas utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
 <p>Las tablas utilizadas son las siguientes:</p>
 <ul class="simple">
 <li>SVA_ZTE_TRAFFIC_DAY</li>
@@ -280,7 +284,7 @@
 </div>
 </div>
 <div class="section" id="smart">
-<h2>7.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<h2>6.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
 <img alt="../_images/pag69.png" class="align-center" src="../_images/pag69.png" />
 <img alt="../_images/pag6.26.png" class="align-center" src="../_images/pag6.26.png" />
@@ -288,6 +292,43 @@
 <img alt="../_images/pag79.png" class="align-center" src="../_images/pag79.png" />
 <img alt="../_images/pag7.27.png" class="align-center" src="../_images/pag7.27.png" />
 </div>
+<div class="section" id="control-de-cambios">
+<h2>7. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+       <style type="text/css">
+  table {
+     border:2px solid red;
+     border-collapse:separate;
+     }
+  th, td {
+     border:1px solid red;
+     padding:10px;
+     }
+      </style>
+
+      <table border="3">
+<tr>
+  <th>Fecha</th>
+  <th>Responsable</th>
+  <th>Ticket Jira</th>
+  <th>Detalle</th>
+  <th>Repositorio</th>
+</tr>
+<tr>
+  <td> 26/12/2016 </td>
+  <td> Franco Rinaldi </td>
+  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-621"> CL-621 </a></p>  </td>
+  <td> Se finaliza por que se valido por Luciano Dealbera que los datos estan correctos </td>
+  <td> </td>
+</tr>
+<tr>
+  <td> 22/12/2016 </td>
+  <td> Monica Pellegrini </td>
+  <td>  <p><a href="http://jira.harriague.com.ar/jira/browse/CMTM-1572"> CMTM-1572 </a></p>  </td>
+  <td> Se cambiaron los ip 10.105.146.75 y 10.104.228.175 son las validas   </td>
+  <td></td>
+
+</tr>
+      </table></div>
 </div>
 
 

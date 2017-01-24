@@ -168,6 +168,47 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
 .. image:: ../_static/images/tableronqi/pag10.png
   :align: center
 
+7. CONTROL DE CAMBIOS
+.....................
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td>  </td>
+    <td> <p><a href="">  </a></p>  </td>
+    <td>  </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> </td>
+    <td>  <p><a href=""> </a></p>  </td>
+    <td>   </td>
+    <td></td>
+    
+  </tr>
+  </table>
+
 
 
 **TABLERO NQI HOURLY**
@@ -286,3 +327,44 @@ f_log 'Finish Tablero NQI Hourly ' $LOG
 .. image:: ../_static/images/tableronqihourly/pag9.png
     :align: center
 
+
+7. CONTROL DE CAMBIOS
+.....................
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td>  </td>
+    <td> <p><a href="">  </a></p>  </td>
+    <td>  </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> </td>
+    <td>  <p><a href=""> </a></p>  </td>
+    <td>   </td>
+    <td></td>
+    
+  </tr>
+  </table>

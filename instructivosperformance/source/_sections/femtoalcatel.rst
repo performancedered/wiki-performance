@@ -368,3 +368,44 @@ Se deben ingresar los siguientes parámetros:
 
 .. image:: ../_static/images/femtoAlcatel/pag26.2.png
   :align: center
+
+9. CONTROL DE CAMBIOS
+---------------------                         
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td> 28/12/2016 </td>
+    <td> Marcelo Carrasco </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-670"> CL-670 </a></p>  </td>
+    <td> Se crearon las estructuras y los procesos necesarios para su ejecución diaria </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 17/01/2017 </td>
+    <td> Martin Champarini </td>
+    <td>  <p><a href="http://jira.harriague.com.ar/jira/browse/CL-669"> CL-669 </a></p>  </td>
+    <td> Se corrigieron los campos de la tabla objetos  </td>
+    <td></td>
+    
+  </tr>
+  </table>
