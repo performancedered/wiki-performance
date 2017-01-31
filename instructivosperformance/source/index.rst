@@ -8,6 +8,12 @@
   :hidden:
   :maxdepth: 8
 
+  PROCESOS <procesos.rst>
+
+.. toctree::
+  :hidden:
+  :maxdepth: 8
+
   ACCESO <acceso.rst>
 
 .. toctree::
@@ -58,6 +64,12 @@
   :maxdepth: 8
 
   MAPA <mapa.rst> 
+
+  .. toctree::
+  :hidden:
+  :maxdepth: 8
+
+  REPORTES <reportes.rst> 
 
   .. toctree::
   :hidden:

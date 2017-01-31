@@ -87,6 +87,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">PROCESOS</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
 </ul>
 <ul>
@@ -102,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ciscoprime.html">1. CISCO PRIME</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lteregional.html">2. LTE REGIONAL</a></li>
@@ -196,23 +200,23 @@
 <h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
 <p>La plataforma WAP ZTE es un internet Gateway que permite a los teléfonos que no son smart phones la posibilidad de navegar en internet. No sólo funciona como proxy, sino también como adaptador de contenido, y en casos donde se visita una página web que tiene imágenes en alta definición, le baja la resolución para que el viejo teléfono lo pueda mostrar&#8221;.</p>
 <p>Campos de la tabla WAP_GATEWAY_KPI_ZTE_AUX:</p>
-<img alt="../_images/pag48.png" class="align-center" src="../_images/pag48.png" />
+<img alt="../_images/pag412.png" class="align-center" src="../_images/pag412.png" />
 <p>Campos de la tabla WAP_GATEWAY_KPI_ZTE_RAW:</p>
-<img alt="../_images/pag4.22.png" class="align-center" src="../_images/pag4.22.png" />
+<img alt="../_images/pag4.26.png" class="align-center" src="../_images/pag4.26.png" />
 <p>Campos de la tabla WAP_GATEWAY_SERVICE_ZTE_AUX:</p>
-<img alt="../_images/pag55.png" class="align-center" src="../_images/pag55.png" />
+<img alt="../_images/pag512.png" class="align-center" src="../_images/pag512.png" />
 <p>Campos de la tabla WAP_GATEWAY_SERVICE_ZTE_BH:</p>
-<img alt="../_images/pag5.21.png" class="align-center" src="../_images/pag5.21.png" />
+<img alt="../_images/pag5.27.png" class="align-center" src="../_images/pag5.27.png" />
 <p>Campos de la tabla WAP_GATEWAY_SERVICE_ZTE_DAY:</p>
-<img alt="../_images/pag64.png" class="align-center" src="../_images/pag64.png" />
+<img alt="../_images/pag612.png" class="align-center" src="../_images/pag612.png" />
 <p>Campos de la tabla WAP_GATEWAY_SERVICE_ZTE_IBHW:</p>
-<img alt="../_images/pag6.22.png" class="align-center" src="../_images/pag6.22.png" />
+<img alt="../_images/pag6.29.png" class="align-center" src="../_images/pag6.29.png" />
 <p>Campos de la tabla  WAP_GATEWAY_SERVICE_ZTE_RAW:</p>
-<img alt="../_images/pag76.png" class="align-center" src="../_images/pag76.png" />
+<img alt="../_images/pag711.png" class="align-center" src="../_images/pag711.png" />
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag7.25.png" class="align-center" src="../_images/pag7.25.png" />
+<img alt="../_images/pag7.28.png" class="align-center" src="../_images/pag7.28.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6.      DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -271,18 +275,18 @@
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
 <p>Campos de la tabla FILE:</p>
-<img alt="../_images/pag39.png" class="align-center" src="../_images/pag39.png" />
+<img alt="../_images/pag315.png" class="align-center" src="../_images/pag315.png" />
 <p>Las tablas utilizadas son las siguientes:</p>
-<img alt="../_images/pag94.png" class="align-center" src="../_images/pag94.png" />
+<img alt="../_images/pag98.png" class="align-center" src="../_images/pag98.png" />
 </div>
 <div class="section" id="pentaho">
 <h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <p>Estructura del proyecto:</p>
-<img alt="../_images/pag9.23.png" class="align-center" src="../_images/pag9.23.png" />
+<img alt="../_images/pag9.24.png" class="align-center" src="../_images/pag9.24.png" />
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag9.3.png" class="align-center" src="../_images/pag9.3.png" />
+<img alt="../_images/pag9.31.png" class="align-center" src="../_images/pag9.31.png" />
 <p>Tenemos el Shell  wapZteDiario.sh que trae datos para el servidor Cortado. Luego setea variables de entorno, directorios donde se encuentran los datos para procesar los archivos disponibles.</p>
 <p>En la Carpeta File se encuentran todos los archivos a procesar.</p>
 <p>Los archivos a procesar dependen del status en que se encuentran:</p>
@@ -302,23 +306,23 @@ Escribe los siguientes datos:</p>
 <li>Status</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag105.png" class="align-center" src="../_images/pag105.png" />
+<img alt="../_images/pag109.png" class="align-center" src="../_images/pag109.png" />
 <ul class="simple">
 <li>Pentaho Inserción tabla auxiliar / raw / hour (No contiene hour)</li>
 </ul>
-<img alt="../_images/pag10.21.png" class="align-center" src="../_images/pag10.21.png" />
+<img alt="../_images/pag10.22.png" class="align-center" src="../_images/pag10.22.png" />
 <p>Tabla auxiliar de la tabla WAP_GATEWAY_KPI_ZTE</p>
 <p>Tabla auxiliar de la tabla WAP_GATEWAY_SERVICE_ZTE_AUX</p>
-<img alt="../_images/pag113.png" class="align-center" src="../_images/pag113.png" />
+<img alt="../_images/pag117.png" class="align-center" src="../_images/pag117.png" />
 <ul class="simple">
 <li>Pentaho Calculo Sumarizaciones</li>
 </ul>
 <p>Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento Call P_CALCULAR_SUMARIZACIONES_ZTE DB Procedures.</p>
-<img alt="../_images/pag11.22.png" class="align-center" src="../_images/pag11.22.png" />
+<img alt="../_images/pag11.26.png" class="align-center" src="../_images/pag11.26.png" />
 </div>
 <div class="section" id="controles">
 <h3>6.6.    Controles<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
-<img alt="../_images/pag11.3.png" class="align-center" src="../_images/pag11.3.png" />
+<img alt="../_images/pag11.31.png" class="align-center" src="../_images/pag11.31.png" />
 </div>
 </div>
 <div class="section" id="reproceso-manual">
@@ -337,16 +341,16 @@ Escribe los siguientes datos:</p>
 <ul class="simple">
 <li>./Pentaho61/data-integration/kitchen.sh  -file=/home/calidad/WapZte/Rework.kjb –param:FECHA_PROC= YYYYMMDD</li>
 </ul>
-<img alt="../_images/pag124.png" class="align-center" src="../_images/pag124.png" />
+<img alt="../_images/pag128.png" class="align-center" src="../_images/pag128.png" />
 </div>
 <div class="section" id="smart">
 <h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
-<img alt="../_images/pag134.png" class="align-center" src="../_images/pag134.png" />
-<img alt="../_images/pag144.png" class="align-center" src="../_images/pag144.png" />
-<img alt="../_images/pag14.23.png" class="align-center" src="../_images/pag14.23.png" />
-<img alt="../_images/pag154.png" class="align-center" src="../_images/pag154.png" />
-<img alt="../_images/pag15.23.png" class="align-center" src="../_images/pag15.23.png" />
+<img alt="../_images/pag137.png" class="align-center" src="../_images/pag137.png" />
+<img alt="../_images/pag147.png" class="align-center" src="../_images/pag147.png" />
+<img alt="../_images/pag14.25.png" class="align-center" src="../_images/pag14.25.png" />
+<img alt="../_images/pag156.png" class="align-center" src="../_images/pag156.png" />
+<img alt="../_images/pag15.24.png" class="align-center" src="../_images/pag15.24.png" />
 </div>
 <div class="section" id="control-de-cambios">
 <h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>

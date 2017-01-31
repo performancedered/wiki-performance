@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reporte Hour &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="REPORTES" href="../reportes.html"/>
+        <link rel="next" title="Reporte Bh Day" href="reportebhday.html"/>
+        <link rel="prev" title="Reporte Raw" href="reporteraw.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">PROCESOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reportes.html">REPORTES</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="reportefilesystem.html"> 1. Reporte File System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteraw.html"> 2. Reporte Raw</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 3. Reporte Hour</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-de-origen">6.1. Datos de origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2. Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4. Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5. Pentaho</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WIKI-PERFORMANCE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
+      
+    <li>Reporte Hour</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reporte-hour">
+<h1>Reporte Hour<a class="headerlink" href="#reporte-hour" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Reporte a Nivel HOURS</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>REPORTE A NIVEL HOURS</strong></p>
+<p>Este reporte se utiliza para obtener los datos de las 3 tecnologías (GSM, UMTS, LTE) enviando un email con los datos y los gráficos del tráfico por hora.</p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag37.png" class="align-center" src="../_images/pag37.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-de-origen">
+<h3>6.1. Datos de origen<a class="headerlink" href="#datos-de-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen y Path: falda.claro.amx  , /calidad/Reportes/</li>
+<li>Frecuencia actualización: Frecuencia diaria</li>
+<li>Tipo de Archivo de Salida: xlsx</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2. Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: Falda</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Files: No</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 vez al día</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: No</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: No</li>
+<li>BH Si/No: No</li>
+<li>Países: No</li>
+<li>Directorio Destino (File System): /home/calidad/Reportes</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>El script es el siguiente:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reportehour/report.sh">Report</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4. Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas son las siguientes:</p>
+<ul class="simple">
+<li>CALIDAD_STATUS_REFERENCES</li>
+<li>UMTS_NSN_SERVICE_WCEL_HOU2</li>
+<li>UMTS_NSN_SERVICE_NE_HOUR</li>
+<li>MULTIVENDOR_GPRS_ALM_HOUR</li>
+<li>MULTIVENDOR_GPRS_MKT_HOUR</li>
+<li>MULTIVENDOR_GPRS_BSC_HOUR</li>
+<li>MULTIVENDOR_GPRS_PAIS_HOUR</li>
+<li>MVENDOR_GPRS_BTS_HOUR</li>
+<li>MULTIVENDOR_PAIS_HOUR</li>
+<li>MULTIVENDOR_ALM_HOUR</li>
+<li>MULTIVENDOR_MKT_HOUR</li>
+<li>MULTIVENDOR_BSC_HOUR</li>
+<li>UMTS_NSN_SERVICE_WCEL_HOU2</li>
+<li>UMTS_NSN_SERVICE_NE_HOUR</li>
+<li>LTE_NSN_SERVICE_LCEL_HOUR</li>
+<li>LTE_NSN_PAQ_LCEL_HOUR</li>
+<li>LTE_NSN_AVAIL_LCEL_HOUR</li>
+<li>LTE_NSN_SERVICE_LCEL_HOUR</li>
+<li>LTE_NSN_PAQ_LCEL_HOUR</li>
+<li>LTE_NSN_AVAIL_LCEL_HOUR</li>
+<li>LTE_NSN_SERVICE_LCEL_HOUR</li>
+<li>LTE_NSN_PAQ_LCEL_HOUR</li>
+<li>LTE_NSN_AVAIL_LCEL_HOUR</li>
+<li>LTE_NSN_SERVICE_LCEL_HOUR</li>
+<li>LTE_NSN_PAQ_LCEL_HOUR</li>
+<li>LTE_NSN_AVAIL_LCEL_HOUR</li>
+<li>LTE_NSN_SERVICE_NE_HOUR</li>
+<li>LTE_NSN_PAQ_NE_HOUR</li>
+<li>LTE_NSN_AVAIL_NE_HOUR</li>
+</ul>
+</div>
+<div class="section" id="pentaho">
+<h3>6.5. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag5.bis.png" class="align-center" src="../_images/pag5.bis.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag58.png" class="align-center" src="../_images/pag58.png" />
+<ul class="simple">
+<li>Proceso Pentaho UMTS</li>
+</ul>
+<p>En este proceso se obtiene datos de las tablas de UMTS_SERVICE y UMTS_HO y  se crea un excel con 2 hojas una para cada medición (service, ho)</p>
+<img alt="../_images/pag5.24.png" class="align-center" src="../_images/pag5.24.png" />
+<ul class="simple">
+<li>Proceso Pentaho GSM</li>
+</ul>
+<img alt="../_images/pag5.31.png" class="align-center" src="../_images/pag5.31.png" />
+<ul class="simple">
+<li>Proceso Pentaho LTE</li>
+</ul>
+<img alt="../_images/pag66.png" class="align-center" src="../_images/pag66.png" />
+<p>Para reprocesar se debe ejecutar por consola el script report.sh, los datos obtenidos será la fecha del dia anterior:</p>
+<img alt="../_images/pag6.25.png" class="align-center" src="../_images/pag6.25.png" />
+<p>El email muestra los archivos adjuntos en formato xlsx que contiene los datos mencionados anteriormente:</p>
+<img alt="../_images/pag6.31.png" class="align-center" src="../_images/pag6.31.png" />
+<p>Gráficos que se encuentran en el archivo que se envía adjunto al email:</p>
+<img alt="../_images/pag76.png" class="align-center" src="../_images/pag76.png" />
+<img alt="../_images/pag7.24.png" class="align-center" src="../_images/pag7.24.png" />
+<img alt="../_images/pag7.31.png" class="align-center" src="../_images/pag7.31.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reportebhday.html" class="btn btn-neutral float-right" title="Reporte Bh Day" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reporteraw.html" class="btn btn-neutral" title="Reporte Raw" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
