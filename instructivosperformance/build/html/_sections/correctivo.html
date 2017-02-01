@@ -35,7 +35,7 @@
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="ASEGURAMIENTO DE DATOS" href="aseguramientodedatos.html"/>
         <link rel="next" title="DESARROLLO DE NUEVOS PROYECTOS" href="nuevosproyectos.html"/>
-        <link rel="prev" title="PREVENTIVO" href="preventivo.html"/> 
+        <link rel="prev" title="PROCESO PREVENTIVO" href="preventivo.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,8 +86,25 @@
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../procesos.html">PROCESOS</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../procesos.html">  PROCESOS</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="aseguramientodedatos.html">1. ASEGURAMIENTO DE DATOS</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="preventivo.html">1. PREVENTIVO</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2. CORRECTIVO</a><ul>
@@ -98,6 +115,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#microflujo-del-proceso">5.      MICROFLUJO DEL PROCESO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#principales-actividades-y-responsabilidades">6.      PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#indicadores">7.      INDICADORES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 </ul>
@@ -105,25 +123,6 @@
 <li class="toctree-l2"><a class="reference internal" href="nuevosproyectos.html">2. DESARROLLO DE NUEVOS PROYECTOS</a></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
 </ul>
 
             
@@ -185,7 +184,7 @@
 <ul class="simple">
 <li>Smart: herramienta de performance de red, donde se almacenan datos históricos de las diferentes plataformas integradas.</li>
 <li>JIRA: herramienta web para registrar y dar seguimiento a tareas.</li>
-<li>Focal Point: es el Analista de Performance designado durante el Sprint para controlar la ejecución del proceso</li>
+<li>Focal Point: es el Analista de Performance designado durante el Sprint para controlar la ejecución del proceso preventivo y correctivo de Aseguramiento de Datos.</li>
 <li>Analista de Datos: es la persona designada para realizar los reprocesos durante el Sprint</li>
 <li>Sprint: período de tiempo actual, normalmente el Sprint tiene 2 semanas de duración</li>
 </ul>
@@ -258,6 +257,36 @@
 <img alt="../_images/pag5.28.png" class="align-center" src="../_images/pag5.28.png" />
 <img alt="../_images/pag5.34.png" class="align-center" src="../_images/pag5.34.png" />
 </div>
+<div class="section" id="control-de-cambios">
+<h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+  <style type="text/css">
+   table {
+      border:2px solid red;
+      border-collapse:separate;
+      }
+   th, td {
+      border:1px solid red;
+      padding:10px;
+      }
+ </style>
+
+ <table border="3">
+ <tr>
+   <th>Fecha</th>
+   <th>Responsable</th>
+   <th>Ticket Jira</th>
+   <th>Detalle</th>
+   <th>Repositorio</th>
+ </tr>
+ <tr>
+   <td> 31/01/2017 </td>
+   <td> Marcela Medrano, Matias Stuyck </td>
+   <td> - </td>
+   <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. </td>
+   <td> -</td>
+ </tr>
+
+</table></div>
 </div>
 
 
@@ -270,7 +299,7 @@
         <a href="nuevosproyectos.html" class="btn btn-neutral float-right" title="DESARROLLO DE NUEVOS PROYECTOS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="preventivo.html" class="btn btn-neutral" title="PREVENTIVO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="preventivo.html" class="btn btn-neutral" title="PROCESO PREVENTIVO" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

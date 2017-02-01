@@ -4,11 +4,6 @@
 
   INTRODUCCIÓN <introduccion.rst> 
 
-.. toctree::
-  :hidden:
-  :maxdepth: 8
-
-  PROCESOS <procesos.rst>
 
 .. toctree::
   :hidden:
@@ -76,6 +71,12 @@
   :maxdepth: 8
 
   PROYECTOS <proyectos.rst> 
+
+  .. toctree::
+    :hidden:
+    :maxdepth: 8
+
+    PROCESOS <procesos.rst>
 
 PERFORMANCE
 ===========

@@ -17,7 +17,7 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 
 +	JIRA: herramienta web para registrar y dar seguimiento a tareas.
 
-+	Focal Point: es el Analista de Performance designado durante el Sprint para controlar la ejecución del proceso
++	Focal Point: es el Analista de Performance designado durante el Sprint para controlar la ejecución del proceso preventivo y correctivo de Aseguramiento de Datos.
 
 +	Analista de Datos: es la persona designada para realizar los reprocesos durante el Sprint
 
@@ -127,3 +127,38 @@ Se utiliza el indicador “Avg. Resolution Time” para controlar el tiempo prom
 
 .. image:: ../_static/images/correctivo/pag5.3.png
   :align: center 
+
+8. CONTROL DE CAMBIOS
+---------------------
+
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td> 31/01/2017 </td>
+    <td> Marcela Medrano, Matias Stuyck </td>
+    <td> - </td>
+    <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. </td>
+    <td> -</td>
+  </tr>
+
+ </table>
