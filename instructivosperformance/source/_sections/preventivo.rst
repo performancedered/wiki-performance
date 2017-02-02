@@ -37,7 +37,7 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 4.	MACROFLUJO DEL PROCESO
 --------------------------
 
-.. image:: ../_static/images/correctivo/pag2.png
+.. image:: ../_static/images/preventivo/pag2.bis.png
   :align: center 
 
 
