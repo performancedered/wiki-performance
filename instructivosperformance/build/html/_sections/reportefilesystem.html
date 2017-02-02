@@ -103,10 +103,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../reportes.html">REPORTES</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#"> 1. Reporte File System</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 1. Reporte File System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-de-origen-y-datos-destino">6.1. Datos de origen y datos destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.4. Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="reporteraw.html"> 2. Reporte Raw</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reportehour.html"> 3. Reporte Hour</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportetablespace.html"> 5. Reporte Table Space</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
@@ -157,6 +174,129 @@
             
   <div class="section" id="reporte-file-system">
 <h1>Reporte File System<a class="headerlink" href="#reporte-file-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Reporte File System</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>REPORTE FILE SYSTEM</strong></p>
+<p>Este reporte se utiliza para controlar el estado de los File System en los servidores.</p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag316.png" class="align-center" src="../_images/pag316.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-de-origen-y-datos-destino">
+<h3>6.1. Datos de origen y datos destino<a class="headerlink" href="#datos-de-origen-y-datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen:</p>
+<blockquote>
+<div><ul class="simple">
+<li>PERDIDO</li>
+<li>GUERRERO</li>
+<li>CORTADO</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Frecuencia actualización: 2 veces por dia(hora 7hs y 16hs)</p>
+</li>
+<li><p class="first">Tipo de Archivo de Salida: HTML</p>
+</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reportefilesystem/deleteEmptyLogs.sh">deleteEmptyLogs</a></li>
+<li><a class="reference external" href="../_static/images/reportefilesystem/diskFree.sh">diskFree</a></li>
+<li><a class="reference external" href="../_static/images/reportefilesystem/runInfoStorage.sh">runInfoStorage</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.3.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>No utiliza  por que trae los datos desde los servidores.</p>
+</div>
+<div class="section" id="pentaho">
+<h3>6.4. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag414.png" class="align-center" src="../_images/pag414.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag4.27.png" class="align-center" src="../_images/pag4.27.png" />
+<ul class="simple">
+<li>Proceso StoragePerdidoRC21</li>
+</ul>
+<p>Dentro de Perdido RC2 RC1 SSH commands se ejecuta el siguiente script:</p>
+<img alt="../_images/pag4.33.png" class="align-center" src="../_images/pag4.33.png" />
+<img alt="../_images/pag514.png" class="align-center" src="../_images/pag514.png" />
+<p>En los procesos:</p>
+<ul class="simple">
+<li>StoragePerdidoRC3</li>
+</ul>
+<img alt="../_images/pag5.29.png" class="align-center" src="../_images/pag5.29.png" />
+<ul class="simple">
+<li>StorageGuerreroST1</li>
+</ul>
+<img alt="../_images/pag5.35.png" class="align-center" src="../_images/pag5.35.png" />
+<ul class="simple">
+<li>StorageCortado</li>
+</ul>
+<img alt="../_images/pag5.4.png" class="align-center" src="../_images/pag5.4.png" />
+<p>Se realiza el mismo procedimiento que en StoragePerdidoRC21, solo se realiza la modificación en el Servidor del cual se obtienen los datos.</p>
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p>Para realizar el reproceso se debe correr lo siguiente por consola:</p>
+<img alt="../_images/pag5.5.png" class="align-center" src="../_images/pag5.5.png" />
+<p>El email muestra la información de la siguiente manera:</p>
+<img alt="../_images/pag5.6.png" class="align-center" src="../_images/pag5.6.png" />
+</div>
+<div class="section" id="control-de-cambios">
+<h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+  <style type="text/css">
+   table {
+      border:2px solid red;
+      border-collapse:separate;
+      }
+   th, td {
+      border:1px solid red;
+      padding:10px;
+      }
+ </style>
+
+ <table border="3">
+ <tr>
+   <th>Fecha</th>
+   <th>Responsable</th>
+   <th>Ticket Jira</th>
+   <th>Detalle</th>
+   <th>Repositorio</th>
+ </tr>
+ <tr>
+   <td>  </td>
+   <td> Marcelo Carrasco </td>
+   <td> - </td>
+   <td>  </td>
+   <td> -</td>
+ </tr>
+
+</table></div>
 </div>
 
 
