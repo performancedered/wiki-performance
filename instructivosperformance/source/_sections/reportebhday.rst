@@ -357,3 +357,37 @@ El email muestra los archivos adjuntos en formato xlsx que contiene los datos me
 
 .. image:: ../_static/images/reportebhday/pag10.png
   :align: center 
+
+8. CONTROL DE CAMBIOS
+---------------------
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td> </td>
+  </tr>
+
+ </table>

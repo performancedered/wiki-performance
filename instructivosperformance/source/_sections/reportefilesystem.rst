@@ -153,10 +153,10 @@ El email muestra la información de la siguiente manera:
   </tr>
   <tr>
     <td>  </td>
-    <td> Marcelo Carrasco </td>
-    <td> - </td>
+    <td> </td>
     <td>  </td>
-    <td> -</td>
+    <td>  </td>
+    <td> </td>
   </tr>
 
  </table>
