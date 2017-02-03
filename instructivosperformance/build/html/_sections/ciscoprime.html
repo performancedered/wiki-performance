@@ -104,7 +104,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. CISCO PRIME</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. CISCO PRIME</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">8.      SMART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="lteregional.html">2. LTE REGIONAL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wapZte.html">3. WAP ZTE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mobileum.html">4. ANTISPAMMING MOBILEUM</a></li>
@@ -160,8 +178,295 @@
             
   <div class="section" id="cisco-prime">
 <h1>CISCO PRIME<a class="headerlink" href="#cisco-prime" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera Cisco Prime.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cortado: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es cortado.claro.amx y la dirección ip física es 10.105.146.8.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
 <p>La plataforma Cisco Prime Performance es el sistema de gestión propietario del proveedor Cisco para todos sus routers y switches.  En Claro se utiliza para monitorear los KPIs del Backbone IP. La integración a Smart de esta plataforma consiste en recolectar los archivos CSV y XML de Cisco Prime Performance, y mostrarles en Smart.  Los KPIs son básicamente: Utilización de CPU y Memoria de los equipos, y  la Utilización de Interfaces.  La información puede visualizarse en Smart hora x hora, por hora pico del día, por hora pico de la semana, por hora pico del mes, por día, por semana, por mes.</p>
-<p><a class="reference external" href="../_static/images/documentos/CiscoPrimeIntegracion.xlsx">Cisco_Prime_Integracion</a></p>
+<p>Documento de Requerimiento: <a class="reference external" href="../_static/images/documentos/CiscoPrimeIntegracion.xlsx">Cisco_Prime_Integracion</a></p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag317.png" class="align-center" src="../_images/pag317.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen y Path: 10.92.50.223 , /opt/CSCOppm-gw/reports/exporthourly/</p>
+</li>
+<li><p class="first">Cantidad de archivos origen: 3 archivos</p>
+<blockquote>
+<div><ul class="simple">
+<li>INTERFACE.YYYY-MM-DD-HH.CSV</li>
+<li>INTERFACE_ERRORS.YYYY-MM-DD-HH.CSV</li>
+<li>INTERFACE_AVAIL.YYYY-MM-DD-HH.CSV</li>
+<li>CPU_DEVICE_AVG.YYYY-MM-DD-HH.CSV</li>
+<li>MEMORY_DEVICE_AVERAGE.YYYY-MM-DD-HH.CSV</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Frecuencia actualización: Frecuencia diaria</p>
+</li>
+<li><p class="first">Tipo de Archivo: CSV</p>
+</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: Cortado</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Files: Si</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 vez al día</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: No</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: Si</li>
+<li>IBHW Si/No: Si</li>
+<li>Países: No</li>
+<li>Directorio Destino (File System): /calidad/CiscoPrime</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los Scripts tienen las siguientes funciones:</p>
+<p>1-      Copiar los archivos</p>
+<p>2-      Ejecutar Pentaho</p>
+<ul class="simple">
+<li>El Script <a class="reference external" href="../_static/images/ciscoprime/ciscoPrimeDiario.sh">ciscoPrimeDiario</a> es la raíz de proceso</li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoprime/arma_log_csv.sh">arma_log_csv</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/ciscoPrime.sh">ciscoPrime</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/ciscoPrimeDiario.sh">ciscoPrimeDiario</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/ciscoPrimeRework.sh">ciscoPrimeRework</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/ciscoRework.sh">ciscoRework</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/countLines.sh">countLines</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/deleteEmptyLogs.sh">deleteEmptyLogs</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/localCgnStatsCount.sh">localCgnStatsCount</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/localCpuCount.sh">localCpuCount</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/localInterfaceAvailCount.sh">localInterfaceAvailCount</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/localInterfaceErrorsCount.sh">localInterfaceErrorsCount</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/localMemoryCount.sh">localMemoryCount</a></li>
+<li><a class="reference external" href="../_static/images/ciscoprime/makeKVP.sh">makeKVP</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son las siguientes:</p>
+<img alt="../_images/pag614.png" class="align-center" src="../_images/pag614.png" />
+<p>Los campos de las tablas utilizadas son las siguientes:</p>
+<ul class="simple">
+<li>Tabla Files</li>
+</ul>
+<img alt="../_images/pag6.211.png" class="align-center" src="../_images/pag6.211.png" />
+<ul class="simple">
+<li>Tabla CSCO_CGN_STATS_BH</li>
+</ul>
+<img alt="../_images/pag713.png" class="align-center" src="../_images/pag713.png" />
+<ul class="simple">
+<li>Tabla CSCO_CGN_STATS_DAY</li>
+</ul>
+<img alt="../_images/pag7.210.png" class="align-center" src="../_images/pag7.210.png" />
+<ul class="simple">
+<li>Tabla CSCO_CGN_STATS_HOUR</li>
+</ul>
+<img alt="../_images/pag810.png" class="align-center" src="../_images/pag810.png" />
+<ul class="simple">
+<li>Tabla CSCO_CGN_STATS_IBHW</li>
+</ul>
+<img alt="../_images/pag8.27.png" class="align-center" src="../_images/pag8.27.png" />
+<ul class="simple">
+<li>Tabla CSCO_CPU_DEVICE_AVG_HOUR</li>
+</ul>
+<img alt="../_images/pag8.33.png" class="align-center" src="../_images/pag8.33.png" />
+<ul class="simple">
+<li>Tabla  CSCO_MEM_DEVICE_AVG_BH</li>
+</ul>
+<img alt="../_images/pag910.png" class="align-center" src="../_images/pag910.png" />
+<ul class="simple">
+<li>Tabla  CSCO_MEM_DEVICE_AVG_DAY</li>
+</ul>
+<img alt="../_images/pag9.25.png" class="align-center" src="../_images/pag9.25.png" />
+<ul class="simple">
+<li>Tabla  CSCO_MEM_DEVICE_AVG_HOUR</li>
+</ul>
+<img alt="../_images/pag1011.png" class="align-center" src="../_images/pag1011.png" />
+<ul class="simple">
+<li>Tabla  CSCO_MEM_DEVICE_AVG_IBHW</li>
+</ul>
+<img alt="../_images/pag1011.png" class="align-center" src="../_images/pag1011.png" />
+<ul class="simple">
+<li>Tabla CSCO_INTERFACE_AVAIL_HOUR</li>
+</ul>
+<img alt="../_images/pag10.23.png" class="align-center" src="../_images/pag10.23.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_BH</li>
+</ul>
+<img alt="../_images/pag118.png" class="align-center" src="../_images/pag118.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_DAY</li>
+</ul>
+<img alt="../_images/pag129.png" class="align-center" src="../_images/pag129.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_ERRORS_HOUR</li>
+</ul>
+<img alt="../_images/pag138.png" class="align-center" src="../_images/pag138.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_HOUR</li>
+</ul>
+<img alt="../_images/pag148.png" class="align-center" src="../_images/pag148.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_HOUR_OLD2</li>
+</ul>
+<img alt="../_images/pag157.png" class="align-center" src="../_images/pag157.png" />
+<ul class="simple">
+<li>Tabla CSCO INTERFACE_IBHW</li>
+</ul>
+<img alt="../_images/pag167.png" class="align-center" src="../_images/pag167.png" />
+<ul class="simple">
+<li>Tabla CSCO_LINKS</li>
+</ul>
+<img alt="../_images/pag175.png" class="align-center" src="../_images/pag175.png" />
+<ul class="simple">
+<li>Tabla CSCO_MEMORY_BH</li>
+</ul>
+<img alt="../_images/pag17.22.png" class="align-center" src="../_images/pag17.22.png" />
+<ul class="simple">
+<li>Tabla CSCO_MEMORY_DAY</li>
+</ul>
+<img alt="../_images/pag185.png" class="align-center" src="../_images/pag185.png" />
+<ul class="simple">
+<li>Tabla CSCO_MEMORY_DEVICE_AVG_HOUR</li>
+</ul>
+<img alt="../_images/pag18.22.png" class="align-center" src="../_images/pag18.22.png" />
+<ul class="simple">
+<li>Tabla CSCO_MEMORY_HOUR</li>
+</ul>
+<img alt="../_images/pag18.3.png" class="align-center" src="../_images/pag18.3.png" />
+<ul class="simple">
+<li>Tabla CSCO_MEMORY_IBHW</li>
+</ul>
+<img alt="../_images/pag18.4.png" class="align-center" src="../_images/pag18.4.png" />
+<ul class="simple">
+<li>Tabla ERROR_LOG_NEW</li>
+</ul>
+<img alt="../_images/pag195.png" class="align-center" src="../_images/pag195.png" />
+<ul class="simple">
+<li>Tabla PROCESS_TO_RUN</li>
+</ul>
+<img alt="../_images/pag19.23.png" class="align-center" src="../_images/pag19.23.png" />
+</div>
+<div class="section" id="pentaho">
+<h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/pag19.31.png" class="align-center" src="../_images/pag19.31.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag19.4.png" class="align-center" src="../_images/pag19.4.png" />
+<ul class="simple">
+<li>Pentaho Inventory End To End</li>
+</ul>
+<img alt="../_images/pag204.png" class="align-center" src="../_images/pag204.png" />
+<ul class="simple">
+<li>Pentaho Links End To End</li>
+</ul>
+<img alt="../_images/pag20.1.png" class="align-center" src="../_images/pag20.1.png" />
+<ul class="simple">
+<li>Pentaho Cgn Stats End To End</li>
+</ul>
+<img alt="../_images/pag215.png" class="align-center" src="../_images/pag215.png" />
+<ul class="simple">
+<li>Pentaho Interface End To End</li>
+</ul>
+<img alt="../_images/pag21.21.png" class="align-center" src="../_images/pag21.21.png" />
+<ul class="simple">
+<li>Pentaho Interface Avail End To End</li>
+</ul>
+<img alt="../_images/pag21.3.png" class="align-center" src="../_images/pag21.3.png" />
+<ul class="simple">
+<li>Pentaho Interface Errors End To End</li>
+</ul>
+<img alt="../_images/pag223.png" class="align-center" src="../_images/pag223.png" />
+<ul class="simple">
+<li>Pentaho Cpu Device Avg End To End</li>
+</ul>
+<img alt="../_images/pag22.21.png" class="align-center" src="../_images/pag22.21.png" />
+<ul class="simple">
+<li>Pentaho Memory Device Avg End To End</li>
+</ul>
+<img alt="../_images/pag234.png" class="align-center" src="../_images/pag234.png" />
+<ul class="simple">
+<li>Pentaho Cpu Mem Device Avg End To End</li>
+</ul>
+<img alt="../_images/pag23.22.png" class="align-center" src="../_images/pag23.22.png" />
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pendiente</strong></p>
+</div>
+<div class="section" id="smart">
+<h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
+<img alt="../_images/pag243.png" class="align-center" src="../_images/pag243.png" />
+<img alt="../_images/pag24.23.png" class="align-center" src="../_images/pag24.23.png" />
+<img alt="../_images/pag24.31.png" class="align-center" src="../_images/pag24.31.png" />
+<img alt="../_images/pag252.png" class="align-center" src="../_images/pag252.png" />
+</div>
+<div class="section" id="control-de-cambios">
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+ <style type="text/css">
+  table {
+     border:2px solid red;
+     border-collapse:separate;
+     }
+  th, td {
+     border:1px solid red;
+     padding:10px;
+     }
+</style>
+
+<table border="3">
+<tr>
+  <th>Fecha</th>
+  <th>Responsable</th>
+  <th>Ticket Jira</th>
+  <th>Detalle</th>
+  <th>Repositorio</th>
+</tr>
+<tr>
+  <td>  </td>
+  <td>  </td>
+  <td> <p><a href="">  </a></p>  </td>
+  <td>  </td>
+  <td> </td>
+</tr>
+<tr>
+  <td>  </td>
+  <td> </td>
+  <td>  <p><a href=""> </a></p>  </td>
+  <td>   </td>
+  <td></td>
+
+</tr>
+</table></div>
 </div>
 
 
