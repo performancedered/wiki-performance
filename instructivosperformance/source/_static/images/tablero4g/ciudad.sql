@@ -1,6 +1,5 @@
-/*TABLERO PARTICIPACION 4G CIUDAD*/
-WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
-                             T1.FECHA,
+   /*TABLERO PARTICIPACION 4G CIUDAD*/
+WITH  DATOS_3G AS  (SELECT T1.FECHA,
                              O1.PROVINCIA,
                              O1.LOCALIDAD, 
                              ROUND((SUM(HS_DSCH_DATA_VOL) / (1024 * 1024 * 1024)), 2) HSDPAMACDGB,
@@ -39,13 +38,12 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                       ('TIERRA DEL FUEGO','USHUAIA'),
                       ('TUCUMAN','SAN MIGUEL DE TUCUMAN')) --(SELECT F_PROV_LOC() FROM DUAL)--RESULTADO DE LA FUNCION
                          --AND T1.FECHA > ADD_MONTHS(SYSDATE, -12) + F_CALCULO_BISIESTO_WO_FECHA
-                         AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                         AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                          AND O1.WCELL_ID = T1.INT_ID
                        GROUP BY T1.FECHA, O1.PROVINCIA, O1.LOCALIDAD
                        ORDER BY T1.FECHA, O1.PROVINCIA
                 ),
-        DATOS_2G AS  (SELECT /*+ MATERIALIZED */
-                               T1.FECHA,
+        DATOS_2G AS  (SELECT T1.FECHA,
                                O1.PROVINCIA,
                                O1.LOCALIDAD,
                                NVL(ROUND((/*SUM(GPRS_UL_TRAFFIC) +*/ SUM(T1.GPRS_DL_TRAFFIC)) / 1024 / 1024, 2), 0) TRAFFICDLGPRS,
@@ -75,13 +73,12 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                       ('SANTIAGO DEL ESTERO','SANTIAGO DEL ESTERO'),
                       ('TIERRA DEL FUEGO','USHUAIA'),
                       ('TUCUMAN','SAN MIGUEL DE TUCUMAN'))
-                       AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000  
+                       AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000  
                        AND O1.BTS_ID = T1.INT_ID
                      GROUP BY T1.FECHA, O1.PROVINCIA, O1.LOCALIDAD
                      ORDER BY T1.FECHA, O1.PROVINCIA
                 ),
-        DATOS_4G AS  (SELECT /*+ MATERIALIZED */
-                               T1.FECHA,
+        DATOS_4G AS  (SELECT T1.FECHA,
                                O1.PROVINCIA,
                                O1.LOCALIDAD,
                                ROUND(SUM(T1.TRAFICO_DL / 1000), 2) TRAFFICDL4G,
@@ -116,7 +113,7 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                           ('TIERRA DEL FUEGO','USHUAIA'),
                           ('TUCUMAN','SAN MIGUEL DE TUCUMAN')
                                               )
-                           AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                           AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                            AND T1.ELEMENT_ID = O1.ELEMENT_ID
                            AND T1.ELEMENT_CLASS = O1.ELEMENT_CLASS
                            AND O1.ELEMENT_CLASS = 'LNBTS'
@@ -220,8 +217,7 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                 GROUP BY PROVINCIA, LOCALIDAD
                 ORDER BY PROVINCIA
                 ),
-      THP_3G_CIUDAD AS (SELECT DISTINCT /*+ MATERIALIZED */ 
-                                      T1.FECHA,
+      THP_3G_CIUDAD AS (SELECT T1.FECHA,
                                       O1.PROVINCIA,
                                       O1.LOCALIDAD,
                                       ROUND(DECODE(SUM(HSDPA_BUFF_WITH_DATA_PER_TTI),0,0,
@@ -240,11 +236,11 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                              UMTS_NSN_HSDPA_WCEL_DAYW     T2,
                              UMTSC_NSN_HSDPA_WCEL_DAYW    T3
                        WHERE T2.FECHA(+) = T1.FECHA
-                         AND T2.INT_ID = T1.INT_ID
+                         AND T2.INT_ID(+) = T1.INT_ID
                          AND T3.FECHA(+) = T1.FECHA
-                         AND T3.INT_ID = T1.INT_ID
+                         AND T3.INT_ID(+) = T1.INT_ID
                          AND O1.WCELL_ID = T1.INT_ID 
-                         AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                         AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                          AND (PROVINCIA,LOCALIDAD) IN (('BUENOS AIRES','LA PLATA'),
                                                                         ('CATAMARCA','SAN FERNANDO DEL VALLE DE CATAMARCA'),
                                                                         ('CHACO','RESISTENCIA'),
@@ -275,13 +271,15 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                                O1.LOCALIDAD
                       ORDER BY PROVINCIA, FECHA
                       ),
-        THP_CELDA_4G_CIUDAD AS (SELECT   ROUND(DECODE(SUM(T1.EUTR_AVG_ACT_CON_UE_NUM) / SUM(T1.EUTR_AVG_ACT_CON_UE_DEN),0,0,
+        THP_CELDA_4G_CIUDAD AS (SELECT   ROUND(DECODE(SUM(T1.EUTR_AVG_ACT_CON_UE_DEN),0,0,
                                         (SUM(T1.EUTR_AVG_ACT_CON_UE_NUM) / SUM(T1.EUTR_AVG_ACT_CON_UE_DEN))),2) LTEACTUSERAVG,
                                          T1.FECHA,
                                          O1.PROVINCIA,
                                          O1.LOCALIDAD,
-                                         ROUND(SUM(AVG_PDCP_CELL_THP_DL_NUM) * 8 / SUM(AVG_PDCP_CELL_THP_DL_DEN),2) THP_CELL_LTE,
-                                         ROUND(SUM(AVG_USER_DL_TPUT_NUM)	/ SUM(AVG_USER_DL_TPUT_DEN),2) THP_USER_LTE      
+                                         ROUND(DECODE(SUM(AVG_PDCP_CELL_THP_DL_DEN),0,0,
+                                         SUM(AVG_PDCP_CELL_THP_DL_NUM) * 8 / SUM(AVG_PDCP_CELL_THP_DL_DEN)),2) THP_CELL_LTE,
+                                         ROUND(DECODE(SUM(AVG_USER_DL_TPUT_DEN),0,0,
+                                         SUM(AVG_USER_DL_TPUT_NUM)	/ SUM(AVG_USER_DL_TPUT_DEN)),2) THP_USER_LTE      
                                     FROM OBJECTS_SP_LTE_NE       O1,
                                          LTE_NSN_SERVICE_NE_DAYW T1
                                    WHERE (PROVINCIA,LOCALIDAD) IN (('BUENOS AIRES','LA PLATA'),
@@ -309,7 +307,7 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                                                                         ('TIERRA DEL FUEGO','USHUAIA'),
                                                                         ('TUCUMAN','SAN MIGUEL DE TUCUMAN')
                                                         )
-                                     AND FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                                     AND FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                                      AND T1.ELEMENT_ID = O1.ELEMENT_ID
                                      AND T1.ELEMENT_CLASS = O1.ELEMENT_CLASS
                                      AND O1.ELEMENT_CLASS = 'LNBTS'
@@ -329,7 +327,7 @@ WITH  DATOS_3G AS  (SELECT /*+ MATERIALIZED */
          DATOS_2G.TRAFFICDLGPRS,
          DATOS_2G.TRAFFICDLEDGE,
          DATOS_4G.TRAFFICDL4G TRAFICOLTE,
-         TO_CHAR(DATOS_4G.ACCESIBILITYLTE,'90.99') ACCESIBILITYLTE,
+         DATOS_4G.ACCESIBILITYLTE ACCESIBILITYLTE,
          THP_CELDA_4G_CIUDAD.LTEACTUSERAVG,--USUARIOS_4G.CELL_LOAD_ACT_UE_AVG  LTEACTUSERAVG,
          (ROUND(DATOS_4G.TRAFFICDL4G+DATOS_2G.TRAFFICDLEDGE+DATOS_2G.TRAFFICDLGPRS+DATOS_3G.DLR99MACDGB+DATOS_3G.HSDPAMACDGB,2)) TRAFICOTOTAL,
          (ROUND(DATOS_4G.TRAFFICDL4G/(DATOS_4G.TRAFFICDL4G+DATOS_2G.TRAFFICDLEDGE+DATOS_2G.TRAFFICDLGPRS+DATOS_3G.DLR99MACDGB+DATOS_3G.HSDPAMACDGB)*100,2)) PARTICIPACION4G,

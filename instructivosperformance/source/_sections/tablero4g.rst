@@ -3,6 +3,25 @@ TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO
 
 1)	Objetivo
 ------------
+
+El presente documento buscar explicar y detallar el proceso que genera el Tablero Participación 4G.
+
+
+2)	Alcance
+-----------
+
+Áreas involucradas: Performance de Red 
+
+3)	DEFINICIONES
+----------------
+
+FD: Fecha desde, en formato DD.MM.YYYY
+
+FH: Fecha hasta, en formato DD.MM.YYYY
+
+4) DESCRIPCIÓN 
+--------------
+
 El objetivo del tablero es poder comparar la evolución de las redes 3G y 4G del vendor Nokia, por ciudad y por mercado. Se espera ver una mejora en los diferentes KPIs de 3G a medida que evoluciona el despliegue de la red 4G y más sitios son puestos en servicio comercial. 
  
 Los KPIs a visualizar son: tráfico de datos, usuarios simultáneos, accesibilidad de datos, throughput por celda, throuhgput por usuario, cantidad de nodos instalados. 
@@ -14,25 +33,15 @@ Los mercados a incluír son los de Argentina y Paraguay.
 
 Tablero_Participacion4G_Ciudad_Mercado_
 
-2)	Alcance
------------
 
-Áreas involucradas: Performance de Red 
-
-3)	DEFINICIONES
-----------------
-
-FD: Fecha desde, en formato DD.MM.YYYY
-FH: Fecha hasta, en formato DD.MM.YYYY
-
-4)	DESCRIPCIÓN DE LOS CAMPOS
------------------------------
+4.2)	DESCRIPCIÓN DE LOS CAMPOS
+-------------------------------
 
 El nombre del tablero ciudad es: Tablero_Participacion4Gciudad
 
 Campos para Ciudad: 
 
-.. image:: ../_static/images/tablero4g/pag3.png
+.. image:: ../_static/images/tablero4g/pag4.png
   :align: center 
 
 
@@ -40,7 +49,7 @@ El nombre del tablero mercado es: Tablero_Participacion4gmercado
 
 Campos para Mercado: 
 
-.. image:: ../_static/images/tablero4g/pag4.png
+.. image:: ../_static/images/tablero4g/pag5.png
   :align: center 
 
 
@@ -68,37 +77,31 @@ Campos para Mercado:
 •	THP_USER_LTE:  Throughput de usuario 4g
 
 
-SERVER
-......
+**SERVER**
 
 perdido.claro.amx (10.92.50.83) a falda.claro.amx(10.92.56.198)
 
-BASE DE DATOS
-.............
+**BASE DE DATOS**
 
 Oracle 10G. Instancia DSMART2
 
-TIEMPO DE EJECUCIÓN
-...................
+**TIEMPO DE EJECUCIÓN**
 
 Se ejecuta los días lunes a las 15 pm (cada 7 dias)
 
-FRECUENCIA 
-..........
+**FRECUENCIA** 
+
 Semanal 
 
-DURACIÓN DEL PROCESO
-....................
+**DURACIÓN DEL PROCESO**
 
 2 minutos aprox
 
-UBICACIÓN DEL PROCESO
-.....................
+**UBICACIÓN DEL PROCESO**
 
 calidad/Tableros/RunAllTableros.kjb
 
-LOGUEO DEL PROCESO
-..................
+**LOGUEO DEL PROCESO**
 
 El logueo del proceso se realiza en la ubicación calidad/tableros/PentahoLogs
 
@@ -106,42 +109,117 @@ El logueo del proceso se realiza en la ubicación calidad/tableros/PentahoLogs
 5)	MACRO FLUJO
 ---------------
 
-.. image:: ../_static/images/tablero4g/pag5.png
+.. image:: ../_static/images/tablero4g/pag6.png
   :align: center
 
+6.  DESCRIPCIÓN GENERAL 
+-----------------------
 
-6)	TABLAS UTILIZADAS
----------------------
+6.1. Datos Origen
+*****************
 
-+	SELECT * FROM ALM_MERCADO;
+• Server Origen: perdido.claro.amx 
+• Cantidad de archivos origen: No contiene 
+• Frecuencia actualización: Frecuencia semanal
 
-+	SELECT * FROM LTE_NSN_SERVICE_NE_DAYW;
+6.2. Datos Destino
+******************
 
-+	SELECT * FROM MULTIVENDOR_GPRS_DAYW;
+• Server Destino: falda.claro.amx 
+• Conversión de Archivos: No
+• Tabla Files: No
+• Tabla Auxiliar: No
+• Frecuencia de corrida del proceso: 1 vez a la semana 
+• Regionales: No
+• RAW Si/No: No
+• Hour Si/No: No
+• Day Si/No: No 
+• BH Si/No: No
+• Day Week: Si 
+• Países: Argentina 
+• Directorio Destino (File System): /calidad/tableros
 
-+	SELECT * FROM OBJECTS_SP_GSM;
+6.3.  Tablas Utilizadas
+***********************
 
-+	SELECT * FROM OBJECTS_SP_LTE;
+Tablas utilizadas para almacenar los datos de los reportes: 
 
-+	SELECT * FROM OBJECTS_SP_LTE_NE;
+• TABLERO_PARTICIPACION4GCIUDAD
 
-+	SELECT * FROM OBJECTS_SP_UMTS;
+• TABLERO_PARTICIPACION4GMERCADO
 
-+	SELECT * FROM OBJECTS_SP_UMTS_NE;
+Tablas consultadas para armar los reportes: 
 
-+	SELECT * FROM UMTS_NSN_HSDPA_MKT_DAYW;
+• ALM_MERCADO
 
-+	SELECT * FROM UMTS_NSN_HSDPA_WCEL_DAYW;
+• LTE_NSN_SERVICE_NE_DAYW
 
-+	SELECT * FROM UMTS_NSN_SERVICE_MKT_DAYW;
+• MULTIVENDOR_GPRS_DAYW
 
-+	SELECT * FROM UMTS_NSN_SERVICE_WCEL_DAYW; 
+• OBJECTS_SP_GSM 
 
-+	SELECT * FROM UMTSC_NSN_HSDPA_MKT_DAYW;
+• OBJECTS_SP_LTE 
 
-+	SELECT * FROM UMTSC_NSN_HSDPA_WCEL_DAYW;
+• OBJECTS_SP_LTE_NE
 
-+	SELECT * FROM UMTSC_NSN_MACD_WCEL_DAYW;  
+• OBJECTS_SP_UMTS
+
+• OBJECTS_SP_UMTS_NE
+
+• UMTS_NSN_HSDPA_MKT_DAYW
+
+• UMTS_NSN_HSDPA_WCEL_DAYW
+
+• UMTS_NSN_SERVICE_MKT_DAYW
+
+• UMTS_NSN_SERVICE_WCEL_DAYW
+
+• UMTSC_NSN_HSDPA_MKT_DAYW
+
+• UMTSC_NSN_HSDPA_WCEL_DAYW
+
+• UMTSC_NSN_MACD_WCEL_DAYW 
+
+6.4.  Pentaho
+*************
+
+Estructura del proyecto: 
+
+.. image:: ../_static/images/tablero4g/pag7.png
+  :align: center 
+
+• Proceso Pentaho End to End
+
+.. image:: ../_static/images/tablero4g/pag8.png
+  :align: center 
+
+• Proceso LlenadoTablero
+
+En este proceso se setea variables de entorno, tiene dos transformaciones: 
+
+  • tablero Ciudad
+
+  • tablero Mercado
+
+
+.. image:: ../_static/images/tablero4g/pag8.2.png
+  :align: center 
+
+• Proceso Generar xls:
+
+En este proceso se obtiene el archivo de formato xls para generar el email 
+
+.. image:: ../_static/images/tablero4g/pag9.png
+  :align: center 
+
+• Proceso Generar reporte HTML
+
+Este proceso genera el contenido del email en formato html para ciudad y mercado
+
+.. image:: ../_static/images/tablero4g/pag9.2.png
+  :align: center 
+
+
 
 7)	DESCRIPCIÓN DETALLADA 
 -------------------------
@@ -155,12 +233,12 @@ TableroRun_
 Los  procesos .sql denominado ciudad.sql y mercado.sql: 
 
 
-.. _ConsultaCiudad:  ../_static/images/tablero4g/consultaCiudad.sql
+.. _ConsultaCiudad:  ../_static/images/tablero4g/ciudad.sql
 
 ConsultaCiudad_
 
 
-.. _ConsultaMercado:  ../_static/images/tablero4g/consultaMercado.sql
+.. _ConsultaMercado:  ../_static/images/tablero4g/mercado.sql
 
 ConsultaMercado_ 
 
@@ -169,15 +247,51 @@ La ejecución de los procesos nos muestra los siguientes resultados:
 
 Cuidad: 
 
-.. image:: ../_static/images/tablero4g/pag7.png
+.. image:: ../_static/images/tablero4g/pag10.png
   :align: center 
 
 Mercado: 
 
-.. image:: ../_static/images/tablero4g/pag7.2.png
+.. image:: ../_static/images/tablero4g/pag10.2.png
   :align: center 
 
-8. CONTROL DE CAMBIOS
+
+
+8.  REPROCESO
+-------------
+
+**Macroflujo de Reproceso**
+
+En este macroflujo de reproceso se agrega el paso de borrado de semana a reprocesar a diferencia del macroflujo original. 
+
+El paso de borrado a semana a reprocesar se encarga de borrar la semana completa a reprocesar con la finalidad de obtener la  consistencia de los datos reprocesados.
+
+.. image:: ../_static/images/tablero4g/pag10.3.png
+  :align: center 
+
+
+1)  Reproceso En Pentaho: 
+*************************
+
+El proceso se presiona el botón ejecutar, luego se deben ingresar los parametros (FECHA_INICIO_REWORK Y FECHA_FIN_REWORK) con formato DD.MM.YYYY. 
+
+.. image:: ../_static/images/tablero4g/pag11.png
+  :align: center 
+
+
+2)  Reproceso por Consola
+*************************
+
+Se debe correr de la siguiente manera:  
+ 
+.. image:: ../_static/images/tablero4g/pag11.2.png
+  :align: center 
+
+Se debe agregar la fecha del día a reprocesar
+
+
+
+9. CONTROL DE CAMBIOS
 ---------------------
 
 

@@ -14,7 +14,7 @@ WITH DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                      WHERE T2.PERIOD_START_TIME(+) = T1.FECHA
                        AND T2.WCELL_ID(+) = T1.INT_ID
                        --AND T1.FECHA > ADD_MONTHS(SYSDATE, -12) + F_CALCULO_BISIESTO_WO_FECHA
-                       AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                       AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                        AND O1.WCELL_ID = T1.INT_ID
                      GROUP BY T1.FECHA, O1.MERCADO
                      ORDER BY T1.FECHA, O1.MERCADO
@@ -25,7 +25,7 @@ WITH DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                            NVL(ROUND((/*SUM(GPRS_UL_TRAFFIC) +*/ SUM(T1.GPRS_DL_TRAFFIC)) / 1024 / 1024, 2), 0) TRAFFICDLGPRS,
                            NVL(ROUND((/*SUM(EDGE_UL_TRAFFIC) +*/ SUM(T1.EDGE_DL_TRAFFIC)) / 1024 / 1024, 2), 0) TRAFFICDLEDGE
                       FROM OBJECTS_SP_GSM O1, MULTIVENDOR_GPRS_DAYW T1
-                     WHERE T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                     WHERE T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                        AND O1.BTS_ID = T1.INT_ID
                      GROUP BY T1.FECHA, O1.MERCADO
                      ORDER BY T1.FECHA, O1.MERCADO
@@ -40,7 +40,7 @@ WITH DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                                    (T1.RAB_SETUP_SUCCESS_NUM / T1.RAB_SETUP_SUCCESS_DEN)))) * 100, 2) ACCESIBILITYLTE
                   FROM OBJECTS_SP_LTE_NE       O1,
                        LTE_NSN_SERVICE_NE_DAYW T1
-                 WHERE T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000 
+                 WHERE T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000 
                    AND T1.ELEMENT_ID = O1.ELEMENT_ID
                    AND T1.ELEMENT_CLASS = O1.ELEMENT_CLASS
                    AND O1.ELEMENT_CLASS = 'MERCADO'
@@ -138,21 +138,23 @@ WITH DATOS_3G AS  (SELECT /*+ MATERIALIZED */
                           AND T3.FECHA(+) = T1.FECHA
                              AND T3.MERCADO(+) = T1.MERCADO
                                 --AND T1.MERCADO = 'AMBA'
-                             AND T1.FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000  
+                             AND T1.FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000  
                              AND O1.MERCADO = T1.MERCADO
                            ORDER BY O1.MERCADO, T1.FECHA
                           ),
           THP_CELDA_4G_MERCADO AS (SELECT ELEMENT_ID,
                                          FECHA,
-                                         ROUND((AVG_PDCP_CELL_THP_DL_NUM * 8 / AVG_PDCP_CELL_THP_DL_DEN),2)     THP_CELL_LTE,
+                                         ROUND(DECODE((AVG_PDCP_CELL_THP_DL_DEN),0,0,
+                                         (AVG_PDCP_CELL_THP_DL_NUM * 8 / AVG_PDCP_CELL_THP_DL_DEN)),2)     THP_CELL_LTE,
                                          --(AVG_PDCP_CELL_THP_UL_NUM * 8 / AVG_PDCP_CELL_THP_UL_DEN)     "Cell Throughput UL"
-                                         ROUND((AVG_USER_DL_TPUT_NUM	/ AVG_USER_DL_TPUT_DEN),2)	                 THP_USER_LTE,
+                                          ROUND(DECODE((AVG_USER_DL_TPUT_DEN),0,0,
+                                          (AVG_USER_DL_TPUT_NUM	/ AVG_USER_DL_TPUT_DEN)),2)	                 THP_USER_LTE,
                                          --AVG_USER_UL_TPUT_NUM	/ AVG_USER_UL_TPUT_DEN	
-                                         ROUND(DECODE((EUTR_AVG_ACT_CON_UE_NUM / EUTR_AVG_ACT_CON_UE_DEN),0,0,
+                                         ROUND(DECODE((EUTR_AVG_ACT_CON_UE_DEN),0,0,
                                          (EUTR_AVG_ACT_CON_UE_NUM / EUTR_AVG_ACT_CON_UE_DEN)),2) LTEACTUSERAVG
                                     FROM LTE_NSN_SERVICE_NE_DAYW
                                    WHERE ELEMENT_CLASS IN ( 'MERCADO')
-                                     AND FECHA BETWEEN TRUNC(SYSDATE)-8 AND TRUNC(SYSDATE)-2 + 83999/84000
+                                     AND FECHA BETWEEN ${FECHA_INICIO} AND ${FECHA_FIN} + 83999/84000
                                      AND ELEMENT_ID NOT IN ('No Especificado')
                                      --AND ELEMENT_ID NOT IN ('Paraguay')
                                   ORDER BY ELEMENT_CLASS DESC, ELEMENT_ID, FECHA

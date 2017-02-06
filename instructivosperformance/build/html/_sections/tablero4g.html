@@ -34,7 +34,7 @@
   
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
-        <link rel="next" title="GESTIÓN" href="../gestion.html"/>
+        <link rel="next" title="Tablero AMX Load LTE" href="tableroamxload.html"/>
         <link rel="prev" title="Uplink Interference (Nokia UMTS)" href="nokiaumts.html"/> 
 
   
@@ -100,31 +100,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tableros.html">TABLEROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1. Tablero AMX Indicadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2. Tablero Mous Day</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3. Tablero NQI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1.  Tablero AMX Indicadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2.  Tablero Mous Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3.  Tablero NQI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 4.  Instructivo Dashboard MicroStrategy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nokiaumts.html"> 5.  Uplink Interference (Nokia UMTS)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"> 6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 6.  Tablero participación 4G mercado/ciudad</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1)      Objetivo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alcance">2)      Alcance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3)      DEFINICIONES</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-de-los-campos">4)      DESCRIPCIÓN DE LOS CAMPOS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#server">SERVER</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#base-de-datos">BASE DE DATOS</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tiempo-de-ejecucion">TIEMPO DE EJECUCIÓN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#frecuencia">FRECUENCIA</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#duracion-del-proceso">DURACIÓN DEL PROCESO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ubicacion-del-proceso">UBICACIÓN DEL PROCESO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#logueo-del-proceso">LOGUEO DEL PROCESO</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion">4) DESCRIPCIÓN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-de-los-campos">4.2)    DESCRIPCIÓN DE LOS CAMPOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#macro-flujo">5)      MACRO FLUJO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tablas-utilizadas">6)      TABLAS UTILIZADAS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">7)      DESCRIPCIÓN DETALLADA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">6.  DESCRIPCIÓN GENERAL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1. Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2. Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablas-utilizadas">6.3.  Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.4.  Pentaho</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">7)      DESCRIPCIÓN DETALLADA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso">8.  REPROCESO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso-en-pentaho">1)  Reproceso En Pentaho:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso-por-consola">2)  Reproceso por Consola</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tableroamxload.html"> 5.  Tablero AMX Load LTE</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
@@ -180,12 +184,7 @@
 <h1>TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO<a class="headerlink" href="#tablero-participacion-4g-ciudad-mercado" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>1)      Objetivo<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
-<p>El objetivo del tablero es poder comparar la evolución de las redes 3G y 4G del vendor Nokia, por ciudad y por mercado. Se espera ver una mejora en los diferentes KPIs de 3G a medida que evoluciona el despliegue de la red 4G y más sitios son puestos en servicio comercial.</p>
-<p>Los KPIs a visualizar son: tráfico de datos, usuarios simultáneos, accesibilidad de datos, throughput por celda, throuhgput por usuario, cantidad de nodos instalados.
-La sumarización de los KPIs es day week.
-Las ciudades a incluír son las capitales de provincia.
-Los mercados a incluír son los de Argentina y Paraguay.</p>
-<p><a class="reference external" href="../_static/images/documentos/Tablero_Participacion4G_Ciudad_Mercado.xlsx">Tablero_Participacion4G_Ciudad_Mercado</a></p>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Tablero Participación 4G.</p>
 </div>
 <div class="section" id="alcance">
 <h2>2)      Alcance<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
@@ -193,17 +192,26 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 </div>
 <div class="section" id="definiciones">
 <h2>3)      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
-<p>FD: Fecha desde, en formato DD.MM.YYYY
-FH: Fecha hasta, en formato DD.MM.YYYY</p>
+<p>FD: Fecha desde, en formato DD.MM.YYYY</p>
+<p>FH: Fecha hasta, en formato DD.MM.YYYY</p>
+</div>
+<div class="section" id="descripcion">
+<h2>4) DESCRIPCIÓN<a class="headerlink" href="#descripcion" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo del tablero es poder comparar la evolución de las redes 3G y 4G del vendor Nokia, por ciudad y por mercado. Se espera ver una mejora en los diferentes KPIs de 3G a medida que evoluciona el despliegue de la red 4G y más sitios son puestos en servicio comercial.</p>
+<p>Los KPIs a visualizar son: tráfico de datos, usuarios simultáneos, accesibilidad de datos, throughput por celda, throuhgput por usuario, cantidad de nodos instalados.
+La sumarización de los KPIs es day week.
+Las ciudades a incluír son las capitales de provincia.
+Los mercados a incluír son los de Argentina y Paraguay.</p>
+<p><a class="reference external" href="../_static/images/documentos/Tablero_Participacion4G_Ciudad_Mercado.xlsx">Tablero_Participacion4G_Ciudad_Mercado</a></p>
 </div>
 <div class="section" id="descripcion-de-los-campos">
-<h2>4)      DESCRIPCIÓN DE LOS CAMPOS<a class="headerlink" href="#descripcion-de-los-campos" title="Permalink to this headline">¶</a></h2>
+<h2>4.2)    DESCRIPCIÓN DE LOS CAMPOS<a class="headerlink" href="#descripcion-de-los-campos" title="Permalink to this headline">¶</a></h2>
 <p>El nombre del tablero ciudad es: Tablero_Participacion4Gciudad</p>
 <p>Campos para Ciudad:</p>
-<img alt="../_images/pag310.png" class="align-center" src="../_images/pag310.png" />
+<img alt="../_images/pag47.png" class="align-center" src="../_images/pag47.png" />
 <p>El nombre del tablero mercado es: Tablero_Participacion4gmercado</p>
 <p>Campos para Mercado:</p>
-<img alt="../_images/pag47.png" class="align-center" src="../_images/pag47.png" />
+<img alt="../_images/pag510.png" class="align-center" src="../_images/pag510.png" />
 <ul class="simple">
 <li>FECHA: FECHA DAYWEEK, corresponde al domingo de inicio de la semana, se considera que la semana comienza el domingo y finaliza el sábado.</li>
 <li>TRAFICO HSDPA (HSDPAMACDGB): Tráfico umts hsdpa gb</li>
@@ -228,74 +236,143 @@ FH: Fecha hasta, en formato DD.MM.YYYY</p>
 <li>THP_CELL_LTE: Throughput de celda 4g</li>
 <li>THP_USER_LTE:  Throughput de usuario 4g</li>
 </ul>
-<div class="section" id="server">
-<h3>SERVER<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p><strong>SERVER</strong></p>
 <p>perdido.claro.amx (10.92.50.83) a falda.claro.amx(10.92.56.198)</p>
-</div>
-<div class="section" id="base-de-datos">
-<h3>BASE DE DATOS<a class="headerlink" href="#base-de-datos" title="Permalink to this headline">¶</a></h3>
+<p><strong>BASE DE DATOS</strong></p>
 <p>Oracle 10G. Instancia DSMART2</p>
-</div>
-<div class="section" id="tiempo-de-ejecucion">
-<h3>TIEMPO DE EJECUCIÓN<a class="headerlink" href="#tiempo-de-ejecucion" title="Permalink to this headline">¶</a></h3>
+<p><strong>TIEMPO DE EJECUCIÓN</strong></p>
 <p>Se ejecuta los días lunes a las 15 pm (cada 7 dias)</p>
-</div>
-<div class="section" id="frecuencia">
-<h3>FRECUENCIA<a class="headerlink" href="#frecuencia" title="Permalink to this headline">¶</a></h3>
+<p><strong>FRECUENCIA</strong></p>
 <p>Semanal</p>
-</div>
-<div class="section" id="duracion-del-proceso">
-<h3>DURACIÓN DEL PROCESO<a class="headerlink" href="#duracion-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p><strong>DURACIÓN DEL PROCESO</strong></p>
 <p>2 minutos aprox</p>
-</div>
-<div class="section" id="ubicacion-del-proceso">
-<h3>UBICACIÓN DEL PROCESO<a class="headerlink" href="#ubicacion-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p><strong>UBICACIÓN DEL PROCESO</strong></p>
 <p>calidad/Tableros/RunAllTableros.kjb</p>
-</div>
-<div class="section" id="logueo-del-proceso">
-<h3>LOGUEO DEL PROCESO<a class="headerlink" href="#logueo-del-proceso" title="Permalink to this headline">¶</a></h3>
+<p><strong>LOGUEO DEL PROCESO</strong></p>
 <p>El logueo del proceso se realiza en la ubicación calidad/tableros/PentahoLogs</p>
-</div>
 </div>
 <div class="section" id="macro-flujo">
 <h2>5)      MACRO FLUJO<a class="headerlink" href="#macro-flujo" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag510.png" class="align-center" src="../_images/pag510.png" />
+<img alt="../_images/pag616.png" class="align-center" src="../_images/pag616.png" />
+</div>
+<div class="section" id="descripcion-general">
+<h2>6.  DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1. Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen: perdido.claro.amx</li>
+<li>Cantidad de archivos origen: No contiene</li>
+<li>Frecuencia actualización: Frecuencia semanal</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2. Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: falda.claro.amx</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Files: No</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 vez a la semana</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: No</li>
+<li>Hour Si/No: No</li>
+<li>Day Si/No: No</li>
+<li>BH Si/No: No</li>
+<li>Day Week: Si</li>
+<li>Países: Argentina</li>
+<li>Directorio Destino (File System): /calidad/tableros</li>
+</ul>
 </div>
 <div class="section" id="tablas-utilizadas">
-<h2>6)      TABLAS UTILIZADAS<a class="headerlink" href="#tablas-utilizadas" title="Permalink to this headline">¶</a></h2>
+<h3>6.3.  Tablas Utilizadas<a class="headerlink" href="#tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Tablas utilizadas para almacenar los datos de los reportes:</p>
 <ul class="simple">
-<li>SELECT * FROM ALM_MERCADO;</li>
-<li>SELECT * FROM LTE_NSN_SERVICE_NE_DAYW;</li>
-<li>SELECT * FROM MULTIVENDOR_GPRS_DAYW;</li>
-<li>SELECT * FROM OBJECTS_SP_GSM;</li>
-<li>SELECT * FROM OBJECTS_SP_LTE;</li>
-<li>SELECT * FROM OBJECTS_SP_LTE_NE;</li>
-<li>SELECT * FROM OBJECTS_SP_UMTS;</li>
-<li>SELECT * FROM OBJECTS_SP_UMTS_NE;</li>
-<li>SELECT * FROM UMTS_NSN_HSDPA_MKT_DAYW;</li>
-<li>SELECT * FROM UMTS_NSN_HSDPA_WCEL_DAYW;</li>
-<li>SELECT * FROM UMTS_NSN_SERVICE_MKT_DAYW;</li>
-<li>SELECT * FROM UMTS_NSN_SERVICE_WCEL_DAYW;</li>
-<li>SELECT * FROM UMTSC_NSN_HSDPA_MKT_DAYW;</li>
-<li>SELECT * FROM UMTSC_NSN_HSDPA_WCEL_DAYW;</li>
-<li>SELECT * FROM UMTSC_NSN_MACD_WCEL_DAYW;</li>
+<li>TABLERO_PARTICIPACION4GCIUDAD</li>
+<li>TABLERO_PARTICIPACION4GMERCADO</li>
 </ul>
+<p>Tablas consultadas para armar los reportes:</p>
+<ul class="simple">
+<li>ALM_MERCADO</li>
+<li>LTE_NSN_SERVICE_NE_DAYW</li>
+<li>MULTIVENDOR_GPRS_DAYW</li>
+<li>OBJECTS_SP_GSM</li>
+<li>OBJECTS_SP_LTE</li>
+<li>OBJECTS_SP_LTE_NE</li>
+<li>OBJECTS_SP_UMTS</li>
+<li>OBJECTS_SP_UMTS_NE</li>
+<li>UMTS_NSN_HSDPA_MKT_DAYW</li>
+<li>UMTS_NSN_HSDPA_WCEL_DAYW</li>
+<li>UMTS_NSN_SERVICE_MKT_DAYW</li>
+<li>UMTS_NSN_SERVICE_WCEL_DAYW</li>
+<li>UMTSC_NSN_HSDPA_MKT_DAYW</li>
+<li>UMTSC_NSN_HSDPA_WCEL_DAYW</li>
+<li>UMTSC_NSN_MACD_WCEL_DAYW</li>
+</ul>
+</div>
+<div class="section" id="pentaho">
+<h3>6.4.  Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag712.png" class="align-center" src="../_images/pag712.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag811.png" class="align-center" src="../_images/pag811.png" />
+<ul class="simple">
+<li>Proceso LlenadoTablero</li>
+</ul>
+<p>En este proceso se setea variables de entorno, tiene dos transformaciones:</p>
+<blockquote>
+<div><ul class="simple">
+<li>tablero Ciudad</li>
+<li>tablero Mercado</li>
+</ul>
+</div></blockquote>
+<img alt="../_images/pag8.28.png" class="align-center" src="../_images/pag8.28.png" />
+<ul class="simple">
+<li>Proceso Generar xls:</li>
+</ul>
+<p>En este proceso se obtiene el archivo de formato xls para generar el email</p>
+<img alt="../_images/pag911.png" class="align-center" src="../_images/pag911.png" />
+<ul class="simple">
+<li>Proceso Generar reporte HTML</li>
+</ul>
+<p>Este proceso genera el contenido del email en formato html para ciudad y mercado</p>
+<img alt="../_images/pag9.26.png" class="align-center" src="../_images/pag9.26.png" />
+</div>
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>7)      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
 <p>El Shell Script:</p>
 <p><a class="reference external" href="../_static/images/tablero4g/tableroRun.sh">TableroRun</a></p>
 <p>Los  procesos .sql denominado ciudad.sql y mercado.sql:</p>
-<p><a class="reference external" href="../_static/images/tablero4g/consultaCiudad.sql">ConsultaCiudad</a></p>
-<p><a class="reference external" href="../_static/images/tablero4g/consultaMercado.sql">ConsultaMercado</a></p>
+<p><a class="reference external" href="../_static/images/tablero4g/ciudad.sql">ConsultaCiudad</a></p>
+<p><a class="reference external" href="../_static/images/tablero4g/mercado.sql">ConsultaMercado</a></p>
 <p>La ejecución de los procesos nos muestra los siguientes resultados:</p>
 <p>Cuidad:</p>
-<img alt="../_images/pag77.png" class="align-center" src="../_images/pag77.png" />
+<img alt="../_images/pag1012.png" class="align-center" src="../_images/pag1012.png" />
 <p>Mercado:</p>
-<img alt="../_images/pag7.25.png" class="align-center" src="../_images/pag7.25.png" />
+<img alt="../_images/pag10.24.png" class="align-center" src="../_images/pag10.24.png" />
+</div>
+<div class="section" id="reproceso">
+<h2>8.  REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+<p><strong>Macroflujo de Reproceso</strong></p>
+<p>En este macroflujo de reproceso se agrega el paso de borrado de semana a reprocesar a diferencia del macroflujo original.</p>
+<p>El paso de borrado a semana a reprocesar se encarga de borrar la semana completa a reprocesar con la finalidad de obtener la  consistencia de los datos reprocesados.</p>
+<img alt="../_images/pag10.3.png" class="align-center" src="../_images/pag10.3.png" />
+<div class="section" id="reproceso-en-pentaho">
+<h3>1)  Reproceso En Pentaho:<a class="headerlink" href="#reproceso-en-pentaho" title="Permalink to this headline">¶</a></h3>
+<p>El proceso se presiona el botón ejecutar, luego se deben ingresar los parametros (FECHA_INICIO_REWORK Y FECHA_FIN_REWORK) con formato DD.MM.YYYY.</p>
+<img alt="../_images/pag119.png" class="align-center" src="../_images/pag119.png" />
+</div>
+<div class="section" id="reproceso-por-consola">
+<h3>2)  Reproceso por Consola<a class="headerlink" href="#reproceso-por-consola" title="Permalink to this headline">¶</a></h3>
+<p>Se debe correr de la siguiente manera:</p>
+<img alt="../_images/pag11.27.png" class="align-center" src="../_images/pag11.27.png" />
+<p>Se debe agregar la fecha del día a reprocesar</p>
+</div>
 </div>
 <div class="section" id="control-de-cambios">
-<h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
  <style type="text/css">
   table {
      border:2px solid red;
@@ -340,7 +417,7 @@ FH: Fecha hasta, en formato DD.MM.YYYY</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tableroamxload.html" class="btn btn-neutral float-right" title="Tablero AMX Load LTE" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="nokiaumts.html" class="btn btn-neutral" title="Uplink Interference (Nokia UMTS)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
