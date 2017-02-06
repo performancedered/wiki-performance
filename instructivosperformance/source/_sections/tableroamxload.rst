@@ -29,16 +29,25 @@ El presente documento busca explicar y detallar el proceso que genera el Tablero
 
 El desarrollo AMX Load LTE Nokia tiene como finalidad reportar el nivel de carga (load) de las celdas y sitios.
 En base a 2 KPIs, uno de usuarios y otro de throughput, comparándolos con la capacidad de cada celda se determina si las celdas están sobrecargadas.
+
 Hay cuatro condiciones posibles:
+
 •	Normal (bajo throughput, bajos usuarios)
+
 •	Alto throughput, bajos usuarios
+
 •	Altos usuarios, bajo throughput
+
 •	Alta carga (Altos usuarios, alto throughput)
 
 Se crearon 2 tableros isabhw.
+
 •	tablero_lte_amx_load_det_ibhw
+
 Es un tablero de detalle en el que se pueden observar los valores throughput y usuarios para cada celda y para cada sitio y sus correspondientes capacidades.
+
 •	tablero_lte_amx_load_res_ibhw
+
 Es un tablero de resumen que muestra la cantidad de celdas y sitios que están en cada una de las condiciones expresadas arriba.
 
 
@@ -54,7 +63,7 @@ Es un tablero de resumen que muestra la cantidad de celdas y sitios que están e
 
 	Los procesos se corren a través de Jobs: 
 
-		•	P_TABLERO_AMX_LOAD_DET_JOB_DAY
+		o	P_TABLERO_AMX_LOAD_DET_JOB_DAY
 
 		o	P_TABLERO_LTE_AMX_RES_IBHW
 		
@@ -62,7 +71,7 @@ Es un tablero de resumen que muestra la cantidad de celdas y sitios que están e
 		
 		o	P_TABLERO_LTE_AMX_RES_IBHW3
 		
-		•	P_TABLERO_LTE_AMX_RES_JOB_DAYW
+		o	P_TABLERO_LTE_AMX_RES_JOB_DAYW
 		
 		o	P_TABLERO_LTE_AMX_RES_IBHW
 		

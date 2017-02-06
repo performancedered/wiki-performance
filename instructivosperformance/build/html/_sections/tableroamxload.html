@@ -196,17 +196,23 @@
 <h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
 <p><strong>TABLERO AMX LOAD LTE</strong></p>
 <p>El desarrollo AMX Load LTE Nokia tiene como finalidad reportar el nivel de carga (load) de las celdas y sitios.
-En base a 2 KPIs, uno de usuarios y otro de throughput, comparándolos con la capacidad de cada celda se determina si las celdas están sobrecargadas.
-Hay cuatro condiciones posibles:
-•       Normal (bajo throughput, bajos usuarios)
-•       Alto throughput, bajos usuarios
-•       Altos usuarios, bajo throughput
-•       Alta carga (Altos usuarios, alto throughput)</p>
-<p>Se crearon 2 tableros isabhw.
-•       tablero_lte_amx_load_det_ibhw
-Es un tablero de detalle en el que se pueden observar los valores throughput y usuarios para cada celda y para cada sitio y sus correspondientes capacidades.
-•       tablero_lte_amx_load_res_ibhw
-Es un tablero de resumen que muestra la cantidad de celdas y sitios que están en cada una de las condiciones expresadas arriba.</p>
+En base a 2 KPIs, uno de usuarios y otro de throughput, comparándolos con la capacidad de cada celda se determina si las celdas están sobrecargadas.</p>
+<p>Hay cuatro condiciones posibles:</p>
+<ul class="simple">
+<li>Normal (bajo throughput, bajos usuarios)</li>
+<li>Alto throughput, bajos usuarios</li>
+<li>Altos usuarios, bajo throughput</li>
+<li>Alta carga (Altos usuarios, alto throughput)</li>
+</ul>
+<p>Se crearon 2 tableros isabhw.</p>
+<ul class="simple">
+<li>tablero_lte_amx_load_det_ibhw</li>
+</ul>
+<p>Es un tablero de detalle en el que se pueden observar los valores throughput y usuarios para cada celda y para cada sitio y sus correspondientes capacidades.</p>
+<ul class="simple">
+<li>tablero_lte_amx_load_res_ibhw</li>
+</ul>
+<p>Es un tablero de resumen que muestra la cantidad de celdas y sitios que están en cada una de las condiciones expresadas arriba.</p>
 <p><strong>Descripción:</strong></p>
 <ul>
 <li><p class="first">Server: falda.claro.amx</p>
@@ -218,15 +224,11 @@ Es un tablero de resumen que muestra la cantidad de celdas y sitios que están e
 <li><p class="first">Proceso que genera el tablero:</p>
 <p>Los procesos se corren a través de Jobs:</p>
 <blockquote>
-<div><ul class="simple">
-<li>P_TABLERO_AMX_LOAD_DET_JOB_DAY</li>
-</ul>
+<div><p>o       P_TABLERO_AMX_LOAD_DET_JOB_DAY</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW2</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW3</p>
-<ul class="simple">
-<li>P_TABLERO_LTE_AMX_RES_JOB_DAYW</li>
-</ul>
+<p>o       P_TABLERO_LTE_AMX_RES_JOB_DAYW</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW2</p>
 <p>o       P_TABLERO_LTE_AMX_RES_IBHW3</p>
