@@ -111,7 +111,25 @@
 <li class="toctree-l2"><a class="reference internal" href="tecnotree.html">5. TECNOTREE COMMERCIAL ENGINE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referenciatableroparticipacion.html">6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referenciatablerofemtocell.html">7. ALCATEL FEMTOCELL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8. ALCATEL LTE URUGUAY - ENODB</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8. ALCATEL LTE URUGUAY - ENODB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo-del-proceso">5.      MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4.    Listado de tablas utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">8.      Smart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
@@ -161,6 +179,228 @@
             
   <div class="section" id="alcatel-lte-uruguay-enodb">
 <h1>ALCATEL LTE URUGUAY - ENODB<a class="headerlink" href="#alcatel-lte-uruguay-enodb" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera ALCATEL LTE URUGUAY - ENODB.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>ALCATEL LTE URUGUAY – ENODEB</strong></p>
+<p>La arquitectura de la red de acceso de LTE se compone de una única entidad de red denominada evolved NodeB (eNodeB) que constituye la estación base de E-UTRAN. Así pues, la estación base E-UTRAN integra toda la funcionalidad de la red de acceso.
+Este desarrollo permite almacenar y monitorear los Indicadores de Performance y los parámetros de configuración correspondientes a los eNodeB del vendor Alcatel instalados en Uruguay, con la finalidad de obtener datos estadísticos y poder visualizarlos en la plataforma SMART</p>
+</div>
+<div class="section" id="macroflujo-del-proceso">
+<h2>5.      MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag310.png" class="align-center" src="../_images/pag310.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Server Origen y Path: 10.111.102.62, /opt/5620sam/lte/stats/20160627/eNodeB/LCA003</p>
+</li>
+<li><p class="first">Cantidad de archivos origen: Si</p>
+<p>Por ejemplo:</p>
+<blockquote>
+<div><p>o       A20170130.0000-0300-0015-0300_eNodeB-LCA003.gz</p>
+</div></blockquote>
+</li>
+<li><p class="first">Frecuencia actualización: Cada 15 min</p>
+</li>
+<li><p class="first">Tipo de Archivo: xml</p>
+</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: falda.claro.amx</li>
+<li>Conversión de Archivos: Si</li>
+<li>Tabla Files: Si</li>
+<li>Tabla Auxiliar: Si</li>
+<li>Frecuencia de corrida del proceso: 14 minutos aproximadamente</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: Si</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: Si</li>
+<li>ISABH Si/No: Si</li>
+<li>Países: Uruguay.</li>
+<li>Directorio Destino (File System): &#8220;/calidad/ENodeB/&#8221;</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Scripts tienen las siguientes funciones:</p>
+<p>1- Copiar los archivos</p>
+<p>2- Limpieza</p>
+<p>3- Ejecutar Pentaho</p>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/enodb/ENodeBEndToEnd.sh">ENodeBEndToEnd</a></li>
+<li><a class="reference external" href="../_static/images/enodb/runENodeB.sh">runENodeB</a></li>
+<li><a class="reference external" href="../_static/images/enodb/runParserEnodeB.sh">runParserEnodeB</a></li>
+<li><a class="reference external" href="../_static/images/enodb/syncro_enodeb.sh">syncro_enodeb</a></li>
+<li><a class="reference external" href="../_static/images/enodb/xml_parse.sh">xml_parse</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4.    Listado de tablas utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son las siguientes:</p>
+<ul class="simple">
+<li>ERROR_LOG_NEW</li>
+</ul>
+<img alt="../_images/pag517.png" class="align-center" src="../_images/pag517.png" />
+<ul class="simple">
+<li>FILES</li>
+</ul>
+<img alt="../_images/pag5.212.png" class="align-center" src="../_images/pag5.212.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_BH</li>
+</ul>
+<img alt="../_images/pag617.png" class="align-center" src="../_images/pag617.png" />
+<img alt="../_images/pag715.png" class="align-center" src="../_images/pag715.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_DAY</li>
+</ul>
+<img alt="../_images/pag812.png" class="align-center" src="../_images/pag812.png" />
+<img alt="../_images/pag912.png" class="align-center" src="../_images/pag912.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_DIC</li>
+</ul>
+<img alt="../_images/pag9.27.png" class="align-center" src="../_images/pag9.27.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_HOUR</li>
+</ul>
+<img alt="../_images/pag1013.png" class="align-center" src="../_images/pag1013.png" />
+<img alt="../_images/pag1110.png" class="align-center" src="../_images/pag1110.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_IBHW</li>
+</ul>
+<img alt="../_images/pag1210.png" class="align-center" src="../_images/pag1210.png" />
+<img alt="../_images/pag139.png" class="align-center" src="../_images/pag139.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW1</li>
+</ul>
+<p>En esta tabla se obtiene los C”N”, con el valor hasta C627</p>
+<img alt="../_images/pag149.png" class="align-center" src="../_images/pag149.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW2</li>
+</ul>
+<p>En esta tabla se obtiene los C”N”, con el valor hasta C627</p>
+<img alt="../_images/pag14.26.png" class="align-center" src="../_images/pag14.26.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW3</li>
+</ul>
+<p>En esta tabla se obtiene los C”N”, con el valor hasta C627</p>
+<img alt="../_images/pag158.png" class="align-center" src="../_images/pag158.png" />
+<ul class="simple">
+<li>PROCESS_TO_RUN</li>
+</ul>
+<img alt="../_images/pag15.25.png" class="align-center" src="../_images/pag15.25.png" />
+</div>
+<div class="section" id="pentaho">
+<h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag15.3.png" class="align-center" src="../_images/pag15.3.png" />
+<ul class="simple">
+<li>Pentaho ParseXml</li>
+</ul>
+<p>Este proceso parsea los archivos xml cada 15 minutos.</p>
+<img alt="../_images/pag168.png" class="align-center" src="../_images/pag168.png" />
+<ul class="simple">
+<li>Pentaho Get Files</li>
+</ul>
+<p>Este proceso obtiene los archivos generados por el parser en formato csv, este archivo generado contiene 4 archivos xml de una misma hora, cada archivo se genera cada 15 minutos.</p>
+<p>Luego de generar el csv, se guarda el nombre del archivo en la tabla Files.</p>
+<img alt="../_images/pag16.25.png" class="align-center" src="../_images/pag16.25.png" />
+<ul class="simple">
+<li>Pentaho Get FileName from Table</li>
+</ul>
+<p>Una vez obtenido el csv, los datos son insertados en  3 tablas Raw.</p>
+<p>El significado de cada columna de la tabla Raw se encuentra en la tabla LTE_C_ALC_UY_ENODEB_DIC</p>
+<img alt="../_images/pag16.3.png" class="align-center" src="../_images/pag16.3.png" />
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p>Macro Flujo de Reproceso:</p>
+<img alt="../_images/pag176.png" class="align-center" src="../_images/pag176.png" />
+<p>Este reproceso borra los registros para la hora que desee reprocesar, descargando los archivos para la hora necesaria y realiza el mismo procedimiento del macro flujo original.</p>
+<p>Ubicación de los scripts en la carpeta: &#8220;/calidad/ENodeB/Scripts/&#8221;</p>
+<p>Ubicación del Rework de ejecución en Pentaho:  &#8220;/calidad/ENodeB/Rework/RunEnodeB.kjb&#8221;–</p>
+<p>Para realizar el reproceso se debe ingresar los siguientes parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Ruta del proyecto</li>
+<li>Fecha con formato YYYYMMDD</li>
+<li>Fecha con formato YYYYMMDD.HH24</li>
+<li>Fecha con formato DDMMYYYYHH24</li>
+</ul>
+</div></blockquote>
+<p>Por consola se utiliza de la siguiente manera:</p>
+<img alt="../_images/pag17.23.png" class="align-center" src="../_images/pag17.23.png" />
+<p>Ejecutando el  siguiente script:</p>
+<ul class="simple">
+<li><a class="reference external" href="ENodeBEndToEndRework.sh">ENodeBEndToEndRework</a></li>
+<li><a class="reference external" href="syncro_enodeb_rework.sh">syncro_enodeb_rework</a></li>
+</ul>
+<p>Al ejecutar el script <a class="reference external" href="ENodeBEndToEndRework.sh">ENodeBEndToEndRework</a>, dentro del mismo se ejecuta el script <a class="reference external" href="syncro_enodeb_rework.sh">syncro_enodeb_rework</a>.</p>
+</div>
+<div class="section" id="smart">
+<h2>8.      Smart<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p><strong>Se encuentran pendientes los gráficos.</strong></p>
+</div>
+<div class="section" id="control-de-cambios">
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+ <style type="text/css">
+  table {
+     border:2px solid red;
+     border-collapse:separate;
+     }
+  th, td {
+     border:1px solid red;
+     padding:10px;
+     }
+</style>
+
+<table border="3">
+<tr>
+  <th>Fecha</th>
+  <th>Responsable</th>
+  <th>Ticket Jira</th>
+  <th>Detalle</th>
+  <th>Repositorio</th>
+</tr>
+<tr>
+  <td>  </td>
+  <td>  </td>
+  <td> <p><a href="">  </a></p>  </td>
+  <td>  </td>
+  <td> </td>
+</tr>
+<tr>
+  <td>  </td>
+  <td> </td>
+  <td>  <p><a href=""> </a></p>  </td>
+  <td>   </td>
+  <td></td>
+
+</tr>
+</table></div>
 </div>
 
 
