@@ -248,9 +248,9 @@ Por consola se utiliza de la siguiente manera:
 
 Ejecutando el  siguiente script:
 
-.. _ENodeBEndToEndRework: ENodeBEndToEndRework.sh
+.. _ENodeBEndToEndRework: ../_static/images/enodb/ENodeBEndToEndRework.sh
 
-.. _syncro_enodeb_rework: syncro_enodeb_rework.sh
+.. _syncro_enodeb_rework: ../_static/images/enodb/syncro_enodeb_rework.sh
 
 +	ENodeBEndToEndRework_
 
