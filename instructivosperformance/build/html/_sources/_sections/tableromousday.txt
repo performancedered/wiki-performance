@@ -204,7 +204,78 @@ P_TABLERO_MOUS_DAY_INS_
 P_TABLERO_MOUS_DAY_NE_INS_
 
 
-7. CONTROL DE CAMBIOS
+
+7.REPROCESO
+-----------
+
+.. _tablero_minutos_recovery: ../_static/images/tableromousday/tablero_minutos_recovery
+
+Script de reproceso: 
+
+*  tablero_minutos_recovery_ 
+
+Se debe ejecutar por consola a través del script tablero_minutos_recovery de la siguiente manera: 
+
+
+.. image:: ../_static/images/tableromousday/pag6.png
+  :align: center
+ 
+Formato de la fecha: DD.MM:YYYY
+
+Por ejemplo:  
+
+.. image:: ../_static/images/tableromousday/pag6.2.png
+  :align: center
+
+• FUNCIÓN MINUTOS DE REPROCESO
+
+f_Tablero_Minutos_Day_Recovery () {
+
+  FECHA_DESDE="$1"
+
+  FECHA_HASTA="$2"
+  
+  LOG=$3
+
+  f_log 'Start Tablero Minutos Day Recovery' $LOG
+
+  f_Tablero_Minutos_Day $FECHA_DESDE $FECHA_HASTA $LOG
+
+  f_log 'Finish Tablero Minutos Day Recovery' $LOG
+}
+
+• FUNCIÓN MINUTOS DAY (se ejecuta automáticamente)
+
+f_Tablero_Minutos_Day () {
+
+  # Autor: Mario Heredia.
+
+  # Actualizacion: Mario Heredia. Fecha: 04.12.2014.
+
+  FECHA_DESDE="$1"
+
+  FECHA_HASTA="$2"
+
+  LOG=$3
+
+  f_log 'Start Tablero Minutos Day' $LOG
+
+  f_log 'Tablero Minutos Day' $LOG
+
+  sqlplus -S / @${wdirTableroMinutos}tablero_mous_day.sql $FECHA_DESDE $FECHA_HASTA
+
+  f_log 'Finish Tablero Minutos Day' $LOG
+
+  f_log 'Start Reclamos Sitios Day' $LOG
+
+  f_Claro_Reclamos_Sitios $FECHA_DESDE $FECHA_HASTA $LOG
+
+  f_log 'Finish Reclamos Sitios Day' $LOG
+}
+
+
+
+8. CONTROL DE CAMBIOS
 ---------------------
 
 .. raw:: html 
@@ -243,4 +314,4 @@ P_TABLERO_MOUS_DAY_NE_INS_
     <td></td>
     
   </tr>
-  </table
+  </table>

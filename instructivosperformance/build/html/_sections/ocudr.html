@@ -310,6 +310,29 @@ o /calidad/sva/tekelec/ocudr/hourly/sva_ocudr_hour.sh</p>
 </div>
 <div class="section" id="reproceso">
 <h2>6.  REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+<p>El reproceso se realiza en el entorno de producción perdido.</p>
+<ul class="simple">
+<li>Para reproceso diario, se ejecuta de la siguiente manera:</li>
+</ul>
+<img alt="../_images/pag17bis.png" class="align-center" src="../_images/pag17bis.png" />
+<p>El formato de la fecha es: DD.MM.YYYY</p>
+<ul class="simple">
+<li>Por ejemplo:</li>
+</ul>
+<img alt="../_images/pag17bis2.png" class="align-center" src="../_images/pag17bis2.png" />
+<ul class="simple">
+<li>Para reproceso semanal se indica la semana que se quiere reprocesar:</li>
+</ul>
+<img alt="../_images/pag17bis3.png" class="align-center" src="../_images/pag17bis3.png" />
+<ul class="simple">
+<li>/calidad/sva/tekelec/ocudr/summary&gt;# f_primer_dia_semana 2 15.01.2017</li>
+<li>/calidad/sva/tekelec/ocudr/summary&gt;# f_ultimo_dia_semana 2 21.01.2017</li>
+</ul>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ocudr/sva_tekelec_ocudr_ins_day_rec.sh">sva_tekelec_ocudr_ins_day_rec</a></li>
+<li><a class="reference external" href="../_static/images/ocudr/sva_tekelec_ocudr_isabhw.sh.new">sva_tekelec_ocudr_isabhw_sh</a></li>
+</ul>
 </div>
 <div class="section" id="smart">
 <h2>7.  SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>

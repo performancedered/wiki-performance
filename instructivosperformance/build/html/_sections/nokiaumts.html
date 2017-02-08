@@ -100,9 +100,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tableros.html">TABLEROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1. Tablero AMX Indicadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2. Tablero Mous Day</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3. Tablero NQI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1.  Tablero AMX Indicadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableromousday.html"> 2.  Tablero Mous Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3.  Tablero NQI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 4.  Instructivo Dashboard MicroStrategy</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#"> 5.  Uplink Interference (Nokia UMTS)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1.  OBJETIVO</a></li>
@@ -120,7 +120,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6.  Tablero participación 4G mercado/ciudad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroamxload.html"> 5.  Tablero AMX Load LTE</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
@@ -227,6 +228,10 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 </ul>
 <img alt="../_images/pag4.22.png" class="align-center" src="../_images/pag4.22.png" />
 <ul class="simple">
+<li>TABLERO_UMTS_ULINTFN_WCEL_DAY</li>
+</ul>
+<img alt="../_images/pag5.2bis.png" class="align-center" src="../_images/pag5.2bis.png" />
+<ul class="simple">
 <li>TABLERO_UMTS_ULINTFN_WCEL_WEEK</li>
 </ul>
 <img alt="../_images/pag56.png" class="align-center" src="../_images/pag56.png" />
@@ -240,7 +245,18 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 </div>
 <div class="section" id="reproceso-manual">
 <h2>7.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
-<p><strong>Pendiente de agregar</strong></p>
+<p>El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:</p>
+<ul class="simple">
+<li>P_UMTS_UL_INTFRNC_REWORK_HOUR</li>
+<li>P_UMTS_UL_INTFRNC_REWORK_DAY</li>
+<li>P_UMTS_UL_INTFRNC_REWORK_WEEK</li>
+</ul>
+<p>Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos:</p>
+<img alt="../_images/pag618.png" class="align-center" src="../_images/pag618.png" />
+<p>La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG Body:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/nokiaumts/G_CISCO_GGSN_EPDG_SAMOG_Body.sql">G_CISCO_GGSN_EPDG_SAMOG_Body</a></li>
+</ul>
 </div>
 <div class="section" id="control-de-cambios">
 <h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>

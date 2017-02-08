@@ -100,8 +100,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tableros.html">TABLEROS</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1. Tablero AMX Indicadores</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"> 2. Tablero Mous Day</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tableroindicadores.html"> 1.  Tablero AMX Indicadores</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 2.  Tablero Mous Day</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
@@ -114,13 +114,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#el-proceso-denominado-tablero-mous-day-sql-se-obtiene-a-continuacion">El proceso denominado tablero_mous_day.sql se obtiene a continuación:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">7. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso">7.REPROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3. Tablero NQI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableronqi.html"> 3.  Tablero NQI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructivomicro.html"> 4.  Instructivo Dashboard MicroStrategy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nokiaumts.html"> 5.  Uplink Interference (Nokia UMTS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6.  Tablero participación 4G mercado/ciudad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroamxload.html"> 5.  Tablero AMX Load LTE</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
@@ -310,8 +312,52 @@ LOG=$3</p>
 <p><a class="reference external" href="../_static/images/tableromousday/P_TABLERO_MOUS_DAY_NE_INS.sql">P_TABLERO_MOUS_DAY_NE_INS</a></p>
 </div>
 </div>
+<div class="section" id="reproceso">
+<h2>7.REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+<p>Script de reproceso:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/tableromousday/tablero_minutos_recovery">tablero_minutos_recovery</a></li>
+</ul>
+<p>Se debe ejecutar por consola a través del script tablero_minutos_recovery de la siguiente manera:</p>
+<img alt="../_images/pag619.png" class="align-center" src="../_images/pag619.png" />
+<p>Formato de la fecha: DD.MM:YYYY</p>
+<p>Por ejemplo:</p>
+<img alt="../_images/pag6.213.png" class="align-center" src="../_images/pag6.213.png" />
+<ul class="simple">
+<li>FUNCIÓN MINUTOS DE REPROCESO</li>
+</ul>
+<p>f_Tablero_Minutos_Day_Recovery () {</p>
+<blockquote>
+<div><p>FECHA_DESDE=&#8221;$1&#8221;</p>
+<p>FECHA_HASTA=&#8221;$2&#8221;</p>
+<p>LOG=$3</p>
+<p>f_log &#8216;Start Tablero Minutos Day Recovery&#8217; $LOG</p>
+<p>f_Tablero_Minutos_Day $FECHA_DESDE $FECHA_HASTA $LOG</p>
+<p>f_log &#8216;Finish Tablero Minutos Day Recovery&#8217; $LOG</p>
+</div></blockquote>
+<p>}</p>
+<ul class="simple">
+<li>FUNCIÓN MINUTOS DAY (se ejecuta automáticamente)</li>
+</ul>
+<p>f_Tablero_Minutos_Day () {</p>
+<blockquote>
+<div><p># Autor: Mario Heredia.</p>
+<p># Actualizacion: Mario Heredia. Fecha: 04.12.2014.</p>
+<p>FECHA_DESDE=&#8221;$1&#8221;</p>
+<p>FECHA_HASTA=&#8221;$2&#8221;</p>
+<p>LOG=$3</p>
+<p>f_log &#8216;Start Tablero Minutos Day&#8217; $LOG</p>
+<p>f_log &#8216;Tablero Minutos Day&#8217; $LOG</p>
+<p>sqlplus -S / &#64;${wdirTableroMinutos}tablero_mous_day.sql $FECHA_DESDE $FECHA_HASTA</p>
+<p>f_log &#8216;Finish Tablero Minutos Day&#8217; $LOG</p>
+<p>f_log &#8216;Start Reclamos Sitios Day&#8217; $LOG</p>
+<p>f_Claro_Reclamos_Sitios $FECHA_DESDE $FECHA_HASTA $LOG</p>
+<p>f_log &#8216;Finish Reclamos Sitios Day&#8217; $LOG</p>
+</div></blockquote>
+<p>}</p>
+</div>
 <div class="section" id="control-de-cambios">
-<h2>7. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+<h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
  <style type="text/css">
   table {
      border:2px solid red;
@@ -346,7 +392,7 @@ LOG=$3</p>
   <td></td>
 
 </tr>
-</table</div>
+</table></div>
 </div>
 
 

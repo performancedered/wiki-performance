@@ -72,6 +72,14 @@ Las tablas utilizadas son:
 .. image:: ../_static/images/nokiaumts/pag4.2.png
   :align: center
 
+
+• TABLERO_UMTS_ULINTFN_WCEL_DAY
+
+
+.. image:: ../_static/images/nokiaumts/pag5.2bis.png
+  :align: center
+
+
 • TABLERO_UMTS_ULINTFN_WCEL_WEEK
 
 .. image:: ../_static/images/nokiaumts/pag5.png
@@ -88,7 +96,26 @@ Las Tablas utilizadas desde Perdido son:
 7.  REPROCESO MANUAL
 --------------------
 
-**Pendiente de agregar**
+El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:
+
+• P_UMTS_UL_INTFRNC_REWORK_HOUR
+
+• P_UMTS_UL_INTFRNC_REWORK_DAY 
+
+• P_UMTS_UL_INTFRNC_REWORK_WEEK 
+
+Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos: 
+
+
+.. image:: ../_static/images/nokiaumts/pag6.png
+  :align: center
+
+La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG Body: 
+
+.. _G_CISCO_GGSN_EPDG_SAMOG_Body: ../_static/images/nokiaumts/G_CISCO_GGSN_EPDG_SAMOG_Body.sql
+
++ G_CISCO_GGSN_EPDG_SAMOG_Body_
+
 
 8. CONTROL DE CAMBIOS
 ---------------------

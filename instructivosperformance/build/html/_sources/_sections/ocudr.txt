@@ -205,6 +205,41 @@ TABLAS A NIVEL ISABHWEEK:
 6.  REPROCESO
 -------------
 
+El reproceso se realiza en el entorno de producción perdido.
+
+•	Para reproceso diario, se ejecuta de la siguiente manera:  
+
+.. image:: ../_static/images/ocudr/pag17bis.png
+  :align: center
+
+El formato de la fecha es: DD.MM.YYYY
+
+•	Por ejemplo: 
+
+.. image:: ../_static/images/ocudr/pag17bis2.png
+  :align: center
+
+
+
+•	Para reproceso semanal se indica la semana que se quiere reprocesar:
+
+.. image:: ../_static/images/ocudr/pag17bis3.png
+  :align: center
+
+ 
+*	/calidad/sva/tekelec/ocudr/summary># f_primer_dia_semana 2 15.01.2017
+
+*	/calidad/sva/tekelec/ocudr/summary># f_ultimo_dia_semana 2 21.01.2017
+
+Los scripts son los siguientes: 
+
+.. _sva_tekelec_ocudr_ins_day_rec: ../_static/images/ocudr/sva_tekelec_ocudr_ins_day_rec.sh
+.. _sva_tekelec_ocudr_isabhw_sh: ../_static/images/ocudr/sva_tekelec_ocudr_isabhw.sh.new
+
++	sva_tekelec_ocudr_ins_day_rec_
+
++	sva_tekelec_ocudr_isabhw_sh_
+
 7.  SMART
 ---------
 

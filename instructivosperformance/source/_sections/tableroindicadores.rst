@@ -284,7 +284,17 @@ id_Registro|id_Tecnologia|voice_Inacc|voice_NonRet|voice_SpeechQuality|voice_Tra
 
 /calidad/ps_spool/amx>#
 
-7.CONTROL DE CAMBIOS
+
+
+7.  REPROCESO
+-------------
+
+Este tablero no tiene reproceso, pero esta croneado para que corra durante 5 dias: 
+
+00 9 1,2,3,4,5 * * /calidad/ps_spool/amx/bd_amx.sh > /dev/null 2>&1
+
+
+8.  CONTROL DE CAMBIOS
 --------------------
 
 .. raw:: html 
@@ -323,4 +333,4 @@ id_Registro|id_Tecnologia|voice_Inacc|voice_NonRet|voice_SpeechQuality|voice_Tra
     <td></td>
     
   </tr>
-  </table
+  </table>
