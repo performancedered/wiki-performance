@@ -9,6 +9,7 @@ PROCESO DE DESARROLLO
     table {
        border:2px solid grey;
        border-collapse:separate;
+       font-size:small;
        }
     th, td {
        border:1px solid grey;
