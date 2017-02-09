@@ -36,7 +36,7 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 6.	PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES
 ------------------------------------------------
 
-1.  Un Analista de  detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.
+1.  Un Analista de Performance detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.
 
 2.  El Analista de Performance  ingresa a JIRA y se fija que no haya una incidencia ya levantada mediante el proceso preventivo de aseguramiento de datos.
 
