@@ -200,15 +200,15 @@
 <div class="section" id="principales-actividades-y-responsabilidades">
 <h2>6.      PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES<a class="headerlink" href="#principales-actividades-y-responsabilidades" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>El Focal Point detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.</li>
-<li>El Focal Point ingresa a JIRA y se fija que no haya una incidencia ya levantada mediante el proceso preventivo de aseguramiento de datos.</li>
+<li>Un Analista de  detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.</li>
+<li>El Analista de Performance  ingresa a JIRA y se fija que no haya una incidencia ya levantada mediante el proceso preventivo de aseguramiento de datos.</li>
 <li>Si el evento todavía no está registrado, entonces lo registra completando la siguiente plantilla:<ul>
 <li>Project: <strong>1688-CLARO SMART – MTM (CMTM)</strong></li>
 <li>Issue Type: <strong>Bug</strong></li>
 <li>Summary: <strong>Faltante de datos – Plataforma NN</strong></li>
 <li>Priority: <strong>Major</strong></li>
 <li>Due Date: <strong>para el día siguiente</strong></li>
-<li>Asignee: <strong>el analista de datos adecuado</strong></li>
+<li>Asignee: <strong>el Focal Point</strong></li>
 </ul>
 </li>
 </ol>
@@ -228,6 +228,7 @@
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="4">
+<li>El Focal Point lo revisa y asigna el ticket a un Analista de Datos.</li>
 <li>El Analista de Datos realiza el análisis de causa raíz, y da una solución al problema, agregando el siguiente comentario:<ul>
 <li><strong>Síntoma de Falla:</strong> ej: no se observan datos hour entre el día 16/01 y el 17/01</li>
 <li><strong>Causa Raíz:</strong> ej: falla del proceso de recolección de datos debido a una falta de espacio en file system, ya que la gente de sistemas utilizó erróneamente el mismo.</li>
@@ -235,6 +236,7 @@
 <li><strong>Pendientes:</strong> ej: crear un correo automático para la utilización del file system que sirva como alerta temprana, registrado mediante ticket jira CMTM-9875</li>
 </ul>
 </li>
+<li>El Analista de Datos asigna el ticket al Focal Point para validación.</li>
 <li>El Focal Point valida si la solución fue definitiva o paliativa; en ambos casos debe avisar al cliente final que el tema está solucionado.  Luego debe cerrar el ticket.</li>
 <li>Si la solución fue paliativa (hay pendientes y no se solucionó la causa raíz) además se debe indicar el nuevo ticket de mejora, el cual deberá ser creado como un requerimiento de mejora:<ul>
 <li>Project: <strong>1688-CLARO SMART – MTM (CMTM)</strong></li>
@@ -283,7 +285,14 @@
    <td> 31/01/2017 </td>
    <td> Marcela Medrano, Matias Stuyck </td>
    <td> - </td>
-   <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. </td>
+   <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. versión 1 </td>
+   <td> -</td>
+ </tr>
+ <tr>
+   <td> 08/02/2017 </td>
+   <td> Matias Stuyck </td>
+   <td> - </td>
+   <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. versión 2 </td>
    <td> -</td>
  </tr>
 

@@ -36,9 +36,9 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 6.	PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES
 ------------------------------------------------
 
-1.	El Focal Point detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.
+1.  Un Analista de  detecta un faltante de datos de alguna plataforma en Smart, ya sea por un reclamo de un usuario final vía telefónica/correo, o durante la construcción de un reporte.
 
-2.	El Focal Point ingresa a JIRA y se fija que no haya una incidencia ya levantada mediante el proceso preventivo de aseguramiento de datos.
+2.  El Analista de Performance  ingresa a JIRA y se fija que no haya una incidencia ya levantada mediante el proceso preventivo de aseguramiento de datos.
 
 3.	Si el evento todavía no está registrado, entonces lo registra completando la siguiente plantilla:
 
@@ -52,7 +52,7 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 
 	*	Due Date: **para el día siguiente**
 
-	*	Asignee: **el analista de datos adecuado**
+	*	Asignee: **el Focal Point**
 
 Description:
 
@@ -77,7 +77,9 @@ Description:
 	*	**Epica:** asignar a la epica REPROCESOS
 
 
-4.	El Analista de Datos realiza el análisis de causa raíz, y da una solución al problema, agregando el siguiente comentario:
+4.  El Focal Point lo revisa y asigna el ticket a un Analista de Datos.
+
+5.	El Analista de Datos realiza el análisis de causa raíz, y da una solución al problema, agregando el siguiente comentario:
 
 	*	**Síntoma de Falla:** ej: no se observan datos hour entre el día 16/01 y el 17/01
 
@@ -87,10 +89,12 @@ Description:
 
 	*	**Pendientes:** ej: crear un correo automático para la utilización del file system que sirva como alerta temprana, registrado mediante ticket jira CMTM-9875
 
-5.	El Focal Point valida si la solución fue definitiva o paliativa; en ambos casos debe avisar al cliente final que el tema está solucionado.  Luego debe cerrar el ticket.
+6.  El Analista de Datos asigna el ticket al Focal Point para validación.
+
+7.	El Focal Point valida si la solución fue definitiva o paliativa; en ambos casos debe avisar al cliente final que el tema está solucionado.  Luego debe cerrar el ticket.
 
  
-6.	Si la solución fue paliativa (hay pendientes y no se solucionó la causa raíz) además se debe indicar el nuevo ticket de mejora, el cual deberá ser creado como un requerimiento de mejora:
+8.	Si la solución fue paliativa (hay pendientes y no se solucionó la causa raíz) además se debe indicar el nuevo ticket de mejora, el cual deberá ser creado como un requerimiento de mejora:
 
 	*	Project: **1688-CLARO SMART – MTM (CMTM)**
 
@@ -109,7 +113,7 @@ Description:
 	*	Description: indicar toda la información con la que se cuente para solucionar la causa raíz
 
 
-7.	El tablero de comandos para este proceso es el siguiente dashboard de jira: **JIRA / Agile / Project 1688-CLARO SMART-MTM / Work.** Donde se observan las tareas: Para Hacer (To Do), en progreso (In Progress) y Finalizadas (Done):
+9.	El tablero de comandos para este proceso es el siguiente dashboard de jira: **JIRA / Agile / Project 1688-CLARO SMART-MTM / Work.** Donde se observan las tareas: Para Hacer (To Do), en progreso (In Progress) y Finalizadas (Done):
 
 .. image:: ../_static/images/correctivo/pag4.png
   :align: center 
@@ -157,7 +161,14 @@ Se utiliza el indicador “Avg. Resolution Time” para controlar el tiempo prom
     <td> 31/01/2017 </td>
     <td> Marcela Medrano, Matias Stuyck </td>
     <td> - </td>
-    <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. </td>
+    <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. versión 1 </td>
+    <td> -</td>
+  </tr>
+  <tr>
+    <td> 08/02/2017 </td>
+    <td> Matias Stuyck </td>
+    <td> - </td>
+    <td> Se creo el documento del proceso correctivo detallando los pasos a seguir. versión 2 </td>
     <td> -</td>
   </tr>
 
