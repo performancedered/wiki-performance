@@ -309,13 +309,25 @@ Este desarrollo permite almacenar y monitorear los Indicadores de Performance y 
 <li>PROCESS_TO_RUN</li>
 </ul>
 <img alt="../_images/pag15.25.png" class="align-center" src="../_images/pag15.25.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW1_AUX  (en esta tabla las columnas  “C” va desde C1 y llegarían al C627)</li>
+</ul>
+<img alt="../_images/pag15.2.bis.png" class="align-center" src="../_images/pag15.2.bis.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW2_AUX (en esta tabla las columnas  “C” va desde C628 y llegarían al C1202)</li>
+</ul>
+<img alt="../_images/pag15.3.bis.png" class="align-center" src="../_images/pag15.3.bis.png" />
+<ul class="simple">
+<li>LTE_C_ALC_UY_ENODEB_RAW3_AUX  (en esta tabla las columnas  “C” va desde C1203 y llegarían al C1202)</li>
+</ul>
+<img alt="../_images/pag15.4.bis.png" class="align-center" src="../_images/pag15.4.bis.png" />
 </div>
 <div class="section" id="pentaho">
 <h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag15.3.png" class="align-center" src="../_images/pag15.3.png" />
+<img alt="../_images/pag310.png" class="align-center" src="../_images/pag310.png" />
 <ul class="simple">
 <li>Pentaho ParseXml</li>
 </ul>
@@ -333,6 +345,11 @@ Este desarrollo permite almacenar y monitorear los Indicadores de Performance y 
 <p>Una vez obtenido el csv, los datos son insertados en  3 tablas Raw.</p>
 <p>El significado de cada columna de la tabla Raw se encuentra en la tabla LTE_C_ALC_UY_ENODEB_DIC</p>
 <img alt="../_images/pag16.3.png" class="align-center" src="../_images/pag16.3.png" />
+<ul class="simple">
+<li>Pentaho Populate Raw Aux</li>
+</ul>
+<p>En este proceso se filtran los datos de las tablas Raw para ser insertados en las tablas Raw Aux para luego calcular los kpi correspondientes.</p>
+<img alt="../_images/pag17.bis.png" class="align-center" src="../_images/pag17.bis.png" />
 </div>
 </div>
 <div class="section" id="reproceso-manual">

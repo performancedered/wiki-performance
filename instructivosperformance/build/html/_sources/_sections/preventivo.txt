@@ -47,9 +47,9 @@ Alcanza al equipo de Performance de Red, sus analistas de Datos y analistas de P
 6.	PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES
 -----------------------------------------------
 
-1.	El Focal Point detecta un faltante de datos de alguna plataforma en Smart, debido a los Controles preventivos Definidos.
+1.	El Analista de datos detecta un faltante de datos de alguna plataforma en Smart, debido a los Controles preventivos Definidos.
 
-2.	El Focal Point ingresa a JIRA y se fija que no haya una incidencia ya levantada para el faltante en cuestión.
+2.	El Analista de datos ingresa a JIRA y se fija que no haya una incidencia ya levantada para el faltante en cuestión.
 
 3.	Si el evento todavía no está registrado, entonces lo registra completando la siguiente plantilla:
 

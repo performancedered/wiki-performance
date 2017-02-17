@@ -119,7 +119,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#proyecto">5.5.    Proyecto</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#reproceso">6.      Reproceso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso">6.      REPROCESO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">7. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
@@ -300,8 +300,30 @@ En base a 2 KPIs, uno de usuarios y otro de throughput, comparándolos con la ca
 </div>
 </div>
 <div class="section" id="reproceso">
-<h2>6.      Reproceso<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
-<p><strong>Se encuentra Pendiente</strong></p>
+<h2>6.      REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+<p>Se crearon los procesos para los reprocesos con los siguientes parámetros:</p>
+<ul class="simple">
+<li>fecha_desde  Formato: DD.MM.YYYY</li>
+<li>fecha_hasta Formato: DD.MM.YYYY</li>
+</ul>
+<dl class="docutils">
+<dt>begin</dt>
+<dd><p class="first">&#8211; Call the procedure
+p_tablero_amx_load_det_rec_day(p_fecha_desde =&gt; :p_fecha_desde,</p>
+<blockquote class="last">
+<div>p_fecha_hasta =&gt; :p_fecha_hasta);</div></blockquote>
+</dd>
+</dl>
+<p>end;</p>
+<dl class="docutils">
+<dt>begin</dt>
+<dd><p class="first">&#8211; Call the procedure
+p_tablero_lte_amx_res_rec_dayw(p_fecha_desde =&gt; :p_fecha_desde,</p>
+<blockquote class="last">
+<div>p_fecha_hasta =&gt; :p_fecha_hasta);</div></blockquote>
+</dd>
+</dl>
+<p>end;</p>
 </div>
 <div class="section" id="control-de-cambios">
 <h2>7. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>

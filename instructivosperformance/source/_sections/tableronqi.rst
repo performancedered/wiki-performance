@@ -327,8 +327,23 @@ f_log 'Finish Tablero NQI Hourly ' $LOG
 .. image:: ../_static/images/tableronqihourly/pag9.png
     :align: center
 
+7.  REPROCESO
+.............
 
-7. CONTROL DE CAMBIOS
+Para el reproceso del tablero nqi a nivel hour, se debe conectar al equipo unix, en la carpeta:
+
+.. image:: ../_static/images/tableronqihourly/pag9.2.png
+    :align: center
+
+Formato de la fecha:  DD.MM.YYYY HH24
+
+Ejemplo:
+
+.. image:: ../_static/images/tableronqihourly/pag9.3.png
+    :align: center 
+
+
+8. CONTROL DE CAMBIOS
 .....................
 
 .. raw:: html 

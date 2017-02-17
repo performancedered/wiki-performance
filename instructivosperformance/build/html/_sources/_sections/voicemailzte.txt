@@ -148,8 +148,26 @@ Estas tablas se obtienen de las siguientes queries:
 
 *	sva_zte_weekly_ 
 
+6.REPROCESO
+-----------
 
-6.	SMART
+Se generó un script aparte de recupero, en el cual se ingresa como argumento la semana que se desee reprocesar: 
+ 
+.. image:: ../_static/images/voicemailzte/pag5.2.png
+  :align: center
+
+Ejemplo:
+
+En este ejemplo se reprocesa a 2 semanas atrás. Encargándose el script de definir la fecha desde y la fecha hasta.
+
+.. image:: ../_static/images/voicemailzte/pag5.3.png
+  :align: center
+
+.. _sva_zte_summary_rec: ../_static/images/voicemailzte/sva_zte_summary_rec.sh
+
+Script de reproceso: sva_zte_summary_rec_
+
+7.	SMART
 ---------
 
 Los reportes en la herramienta Smart se muestran de la siguiente manera: 
@@ -170,7 +188,7 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
   :align: center
 
 
-7. CONTROL DE CAMBIOS
+8. CONTROL DE CAMBIOS
 ---------------------
 
 

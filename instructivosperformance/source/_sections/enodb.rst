@@ -181,12 +181,27 @@ En esta tabla se obtiene los C”N”, con el valor hasta C627
 .. image:: ../_static/images/enodb/pag15.2.png
   :align: center 
 
+• LTE_C_ALC_UY_ENODEB_RAW1_AUX  (en esta tabla las columnas  “C” va desde C1 y llegarían al C627)
+
+.. image:: ../_static/images/enodb/pag15.2.bis.png
+  :align: center 
+
+• LTE_C_ALC_UY_ENODEB_RAW2_AUX (en esta tabla las columnas  “C” va desde C628 y llegarían al C1202)
+
+.. image:: ../_static/images/enodb/pag15.3.bis.png
+  :align: center 
+
+• LTE_C_ALC_UY_ENODEB_RAW3_AUX  (en esta tabla las columnas  “C” va desde C1203 y llegarían al C1202)
+
+.. image:: ../_static/images/enodb/pag15.4.bis.png
+  :align: center 
+
 6.5.	Pentaho
 ***************
 
 •	Proceso Pentaho End to End 
 
-.. image:: ../_static/images/enodb/pag15.3.png
+.. image:: ../_static/images/enodb/pag3.png
   :align: center 
 
 •	Pentaho ParseXml
@@ -214,6 +229,13 @@ Una vez obtenido el csv, los datos son insertados en  3 tablas Raw.
 El significado de cada columna de la tabla Raw se encuentra en la tabla LTE_C_ALC_UY_ENODEB_DIC
 
 .. image:: ../_static/images/enodb/pag16.3.png
+  :align: center 
+
+• Pentaho Populate Raw Aux
+
+En este proceso se filtran los datos de las tablas Raw para ser insertados en las tablas Raw Aux para luego calcular los kpi correspondientes.
+
+.. image:: ../_static/images/enodb/pag17.bis.png
   :align: center 
 
 7.	REPROCESO MANUAL

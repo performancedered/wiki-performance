@@ -165,10 +165,27 @@ El email se envía todos los Lunes a las 7:00am con el archivo adjunto:
 .. image:: ../_static/images/tableroamxloadlte/pag7.png
   :align: center
 
-6.	Reproceso 
+6.	REPROCESO 
 -------------
 
-**Se encuentra Pendiente** 
+Se crearon los procesos para los reprocesos con los siguientes parámetros:
+
+• fecha_desde  Formato: DD.MM.YYYY
+• fecha_hasta Formato: DD.MM.YYYY
+
+begin
+  -- Call the procedure
+  p_tablero_amx_load_det_rec_day(p_fecha_desde => :p_fecha_desde,
+                                                         p_fecha_hasta => :p_fecha_hasta);
+end;
+ 
+begin
+  -- Call the procedure
+  p_tablero_lte_amx_res_rec_dayw(p_fecha_desde => :p_fecha_desde,
+                                 p_fecha_hasta => :p_fecha_hasta);
+end;
+
+
 
 
 7. CONTROL DE CAMBIOS
