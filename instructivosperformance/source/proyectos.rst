@@ -22,4 +22,4 @@ PROYECTOS
 
    9. FIREWALL CHECKPOINT GRX BX <../../_sections/firewall>
 
-   10. CISCO EPDG y SAMOG <../../_sections/ciscoepdgsamog>
+   10. CISCO EPDG y SAMOG <../../_sections/cisco_epdg_samog>
