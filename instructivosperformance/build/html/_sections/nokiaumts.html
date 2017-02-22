@@ -246,6 +246,13 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <div class="section" id="reproceso-manual">
 <h2>7.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
 <p>El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Formato fecha a nivel  horario: DD.MM.YYYY HH24</li>
+<li>Formato fecha a nivel día o semanal: DD.MM.YYYY</li>
+<li>Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado.</li>
+</ul>
+</div></blockquote>
 <ul class="simple">
 <li>P_UMTS_UL_INTFRNC_REWORK_HOUR</li>
 <li>P_UMTS_UL_INTFRNC_REWORK_DAY</li>
@@ -253,9 +260,9 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 </ul>
 <p>Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos:</p>
 <img alt="../_images/pag618.png" class="align-center" src="../_images/pag618.png" />
-<p>La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG Body:</p>
+<p>La descripción detallada de cada procedimiento se encuentra en el paquete G_UMTS_UL_INTERFERENCE:</p>
 <ul class="simple">
-<li><a class="reference external" href="../_static/images/nokiaumts/G_CISCO_GGSN_EPDG_SAMOG_Body.sql">G_CISCO_GGSN_EPDG_SAMOG_Body</a></li>
+<li><a class="reference external" href="../_static/images/nokiaumts/G_UMTS_UL_INTERFERENCE.sql">G_UMTS_UL_INTERFERENCE</a></li>
 </ul>
 </div>
 <div class="section" id="control-de-cambios">

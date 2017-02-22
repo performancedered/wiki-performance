@@ -283,7 +283,30 @@
 </div>
 <div class="section" id="reproceso">
 <h2>7.      REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
-<p><strong>PENDIENTE</strong></p>
+<p>El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Formato fecha a nivel  horario: DD.MM.YYYY HH24</li>
+<li>Formato fecha a nivel día o semanal: DD.MM.YYYY</li>
+<li>Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado.</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>P_CISCO_GGSN_EPDG_REWORK_HOUR</li>
+<li>P_CISCO_GGSN_EPDG_REWORK_DAY</li>
+<li>P_CISCO_GGSN_EPDG_REWORK_BH</li>
+<li>P_CISCO_GGSN_EPDG_REWORK_WEEK</li>
+<li>P_CISCO_GGSN_SAMOG_REWORK_HOUR</li>
+<li>P_CISCO_GGSN_SAMOG_REWORK_DAY</li>
+<li>P_CISCO_GGSN_SAMOG_REWORK_BH</li>
+<li>P_CISCO_GGSN_SAMOG_REWORK_WEEK</li>
+</ul>
+<p>Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos:</p>
+<img alt="../_images/pag186.png" class="align-center" src="../_images/pag186.png" />
+<p>La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoepdgsamog/G_CISCO_GGSN_EPDG_SAMOG.sql">G_CISCO_GGSN_EPDG_SAMOG</a></li>
+</ul>
 </div>
 <div class="section" id="smart">
 <h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>

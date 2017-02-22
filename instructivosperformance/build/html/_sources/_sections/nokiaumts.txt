@@ -98,6 +98,13 @@ Las Tablas utilizadas desde Perdido son:
 
 El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:
 
+    + Formato fecha a nivel  horario: DD.MM.YYYY HH24 
+
+    + Formato fecha a nivel día o semanal: DD.MM.YYYY
+
+    + Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado. 
+
+
 • P_UMTS_UL_INTFRNC_REWORK_HOUR
 
 • P_UMTS_UL_INTFRNC_REWORK_DAY 
@@ -110,11 +117,11 @@ Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la 
 .. image:: ../_static/images/nokiaumts/pag6.png
   :align: center
 
-La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG Body: 
+La descripción detallada de cada procedimiento se encuentra en el paquete G_UMTS_UL_INTERFERENCE: 
 
-.. _G_CISCO_GGSN_EPDG_SAMOG_Body: ../_static/images/nokiaumts/G_CISCO_GGSN_EPDG_SAMOG_Body.sql
+.. _G_UMTS_UL_INTERFERENCE: ../_static/images/nokiaumts/G_UMTS_UL_INTERFERENCE.sql
 
-+ G_CISCO_GGSN_EPDG_SAMOG_Body_
++ G_UMTS_UL_INTERFERENCE_
 
 
 8. CONTROL DE CAMBIOS

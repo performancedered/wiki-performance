@@ -152,7 +152,38 @@ Tablas utilizadas:
 7.	REPROCESO
 -------------
 
-**PENDIENTE**
+.. _G_CISCO_GGSN_EPDG_SAMOG: ../_static/images/ciscoepdgsamog/G_CISCO_GGSN_EPDG_SAMOG.sql
+
+El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal: 
+
+  + Formato fecha a nivel  horario: DD.MM.YYYY HH24 
+
+  + Formato fecha a nivel día o semanal: DD.MM.YYYY
+
+  + Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado. 
+
+• P_CISCO_GGSN_EPDG_REWORK_HOUR
+• P_CISCO_GGSN_EPDG_REWORK_DAY 
+• P_CISCO_GGSN_EPDG_REWORK_BH
+• P_CISCO_GGSN_EPDG_REWORK_WEEK
+• P_CISCO_GGSN_SAMOG_REWORK_HOUR
+• P_CISCO_GGSN_SAMOG_REWORK_DAY
+• P_CISCO_GGSN_SAMOG_REWORK_BH
+• P_CISCO_GGSN_SAMOG_REWORK_WEEK
+
+
+Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos: 
+
+.. image:: ../_static/images/ciscoepdgsamog/pag18.png
+  :align: center
+
+La descripción detallada de cada procedimiento se encuentra en el paquete G_CISCO_GGSN_EPDG_SAMOG: 
+
++ G_CISCO_GGSN_EPDG_SAMOG_
+
+
+
+
 
 8.	SMART
 ---------
