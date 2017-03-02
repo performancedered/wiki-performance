@@ -1,0 +1,794 @@
+<?xml version="1.0" ?>
+<ROWDATA>
+
+<ROW>
+  <Name>FECHA</Name>
+  <Type>DATE</Type>
+</ROW>
+
+<ROW>
+  <Name>INT_ID</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_ERL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_ERL_VOZ</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_ERL_VIDEOCALL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_ERL_STREAMING</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_MOUS</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_MOUS_VOZ</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_MOUS_VIDEOCALL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_MOUS_STREAMING</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_AVG_USED_SAMP_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_AVG_USED_SAMP_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_VOZ_AVG_USED_SAMP_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_VIDEO_AVG_USED_SAMP_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_STREA_AVG_USED_SAMP_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_VOZ_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_VOZ_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_VIDEOCALL_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_VIDEOCALL_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_STREAMING_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_STREAMING_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_VOZ_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_VOZ_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_VIDEOCALL_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_VIDEOCALL_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_STREAMING_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_STREAMING_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VOZ_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VOZ_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VIDEO_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VIDEO_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_STREAMING_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_STREAMING_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VOZ_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VOZ_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VIDEO_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_VIDEO_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_STREAMING_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_STREAMING_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_SETUP_TIME_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_SETUP_TIME_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_SETUP_TIME_VIDEO_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_SETUP_TIME_VIDEO_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_OCCUPANCY_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_OCCUPANCY_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_MAX_PERCENT_OCCUPANCY</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_MIN_PERCENT_OCCUPANCY</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_BLCK_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CODE_BLCK_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_MAX_USED_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_MAX_USED_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_MIN_USED_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_MIN_USED_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_MAX_AVAIL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_AVG_USED_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_AVG_USED_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CE_AVG_AVAIL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CELL_AVAIL_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CELL_AVAIL_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CELL_AVAIL_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CELL_AVAIL_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_PACKET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_CSS_PACKET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_PACKET_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_PACKET_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_PACKET_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_DROP_PACKET_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_PACKET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_CSS_PACKET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>VENDOR</Name>
+  <Type>VARCHAR2(10)</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_PS_DL_TOTAL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_VOICE_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_VIDEOCALL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>CS_STREAM_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_DL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_DL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_DL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_DL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_UL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_UL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_UL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_UL_MB</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_DL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_DL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_DL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_DL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_DL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_DL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_DL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_DL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_UL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTERACT_UL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_UL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_BACKG_UL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_UL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_UL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_UL_THROUG_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_VOICE_UL_THROUG_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTER_BACKG_UL_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTER_BACKG_UL_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTER_BACKG_DL_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_INTER_BACKG_DL_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_DL_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_DL_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_UL_KBPS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>PS_STREAM_UL_KBPS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_EST_SUCC_NET_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_EST_SUCC_NET_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_EST_SUCC_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_EST_SUCC_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_STP_SUCC_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_STP_SUCC_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_ACC_SUCC_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_ACC_SUCC_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_ACT_DROP_USR_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RRC_ACT_DROP_USR_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_VOICE_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_VOICE_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_CONV_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_CONV_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_CS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_PS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_PS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_VOICE_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_VOICE_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_CONV_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_CONV_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_CS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_PS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_PS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_VOICE_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_VOICE_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_CONV_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_CONV_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_CS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_PS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_PS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_PS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_EST_SUCC_PS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_PS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_STP_SUCC_PS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_PS_STREA_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RAB_ACC_SUCC_PS_STREA_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>MAX_HSUPA_CE_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>MIN_HSUPA_CE_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>AVG_HSUPA_CE_UL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>AVG_HSUPA_CE_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>MAX_HSUPA_CE_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>MIN_HSUPA_CE_DL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>AVG_NUMBER_HSUPA_USER_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RTWP_CLASS_NUM</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RTWP_CLASS_DEN</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>MAX_HSDPA_USERS_IN_CELL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RTWP</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+<ROW>
+  <Name>RTWP_CONTROL</Name>
+  <Type>NUMBER</Type>
+</ROW>
+
+</ROWDATA>

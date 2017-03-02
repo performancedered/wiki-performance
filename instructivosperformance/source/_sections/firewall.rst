@@ -20,7 +20,9 @@ El presente documento buscar explicar y detallar el proceso que genera Firewall 
 4. DESCRIPCÓN GENERAL
 ---------------------
 
- **Pendiente**
+**Alcatel IPRAN**
+
+Permite el  tráfico y conexiones de datos móviles entre usuarios de Roaming de otras Operadoras en la Red Claro y viceversa. Estas cajas están conectadas contra los Routers 7600 PE de DTO (TOR-PE-R01 y TOR-PE-R02) respectivamente.
 
 5. MACRO FLUJO DEL PROCESO
 --------------------------
@@ -32,7 +34,7 @@ El presente documento buscar explicar y detallar el proceso que genera Firewall 
 ------------------------
 
 6.1.	Datos Origen
-.....................
+..................
 
 •	Server Origen y Path: guerrero.claro.amx
 
@@ -43,7 +45,7 @@ El presente documento buscar explicar y detallar el proceso que genera Firewall 
 •	Tipo de Archivo: No posse archivos
 
 6.2.	Datos Destino
-......................
+...................
 
 •	Server Destino: perdido.claro.amx
 

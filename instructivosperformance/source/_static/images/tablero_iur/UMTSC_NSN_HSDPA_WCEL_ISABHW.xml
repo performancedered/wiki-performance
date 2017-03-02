@@ -1,0 +1,1892 @@
+<?xml version="1.0" ?>
+<ROWDATA>
+
+<ROW>
+  <Name>FECHA</Name>
+  <Type>DATE</Type>
+  <Nullable></Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>INT_ID</Name>
+  <Type>INTEGER</Type>
+  <Nullable></Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ALLO_HS_DSCH_FLOW_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ALLO_HS_DSCH_FLOW_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DCH_SEL_MAX_HSDPA_USERS_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DCH_SEL_MAX_HSDPA_USERS_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_NO_USERS</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_11_OR_12</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_13_OR_14</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_15_OR_16</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_1_OR_2</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_3_OR_4</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_5_OR_6</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_7_OR_8</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSDPA_USERS_9_OR_10</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_0</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_1</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_2</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_3</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_4</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HS_SCCH_PWR_DIST_CLASS_5</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_D_PDU_DROP_BTS_OWFL</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_D_PDU_TOT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_0</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_1</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_2</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_3</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_4</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MAC_HS_PDU_RETR_DIST_CL_5</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_1_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_1_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_2_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_2_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_3_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_3_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_4_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_4_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_5_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_5_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REJ_HS_DSCH_RET_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REJ_HS_DSCH_RET_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_NORM_HS_DSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_NORM_HS_DSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_OTH_FAIL_HSDSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_OTH_FAIL_HSDSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_RL_FAIL_HS_DSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_ALLO_RL_FAIL_HS_DSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_1_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_1_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_2_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_2_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_3_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_3_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_4_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_4_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_5_CODE_16QAM</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_5_CODE_QPSK</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RRC_CONN_STP_COMP</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_INTER_BTS_SUCCESSFUL</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_INTRA_BTS_SUCCESSFUL</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_STARTED_ACTIVE_SET_UPD</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_STARTED_CPICH_ECNO</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_STARTED_OTHER_REASON</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SCC_STARTED_UL_SIR_ERROR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_BTS_HS_DSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_BTS_HS_DSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_IUB_HS_TOTAL_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_IUB_HS_TOTAL_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_RNC_HS_DSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_RNC_HS_DSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_UE_HS_DSCH_BGR</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_UE_HS_DSCH_INT</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_HSDSCH_CLASS_11_12</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_HSDSCH_CLASS_1_6</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_HSDSCH_CLASS_7_8</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_HSDSCH_CLASS_9_10</Name>
+  <Type>INTEGER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_17_TO_20</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_21_TO_24</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_25_TO_28</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_29_TO_32</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_33_TO_36</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_37_TO_40</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_41_TO_44</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_45_TO_48</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_6_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_7_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_8_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_9_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_10_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_11_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_12_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_13_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_14_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_15_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_6_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_7_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_8_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_9_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_10_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_11_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_12_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_13_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_14_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ORIG_TRANS_15_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_6_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_7_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_8_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_9_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_10_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_11_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_12_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_13_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_14_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_15_CODE_QPSK</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_6_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_7_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_8_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_9_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_10_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_11_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_12_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_13_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_14_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RETRANS_15_CODE_16QAM</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_FAILED</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_0</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_1</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_2</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_3</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_4</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_5</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_6</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_7</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_8</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_9</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_10</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_11</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_12</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_13</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_14</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_15</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_16</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_17</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_18</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_19</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_20</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_21</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_22</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_23</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_24</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_25</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_26</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_27</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_28</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_29</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>CQI_DIST_CL_30</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_BUFF_WITH_DATA_PER_TTI</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>TTI_NOT_SEND_DATA_FROM_BUFF</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_1_0_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_1_1_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_1_2_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_2_0_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_2_1_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>HSDPA_USERS_3_0_IN_CELLS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ALLO_SUCCESS_EDCH_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>ALLO_SUCCESS_EDCH_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>EDCH_ALLO_CANC_NA_AS_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>EDCH_ALLO_CANC_NA_AS_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_HSDSCH_SCC_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_HSDSCH_SCC_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_NORM_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_NORM_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_OTHER_FAIL_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_OTHER_FAIL_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_RL_FAIL_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>REL_EDCH_RL_FAIL_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_BTS_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_BTS_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_OTHER_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_OTHER_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_TRANS_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_TRANS_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_UE_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_FAIL_EDCH_UE_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UL_DCH_SEL_BTS_HW_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UL_DCH_SEL_BTS_HW_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UL_DCH_SEL_MAX_HSUPA_USR_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UL_DCH_SEL_MAX_HSUPA_USR_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_NO_USERS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_1_OR_2</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_3_OR_4</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_5_OR_6</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_7_OR_8</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_9_OR_10</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_11_OR_12</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_13_OR_14</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_15_OR_16</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_17_OR_18</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DUR_HSUPA_USERS_19_OR_20</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>EDCH_SCC_INTER_BTS_SUCCESS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>EDCH_SCC_INTRA_BTS_SUCCESS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>EDCH_SCC_STARTED</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_HARQ_FAIL_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_00_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_01_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_02_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_03_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_04_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_05_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_06_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_07_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_08_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_09_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_10_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_11_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_12_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>MACE_PDU_RETR_UNKNOWN_COUNTER</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_1</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_2</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_3</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_4</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_5</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>UE_SUPP_EDCH_CATEGORY_6</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>RECEIVED_HS_MACD_BITS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DISCARDED_HS_MACD_BITS</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_49_TO_52</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_53_TO_56</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_57_TO_60</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_61_TO_64</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_65_TO_72</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_73_TO_80</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_81_TO_96</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_97_TO_112</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>DURA_HSDPA_USERS_113_OR_MORE</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_REJ_EDCH_AC_INT</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+<ROW>
+  <Name>SETUP_REJ_EDCH_AC_BGR</Name>
+  <Type>NUMBER</Type>
+  <Nullable>Y</Nullable>
+  <Default></Default>
+  <Comments></Comments>
+</ROW>
+
+</ROWDATA>

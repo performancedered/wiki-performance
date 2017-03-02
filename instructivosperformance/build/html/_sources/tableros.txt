@@ -18,4 +18,6 @@ TABLEROS
 
     6. 	Tablero participación 4G mercado/ciudad <../../_sections/tablero4g>
 
-    5.	Tablero AMX Load LTE <../../_sections/tableroamxload>
+    7.	Tablero AMX Load LTE <../../_sections/tableroamxload>
+
+    8.	Tablero IUR <../../_sections/tableroiur>
