@@ -309,18 +309,10 @@ Al ejecutar el script ENodeBEndToEndRework_, dentro del mismo se ejecuta el scri
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 17/02/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-606"> CL-606 </a></p> </td>
+    <td> Se creo la tabla objeto. </td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>

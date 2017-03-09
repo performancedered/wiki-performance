@@ -317,18 +317,9 @@ Se debe agregar la fecha del día a reprocesar
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
-    <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
+    <td> 23/01/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-756"> CL-756</a></p> </td>
+    <td>  Se modifico el flujo normal del proceso, guardando el resultado en dos nuevas tablas.</td>
   </tr>
   </table>

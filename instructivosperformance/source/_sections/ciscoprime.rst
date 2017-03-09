@@ -380,18 +380,11 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 06/02/2017 </td>
+    <td> Marcelo Carrasco </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-794"> CL-794 </a></p>  </td>
+    <td> Se realizo el proceso de deploy.
+         <br>Se crearon nuevas tablas.</br></td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>

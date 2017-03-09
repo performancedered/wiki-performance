@@ -319,18 +319,10 @@ Este tablero no tiene reproceso, pero esta croneado para que corra durante 5 dia
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td>  01/02/2017</td>
+    <td>  Monica Pellegrini</td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-723"> CL-723 </a></p></td>
+    <td> Se agrego proceso de recuperación de datos. </td>
     <td> </td>
   </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
-  </tr>
-  </table>
+   </table>

@@ -287,18 +287,11 @@ En la plataforma Smart se ve de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 01/02/2017 </td>
+    <td> Monica Pellegrini </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-718"> CL-718 </a></p>  </td>
+    <td> Se agrego el proceso de recuperación de datos. </td>
     <td> </td>
   </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
-  </tr>
+
   </table>

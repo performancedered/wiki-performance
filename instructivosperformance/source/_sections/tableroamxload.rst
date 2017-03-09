@@ -212,18 +212,10 @@ end;
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 10/02/2017 </td>
+    <td> Monica Pellegrini </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-785"> CL-785 </a></p>  </td>
+    <td>  Se modifico correctamente el calculo del tablero.</td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>

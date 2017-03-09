@@ -116,12 +116,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3. Listado de Tablas Utilizadas</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7.  REPROCESO MANUAL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#controles">7.CONTROLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8.  REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6.  Tablero participación 4G mercado/ciudad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tableroamxload.html"> 5.  Tablero AMX Load LTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroamxload.html"> 7.  Tablero AMX Load LTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tableroiur.html"> 8.  Tablero IUR</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
@@ -243,14 +245,23 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 </ul>
 </div>
 </div>
+<div class="section" id="controles">
+<h2>7.CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h2>
+<p>Se debe controlar que los valores de las celdas respeten el rango 54000 a 55000, si la celda nos devuelve un valor menor se debe <strong>REPROCESAR</strong>.</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/nokiaumts/control_nivel_hour.sql">CONTROL_NIVEL_HOUR</a></li>
+<li><a class="reference external" href="../_static/images/nokiaumts/control_nivel_day.sql">CONTROL_NIVEL_DAY</a></li>
+<li><a class="reference external" href="../_static/images/nokiaumts/control_nivel_semanal.sql">CONTROL_NIVEL_SEMANAL</a></li>
+</ul>
+</div>
 <div class="section" id="reproceso-manual">
-<h2>7.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<h2>8.  REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
 <p>El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Formato fecha a nivel  horario: DD.MM.YYYY HH24</li>
 <li>Formato fecha a nivel día o semanal: DD.MM.YYYY</li>
-<li>Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado.</li>
+<li>Para ejecutar a nivel semanal se debe tomar desde el lunes como comienzo de semana al día viernes.</li>
 </ul>
 </div></blockquote>
 <ul class="simple">
@@ -266,7 +277,7 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 </ul>
 </div>
 <div class="section" id="control-de-cambios">
-<h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
  <style type="text/css">
   table {
      border:2px solid red;
@@ -287,19 +298,11 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
   <th>Repositorio</th>
 </tr>
 <tr>
-  <td>  </td>
-  <td>  </td>
-  <td> <p><a href="">  </a></p>  </td>
-  <td>  </td>
+  <td> 25/01/2017 </td>
+  <td>  Matias Orquera</td>
+  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-768"> CL-768 </a></p>  </td>
+  <td> Se creo el tablero day. </td>
   <td> </td>
-</tr>
-<tr>
-  <td>  </td>
-  <td> </td>
-  <td>  <p><a href=""> </a></p>  </td>
-  <td>   </td>
-  <td></td>
-
 </tr>
 </table></div>
 </div>

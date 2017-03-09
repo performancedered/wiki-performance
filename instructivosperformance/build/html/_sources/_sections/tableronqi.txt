@@ -147,6 +147,23 @@ Los procedimientos **P_UMTS_NSN_NQI_VOL_DAY_INS** y  **P_LTE_NQI_DAY_INS** :
 
 + P_LTE_NQI_DAY_INS_
 
+7.REPROCESO
+...........
+
+Para el reproceso del tablero nqi a nivel day, se debe conectar al equipo unix, en la carpeta:
+
+.. image:: ../_static/images/tableronqi/pag6.2.png
+    :align: center
+
+Formato de la fecha:  DD.MM.YYYY
+
+Ejemplo:
+
+.. image:: ../_static/images/tableronqi/pag6.3.png
+    :align: center 
+
+8.SMART
+.......
 
 Los reportes en la herramienta Smart se muestran de la siguiente manera: 
 
@@ -168,7 +185,7 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
 .. image:: ../_static/images/tableronqi/pag10.png
   :align: center
 
-7. CONTROL DE CAMBIOS
+9. CONTROL DE CAMBIOS
 .....................
 
 .. raw:: html 
@@ -193,26 +210,18 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 12/01/2017 </td>
+    <td> Monica Pellegrini </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-462"> CL-462 </a></p>  </td>
+    <td> Se creo el proceso para insertar datos en tabla auxiliar. </td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>
 
 
 
-**TABLERO NQI HOURLY**
-----------------------
+**TABLERO QDA/QDR/Configuración (NQI HOURLY)**
+---------------------------------------------
 
 Descripción: 
 ************
@@ -368,18 +377,10 @@ Ejemplo:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 01/02/2017</td>
+    <td>  Monica Pellegrini</td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-728"> CL-728 </a></p>  </td>
+    <td> Se agrego el proceso de recuperación de datos. </td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>

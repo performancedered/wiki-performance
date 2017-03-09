@@ -224,10 +224,10 @@ En la herramienta Smart se muestra la información de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
+    <td> 24/02/2017 </td>
+    <td>  Matias Orquera</td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-832"> CL-832 </a></p>  </td>
+    <td> Se actualizaron los nombres de procedimientos de mantenimiento de particiones.</td>
     <td> </td>
   </tr>
 

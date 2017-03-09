@@ -93,7 +93,26 @@ Las Tablas utilizadas desde Perdido son:
 
 • UMTS_C_NSN_SERVLEV_MNC1_RAW@SMART.WORLD T3
 
-7.  REPROCESO MANUAL
+7.CONTROLES
+-----------
+
+.. _CONTROL_NIVEL_HOUR: ../_static/images/nokiaumts/control_nivel_hour.sql 
+
+.. _CONTROL_NIVEL_DAY: ../_static/images/nokiaumts/control_nivel_day.sql
+
+.. _CONTROL_NIVEL_SEMANAL: ../_static/images/nokiaumts/control_nivel_semanal.sql
+
+Se debe controlar que los valores de las celdas respeten el rango 54000 a 55000, si la celda nos devuelve un valor menor se debe **REPROCESAR**.
+
+* CONTROL_NIVEL_HOUR_
+
+* CONTROL_NIVEL_DAY_
+
+* CONTROL_NIVEL_SEMANAL_
+
+
+
+8.  REPROCESO MANUAL
 --------------------
 
 El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:
@@ -102,7 +121,7 @@ El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, de
 
     + Formato fecha a nivel día o semanal: DD.MM.YYYY
 
-    + Para ejecutar a nivel semanal se debe tomar desde el domingo como comienzo de semana al día sábado. 
+    + Para ejecutar a nivel semanal se debe tomar desde el lunes como comienzo de semana al día viernes. 
 
 
 • P_UMTS_UL_INTFRNC_REWORK_HOUR
@@ -124,7 +143,7 @@ La descripción detallada de cada procedimiento se encuentra en el paquete G_UMT
 + G_UMTS_UL_INTERFERENCE_
 
 
-8. CONTROL DE CAMBIOS
+9. CONTROL DE CAMBIOS
 ---------------------
 
 .. raw:: html 
@@ -149,18 +168,10 @@ La descripción detallada de cada procedimiento se encuentra en el paquete G_UMT
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
-    <td>  </td>
+    <td> 25/01/2017 </td>
+    <td>  Matias Orquera</td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-768"> CL-768 </a></p>  </td>
+    <td> Se creo el tablero day. </td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>

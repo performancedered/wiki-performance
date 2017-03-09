@@ -292,18 +292,10 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
+    <td> </td>
     <td>  </td>
-    <td>  </td>
-    <td> <p><a href="">  </a></p>  </td>
+    <td> <p><a href=""> </a></p> </td>
     <td>  </td>
     <td> </td>
-  </tr>
-  <tr>
-    <td>  </td>
-    <td> </td>
-    <td>  <p><a href=""> CL-669 </a></p>  </td>
-    <td>   </td>
-    <td></td>
-    
   </tr>
   </table>
