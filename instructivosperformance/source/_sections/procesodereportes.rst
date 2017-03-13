@@ -44,7 +44,7 @@ Focal Point: es un rol que se asigna a un colaborador durante el sprint para ase
 5.	MICROFLUJO DEL PROCESO
 --------------------------
 
-**Pendiente**
+**No contiene microflujo este proceso**
 
 
 6.	PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES
