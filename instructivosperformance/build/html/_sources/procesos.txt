@@ -9,6 +9,6 @@ PROCESOS
 
   2. ASEGURAMIENTO DE DATOS <../../_sections/aseguramientodedatos>
 
-  3. DESARROLLO DE NUEVOS PROYECTOS <../../_sections/nuevosproyectos>
+  3. PROCESO DE REPORTES <../../_sections/procesodereportes>
 
   

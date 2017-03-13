@@ -47,7 +47,8 @@ El proceso de desarrollo debe tener el siguiente formato:
 	<td>&nbsp;Nombre de Proyecto + Crear documento requerimientos:</td>
 	<td>Analista</td>
 	<td width="615">Se debera completar el template de requerimientos definido con los datos del proyecto. Debera incluir la definicion de la tabla Objetos y los graficos que se deben Implementar en SMART.</td>
-	<td>Link al template de Requerimientos</td>
+	<td><a class="reference external" href="../_static/images/procesodedesarrollo/Requerimientos_para_integrar_Smart.xlsx">Template de Requerimientos</a>
+	</td>
 	</tr>
 	<tr>
 	<td>REQ</td>
