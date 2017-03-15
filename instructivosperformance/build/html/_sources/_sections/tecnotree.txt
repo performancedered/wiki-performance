@@ -22,10 +22,10 @@ El presente documento buscar explicar y detallar el proceso que genera Tecnotree
 La plataforma CE permite cobrar servicios de contenidos (suscripciones, votaciones, descargas, Claro Música, Claro Video, etc.) mediante webservices expuestos a los proveedores de contenidos.A su vez gestiona el ciclo de las suscripciones (la expiración, la entrega de contenidos, la renovación)
 
 
-6.  DESCRIPCIÓN DETALLADA
+5.  DESCRIPCIÓN DETALLADA
 -------------------------
 
-6.2 Datos de Origen
+5.2 Datos de Origen
 ....................
 
 • Server Origen y Path: 10.48.69.68 - /data1/uyce/data/tpsfiles
@@ -39,7 +39,7 @@ La plataforma CE permite cobrar servicios de contenidos (suscripciones, votacion
 
 • Tipo de Archivo: csv
 
-6.3 Datos de Destino
+5.3 Datos de Destino
 --------------------
 
 • Server Destino: Cortado
@@ -68,7 +68,7 @@ La plataforma CE permite cobrar servicios de contenidos (suscripciones, votacion
 
 • Directorio Destino (File System): /home/calidad/TecnotreeCE
 
-6.4 Shell Copiar Archivos Origen a Destino y limpieza de los mismos:
+5.4 Shell Copiar Archivos Origen a Destino y limpieza de los mismos:
 --------------------------------------------------------------------
 
 Los Scripts tienen las siguientes funciones:
@@ -110,7 +110,7 @@ Los scripts son los siguientes:
 + `tecnotreeDiario`_
 
 
-6.5 Listado de tablas utilizadas
+5.5 Listado de tablas utilizadas
 ................................
 
 Campos de la tabla FILE: 
@@ -193,13 +193,13 @@ Campos de la tabla TEC_CE_CM_TPS_RAW:
   :align: center
 
 
-5.  MACROFLUJO DEL PROCESO
+6.  MACROFLUJO DEL PROCESO
 --------------------------
 
 .. image:: ../_static/images/tecnotree/pag7.2.png
   :align: center
 
-6.6 Pentaho
+6.2 Pentaho
 ...........
 
 Estructura del proyecto:
@@ -259,7 +259,30 @@ Las sumarizaciones se calculan a día vencido (el día anterior al actual), para
 7.  REPROCESO MANUAL
 --------------------
 
-• Procedimiento de reproceso manual paso a paso:
+7.1 Administración de particiones
+.................................
+
+Antes de realizar el reproceso manual se debe realizar la administración de particiones, la cual se encarga de borrar los datos que serán reprocesados e insertados nuevamente a la tabla.
+
+Para realizar este proceso se debe ejecutar la siguiente querie: 
+
+Parámetros: 
+
+• Nombre de la tabla
+• Fecha desde (DD.MM.YYYY)
+• Fecha hasta (DD.MM.YYYY)
+
+Para todos los niveles se utilizan los mismos parámetros de ejecución. 
+
+Por ejemplo: 
+
+• G_PARTITION_MGMT.P_DROP_PARTITION_WEEK('CISCO_GGSN_EPDG_ISABHW','01.01.2017','07.01.2017');
+
+.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
+
+
+7.2 Procedimiento de reproceso manual paso a paso:
+..................................................
 
 Se debe ejecutar el script `scpTecnotreeDate`_ , el cual debe recibir por parámetro la Fecha solicitada, para realizar la limpieza, para luego ejecutar el TecnotreeCERework.kjb en Pentaho de manera manual. 
 

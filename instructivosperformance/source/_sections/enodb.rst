@@ -241,7 +241,32 @@ En este proceso se filtran los datos de las tablas Raw para ser insertados en la
 7.	REPROCESO MANUAL
 --------------------
 
-Macro Flujo de Reproceso: 
+7.1 Administración de particiones
+*********************************
+
+
+Antes de realizar el reproceso manual se debe realizar la administración de particiones, la cual se encarga de borrar los datos que serán reprocesados e insertados nuevamente a la tabla.
+
+Para realizar este proceso se debe ejecutar la siguiente querie: 
+
+Parámetros: 
+
+• Nombre de la tabla
+• Fecha desde (DD.MM.YYYY)
+• Fecha hasta (DD.MM.YYYY)
+
+Para todos los niveles se utilizan los mismos parámetros de ejecución. 
+
+Por ejemplo: 
+
+• G_PARTITION_MGMT.P_DROP_PARTITION_WEEK('CISCO_GGSN_EPDG_ISABHW','01.01.2017','07.01.2017');
+
+.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
+
+
+7.2 Macro Flujo de Reproceso
+****************************
+
 
 .. image:: ../_static/images/enodb/pag17.png
   :align: center 
@@ -312,7 +337,28 @@ Al ejecutar el script ENodeBEndToEndRework_, dentro del mismo se ejecuta el scri
     <td> 17/02/2017 </td>
     <td> Juan Lopez </td>
     <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-606"> CL-606 </a></p> </td>
-    <td> Se creo la tabla objeto. </td>
+    <td> RFC- Se creo la tabla objeto. </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 08/02/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-799"> CL-799 </a></p> </td>
+    <td> RFC2 - Cambiar el nombre de columna de todas las tablas. Campo LNCEL_NAME por LNBTS_NAME y OBJ_MED por LNCEL_NAME </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 09/02/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-800"> CL-800 </a></p> </td>
+    <td> RFC2 - Insertar en el campo OBJ_MED->LNCEL_NAME el nombre de la celda. </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 23/02/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-801"> CL-801 </a></p> </td>
+    <td> RFC 2- Crear una semana de datos de prueba reales en falda. </td>
     <td> </td>
   </tr>
   </table>

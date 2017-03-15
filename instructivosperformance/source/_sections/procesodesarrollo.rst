@@ -2,7 +2,63 @@
 PROCESO DE DESARROLLO E IMPLEMENTACIÓN
 ======================================
 
+1.	OBJETIVO
+------------
 
+El objetivo de este proceso es definir los pasos para desarrollar e implementar las nuevas plataformas en la herramienta Smart.  Como así también definir los roles dentro del equipo de trabajo.
+ 
+2.	ALCANCE
+-----------
+
+Alcanza a todo el equipo de Performance de Red.
+
+3.	DEFINICIONES
+--------------------
+
++	Smart: herramienta de performance de red, donde se almacenan datos históricos de las diferentes plataformas integradas.
+
++	JIRA: herramienta web para registrar y dar seguimiento a tareas.
+
++	Project Manager: es la persona designada para dirigir el proyecto.  Sus responsabilidades son:
+
+		+	Definir el proyecto y presentarlo al equipo.
+		+	Planificar las tareas y asignarlas al equipo.
+		+	Supervisar las tareas del equipo.
+		+	Asignar prioridades al equipo.
+		+	Implementar cambios en el proyecto.
+
++	Analista de Performance: es la persona designada para construir los requerimientos técnicos según la necesidad del cliente final y validar lo construido.
+
++	Analista de Desarrollo: es la persona designada para crear las diferentes partes de una plataforma siguiendo una metodología estándar.
+
++	Analista de Negocio: es la persona designada para validar que el desarrollo es estándar, escalable y mantenible.  Utiliza el check list de validación.
+
++	Analista de Producción: es la persona designada para implementar en el ambiente de producción todo el material del ambiente de desarrollo.
+
++	Check list de validación: es un listado de condiciones estándar para todos los desarrollos e implementaciones.  Asegura que se utilizan ambientes de desarrollo y producción virtualizados, sistema operativo Linux, base de datos Oracle 12, parser estándar, pentaho data integrator, tablas raw y sumarizaciones, depuraciones automáticas, controles automáticos, funciones de reprocesos, etc.
+ 
++	Sprint: período de tiempo, normalmente el Sprint tiene 2 semanas de duración.
+
++	Epica: conjunto de tareas, su duración es de 2, 3 o más sprints.
+
++	Tarea: es una activida a realizar, de baja complejidad, debe durar 2 o 3 días. 
+ 
+
+
+4.	MACROFLUJO DEL PROCESO
+--------------------------
+
+.. image:: ../_static/images/procesodedesarrollo/pag2.png
+  :align: center 
+
+5.	MICROFLUJO DEL PROCESO
+--------------------------
+
+.. image:: ../_static/images/procesodedesarrollo/pag3.png
+  :align: center 
+
+6.	PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES
+-----------------------------------------------
 
 El proceso de desarrollo debe tener el siguiente formato:
 
@@ -239,6 +295,72 @@ Los tickets tipo Documentacion poseen el siguiente FLOW:
 Los tickets tipo Epica tienen el siguiente FLOW:
 
 .. image:: ../_static/images/procesodedesarrollo/workflow3.png
+  :align: center
+
+1.	El tablero de comandos para este proceso es el siguiente dashboard de jira: JIRA / Agile / Project 1688-CLARO SMART - 2016 / Work.  
+
+.. image:: ../_static/images/procesodedesarrollo/pag4.png
+  :align: center
+
+7.	INDICADORES 
+---------------
+
+Se utiliza el indicador “Porcentaje de Tareas Completadas” para controlar la cantidad de tareas completadas en cada Sprint.  
+
+El listado de tareas se obtiene de JIRA: JIRA / Agile / Project 1688-CLARO SMART - 2016 / Report / Sprint Report.  
+
+El objetivo es completar el 80% de las tareas planificadas en cada Sprint.
+
+.. raw:: html
+
+	<table width="900">
+	<tbody>
+	<tr>
+	<td colspan="5" width="605">
+	<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Iacute;tem de Control / Verificaci&oacute;n</strong></p>
+	</td>
+	</tr>
+	<tr>
+	<td width="123">
+	<p><strong>&Iacute;tem</strong></p>
+	</td>
+	<td width="123">
+	<p><strong>&Iacute;ndice</strong></p>
+	</td>
+	<td width="170">
+	<p><strong>Est&aacute;ndar</strong></p>
+	</td>
+	<td width="85">
+	<p><strong>Qui&eacute;n lo emite</strong></p>
+	</td>
+	<td width="104">
+	<p><strong>Frecuencia</strong></p>
+	</td>
+	</tr>
+	<tr>
+	<td width="123">
+	<p><strong>Porcentaje de Tareas Completadas</strong></p>
+	</td>
+	<td width="500">
+	<p>Porcentaje de Tareas Completadas = Tareas Completadas / (Tareas Completadas + Tareas No Completadas)</p>
+	<p>&nbsp;</p>
+	</td>
+	<td width="170">
+	<p><em>&nbsp;</em></p>
+	<p><strong>80%</strong></p>
+	</td>
+	<td width="85">
+	<p><strong>Project Manager</strong></p>
+	</td>
+	<td width="104">
+	<p><strong>Al final de cada Sprint</strong></p>
+	</td>
+	</tr>
+	</tbody>
+	</table>
+
+
+.. image:: ../_static/images/procesodedesarrollo/pag5.png
   :align: center
 
 ANEXO II-Desarrollo de Proyectos

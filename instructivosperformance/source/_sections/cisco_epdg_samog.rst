@@ -152,6 +152,30 @@ Tablas utilizadas:
 7.	REPROCESO
 -------------
 
+7.1 Administración de particiones
+*********************************
+
+Antes de realizar el reproceso manual se debe realizar la administración de particiones, la cual se encarga de borrar los datos que serán reprocesados e insertados nuevamente a la tabla.
+
+Para realizar este proceso se debe ejecutar la siguiente querie: 
+
+Parámetros: 
+
+• Nombre de la tabla
+• Fecha desde (DD.MM.YYYY)
+• Fecha hasta (DD.MM.YYYY)
+
+Para todos los niveles se utilizan los mismos parámetros de ejecución. 
+
+Por ejemplo: 
+
+• G_PARTITION_MGMT.P_DROP_PARTITION_WEEK('CISCO_GGSN_EPDG_ISABHW','01.01.2017','07.01.2017');
+
+.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
+
+7.2 Procedimiento de reproceso manual paso a paso
+*************************************************
+
 .. _G_CISCO_GGSN_EPDG_SAMOG: ../_static/images/ciscoepdgsamog/G_CISCO_GGSN_EPDG_SAMOG.sql
 
 El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal: 
@@ -226,8 +250,22 @@ En la herramienta Smart se muestra la información de la siguiente manera:
   <tr>
     <td> 24/02/2017 </td>
     <td>  Matias Orquera</td>
-    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-832"> CL-832 </a></p>  </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-965"> CL-965 </a></p>  </td>
     <td> Se actualizaron los nombres de procedimientos de mantenimiento de particiones.</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 07/03/2017 </td>
+    <td>  Marcelo Carrasco </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-832"> CL-832 </a></p>  </td>
+    <td> RFC 1- Implementar a Producción</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 09/03/2017 </td>
+    <td>  Marcela Medrano </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-968"> CL-968 </a></p>  </td>
+    <td> RFC 2- Corregir error en el procedimiento de reproceso </td>
     <td> </td>
   </tr>
 

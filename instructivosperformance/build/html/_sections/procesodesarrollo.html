@@ -106,6 +106,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../procesos.html">  PROCESOS</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. PROCESO DE DESARROLLO E IMPLEMENTACIÓN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo-del-proceso">4.      MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#microflujo-del-proceso">5.      MICROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#principales-actividades-y-responsabilidades">6.      PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#indicadores">7.      INDICADORES</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#anexo-ii-desarrollo-de-proyectos">ANEXO II-Desarrollo de Proyectos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#anexo-iii-desarrollo-de-tableros">ANEXO III -Desarrollo de Tableros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#anexo-iv-paquete-deploy">ANEXO IV - Paquete Deploy</a></li>
@@ -161,6 +168,60 @@
             
   <div class="section" id="proceso-de-desarrollo-e-implementacion">
 <h1>PROCESO DE DESARROLLO E IMPLEMENTACIÓN<a class="headerlink" href="#proceso-de-desarrollo-e-implementacion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo de este proceso es definir los pasos para desarrollar e implementar las nuevas plataformas en la herramienta Smart.  Como así también definir los roles dentro del equipo de trabajo.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Alcanza a todo el equipo de Performance de Red.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Smart: herramienta de performance de red, donde se almacenan datos históricos de las diferentes plataformas integradas.</p>
+</li>
+<li><p class="first">JIRA: herramienta web para registrar y dar seguimiento a tareas.</p>
+</li>
+<li><p class="first">Project Manager: es la persona designada para dirigir el proyecto.  Sus responsabilidades son:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Definir el proyecto y presentarlo al equipo.</li>
+<li>Planificar las tareas y asignarlas al equipo.</li>
+<li>Supervisar las tareas del equipo.</li>
+<li>Asignar prioridades al equipo.</li>
+<li>Implementar cambios en el proyecto.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Analista de Performance: es la persona designada para construir los requerimientos técnicos según la necesidad del cliente final y validar lo construido.</p>
+</li>
+<li><p class="first">Analista de Desarrollo: es la persona designada para crear las diferentes partes de una plataforma siguiendo una metodología estándar.</p>
+</li>
+<li><p class="first">Analista de Negocio: es la persona designada para validar que el desarrollo es estándar, escalable y mantenible.  Utiliza el check list de validación.</p>
+</li>
+<li><p class="first">Analista de Producción: es la persona designada para implementar en el ambiente de producción todo el material del ambiente de desarrollo.</p>
+</li>
+<li><p class="first">Check list de validación: es un listado de condiciones estándar para todos los desarrollos e implementaciones.  Asegura que se utilizan ambientes de desarrollo y producción virtualizados, sistema operativo Linux, base de datos Oracle 12, parser estándar, pentaho data integrator, tablas raw y sumarizaciones, depuraciones automáticas, controles automáticos, funciones de reprocesos, etc.</p>
+</li>
+<li><p class="first">Sprint: período de tiempo, normalmente el Sprint tiene 2 semanas de duración.</p>
+</li>
+<li><p class="first">Epica: conjunto de tareas, su duración es de 2, 3 o más sprints.</p>
+</li>
+<li><p class="first">Tarea: es una activida a realizar, de baja complejidad, debe durar 2 o 3 días.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="macroflujo-del-proceso">
+<h2>4.      MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag217.png" class="align-center" src="../_images/pag217.png" />
+</div>
+<div class="section" id="microflujo-del-proceso">
+<h2>5.      MICROFLUJO DEL PROCESO<a class="headerlink" href="#microflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag320.png" class="align-center" src="../_images/pag320.png" />
+</div>
+<div class="section" id="principales-actividades-y-responsabilidades">
+<h2>6.      PRINCIPALES ACTIVIDADES Y RESPONSABILIDADES<a class="headerlink" href="#principales-actividades-y-responsabilidades" title="Permalink to this headline">¶</a></h2>
 <p>El proceso de desarrollo debe tener el siguiente formato:</p>
     <style type="text/css">
 table {
@@ -376,6 +437,62 @@ th, td {
 <img alt="../_images/workflow2.png" class="align-center" src="../_images/workflow2.png" />
 <p>Los tickets tipo Epica tienen el siguiente FLOW:</p>
 <img alt="../_images/workflow3.png" class="align-center" src="../_images/workflow3.png" />
+<ol class="arabic simple">
+<li>El tablero de comandos para este proceso es el siguiente dashboard de jira: JIRA / Agile / Project 1688-CLARO SMART - 2016 / Work.</li>
+</ol>
+<img alt="../_images/pag419.png" class="align-center" src="../_images/pag419.png" />
+</div>
+<div class="section" id="indicadores">
+<h2>7.      INDICADORES<a class="headerlink" href="#indicadores" title="Permalink to this headline">¶</a></h2>
+<p>Se utiliza el indicador “Porcentaje de Tareas Completadas” para controlar la cantidad de tareas completadas en cada Sprint.</p>
+<p>El listado de tareas se obtiene de JIRA: JIRA / Agile / Project 1688-CLARO SMART - 2016 / Report / Sprint Report.</p>
+<p>El objetivo es completar el 80% de las tareas planificadas en cada Sprint.</p>
+<table width="900">
+<tbody>
+<tr>
+<td colspan="5" width="605">
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Iacute;tem de Control / Verificaci&oacute;n</strong></p>
+</td>
+</tr>
+<tr>
+<td width="123">
+<p><strong>&Iacute;tem</strong></p>
+</td>
+<td width="123">
+<p><strong>&Iacute;ndice</strong></p>
+</td>
+<td width="170">
+<p><strong>Est&aacute;ndar</strong></p>
+</td>
+<td width="85">
+<p><strong>Qui&eacute;n lo emite</strong></p>
+</td>
+<td width="104">
+<p><strong>Frecuencia</strong></p>
+</td>
+</tr>
+<tr>
+<td width="123">
+<p><strong>Porcentaje de Tareas Completadas</strong></p>
+</td>
+<td width="500">
+<p>Porcentaje de Tareas Completadas = Tareas Completadas / (Tareas Completadas + Tareas No Completadas)</p>
+<p>&nbsp;</p>
+</td>
+<td width="170">
+<p><em>&nbsp;</em></p>
+<p><strong>80%</strong></p>
+</td>
+<td width="85">
+<p><strong>Project Manager</strong></p>
+</td>
+<td width="104">
+<p><strong>Al final de cada Sprint</strong></p>
+</td>
+</tr>
+</tbody>
+</table><img alt="../_images/pag521.png" class="align-center" src="../_images/pag521.png" />
+</div>
 <div class="section" id="anexo-ii-desarrollo-de-proyectos">
 <h2>ANEXO II-Desarrollo de Proyectos<a class="headerlink" href="#anexo-ii-desarrollo-de-proyectos" title="Permalink to this headline">¶</a></h2>
 <p>Los proyectos de desarrollo deberan ser implementados acorde a lo definido en el siguiente apartado:</p>

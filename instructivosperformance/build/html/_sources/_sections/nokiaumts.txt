@@ -171,7 +171,21 @@ La descripción detallada de cada procedimiento se encuentra en el paquete G_UMT
     <td> 25/01/2017 </td>
     <td>  Matias Orquera</td>
     <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-768"> CL-768 </a></p>  </td>
-    <td> Se creo el tablero day. </td>
+    <td> RFC- Se creo el tablero day. </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 22/02/2017 </td>
+    <td>  Marcelo Carrasco </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-811"> CL-811 </a></p>  </td>
+    <td> RFC- Implementación a producción</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> 07/02/2017 </td>
+    <td>  Marcelo Carrasco </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-920"> CL-920 </a></p>  </td>
+    <td> RFC 1- Implementar a producción mejoras</td>
     <td> </td>
   </tr>
   </table>

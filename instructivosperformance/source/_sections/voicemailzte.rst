@@ -239,6 +239,14 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <td></td>
     
   </tr>
+  <tr>
+    <td> 02/02/2017 </td>
+    <td> Monica Pellegrini </td>
+    <td><p><a href="http://jira.harriague.com.ar/jira/browse/CL-720"> CL-720 </a></p>  </td>
+    <td> RFC- Agregar script y actividades de reproceso.  </td>
+    <td></td>
+    
+  </tr>
 	</table>
 
 	

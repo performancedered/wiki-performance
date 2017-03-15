@@ -380,7 +380,7 @@ Ejemplo:
     <td> 01/02/2017</td>
     <td>  Monica Pellegrini</td>
     <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-728"> CL-728 </a></p>  </td>
-    <td> Se agrego el proceso de recuperación de datos. </td>
+    <td> RFC- Se agrego el proceso de recuperación de datos. </td>
     <td> </td>
   </tr>
   </table>

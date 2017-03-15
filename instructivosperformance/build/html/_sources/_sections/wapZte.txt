@@ -225,7 +225,30 @@ Las sumarizaciones se calculan a día vencido (el día anterior al actual), para
 7.	REPROCESO MANUAL
 --------------------
 
-•	Procedimiento de reproceso manual paso a paso: 
+7.1 Administracion de particiones
+.................................
+
+Antes de realizar el reproceso manual se debe realizar la administración de particiones, la cual se encarga de borrar los datos que serán reprocesados e insertados nuevamente a la tabla.
+
+Para realizar este proceso se debe ejecutar la siguiente querie: 
+
+Parámetros: 
+
+• Nombre de la tabla
+• Fecha desde (DD.MM.YYYY)
+• Fecha hasta (DD.MM.YYYY)
+
+Para todos los niveles se utilizan los mismos parámetros de ejecución. 
+
+Por ejemplo: 
+
+• G_PARTITION_MGMT.P_DROP_PARTITION_WEEK('CISCO_GGSN_EPDG_ISABHW','01.01.2017','07.01.2017');
+
+.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
+
+
+7.2 Procedimiento de reproceso manual paso a paso: 
+..................................................
 
 Se debe ejecutar el script ScpWapZteDate.sh, el cual debe recibir por parámetro la Fecha solicitada, para realizar la limpieza, para luego ejecutar el ImportRework.kjb en Pentaho de manera manual.
 

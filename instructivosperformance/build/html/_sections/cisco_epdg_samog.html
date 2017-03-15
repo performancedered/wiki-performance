@@ -125,7 +125,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#tablas-utilizadas">6.3.    Tablas Utilizadas</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#reproceso">7.      REPROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso">7.      REPROCESO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#administracion-de-particiones">7.1 Administración de particiones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedimiento-de-reproceso-manual-paso-a-paso">7.2 Procedimiento de reproceso manual paso a paso</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#smart">8.      SMART</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
 </ul>
@@ -283,6 +287,24 @@
 </div>
 <div class="section" id="reproceso">
 <h2>7.      REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="administracion-de-particiones">
+<h3>7.1 Administración de particiones<a class="headerlink" href="#administracion-de-particiones" title="Permalink to this headline">¶</a></h3>
+<p>Antes de realizar el reproceso manual se debe realizar la administración de particiones, la cual se encarga de borrar los datos que serán reprocesados e insertados nuevamente a la tabla.</p>
+<p>Para realizar este proceso se debe ejecutar la siguiente querie:</p>
+<p>Parámetros:</p>
+<ul class="simple">
+<li>Nombre de la tabla</li>
+<li>Fecha desde (DD.MM.YYYY)</li>
+<li>Fecha hasta (DD.MM.YYYY)</li>
+</ul>
+<p>Para todos los niveles se utilizan los mismos parámetros de ejecución.</p>
+<p>Por ejemplo:</p>
+<ul class="simple">
+<li>G_PARTITION_MGMT.P_DROP_PARTITION_WEEK(&#8216;CISCO_GGSN_EPDG_ISABHW&#8217;,&#8216;01.01.2017&#8217;,&#8216;07.01.2017&#8217;);</li>
+</ul>
+</div>
+<div class="section" id="procedimiento-de-reproceso-manual-paso-a-paso">
+<h3>7.2 Procedimiento de reproceso manual paso a paso<a class="headerlink" href="#procedimiento-de-reproceso-manual-paso-a-paso" title="Permalink to this headline">¶</a></h3>
 <p>El reproceso manual se lleva a cabo ejecutando los siguientes procedimientos, dependiendo si se necesita reprocesar datos tanto a nivel horario, día o semanal:</p>
 <blockquote>
 <div><ul class="simple">
@@ -307,6 +329,7 @@
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/ciscoepdgsamog/G_CISCO_GGSN_EPDG_SAMOG.sql">G_CISCO_GGSN_EPDG_SAMOG</a></li>
 </ul>
+</div>
 </div>
 <div class="section" id="smart">
 <h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
@@ -338,8 +361,22 @@
  <tr>
    <td> 24/02/2017 </td>
    <td>  Matias Orquera</td>
-   <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-832"> CL-832 </a></p>  </td>
+   <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-965"> CL-965 </a></p>  </td>
    <td> Se actualizaron los nombres de procedimientos de mantenimiento de particiones.</td>
+   <td> </td>
+ </tr>
+ <tr>
+   <td> 07/03/2017 </td>
+   <td>  Marcelo Carrasco </td>
+   <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-832"> CL-832 </a></p>  </td>
+   <td> RFC 1- Implementar a Producción</td>
+   <td> </td>
+ </tr>
+ <tr>
+   <td> 09/03/2017 </td>
+   <td>  Marcela Medrano </td>
+   <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-968"> CL-968 </a></p>  </td>
+   <td> RFC 2- Corregir error en el procedimiento de reproceso </td>
    <td> </td>
  </tr>
 
