@@ -249,6 +249,10 @@ Antes de realizar el reproceso manual se debe realizar la administración de par
 
 Para realizar este proceso se debe ejecutar la siguiente querie: 
 
+.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
+
++ G_PARTITION_MGMT_
+
 Parámetros: 
 
 • Nombre de la tabla
@@ -260,9 +264,6 @@ Para todos los niveles se utilizan los mismos parámetros de ejecución.
 Por ejemplo: 
 
 • G_PARTITION_MGMT.P_DROP_PARTITION_WEEK('CISCO_GGSN_EPDG_ISABHW','01.01.2017','07.01.2017');
-
-.. _G_PARTITION_MGMT: ../_static/images/archivo/G_PARTITION_MGMT.sql 
-
 
 7.2 Macro Flujo de Reproceso
 ****************************
