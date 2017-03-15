@@ -174,7 +174,7 @@ El proceso de desarrollo debe tener el siguiente formato:
 	<td>&nbsp;Nombre de Proyecto + Armar paquete de Instalacion&nbsp;</td>
 	<td>Desarrollador</td>
 	<td width="615">El responsable de desarrollo debera armar el paquete de instalacion de acuerdo a la template definida.</td>
-	<td>Link al template del paquete de instalacion. (Anexo IV)</td>
+	<td>Link al template del paquete de instalacion.<a class="reference internal" href="http://10.111.249.17/wiki-performance/instructivosperformance/build/html/_sections/procesodesarrollo.html#anexo-iv-paquete-deploy">(Anexo IV)</a> </td>
 	</tr>
 	<tr>
 	<td><span style="color: #333399;">REQ</span></td>
