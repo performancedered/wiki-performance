@@ -322,4 +322,12 @@ Se debe agregar la fecha del día a reprocesar
     <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-756"> CL-756</a></p> </td>
     <td>  Se modifico el flujo normal del proceso, guardando el resultado en dos nuevas tablas.</td>
   </tr>
+    <tr>
+    <td> 16/03/2017 </td>
+    <td> Juan Lopez </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-818"> CL-818</a></p> </td>
+    <td>  RFC 1 - Modificar Consulta del Reporte Automático (seleccion ciudades). </td>
+  </tr>
+  
+
   </table>
