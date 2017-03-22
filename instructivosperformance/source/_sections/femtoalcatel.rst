@@ -406,6 +406,13 @@ Se deben ingresar los siguientes parámetros:
     <td>  <p><a href="http://jira.harriague.com.ar/jira/browse/CL-669"> CL-669 </a></p>  </td>
     <td> Se corrigieron los campos de la tabla objetos  </td>
     <td></td>
-    
+    </tr>
+  <tr>
+    <td> 15/03/2017 </td>
+    <td> Martin Champarini </td>
+    <td>  <p><a href="http://jira.harriague.com.ar/jira/browse/CL-953"> CL-953 </a></p>  </td>
+    <td> RFC I - Alcatel Femtocell - Elminar de las tablas de kpi (HOUR,BH,DAY,IBHW) todos los campos de la cabecera </td>
+    <td></td>
   </tr>
   </table>
+
