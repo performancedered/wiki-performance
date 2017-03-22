@@ -118,7 +118,15 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#controles">7.CONTROLES</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8.  REPROCESO MANUAL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reporte">9.      REPORTE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#macroflujo-del-proceso">9.1.    Macroflujo del proceso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">9.2.    Descripción Detallada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">9.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">9.4. Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">9.5. Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">10. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tablero4g.html"> 6.  Tablero participación 4G mercado/ciudad</a></li>
@@ -276,8 +284,80 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <li><a class="reference external" href="../_static/images/nokiaumts/G_UMTS_UL_INTERFERENCE.sql">G_UMTS_UL_INTERFERENCE</a></li>
 </ul>
 </div>
+<div class="section" id="reporte">
+<h2>9.      REPORTE<a class="headerlink" href="#reporte" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="macroflujo-del-proceso">
+<h3>9.1.    Macroflujo del proceso<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/pag719.png" class="align-center" src="../_images/pag719.png" />
+</div>
+<div class="section" id="id1">
+<h3>9.2.    Descripción Detallada<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h4>9.2.1.  Datos de Origen<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Server Origen y Path: falda.claro.amx , calidad/Nokia_UMTS_Uplink_Interference/</li>
+<li>Frecuencia actualización: Frecuencia Semanal</li>
+<li>Tipo de Archivo de Salida: xlsx</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h4>9.2.2.  Datos Destino<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Server Destino: Falda</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Files: No</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 vez al día, los días Lunes</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: No</li>
+<li>Hour Si/No: No</li>
+<li>Day Si/No: No</li>
+<li>BH Si/No: No</li>
+<li>Países: No</li>
+<li>Directorio Destino (File System):</li>
+</ul>
+</div>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>9.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>El script es el siguiente:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/nokiaumts/nokiaRun.sh">nokiaRun</a></li>
+<li><a class="reference external" href="../_static/images/nokiaumts/nokiaRunLoad.sh">nokiaRunLoad</a></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>9.4. Listado de Tablas Utilizadas<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas son las siguientes:</p>
+<ul class="simple">
+<li>TABLERO_UMTS_ULINTFN_WCEL_WEEK</li>
+</ul>
+</div>
+<div class="section" id="pentaho">
+<h3>9.5. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag815.png" class="align-center" src="../_images/pag815.png" />
+<ul class="simple">
+<li>Proceso EndToEnd</li>
+</ul>
+<img alt="../_images/pag8.29.png" class="align-center" src="../_images/pag8.29.png" />
+<ul class="simple">
+<li>Proceso Insert_week_number</li>
+</ul>
+<p>Este proceso se encarga de obtener el número de la semana del año para insertarlo en el excel y en el título del reporte.</p>
+<img alt="../_images/pag915.png" class="align-center" src="../_images/pag915.png" />
+<ul class="simple">
+<li>Proceso  send_email</li>
+</ul>
+<p>Este proceso se encarga de validar la existencia del archivo para luego validar que el email sea enviado correctamente.</p>
+<img alt="../_images/pag9.29.png" class="align-center" src="../_images/pag9.29.png" />
+<p>El email muestra los archivos adjuntos en formato xlsx que contiene los datos mencionados anteriormente:</p>
+<img alt="../_images/pag9.33.png" class="align-center" src="../_images/pag9.33.png" />
+<img alt="../_images/pag9.4.png" class="align-center" src="../_images/pag9.4.png" />
+</div>
+</div>
 <div class="section" id="control-de-cambios">
-<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+<h2>10. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
  <style type="text/css">
   table {
      border:2px solid red;
@@ -318,6 +398,15 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
   <td> RFC 1- Implementar a producción mejoras</td>
   <td> </td>
 </tr>
+
+<tr>
+  <td> 02/03/2017 </td>
+  <td>  Ivan Leandro Ferreira </td>
+  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-562"> CL-562 </a></p>  </td>
+  <td> RFC 3 - Nokia UMTS Uplink Interference Wnn - Reporte Semanal Automático por correo</td>
+  <td> </td>
+</tr>
+
 </table></div>
 </div>
 

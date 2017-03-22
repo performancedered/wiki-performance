@@ -142,9 +142,100 @@ La descripción detallada de cada procedimiento se encuentra en el paquete G_UMT
 
 + G_UMTS_UL_INTERFERENCE_
 
+9.	REPORTE
+-----------
 
-9. CONTROL DE CAMBIOS
----------------------
+9.1.	Macroflujo del proceso
+******************************
+
+.. image:: ../_static/images/nokiaumts/pag7.png
+  :align: center
+
+
+9.2.	Descripción Detallada
+*****************************
+
+9.2.1.	Datos de Origen
+.......................
+
+•	Server Origen y Path: falda.claro.amx , calidad/Nokia_UMTS_Uplink_Interference/
+•	Frecuencia actualización: Frecuencia Semanal
+•	Tipo de Archivo de Salida: xlsx
+
+9.2.2.	Datos Destino 
+.....................
+
+•	Server Destino: Falda
+•	Conversión de Archivos: No
+•	Tabla Files: No
+•	Tabla Auxiliar: No
+•	Frecuencia de corrida del proceso: 1 vez al día, los días Lunes 
+•	Regionales: No
+•	RAW Si/No: No
+•	Hour Si/No: No
+•	Day Si/No: No
+•	BH Si/No: No
+•	Países: No
+•	Directorio Destino (File System):
+
+9.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismos
+********************************************************************
+
+El script es el siguiente:
+
+.. _nokiaRun: ../_static/images/nokiaumts/nokiaRun.sh
+.. _nokiaRunLoad: ../_static/images/nokiaumts/nokiaRunLoad.sh 
+
++	nokiaRun_
++	nokiaRunLoad_
+
+
+9.4. Listado de Tablas Utilizadas 	
+*********************************
+
+Las tablas son las siguientes:
+
+•	TABLERO_UMTS_ULINTFN_WCEL_WEEK
+
+9.5. Pentaho
+************
+
+Estructura del proyecto:
+
+
+.. image:: ../_static/images/nokiaumts/pag8.png
+  :align: center
+
+•	Proceso EndToEnd
+
+
+.. image:: ../_static/images/nokiaumts/pag8.2.png
+  :align: center
+ 
+•	Proceso Insert_week_number
+
+Este proceso se encarga de obtener el número de la semana del año para insertarlo en el excel y en el título del reporte.
+
+
+.. image:: ../_static/images/nokiaumts/pag9.png
+  :align: center
+
+•	Proceso  send_email
+Este proceso se encarga de validar la existencia del archivo para luego validar que el email sea enviado correctamente.
+
+.. image:: ../_static/images/nokiaumts/pag9.2.png
+  :align: center
+
+El email muestra los archivos adjuntos en formato xlsx que contiene los datos mencionados anteriormente: 
+
+.. image:: ../_static/images/nokiaumts/pag9.3.png
+  :align: center
+
+.. image:: ../_static/images/nokiaumts/pag9.4.png
+  :align: center
+
+10. CONTROL DE CAMBIOS
+----------------------
 
 .. raw:: html 
 
@@ -188,4 +279,13 @@ La descripción detallada de cada procedimiento se encuentra en el paquete G_UMT
     <td> RFC 1- Implementar a producción mejoras</td>
     <td> </td>
   </tr>
+
+  <tr>
+    <td> 02/03/2017 </td>
+    <td>  Ivan Leandro Ferreira </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-562"> CL-562 </a></p>  </td>
+    <td> RFC 3 - Nokia UMTS Uplink Interference Wnn - Reporte Semanal Automático por correo</td>
+    <td> </td>
+  </tr>
+
   </table>
