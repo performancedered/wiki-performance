@@ -15,3 +15,5 @@ REPORTES
     4. Reporte Bh Day <../../_sections/reportebhday>
 
     5. Reporte Table Space <../../_sections/reportetablespace>
+
+    6. Reporte Movistar Ran Sharing <../../_sections/reporteransharing>
