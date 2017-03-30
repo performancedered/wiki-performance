@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
         <link rel="next" title="TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO" href="tablero4g.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -151,8 +160,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -161,23 +172,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
-      
-    <li>Uplink Interference (Nokia UMTS)</li>
+        
+      <li>Uplink Interference (Nokia UMTS)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -205,11 +233,11 @@
 <p><strong>Nokia UMTS Uplink Interference</strong></p>
 <p>Este desarrollo tiene la finalidad de detectar y clasificar la interferencia en las celdas UMTS tomando RTWP en función del tráfico de voz.
 Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con una regresión lineal, obteniendo así una pendiente y una ordenada al origen para cada celda. Esta información demuestra cómo evoluciona la interferencia según crece el tráfico. En función de estos valores se clasifica la celda dentro de 4 categorías que son indicadores de las acciones a tomar en cada caso.</p>
-<img alt="../_images/pag36.png" class="align-center" src="../_images/pag36.png" />
+<img alt="../_images/pag310.png" class="align-center" src="../_images/pag310.png" />
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag45.png" class="align-center" src="../_images/pag45.png" />
+<img alt="../_images/pag47.png" class="align-center" src="../_images/pag47.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -236,7 +264,7 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <ul class="simple">
 <li>UMTS_UL_INTFRNC_WCEL_HOUR</li>
 </ul>
-<img alt="../_images/pag4.22.png" class="align-center" src="../_images/pag4.22.png" />
+<img alt="../_images/pag4.23.png" class="align-center" src="../_images/pag4.23.png" />
 <ul class="simple">
 <li>TABLERO_UMTS_ULINTFN_WCEL_DAY</li>
 </ul>
@@ -244,7 +272,7 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <ul class="simple">
 <li>TABLERO_UMTS_ULINTFN_WCEL_WEEK</li>
 </ul>
-<img alt="../_images/pag56.png" class="align-center" src="../_images/pag56.png" />
+<img alt="../_images/pag510.png" class="align-center" src="../_images/pag510.png" />
 <p>Las Tablas utilizadas desde Perdido son:</p>
 <ul class="simple">
 <li><a class="reference external" href="mailto:UMTS_C_NSN_CELLRES_MNC1_RAW&#37;&#52;&#48;SMART&#46;WORLD">UMTS_C_NSN_CELLRES_MNC1_RAW<span>&#64;</span>SMART<span>&#46;</span>WORLD</a> T1</li>
@@ -278,7 +306,7 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <li>P_UMTS_UL_INTFRNC_REWORK_WEEK</li>
 </ul>
 <p>Los procedimientos para ejecutarlos correctamente se ingresar por parámetro la fecha en la cual desea reprocesar los datos:</p>
-<img alt="../_images/pag618.png" class="align-center" src="../_images/pag618.png" />
+<img alt="../_images/pag69.png" class="align-center" src="../_images/pag69.png" />
 <p>La descripción detallada de cada procedimiento se encuentra en el paquete G_UMTS_UL_INTERFERENCE:</p>
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/nokiaumts/G_UMTS_UL_INTERFERENCE.sql">G_UMTS_UL_INTERFERENCE</a></li>
@@ -288,7 +316,7 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <h2>9.      REPORTE<a class="headerlink" href="#reporte" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="macroflujo-del-proceso">
 <h3>9.1.    Macroflujo del proceso<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h3>
-<img alt="../_images/pag719.png" class="align-center" src="../_images/pag719.png" />
+<img alt="../_images/pag79.png" class="align-center" src="../_images/pag79.png" />
 </div>
 <div class="section" id="id1">
 <h3>9.2.    Descripción Detallada<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -336,23 +364,23 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 <div class="section" id="pentaho">
 <h3>9.5. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <p>Estructura del proyecto:</p>
-<img alt="../_images/pag815.png" class="align-center" src="../_images/pag815.png" />
+<img alt="../_images/pag89.png" class="align-center" src="../_images/pag89.png" />
 <ul class="simple">
 <li>Proceso EndToEnd</li>
 </ul>
-<img alt="../_images/pag8.29.png" class="align-center" src="../_images/pag8.29.png" />
+<img alt="../_images/pag8.26.png" class="align-center" src="../_images/pag8.26.png" />
 <ul class="simple">
 <li>Proceso Insert_week_number</li>
 </ul>
 <p>Este proceso se encarga de obtener el número de la semana del año para insertarlo en el excel y en el título del reporte.</p>
-<img alt="../_images/pag915.png" class="align-center" src="../_images/pag915.png" />
+<img alt="../_images/pag97.png" class="align-center" src="../_images/pag97.png" />
 <ul class="simple">
 <li>Proceso  send_email</li>
 </ul>
 <p>Este proceso se encarga de validar la existencia del archivo para luego validar que el email sea enviado correctamente.</p>
-<img alt="../_images/pag9.29.png" class="align-center" src="../_images/pag9.29.png" />
+<img alt="../_images/pag9.25.png" class="align-center" src="../_images/pag9.25.png" />
 <p>El email muestra los archivos adjuntos en formato xlsx que contiene los datos mencionados anteriormente:</p>
-<img alt="../_images/pag9.33.png" class="align-center" src="../_images/pag9.33.png" />
+<img alt="../_images/pag9.3.png" class="align-center" src="../_images/pag9.3.png" />
 <img alt="../_images/pag9.4.png" class="align-center" src="../_images/pag9.4.png" />
 </div>
 </div>
@@ -412,15 +440,18 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tablero4g.html" class="btn btn-neutral float-right" title="TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tablero4g.html" class="btn btn-neutral float-right" title="TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="instructivomicro.html" class="btn btn-neutral" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="instructivomicro.html" class="btn btn-neutral" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -454,7 +485,8 @@ Al cruzar estos parámetros, obtenemos una nube de puntos la cual se modela con 
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

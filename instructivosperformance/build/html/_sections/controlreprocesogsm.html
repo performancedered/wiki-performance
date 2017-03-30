@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="INSTRUCTIVOS TECNOLOGIA 2G" href="tecnologia2g.html"/>
         <link rel="next" title="INSTRUCTIVOS TECNOLOGIA 3G" href="tecnologia3g.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul class="current">
@@ -132,8 +141,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -142,25 +153,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
-      
+        
           <li><a href="tecnologia2g.html">INSTRUCTIVOS TECNOLOGIA 2G</a> &raquo;</li>
-      
-    <li>INSTRUCTIVO CONTROL Y REPROCESO DE TABLAS GSM/GPRS</li>
+        
+      <li>INSTRUCTIVO CONTROL Y REPROCESO DE TABLAS GSM/GPRS</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -169,8 +197,6 @@
   <div class="section" id="instructivo-control-y-reproceso-de-tablas-gsm-gprs">
 <h1>INSTRUCTIVO CONTROL Y REPROCESO DE TABLAS GSM/GPRS<a class="headerlink" href="#instructivo-control-y-reproceso-de-tablas-gsm-gprs" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-<ul class="simple">
-</ul>
 </div>
 <div class="section" id="objetivo">
 <h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
@@ -210,8 +236,8 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <li>Ejecutar la primera consulta en el archivo Control GSM/GPRS.sql. para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.</li>
 </ol>
 <img alt="../_images/pag4.png" class="align-center" src="../_images/pag4.png" />
-<img alt="../_images/pag5.png" class="align-center" src="../_images/pag5.png" />
-<img alt="../_images/pag6.png" class="align-center" src="../_images/pag6.png" />
+<img alt="../_images/pag51.png" class="align-center" src="../_images/pag51.png" />
+<img alt="../_images/pag62.png" class="align-center" src="../_images/pag62.png" />
 <p>Esta consulta recibe los siguientes parámetros:</p>
 <ul class="simple">
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
@@ -229,7 +255,7 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 </ul>
 <img alt="../_images/pag7.1.png" class="align-center" src="../_images/pag7.1.png" />
 <p>La consulta muestra el siguiente resultado:</p>
-<img alt="../_images/pag7.2.png" class="align-center" src="../_images/pag7.2.png" />
+<img alt="../_images/pag7.21.png" class="align-center" src="../_images/pag7.21.png" />
 <p>En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta (se encuentra en Controles adicionales GSM/GPRS.sql):</p>
 <p>Aquí, ajustamos el FILENAME según el RC que nos interese, y la fecha/hora que nos importe.</p>
 <p>Ejecutamos la consulta:</p>
@@ -246,14 +272,14 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 </ul>
 <p>También nótese que hay 14 elementos, que corresponden a las 14 mediciones diferentes, para el RC seleccionado, en la hora seleccionada.</p>
 <p>En caso de que si, se pueden volver a solicitar para reprocesar, para ello ejecutar la siguiente sentencia, siempre ajustando el valor del RC y de la fecha/hora:</p>
-<img alt="../_images/pag8.2.png" class="align-center" src="../_images/pag8.2.png" />
+<img alt="../_images/pag8.21.png" class="align-center" src="../_images/pag8.21.png" />
 <img alt="../_images/pag9.1.png" class="align-center" src="../_images/pag9.1.png" />
 <p>Ingresamos la fecha y hora:</p>
-<img alt="../_images/pag9.2.png" class="align-center" src="../_images/pag9.2.png" />
+<img alt="../_images/pag9.21.png" class="align-center" src="../_images/pag9.21.png" />
 <ol class="arabic simple" start="2">
 <li>Ejecutar las consultas en las tablas hour de GSM y GPRS (presentes en Control GSM/GPRS.sql).</li>
 </ol>
-<img alt="../_images/pag10.png" class="align-center" src="../_images/pag10.png" />
+<img alt="../_images/pag102.png" class="align-center" src="../_images/pag102.png" />
 <img alt="../_images/pag11.1.png" class="align-center" src="../_images/pag11.1.png" />
 <p>Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:</p>
 <ul class="simple">
@@ -262,7 +288,7 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 </ul>
 <img alt="../_images/pag11.2.png" class="align-center" src="../_images/pag11.2.png" />
 <p>La consulta nos muestra como resultado:</p>
-<img alt="../_images/pag12.png" class="align-center" src="../_images/pag12.png" />
+<img alt="../_images/pag122.png" class="align-center" src="../_images/pag122.png" />
 <p>En caso de que haya faltante por regional, ejecutar en Perdido las siguientes instrucciones:</p>
 <ol class="arabic simple" start="2">
 <li><ol class="first loweralpha">
@@ -288,8 +314,8 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <ol class="arabic simple" start="3">
 <li>Ejecutar las consultas en las tablas a nivel de mercado, presentes en Control GSM/GPRS.sql:</li>
 </ol>
-<img alt="../_images/pag14.png" class="align-center" src="../_images/pag14.png" />
-<img alt="../_images/pag15.png" class="align-center" src="../_images/pag15.png" />
+<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
+<img alt="../_images/pag152.png" class="align-center" src="../_images/pag152.png" />
 <p>Esta consulta recibe los siguientes parámetros:</p>
 <ul class="simple">
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
@@ -299,7 +325,7 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 </ul>
 <img alt="../_images/pag15.2.png" class="align-center" src="../_images/pag15.2.png" />
 <p>La consulta nos muestra como resultado:</p>
-<img alt="../_images/pag16.png" class="align-center" src="../_images/pag16.png" />
+<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
 <p>En caso de haber faltante por tipo de mercado, se corren las siguientes consultas en Perdido:</p>
 <p>cd /calidad/multivendor/gsm/hourly</p>
 <blockquote>
@@ -312,24 +338,27 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <p>En consola, nos muestra el contenido de run2.sh:</p>
 <img alt="../_images/pag16.2.png" class="align-center" src="../_images/pag16.2.png" />
 <p>Luego ejecutamos run2.sh:</p>
-<img alt="../_images/pag17.png" class="align-center" src="../_images/pag17.png" />
+<img alt="../_images/pag172.png" class="align-center" src="../_images/pag172.png" />
 <p>Nos muestra como resultado:</p>
-<img alt="../_images/pag18.png" class="align-center" src="../_images/pag18.png" />
+<img alt="../_images/pag182.png" class="align-center" src="../_images/pag182.png" />
 </div>
 </div>
 </div>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tecnologia3g.html" class="btn btn-neutral float-right" title="INSTRUCTIVOS TECNOLOGIA 3G" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tecnologia3g.html" class="btn btn-neutral float-right" title="INSTRUCTIVOS TECNOLOGIA 3G" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tecnologia2g.html" class="btn btn-neutral" title="INSTRUCTIVOS TECNOLOGIA 2G" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tecnologia2g.html" class="btn btn-neutral" title="INSTRUCTIVOS TECNOLOGIA 2G" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -363,7 +392,8 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

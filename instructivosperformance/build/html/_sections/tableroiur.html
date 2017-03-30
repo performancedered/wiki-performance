@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
         <link rel="next" title="GESTIÓN" href="../gestion.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -141,8 +150,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -151,23 +162,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
-      
-    <li>Tablero IUR</li>
+        
+      <li>Tablero IUR</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -208,7 +236,7 @@
 <li><em>Capacity Management</em> : Representa el porcentaje de la carga de voz, datos y usuarios de la celda. Menor o Igual que 80%</li>
 </ol>
 <p>Para todos los indicadores se consideran los valores ISABHW (pico semanal), excepto para la Disponibilidad Cliente que es diaria. ISABHW = Individual Sector Average-Busy-Hour Week, o sea promedio de los valores de hora pico de la semana, de cada sector individual.</p>
-<img alt="../_images/pag418.png" class="align-center" src="../_images/pag418.png" />
+<img alt="../_images/pag416.png" class="align-center" src="../_images/pag416.png" />
 <ul class="simple">
 <li>Server: perdido.claro.amx (10.92.50.83).</li>
 <li>Base de Datos: Oracle 10G. Instancia WILLY</li>
@@ -240,28 +268,28 @@ La ejecución entonces se realiza el minuto 11, de la hora 00, todos los días L
 <ul class="simple">
 <li>OBJECTS_SP_UMTS</li>
 </ul>
-<img alt="../_images/pag622.png" class="align-center" src="../_images/pag622.png" />
+<img alt="../_images/pag617.png" class="align-center" src="../_images/pag617.png" />
 <ul class="simple">
 <li>NOC_UMTS_AVAIL_WCEL_DAYWO</li>
 </ul>
-<img alt="../_images/pag718.png" class="align-center" src="../_images/pag718.png" />
+<img alt="../_images/pag715.png" class="align-center" src="../_images/pag715.png" />
 <ul class="simple">
 <li>UMTSC_NSN_MACD_WCEL_ISABHW</li>
 </ul>
-<img alt="../_images/pag814.png" class="align-center" src="../_images/pag814.png" />
+<img alt="../_images/pag813.png" class="align-center" src="../_images/pag813.png" />
 <ul class="simple">
 <li>UMTS_NSN_HSDPA_WCEL_ISABHW</li>
 </ul>
-<img alt="../_images/pag914.png" class="align-center" src="../_images/pag914.png" />
+<img alt="../_images/pag911.png" class="align-center" src="../_images/pag911.png" />
 <ul class="simple">
 <li>UMTS_CLDD_RADAR_WCEL_DAYW</li>
 </ul>
-<img alt="../_images/pag1015.png" class="align-center" src="../_images/pag1015.png" />
+<img alt="../_images/pag1012.png" class="align-center" src="../_images/pag1012.png" />
 </div>
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5. MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag10.25.png" class="align-center" src="../_images/pag10.25.png" />
+<img alt="../_images/pag10.23.png" class="align-center" src="../_images/pag10.23.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6. DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -279,12 +307,12 @@ La ejecución entonces se realiza el minuto 11, de la hora 00, todos los días L
 <li>Formato de la fecha: DD.MM.YYYY</li>
 </ul>
 <p>Ejemplo de reproceso:</p>
-<img alt="../_images/pag1112.png" class="align-center" src="../_images/pag1112.png" />
+<img alt="../_images/pag1110.png" class="align-center" src="../_images/pag1110.png" />
 </div>
 <div class="section" id="smart">
 <h2>8. SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
-<img alt="../_images/pag1212.png" class="align-center" src="../_images/pag1212.png" />
+<img alt="../_images/pag1210.png" class="align-center" src="../_images/pag1210.png" />
 <img alt="../_images/pag12.27.png" class="align-center" src="../_images/pag12.27.png" />
 </div>
 <div class="section" id="control-de-cambios">
@@ -321,15 +349,18 @@ La ejecución entonces se realiza el minuto 11, de la hora 00, todos los días L
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../gestion.html" class="btn btn-neutral float-right" title="GESTIÓN" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tableroamxload.html" class="btn btn-neutral" title="Tablero AMX Load LTE" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tableroamxload.html" class="btn btn-neutral" title="Tablero AMX Load LTE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -363,7 +394,8 @@ La ejecución entonces se realiza el minuto 11, de la hora 00, todos los días L
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

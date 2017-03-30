@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="INSTRUCTIVOS TECNOLOGIA 3G" href="tecnologia3g.html"/>
         <link rel="next" title="SOPORTE UMTS" href="soporteumts.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul class="current">
@@ -134,8 +143,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -144,25 +155,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
-      
+        
           <li><a href="tecnologia3g.html">INSTRUCTIVOS TECNOLOGIA 3G</a> &raquo;</li>
-      
-    <li>Instructivo Control y Reproceso de tablas UMTS</li>
+        
+      <li>Instructivo Control y Reproceso de tablas UMTS</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -189,12 +217,12 @@
 <div class="section" id="instrucciones-operativas">
 <h2>3.      INSTRUCCIONES OPERATIVAS<a class="headerlink" href="#instrucciones-operativas" title="Permalink to this headline">¶</a></h2>
 <p>Para realizar este instructivo, se requiere acceso por SSH a Perdido, y el programa PL/SQL Developer con acceso a Smart.</p>
-<img alt="../_images/pag22.png" class="align-center" src="../_images/pag22.png" />
+<img alt="../_images/pag27.png" class="align-center" src="../_images/pag27.png" />
 <dl class="docutils">
 <dt>Ingresar al programa PL/SQL Developer   &#8211;&gt;Ingresar Username</dt>
 <dd>&#8211;&gt;  Ingresa Password</dd>
 </dl>
-<img alt="../_images/pag31.png" class="align-center" src="../_images/pag31.png" />
+<img alt="../_images/pag33.png" class="align-center" src="../_images/pag33.png" />
 <img alt="../_images/pag3.22.png" class="align-center" src="../_images/pag3.22.png" />
 <p>Aquí se referenciarán las consultas presentes en los scripts:</p>
 <ul class="simple">
@@ -227,12 +255,12 @@
 <li>Fecha hasta</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag71.png" class="align-center" src="../_images/pag71.png" />
+<img alt="../_images/pag73.png" class="align-center" src="../_images/pag73.png" />
 <p>La busqueda a traves de las variables ingresadas muestra como resultado:</p>
-<img alt="../_images/pag7.22.png" class="align-center" src="../_images/pag7.22.png" />
+<img alt="../_images/pag7.23.png" class="align-center" src="../_images/pag7.23.png" />
 <p>En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta, en donde deberemos ajustar el FILENAME según el RC que nos interese, y la fecha/hora que nos importe:</p>
-<img alt="../_images/pag81.png" class="align-center" src="../_images/pag81.png" />
-<img alt="../_images/pag8.21.png" class="align-center" src="../_images/pag8.21.png" />
+<img alt="../_images/pag83.png" class="align-center" src="../_images/pag83.png" />
+<img alt="../_images/pag8.22.png" class="align-center" src="../_images/pag8.22.png" />
 <p>Los valores en Status pueden ser tres posibles:</p>
 <blockquote>
 <div><ul class="simple">
@@ -243,9 +271,9 @@
 </div></blockquote>
 <p>Nótese que hay 13 elementos, que corresponden a las 13 mediciones diferentes, para el RC seleccionado, en la hora seleccionada.</p>
 <p>En caso de que necesitar reprocesar lo único que se debe hacer el dejar el archivo en estado PENDIENTE. Para ello ejecutar la siguiente sentencia, siempre ajustando el valor del RC y de la fecha/hora:</p>
-<img alt="../_images/pag91.png" class="align-center" src="../_images/pag91.png" />
+<img alt="../_images/pag93.png" class="align-center" src="../_images/pag93.png" />
 <p>Luego presiona commit &#8211;&gt; Yes</p>
-<img alt="../_images/pag9.21.png" class="align-center" src="../_images/pag9.21.png" />
+<img alt="../_images/pag9.22.png" class="align-center" src="../_images/pag9.22.png" />
 </div>
 <div class="section" id="b-control-2-umts-sql">
 <h3>b.      Control 2 UMTS.sql.<a class="headerlink" href="#b-control-2-umts-sql" title="Permalink to this headline">¶</a></h3>
@@ -273,7 +301,7 @@
 </div></blockquote>
 <img alt="../_images/pag12.21.png" class="align-center" src="../_images/pag12.21.png" />
 <p>La Busqueda a traves de las variables ingresadas muestra como resultado:</p>
-<img alt="../_images/pag131.png" class="align-center" src="../_images/pag131.png" />
+<img alt="../_images/pag133.png" class="align-center" src="../_images/pag133.png" />
 <p>Si tenemos diferencias o faltantes pero tenemos datos en dichas horas en las tablas raw, debemos ingresar manualmente “nuevos pedidos de procesamiento” en las colas. Para ello, tenemos un script que permite generar la llamada a esos pedidos.
 Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:</p>
 <p>SERVICE</p>
@@ -296,13 +324,13 @@ Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:</p
 </div></blockquote>
 <p>De ahí que, en dicho script, se comente/descomente la línea de DBMS_OUTPUT, para lograr la salida deseada, para la tabla que necesitamos.
 En general, siempre procesar primero tablas detail wcell, luego master master wcell, y luego ídem con tablas NE.</p>
-<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
+<img alt="../_images/pag144.png" class="align-center" src="../_images/pag144.png" />
 <p>Este script genera la siguiente salida:</p>
 <img alt="../_images/pag14.21.png" class="align-center" src="../_images/pag14.21.png" />
 <p>Copiamos estos comandos, y los debemos ejecutar en Perdido, en la ruta /calidad/nokia/umts/aq/hourly/enqueue.</p>
-<img alt="../_images/pag151.png" class="align-center" src="../_images/pag151.png" />
+<img alt="../_images/pag153.png" class="align-center" src="../_images/pag153.png" />
 <p>Luego presiona &#8211;&gt; Open</p>
-<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
+<img alt="../_images/pag164.png" class="align-center" src="../_images/pag164.png" />
 <p>En dicha ruta existen a modo de ejemplo los siguientes scripts, los cuales pueden servir de referencia</p>
 <img alt="../_images/pag16.21.png" class="align-center" src="../_images/pag16.21.png" />
 <p>Luego, se deben controlar el estado de dichas colas, para ello ejecutar las consultas:</p>
@@ -325,8 +353,8 @@ En general, siempre procesar primero tablas detail wcell, luego master master wc
 </ul>
 </div></blockquote>
 <p>A modo ejemplo ejecutamos  la siguiente consulta: ReportUmtsNsnHourlyServiceDetailWcell.sql</p>
-<img alt="../_images/pag171.png" class="align-center" src="../_images/pag171.png" />
-<img alt="../_images/pag182.png" class="align-center" src="../_images/pag182.png" />
+<img alt="../_images/pag173.png" class="align-center" src="../_images/pag173.png" />
+<img alt="../_images/pag184.png" class="align-center" src="../_images/pag184.png" />
 </div>
 <div class="section" id="procedimiento-controles-daily-busy-hour-controles-semanales">
 <h3>2.      Procedimiento Controles Daily/Busy Hour – Controles Semanales:<a class="headerlink" href="#procedimiento-controles-daily-busy-hour-controles-semanales" title="Permalink to this headline">¶</a></h3>
@@ -338,9 +366,9 @@ La misma recibe los siguientes parámetros:</p>
 <li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag18.2.png" class="align-center" src="../_images/pag18.2.png" />
+<img alt="../_images/pag18.21.png" class="align-center" src="../_images/pag18.21.png" />
 <p>[No adjuntamos la consulta dado que es muy extensa y se utiliza ocasionalmente].</p>
-<img alt="../_images/pag191.png" class="align-center" src="../_images/pag191.png" />
+<img alt="../_images/pag192.png" class="align-center" src="../_images/pag192.png" />
 <p>Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs.</p>
 <p>Para reprocesar debemos ir a la carpeta /calidad/nokia/umts/daily/, y ejecutar los siguientes scripts:</p>
 <blockquote>
@@ -349,7 +377,7 @@ La misma recibe los siguientes parámetros:</p>
 <li>Tablas busy hour (BH): nokia_umts_bh_rec.sh</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag19.21.png" class="align-center" src="../_images/pag19.21.png" />
+<img alt="../_images/pag19.22.png" class="align-center" src="../_images/pag19.22.png" />
 <p>Estos scripts reciben 3 parámetros:</p>
 <blockquote>
 <div><ul class="simple">
@@ -358,7 +386,7 @@ La misma recibe los siguientes parámetros:</p>
 <li>$3: Medición, que puede ser: ho, service, hsdpa, macd ó noc.</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag20.png" class="align-center" src="../_images/pag20.png" />
+<img alt="../_images/pag202.png" class="align-center" src="../_images/pag202.png" />
 <p>El script nos da como resultado:</p>
 <img alt="../_images/pag211.png" class="align-center" src="../_images/pag211.png" />
 <p>Si se han recuperado tablas a nivel day/bh, es necesario reprocesar los tableros diarios ejecutando los scripts ubicados en:</p>
@@ -394,26 +422,29 @@ La misma recibe los siguientes parámetros:</p>
 <p>2° Ejecutar la query del constructor:</p>
 <p><a class="reference external" href="../_static/images/queries/constructorCallConstructorProcedureReInsert_Umts.sql">constructorCallConstructorProcedureReInsert_Umts</a></p>
 <p>Nos muestra como resultado:</p>
-<img alt="../_images/pag23.png" class="align-center" src="../_images/pag23.png" />
+<img alt="../_images/pag231.png" class="align-center" src="../_images/pag231.png" />
 <p>3° Se debe tomar el resultado que nos muestra en la pestaña “Output” para crear el bloque PL/SQL anónimo, ejecutar el bloque PL/SQL anónimo:</p>
-<img alt="../_images/pag24.png" class="align-center" src="../_images/pag24.png" />
+<img alt="../_images/pag241.png" class="align-center" src="../_images/pag241.png" />
 <p>En el bloque PL/SQL define los siguientes parámetros:</p>
-<img alt="../_images/pag24.2.png" class="align-center" src="../_images/pag24.2.png" />
+<img alt="../_images/pag24.21.png" class="align-center" src="../_images/pag24.21.png" />
 <p>Al finalizar los pasos detallados anteriormente los datos son reinsertados con éxito.</p>
 </div>
 </div>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="soporteumts.html" class="btn btn-neutral float-right" title="SOPORTE UMTS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="soporteumts.html" class="btn btn-neutral float-right" title="SOPORTE UMTS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tecnologia3g.html" class="btn btn-neutral" title="INSTRUCTIVOS TECNOLOGIA 3G" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tecnologia3g.html" class="btn btn-neutral" title="INSTRUCTIVOS TECNOLOGIA 3G" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -447,7 +478,8 @@ La misma recibe los siguientes parámetros:</p>
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

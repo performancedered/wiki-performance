@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="SVA" href="../sva.html"/>
         <link rel="next" title="PREPAGO" href="../prepago.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -136,8 +145,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -146,23 +157,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../sva.html">SVA</a> &raquo;</li>
-      
-    <li>VOICEMAIL ZTE</li>
+        
+      <li>VOICEMAIL ZTE</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -289,20 +317,20 @@
 <div class="section" id="reproceso">
 <h2>6.REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
 <p>Se generó un script aparte de recupero, en el cual se ingresa como argumento la semana que se desee reprocesar:</p>
-<img alt="../_images/pag5.213.png" class="align-center" src="../_images/pag5.213.png" />
+<img alt="../_images/pag5.214.png" class="align-center" src="../_images/pag5.214.png" />
 <p>Ejemplo:</p>
 <p>En este ejemplo se reprocesa a 2 semanas atrás. Encargándose el script de definir la fecha desde y la fecha hasta.</p>
-<img alt="../_images/pag5.38.png" class="align-center" src="../_images/pag5.38.png" />
+<img alt="../_images/pag5.310.png" class="align-center" src="../_images/pag5.310.png" />
 <p>Script de reproceso: <a class="reference external" href="../_static/images/voicemailzte/sva_zte_summary_rec.sh">sva_zte_summary_rec</a></p>
 </div>
 <div class="section" id="smart">
 <h2>7.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
-<img alt="../_images/pag611.png" class="align-center" src="../_images/pag611.png" />
-<img alt="../_images/pag6.28.png" class="align-center" src="../_images/pag6.28.png" />
-<img alt="../_images/pag6.33.png" class="align-center" src="../_images/pag6.33.png" />
-<img alt="../_images/pag710.png" class="align-center" src="../_images/pag710.png" />
-<img alt="../_images/pag7.27.png" class="align-center" src="../_images/pag7.27.png" />
+<img alt="../_images/pag622.png" class="align-center" src="../_images/pag622.png" />
+<img alt="../_images/pag6.213.png" class="align-center" src="../_images/pag6.213.png" />
+<img alt="../_images/pag6.35.png" class="align-center" src="../_images/pag6.35.png" />
+<img alt="../_images/pag718.png" class="align-center" src="../_images/pag718.png" />
+<img alt="../_images/pag7.29.png" class="align-center" src="../_images/pag7.29.png" />
 </div>
 <div class="section" id="control-de-cambios">
 <h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
@@ -353,15 +381,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../prepago.html" class="btn btn-neutral float-right" title="PREPAGO" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../prepago.html" class="btn btn-neutral float-right" title="PREPAGO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../sva.html" class="btn btn-neutral" title="SVA" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../sva.html" class="btn btn-neutral" title="SVA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -395,7 +426,8 @@
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

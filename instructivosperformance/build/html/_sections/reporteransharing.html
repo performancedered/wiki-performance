@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,9 +34,12 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="REPORTES" href="../reportes.html"/>
-        <link rel="next" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="next" title="Reporte Downstream Internet Wnn" href="downstream.html"/>
         <link rel="prev" title="Reporte Table Space" href="reportetablespace.html"/> 
 
   
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -125,6 +134,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8. REPROCESO MANUAL</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
@@ -141,8 +151,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -151,23 +163,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
-      
-    <li>Reporte Movistar Ran Sharing</li>
+        
+      <li>Reporte Movistar Ran Sharing</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -199,7 +228,7 @@ Se identifican las celdas Movistar al filtrar las celdas de nuestra tabla objeto
 </div>
 <div class="section" id="macroflujo">
 <h2>5.      MACROFLUJO<a class="headerlink" href="#macroflujo" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag321.png" class="align-center" src="../_images/pag321.png" />
+<img alt="../_images/pag314.png" class="align-center" src="../_images/pag314.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -236,24 +265,24 @@ Se identifican las celdas Movistar al filtrar las celdas de nuestra tabla objeto
 <div class="section" id="pentaho">
 <h3>6.4. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <p>Estructura del proyecto:</p>
-<img alt="../_images/pag420.png" class="align-center" src="../_images/pag420.png" />
+<img alt="../_images/pag410.png" class="align-center" src="../_images/pag410.png" />
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag4.210.png" class="align-center" src="../_images/pag4.210.png" />
+<img alt="../_images/pag4.25.png" class="align-center" src="../_images/pag4.25.png" />
 <ul class="simple">
 <li>Proceso Crear Reporte</li>
 </ul>
 <p>En este proceso se encarga de ejecutar las queries para generar el Excel de salida.
 En el Excel se muestra  cada trabajo en una hoja diferente.
 Por ejemplo: una hoja de  Resumen y otra hoja de Detalle</p>
-<img alt="../_images/pag522.png" class="align-center" src="../_images/pag522.png" />
+<img alt="../_images/pag515.png" class="align-center" src="../_images/pag515.png" />
 <ul class="simple">
 <li>Proceso Resumen y Detalle</li>
 </ul>
 <p>Este proceso se encarga de ejecutar la query en Tablero Resumen o Detalle, en el siguiente paso se da formato a la fecha (dd/MM/yyyy) y para finalizar se genera la solapa de datos en la hoja de Excel.
 Este mismo proceso se realiza para Detalle.</p>
-<img alt="../_images/pag5.215.png" class="align-center" src="../_images/pag5.215.png" />
+<img alt="../_images/pag5.29.png" class="align-center" src="../_images/pag5.29.png" />
 </div>
 </div>
 <div class="section" id="controles">
@@ -264,22 +293,25 @@ Este mismo proceso se realiza para Detalle.</p>
 <h2>8. REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
 <p><strong>No tiene reproceso</strong></p>
 <p>Se envía vía email un archivo Excel con el nombre: 05-Ran_Sharing_MovistarLTE_20170322_09</p>
-<img alt="../_images/pag5.310.png" class="align-center" src="../_images/pag5.310.png" />
-<img alt="../_images/pag623.png" class="align-center" src="../_images/pag623.png" />
+<img alt="../_images/pag5.35.png" class="align-center" src="../_images/pag5.35.png" />
+<img alt="../_images/pag612.png" class="align-center" src="../_images/pag612.png" />
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../proyectos.html" class="btn btn-neutral float-right" title="PROYECTOS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="downstream.html" class="btn btn-neutral float-right" title="Reporte Downstream Internet Wnn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reportetablespace.html" class="btn btn-neutral" title="Reporte Table Space" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reportetablespace.html" class="btn btn-neutral" title="Reporte Table Space" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -313,7 +345,8 @@ Este mismo proceso se realiza para Detalle.</p>
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

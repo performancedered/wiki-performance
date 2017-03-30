@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
         <link rel="next" title="CISCO EPDG y SAMOG" href="cisco_epdg_samog.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -145,8 +154,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -155,23 +166,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../proyectos.html">PROYECTOS</a> &raquo;</li>
-      
-    <li>FIREWALL CHECKPOINT GRX BX</li>
+        
+      <li>FIREWALL CHECKPOINT GRX BX</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -203,7 +231,7 @@
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5. MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag318.png" class="align-center" src="../_images/pag318.png" />
+<img alt="../_images/pag36.png" class="align-center" src="../_images/pag36.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6. DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -254,45 +282,44 @@
 <ul class="simple">
 <li>SVA_FIREWALL_RECURSOS_HOUR</li>
 </ul>
-<img alt="../_images/pag417.png" class="align-center" src="../_images/pag417.png" />
+<img alt="../_images/pag43.png" class="align-center" src="../_images/pag43.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_FIREWALL_HOUR</li>
 </ul>
-<img alt="../_images/pag4.29.png" class="align-center" src="../_images/pag4.29.png" />
+<img alt="../_images/pag4.2.png" class="align-center" src="../_images/pag4.2.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_FIREWALL_DAY</li>
 </ul>
-<img alt="../_images/pag518.png" class="align-center" src="../_images/pag518.png" />
+<img alt="../_images/pag56.png" class="align-center" src="../_images/pag56.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_RECURSOS_DAY</li>
 </ul>
-<img alt="../_images/pag5.214.png" class="align-center" src="../_images/pag5.214.png" />
+<img alt="../_images/pag5.23.png" class="align-center" src="../_images/pag5.23.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_FIREWALL_BH</li>
 </ul>
-<img alt="../_images/pag5.39.png" class="align-center" src="../_images/pag5.39.png" />
+<img alt="../_images/pag5.32.png" class="align-center" src="../_images/pag5.32.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_RECURSOS_BH</li>
 </ul>
-<img alt="../_images/pag5.41.png" class="align-center" src="../_images/pag5.41.png" />
+<img alt="../_images/pag5.4.png" class="align-center" src="../_images/pag5.4.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_RECURSOS_IBHW</li>
 </ul>
-<img alt="../_images/pag5.41.png" class="align-center" src="../_images/pag5.41.png" />
+<img alt="../_images/pag5.4.png" class="align-center" src="../_images/pag5.4.png" />
 <ul class="simple">
 <li>SVA_FIREWALL_FIREWALL_IBHW</li>
 </ul>
-<img alt="../_images/pag620.png" class="align-center" src="../_images/pag620.png" />
+<img alt="../_images/pag66.png" class="align-center" src="../_images/pag66.png" />
 </div>
 <div class="section" id="reproceso-manual">
 <h2>7. REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
 <p>Reproceso a Nivel Horario:</p>
 <blockquote>
-<div><ul>
+<div><ul class="simple">
 <li><dl class="first docutils">
 <dt>p_sva_firewall_rec_hour(p_fecha_desde =&gt; :p_fecha_desde,</dt>
-<dd><p class="first last">p_fecha_hasta =&gt; :p_fecha_hasta);</p>
-</dd>
+<dd>p_fecha_hasta =&gt; :p_fecha_hasta);</dd>
 </dl>
 </li>
 </ul>
@@ -300,11 +327,10 @@
 <p>dd.mm.yyyy hh24  = fecha_desde    dd.mm.yyyy hh24  = fecha_hasta</p>
 <p>Reproceso a Nivel Diario:</p>
 <blockquote>
-<div><ul>
+<div><ul class="simple">
 <li><dl class="first docutils">
 <dt>p_sva_firewall_rec_daily(p_fecha_desde =&gt; :p_fecha_desde,</dt>
-<dd><p class="first last">p_fecha_hasta =&gt; :p_fecha_hasta);</p>
-</dd>
+<dd>p_fecha_hasta =&gt; :p_fecha_hasta);</dd>
 </dl>
 </li>
 </ul>
@@ -312,11 +338,10 @@
 <p>fecha_desde = dd.mm.yyyy   fecha_hasta = dd.mm.yyyy</p>
 <p>Reproceso a Nivel Semanal:</p>
 <blockquote>
-<div><ul>
+<div><ul class="simple">
 <li><dl class="first docutils">
 <dt>p_sva_firewall_rec_ibhw(p_fecha_desde =&gt; :p_fecha_desde,</dt>
-<dd><p class="first last">p_fecha_hasta =&gt; :p_fecha_hasta);</p>
-</dd>
+<dd>p_fecha_hasta =&gt; :p_fecha_hasta);</dd>
 </dl>
 </li>
 </ul>
@@ -326,8 +351,8 @@
 <div class="section" id="smart">
 <h2>8.  SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
 <p>En la herramienta Smart se muestra la información de la siguiente manera:</p>
-<img alt="../_images/pag716.png" class="align-center" src="../_images/pag716.png" />
-<img alt="../_images/pag7.29.png" class="align-center" src="../_images/pag7.29.png" />
+<img alt="../_images/pag76.png" class="align-center" src="../_images/pag76.png" />
+<img alt="../_images/pag7.24.png" class="align-center" src="../_images/pag7.24.png" />
 </div>
 <div class="section" id="control-de-cambios">
 <h2>8. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
@@ -370,15 +395,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cisco_epdg_samog.html" class="btn btn-neutral float-right" title="CISCO EPDG y SAMOG" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cisco_epdg_samog.html" class="btn btn-neutral float-right" title="CISCO EPDG y SAMOG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="enodb.html" class="btn btn-neutral" title="ALCATEL LTE URUGUAY - ENODB" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="enodb.html" class="btn btn-neutral" title="ALCATEL LTE URUGUAY - ENODB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -412,7 +440,8 @@
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

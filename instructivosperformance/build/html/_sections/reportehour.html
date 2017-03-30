@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="REPORTES" href="../reportes.html"/>
         <link rel="next" title="Reporte Bh Day" href="reportebhday.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -124,6 +133,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reportetablespace.html"> 5. Reporte Table Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteransharing.html"> 6. Reporte Movistar Ran Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
@@ -140,8 +151,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -150,23 +163,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
-      
-    <li>Reporte Hour</li>
+        
+      <li>Reporte Hour</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -195,7 +225,7 @@
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag37.png" class="align-center" src="../_images/pag37.png" />
+<img alt="../_images/pag313.png" class="align-center" src="../_images/pag313.png" />
 </div>
 <div class="section" id="descripcion-detallada">
 <h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
@@ -273,28 +303,28 @@
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag58.png" class="align-center" src="../_images/pag58.png" />
+<img alt="../_images/pag514.png" class="align-center" src="../_images/pag514.png" />
 <ul class="simple">
 <li>Proceso Pentaho UMTS</li>
 </ul>
 <p>En este proceso se obtiene datos de las tablas de UMTS_SERVICE y UMTS_HO y  se crea un excel con 2 hojas una para cada medición (service, ho)</p>
-<img alt="../_images/pag5.24.png" class="align-center" src="../_images/pag5.24.png" />
+<img alt="../_images/pag5.28.png" class="align-center" src="../_images/pag5.28.png" />
 <ul class="simple">
 <li>Proceso Pentaho GSM</li>
 </ul>
-<img alt="../_images/pag5.31.png" class="align-center" src="../_images/pag5.31.png" />
+<img alt="../_images/pag5.34.png" class="align-center" src="../_images/pag5.34.png" />
 <ul class="simple">
 <li>Proceso Pentaho LTE</li>
 </ul>
-<img alt="../_images/pag66.png" class="align-center" src="../_images/pag66.png" />
+<img alt="../_images/pag611.png" class="align-center" src="../_images/pag611.png" />
 <p>Para reprocesar se debe ejecutar por consola el script report.sh, los datos obtenidos será la fecha del dia anterior:</p>
-<img alt="../_images/pag6.25.png" class="align-center" src="../_images/pag6.25.png" />
+<img alt="../_images/pag6.26.png" class="align-center" src="../_images/pag6.26.png" />
 <p>El email muestra los archivos adjuntos en formato xlsx que contiene los datos mencionados anteriormente:</p>
 <img alt="../_images/pag6.31.png" class="align-center" src="../_images/pag6.31.png" />
 <p>Gráficos que se encuentran en el archivo que se envía adjunto al email:</p>
-<img alt="../_images/pag76.png" class="align-center" src="../_images/pag76.png" />
-<img alt="../_images/pag7.24.png" class="align-center" src="../_images/pag7.24.png" />
-<img alt="../_images/pag7.31.png" class="align-center" src="../_images/pag7.31.png" />
+<img alt="../_images/pag712.png" class="align-center" src="../_images/pag712.png" />
+<img alt="../_images/pag7.27.png" class="align-center" src="../_images/pag7.27.png" />
+<img alt="../_images/pag7.32.png" class="align-center" src="../_images/pag7.32.png" />
 </div>
 </div>
 <div class="section" id="control-de-cambios">
@@ -331,15 +361,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reportebhday.html" class="btn btn-neutral float-right" title="Reporte Bh Day" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="reportebhday.html" class="btn btn-neutral float-right" title="Reporte Bh Day" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reporteraw.html" class="btn btn-neutral" title="Reporte Raw" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reporteraw.html" class="btn btn-neutral" title="Reporte Raw" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -373,7 +406,8 @@
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

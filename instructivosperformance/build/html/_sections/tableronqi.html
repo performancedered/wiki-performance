@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
         <link rel="next" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" href="instructivomicro.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -153,8 +162,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -163,23 +174,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
-      
-    <li>TABLERO NQI</li>
+        
+      <li>TABLERO NQI</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -210,7 +238,7 @@
 <h3>Descripción:<a class="headerlink" href="#descripcion" title="Permalink to this headline">¶</a></h3>
 <p>El tablero_nqi_day contiene información diaria sobre el tráfico de voz y datos, de las tecnologías umts y lte, agrupado por mercado y país. Para ver el tablero, una vez conectados a la base de datos Smart, con el PL/SQL ejecutar select * from tablero_nqi_day.</p>
 <p>Contiene los siguientes campos:</p>
-<img alt="../_images/pag313.png" class="align-center" src="../_images/pag313.png" />
+<img alt="../_images/pag319.png" class="align-center" src="../_images/pag319.png" />
 </div>
 <div class="section" id="descripcion-de-los-campos">
 <h3>Descripción de los campos:<a class="headerlink" href="#descripcion-de-los-campos" title="Permalink to this headline">¶</a></h3>
@@ -256,7 +284,7 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <div class="section" id="logueo-del-proceso">
 <h3>Logueo del proceso:<a class="headerlink" href="#logueo-del-proceso" title="Permalink to this headline">¶</a></h3>
 <p>El logueo del proceso se realiza en el archivo nqi_day_ins.log (ubicado en el path /calidad/tablero/nqi/daily/)</p>
-<img alt="../_images/pag49.png" class="align-center" src="../_images/pag49.png" />
+<img alt="../_images/pag417.png" class="align-center" src="../_images/pag417.png" />
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h3>
@@ -303,19 +331,19 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <div class="section" id="reproceso">
 <h3>7.REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h3>
 <p>Para el reproceso del tablero nqi a nivel day, se debe conectar al equipo unix, en la carpeta:</p>
-<img alt="../_images/pag6.214.png" class="align-center" src="../_images/pag6.214.png" />
+<img alt="../_images/pag6.211.png" class="align-center" src="../_images/pag6.211.png" />
 <p>Formato de la fecha:  DD.MM.YYYY</p>
 <p>Ejemplo:</p>
-<img alt="../_images/pag6.35.png" class="align-center" src="../_images/pag6.35.png" />
+<img alt="../_images/pag6.33.png" class="align-center" src="../_images/pag6.33.png" />
 </div>
 <div class="section" id="smart">
 <h3>8.SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h3>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
-<img alt="../_images/pag68.png" class="align-center" src="../_images/pag68.png" />
-<img alt="../_images/pag78.png" class="align-center" src="../_images/pag78.png" />
-<img alt="../_images/pag87.png" class="align-center" src="../_images/pag87.png" />
-<img alt="../_images/pag95.png" class="align-center" src="../_images/pag95.png" />
-<img alt="../_images/pag107.png" class="align-center" src="../_images/pag107.png" />
+<img alt="../_images/pag619.png" class="align-center" src="../_images/pag619.png" />
+<img alt="../_images/pag716.png" class="align-center" src="../_images/pag716.png" />
+<img alt="../_images/pag814.png" class="align-center" src="../_images/pag814.png" />
+<img alt="../_images/pag912.png" class="align-center" src="../_images/pag912.png" />
+<img alt="../_images/pag1013.png" class="align-center" src="../_images/pag1013.png" />
 </div>
 <div class="section" id="control-de-cambios">
 <h3>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h3>
@@ -357,8 +385,8 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 </ul>
 </div></blockquote>
 <p>Contiene los siguientes campos:</p>
-<img alt="../_images/pag410.png" class="align-center" src="../_images/pag410.png" />
-<img alt="../_images/pag4.24.png" class="align-center" src="../_images/pag4.24.png" />
+<img alt="../_images/pag418.png" class="align-center" src="../_images/pag418.png" />
+<img alt="../_images/pag4.28.png" class="align-center" src="../_images/pag4.28.png" />
 <ul class="simple">
 <li>Server:</li>
 </ul>
@@ -390,7 +418,7 @@ Para poder ver el proceso se sugiere conectarse vía ftp al server perdido, con 
 <p>El logueo del proceso se realiza en el archivo nqi_hourly_ins.log (ubicado en el path /calidad/tablero/radar)</p>
 <div class="section" id="id5">
 <h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<img alt="../_images/pag69.png" class="align-center" src="../_images/pag69.png" />
+<img alt="../_images/pag620.png" class="align-center" src="../_images/pag620.png" />
 </div>
 <div class="section" id="id6">
 <h3>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
@@ -437,16 +465,16 @@ sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
 </ul>
 </li>
 </ul>
-<img alt="../_images/pag88.png" class="align-center" src="../_images/pag88.png" />
-<img alt="../_images/pag96.png" class="align-center" src="../_images/pag96.png" />
+<img alt="../_images/pag815.png" class="align-center" src="../_images/pag815.png" />
+<img alt="../_images/pag913.png" class="align-center" src="../_images/pag913.png" />
 </div>
 <div class="section" id="id7">
 <h3>7.  REPROCESO<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Para el reproceso del tablero nqi a nivel hour, se debe conectar al equipo unix, en la carpeta:</p>
-<img alt="../_images/pag9.28.png" class="align-center" src="../_images/pag9.28.png" />
+<img alt="../_images/pag9.27.png" class="align-center" src="../_images/pag9.27.png" />
 <p>Formato de la fecha:  DD.MM.YYYY HH24</p>
 <p>Ejemplo:</p>
-<img alt="../_images/pag9.32.png" class="align-center" src="../_images/pag9.32.png" />
+<img alt="../_images/pag9.31.png" class="align-center" src="../_images/pag9.31.png" />
 </div>
 <div class="section" id="id8">
 <h3>8. CONTROL DE CAMBIOS<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
@@ -482,15 +510,18 @@ sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="instructivomicro.html" class="btn btn-neutral float-right" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="instructivomicro.html" class="btn btn-neutral float-right" title="INSTRUCTIVO DASHBOARD MICROSTRATEGY" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tableromousday.html" class="btn btn-neutral" title="Tablero Mous Day" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tableromousday.html" class="btn btn-neutral" title="Tablero Mous Day" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -524,7 +555,8 @@ sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

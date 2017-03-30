@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="TABLEROS" href="../tableros.html"/>
         <link rel="next" title="Tablero AMX Load LTE" href="tableroamxload.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -149,8 +158,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -159,23 +170,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../tableros.html">TABLEROS</a> &raquo;</li>
-      
-    <li>TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO</li>
+        
+      <li>TABLERO PARTICIPACIÓN 4G CIUDAD/MERCADO</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -209,10 +237,10 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 <h2>4.2)    DESCRIPCIÓN DE LOS CAMPOS<a class="headerlink" href="#descripcion-de-los-campos" title="Permalink to this headline">¶</a></h2>
 <p>El nombre del tablero ciudad es: Tablero_Participacion4Gciudad</p>
 <p>Campos para Ciudad:</p>
-<img alt="../_images/pag47.png" class="align-center" src="../_images/pag47.png" />
+<img alt="../_images/pag413.png" class="align-center" src="../_images/pag413.png" />
 <p>El nombre del tablero mercado es: Tablero_Participacion4gmercado</p>
 <p>Campos para Mercado:</p>
-<img alt="../_images/pag510.png" class="align-center" src="../_images/pag510.png" />
+<img alt="../_images/pag518.png" class="align-center" src="../_images/pag518.png" />
 <ul class="simple">
 <li>FECHA: FECHA DAYWEEK, corresponde al domingo de inicio de la semana, se considera que la semana comienza el domingo y finaliza el sábado.</li>
 <li>TRAFICO HSDPA (HSDPAMACDGB): Tráfico umts hsdpa gb</li>
@@ -254,7 +282,7 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 </div>
 <div class="section" id="macro-flujo">
 <h2>5)      MACRO FLUJO<a class="headerlink" href="#macro-flujo" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag616.png" class="align-center" src="../_images/pag616.png" />
+<img alt="../_images/pag615.png" class="align-center" src="../_images/pag615.png" />
 </div>
 <div class="section" id="descripcion-general">
 <h2>6.  DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
@@ -313,11 +341,11 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 <div class="section" id="pentaho">
 <h3>6.4.  Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <p>Estructura del proyecto:</p>
-<img alt="../_images/pag712.png" class="align-center" src="../_images/pag712.png" />
+<img alt="../_images/pag713.png" class="align-center" src="../_images/pag713.png" />
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag811.png" class="align-center" src="../_images/pag811.png" />
+<img alt="../_images/pag812.png" class="align-center" src="../_images/pag812.png" />
 <ul class="simple">
 <li>Proceso LlenadoTablero</li>
 </ul>
@@ -328,12 +356,12 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 <li>tablero Mercado</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag8.28.png" class="align-center" src="../_images/pag8.28.png" />
+<img alt="../_images/pag8.29.png" class="align-center" src="../_images/pag8.29.png" />
 <ul class="simple">
 <li>Proceso Generar xls:</li>
 </ul>
 <p>En este proceso se obtiene el archivo de formato xls para generar el email</p>
-<img alt="../_images/pag911.png" class="align-center" src="../_images/pag911.png" />
+<img alt="../_images/pag910.png" class="align-center" src="../_images/pag910.png" />
 <ul class="simple">
 <li>Proceso Generar reporte HTML</li>
 </ul>
@@ -350,9 +378,9 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 <p><a class="reference external" href="../_static/images/tablero4g/mercado.sql">ConsultaMercado</a></p>
 <p>La ejecución de los procesos nos muestra los siguientes resultados:</p>
 <p>Cuidad:</p>
-<img alt="../_images/pag1012.png" class="align-center" src="../_images/pag1012.png" />
+<img alt="../_images/pag1011.png" class="align-center" src="../_images/pag1011.png" />
 <p>Mercado:</p>
-<img alt="../_images/pag10.24.png" class="align-center" src="../_images/pag10.24.png" />
+<img alt="../_images/pag10.22.png" class="align-center" src="../_images/pag10.22.png" />
 </div>
 <div class="section" id="reproceso">
 <h2>8.  REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h2>
@@ -368,7 +396,7 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 <div class="section" id="reproceso-por-consola">
 <h3>2)  Reproceso por Consola<a class="headerlink" href="#reproceso-por-consola" title="Permalink to this headline">¶</a></h3>
 <p>Se debe correr de la siguiente manera:</p>
-<img alt="../_images/pag11.27.png" class="align-center" src="../_images/pag11.27.png" />
+<img alt="../_images/pag11.25.png" class="align-center" src="../_images/pag11.25.png" />
 <p>Se debe agregar la fecha del día a reprocesar</p>
 </div>
 </div>
@@ -412,15 +440,18 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tableroamxload.html" class="btn btn-neutral float-right" title="Tablero AMX Load LTE" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tableroamxload.html" class="btn btn-neutral float-right" title="Tablero AMX Load LTE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nokiaumts.html" class="btn btn-neutral" title="Uplink Interference (Nokia UMTS)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nokiaumts.html" class="btn btn-neutral" title="Uplink Interference (Nokia UMTS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -454,7 +485,8 @@ Los mercados a incluír son los de Argentina y Paraguay.</p>
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

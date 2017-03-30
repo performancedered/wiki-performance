@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="_static/icono_pag.ico"/>
   
+  
+  
 
   
 
@@ -32,6 +34,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="index.html"/>
         <link rel="next" title="Reporte File System" href="_sections/reportefilesystem.html"/>
         <link rel="prev" title="MAPA" href="mapa.html"/> 
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +88,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduccion.html">INTRODUCCIÓN</a></li>
 </ul>
 <ul>
@@ -108,6 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="_sections/reportebhday.html"> 4. Reporte Bh Day</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_sections/reportetablespace.html"> 5. Reporte Table Space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_sections/reporteransharing.html"> 6. Reporte Movistar Ran Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="proyectos.html">PROYECTOS</a></li>
@@ -124,8 +134,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">WIKI-PERFORMANCE</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">WIKI-PERFORMANCE</a>
+        
       </nav>
 
 
@@ -134,21 +146,38 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>REPORTES</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>REPORTES</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -260,21 +289,41 @@
 <li class="toctree-l2"><a class="reference internal" href="_sections/reporteransharing.html#reproceso-manual">8. REPROCESO MANUAL</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/downstream.html"> 7. Reporte Downstream Internet Wnn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#macroflujo">5.      MACROFLUJO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#descripcion-detallada">DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/downstream.html#datos-de-origen-y-datos-destino">6.1. Datos de origen y datos destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/downstream.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/downstream.html#listado-de-tablas-utilizadas">6.3. Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/downstream.html#pentaho">6.4. Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#controles">7.      CONTROLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/downstream.html#reproceso-manual">8. REPROCESO MANUAL</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="_sections/reportefilesystem.html" class="btn btn-neutral float-right" title="Reporte File System" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="_sections/reportefilesystem.html" class="btn btn-neutral float-right" title="Reporte File System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mapa.html" class="btn btn-neutral" title="MAPA" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mapa.html" class="btn btn-neutral" title="MAPA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -308,7 +357,8 @@
             VERSION:'',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>
