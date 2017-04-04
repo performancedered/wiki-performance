@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reporte CGNAT &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="REPORTES" href="../reportes.html"/>
+        <link rel="next" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="prev" title="Reporte Tráfico Mensual Implantación" href="reporteimplantacion.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reportes.html">REPORTES</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="reportefilesystem.html"> 1. Reporte File System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteraw.html"> 2. Reporte Raw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportehour.html"> 3. Reporte Hour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportetablespace.html"> 5. Reporte Table Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteransharing.html"> 6. Reporte Movistar Ran Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteimplantacion.html">     8. Reporte Tráfico Mensual Implantación</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     9. Reporte CGNAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo">5.      MACROFLUJO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6. DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-de-origen-y-datos-destino">6.1. Datos de origen y datos destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3. Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.4. Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#controles">7.      CONTROLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8. REPROCESO MANUAL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
+        
+      <li>Reporte CGNAT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reporte-cgnat">
+<h1>Reporte CGNAT<a class="headerlink" href="#reporte-cgnat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Reporte CGNAT</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+<li>Cortado: Servidor LINUX en donde se importan los CSV desde el proveedor.</li>
+</ul>
+<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p><strong>CGNAT</strong></p>
+<p>Las direcciones IP públicas con las que cuenta Claro son limitadas, no es posible asignarle una a cada usuario de la red móvil, por ese motivo c/u debe ser reutilizada varias veces (nateo).
+En la compañía contamos con 2 equipos Cisco encargados de realizar el nateo de direcciones IP públicas.  Los equipos están ubicados en Don Torcuato (CF223) y Jonte 2 (C1900) y cada uno tiene 3 tarjetas para realizar la tarea.  Dado que cada tarjeta tiene una capacidad limitada, debe estar correctamente balanceada la carga entre todas las tarjetas, y este reporte ayuda a visualizar hora x hora la cantidad de subscribers que maneja c/u.</p>
+</div>
+<div class="section" id="macroflujo">
+<h2>5.      MACROFLUJO<a class="headerlink" href="#macroflujo" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/pag324.png" class="align-center" src="../_images/pag324.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6. DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-de-origen-y-datos-destino">
+<h3>6.1. Datos de origen y datos destino<a class="headerlink" href="#datos-de-origen-y-datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen y Path: falda.claro.amx, /calidad/ReporteCGNAT/</li>
+<li>Frecuencia actualización:  Semanal (Los domingos a las 7 a.m)</li>
+<li>Tipo de Archivo de Salida: .xlsx</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los scripts son los siguientes:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reportecgnat/cleanupLogs.sh">cleanupLogs</a></li>
+<li><a class="reference external" href="../_static/images/reportecgnat/deleteEmptyLogs.sh">deleteEmptyLogs</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.3. Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>La tabla utilizada es:</p>
+<ul class="simple">
+<li>CSCO_CGN_STATS_HOUR</li>
+</ul>
+</div>
+<div class="section" id="pentaho">
+<h3>6.4. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto:</p>
+<img alt="../_images/pag423.png" class="align-center" src="../_images/pag423.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End</li>
+</ul>
+<img alt="../_images/pag525.png" class="align-center" src="../_images/pag525.png" />
+<ul class="simple">
+<li>Proceso Generar Reporte</li>
+</ul>
+<p>Este proceso se encarga de ejecutar la query en CGNAT, en el siguiente paso se da formato a la fecha (DD/MM/YYYY) y para finalizar se cargan los datos en el template de Excel</p>
+<img alt="../_images/pag5.218.png" class="align-center" src="../_images/pag5.218.png" />
+</div>
+</div>
+<div class="section" id="controles">
+<h2>7.      CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h2>
+<p><strong>No contiene controles</strong></p>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>8. REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p><strong>No tiene reproceso.</strong></p>
+<p>Se envía vía email un archivo Excel con el nombre:  REPORTE_CGNAT 02-04-2017</p>
+<img alt="../_images/pag5.312.png" class="align-center" src="../_images/pag5.312.png" />
+<img alt="../_images/pag626.png" class="align-center" src="../_images/pag626.png" />
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../proyectos.html" class="btn btn-neutral float-right" title="PROYECTOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reporteimplantacion.html" class="btn btn-neutral" title="Reporte Tráfico Mensual Implantación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

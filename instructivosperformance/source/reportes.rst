@@ -21,3 +21,5 @@ REPORTES
     7. Reporte Downstream Internet Wnn <../../_sections/downstream>
 
    	8. Reporte Tráfico Mensual Implantación <../../_sections/reporteimplantacion>
+
+   	9. Reporte CGNAT <../../_sections/reportecgnat>
