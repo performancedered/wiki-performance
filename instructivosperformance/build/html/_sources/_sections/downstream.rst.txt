@@ -4,7 +4,7 @@ Reporte Downstream Internet Wnn
 1.	OBJETIVO
 ------------
 
-El presente documento buscar explicar y detallar el proceso que genera el Reporte Downstream
+El presente documento buscar explicar y detallar el proceso que genera el Reporte Downstream Internet.
 
 2.	ALCANCE 
 -----------
@@ -78,15 +78,14 @@ Estructura del proyecto:
 
 En este proceso se encarga de ejecutar las queries para generar el Excel de salida.
 En el Excel se muestra cada trabajo en una hoja diferente.
-Por ejemplo: una hoja de internet Downstream. 
-Tablas dinámicas- hoja Gráficos
+
 
 .. image:: ../_static/images/downstream/pag4.3.png
   :align: center 
 
 •	Proceso DownstreamTIER1
 
-Este proceso se encarga de ejecutar la query en Table Downstream, en el siguiente paso se da formato a la fecha (dd/MM/yyyy) y para finalizar se genera la solapa de datos en la hoja de Excel. 
+Este proceso se encarga de ejecutar la query en Table TIER-1 Hour, en el siguiente paso se da formato a la fecha (dd/MM/yyyy) y para finalizar se genera la solapa de datos en la hoja de Excel. 
 
 .. image:: ../_static/images/downstream/pag5.png
   :align: center 

@@ -19,3 +19,5 @@ REPORTES
     6. Reporte Movistar Ran Sharing <../../_sections/reporteransharing>
 
     7. Reporte Downstream Internet Wnn <../../_sections/downstream>
+
+   	8. Reporte Tráfico Mensual Implantación <../../_sections/reporteimplantacion>

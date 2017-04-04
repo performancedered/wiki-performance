@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Reporte Downstream Internet Wnn &mdash; WIKI-PERFORMANCE  documentation</title>
+  <title>Reporte Tráfico Mensual Implantación &mdash; WIKI-PERFORMANCE  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="REPORTES" href="../reportes.html"/>
-        <link rel="next" title="Reporte Tráfico Mensual Implantación" href="reporteimplantacion.html"/>
-        <link rel="prev" title="Reporte Movistar Ran Sharing" href="reporteransharing.html"/> 
+        <link rel="next" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="prev" title="Reporte Downstream Internet Wnn" href="downstream.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -118,13 +118,14 @@
 <li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reportetablespace.html"> 5. Reporte Table Space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reporteransharing.html"> 6. Reporte Movistar Ran Sharing</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"> 7. Reporte Downstream Internet Wnn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     8. Reporte Tráfico Mensual Implantación</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCIÓN GENERAL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#macroflujo">5.      MACROFLUJO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6. DESCRIPCIÓN DETALLADA</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#datos-de-origen-y-datos-destino">6.1. Datos de origen y datos destino</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3. Listado de Tablas Utilizadas</a></li>
@@ -135,7 +136,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8. REPROCESO MANUAL</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="reporteimplantacion.html">     8. Reporte Tráfico Mensual Implantación</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
@@ -186,7 +186,7 @@
         
           <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
         
-      <li>Reporte Downstream Internet Wnn</li>
+      <li>Reporte Tráfico Mensual Implantación</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,11 +203,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="reporte-downstream-internet-wnn">
-<h1>Reporte Downstream Internet Wnn<a class="headerlink" href="#reporte-downstream-internet-wnn" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="reporte-trafico-mensual-implantacion">
+<h1>Reporte Tráfico Mensual Implantación<a class="headerlink" href="#reporte-trafico-mensual-implantacion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
-<p>El presente documento buscar explicar y detallar el proceso que genera el Reporte Downstream Internet.</p>
+<p>El presente documento buscar explicar y detallar el proceso que genera el Reporte Trafico Mensual Implantación.</p>
 </div>
 <div class="section" id="alcance">
 <h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
@@ -215,70 +215,83 @@
 </div>
 <div class="section" id="definiciones">
 <h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</p>
-</li>
-<li><p class="first">Cortado: Servidor LINUX en donde se importan los CSV desde el proveedor.</p>
-<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
-</li>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+<li>Cortado: Servidor LINUX en donde se importan los CSV desde el proveedor.</li>
 </ul>
+<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
 </div>
 <div class="section" id="descripcion-general">
 <h2>4.      DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
-<p><strong>PENDIENTE</strong></p>
+<p>Este reporte será utilizado por el área de Implantación para saber si un contrato de alquiler de sitio debe renovarse o no con el propietario.
+Se deben remarcar los siguientes casos:</p>
+<ul class="simple">
+<li>Sitios con contratos próximos a vencer de sitios que no tienen trafico</li>
+<li>Sitios con contratos vencidos o rescindidos que tiene trafico
+Se toma información de tráfico de la base de datos Smart (gsm, umts, lte).</li>
+</ul>
+<p>El Excel muestra las siguientes solapas:</p>
+<ul class="simple">
+<li>Tráfico: En esta solapa se deben ingresar los valores CELL ID para verificar si hay tráfico.</li>
+<li>Detalle: Muestra una tabla con los datos de cada CELL ID</li>
+</ul>
+<p>Para saber si hay tráfico en los últimos 6 meses se utiliza la solapa Trafico, ingresando el cell id</p>
+<img alt="../_images/pag323.png" class="align-center" src="../_images/pag323.png" />
+<p>Cuando ingresamos las cell id nos devuelve dos resultados:</p>
+<ul class="simple">
+<li>Bandera Verde <img alt="banderaverde" src="../_images/bandera1.png" />: Significa que hubo tráfico en algunas de las mediciones en los meses que indica la planilla.</li>
+<li>Bandera Roja  <img alt="banderaroja" src="../_images/bandera2.png" />: Significa que hubo no tráfico en algunas de las mediciones en los meses que indica la planilla.</li>
+</ul>
 </div>
 <div class="section" id="macroflujo">
 <h2>5.      MACROFLUJO<a class="headerlink" href="#macroflujo" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag322.png" class="align-center" src="../_images/pag322.png" />
+<img alt="../_images/pag422.png" class="align-center" src="../_images/pag422.png" />
 </div>
 <div class="section" id="descripcion-detallada">
-<h2>DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<h2>6. DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="datos-de-origen-y-datos-destino">
 <h3>6.1. Datos de origen y datos destino<a class="headerlink" href="#datos-de-origen-y-datos-destino" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Server Origen y Path: falda.claro.amx /calidad/DownstreamInternet/</li>
-<li>Frecuencia actualización: Frecuencia semanal(domingos a las 7 am )</li>
-<li>Tipo de Archivo de Salida: .xlsx</li>
+<li>Server Origen y Path: falda.claro.amx, /calidad/ReporteImp/</li>
+<li>Frecuencia actualización:  Mensual (El quinto día de cada mes)</li>
+<li>Tipo de Archivo de Salida: .xls</li>
 </ul>
 </div>
 <div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
 <h3>6.2. Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
 <p>Los scripts son los siguientes:</p>
 <ul class="simple">
-<li><a class="reference external" href="../_static/images/downstream/DownstreamInternet.sh">DownstreamInternet</a></li>
-<li><a class="reference external" href="../_static/images/downstream/DownstreamInternetRun.sh">DownstreamInternetRun</a></li>
+<li><a class="reference external" href="../_static/images/reporteimplantacion/reporteImp.sh">reporteImp</a></li>
+<li><a class="reference external" href="../_static/images/reporteimplantacion/reporteImpMensual.sh">reporteImpMensual</a></li>
 </ul>
 </div>
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.3. Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
-<p>La tabla utilizada es:</p>
+<p>Las tablas utilizadas son:</p>
 <ul class="simple">
-<li>CSCO_INTERFACE_HOUR</li>
-<li>CSCO_LINKS</li>
+<li>MULTIVENDOR_BTS_DAY_MONTH MV</li>
+<li>MULTIVENDOR_GPRS_DAY_MONTH MV</li>
+<li>OBJECTS_SP_GSM</li>
+<li>UMTS_NSN_SERVICE_WCEL_DAYM</li>
+<li>UMTSC_NSN_MACD_WCEL_DAYM</li>
+<li>OBJECTS_SP_UMTS</li>
+<li>OBJECTS_SP_LTE</li>
+<li>LTE_NSN_SERVICE_LCEL_DAYM</li>
 </ul>
 </div>
 <div class="section" id="pentaho">
 <h3>6.4. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
 <p>Estructura del proyecto:</p>
-<img alt="../_images/pag421.png" class="align-center" src="../_images/pag421.png" />
+<img alt="../_images/pag524.png" class="align-center" src="../_images/pag524.png" />
 <ul class="simple">
 <li>Proceso Pentaho End to End</li>
 </ul>
-<img alt="../_images/pag4.211.png" class="align-center" src="../_images/pag4.211.png" />
+<img alt="../_images/pag5.217.png" class="align-center" src="../_images/pag5.217.png" />
 <ul class="simple">
-<li>Proceso DownstreamInternet</li>
+<li>Proceso Generar Excel</li>
 </ul>
-<p>En este proceso se encarga de ejecutar las queries para generar el Excel de salida.
-En el Excel se muestra cada trabajo en una hoja diferente.</p>
-<img alt="../_images/pag4.34.png" class="align-center" src="../_images/pag4.34.png" />
-<ul class="simple">
-<li>Proceso DownstreamTIER1</li>
-</ul>
-<p>Este proceso se encarga de ejecutar la query en Table TIER-1 Hour, en el siguiente paso se da formato a la fecha (dd/MM/yyyy) y para finalizar se genera la solapa de datos en la hoja de Excel.</p>
-<img alt="../_images/pag523.png" class="align-center" src="../_images/pag523.png" />
-<p>Este proceso se realiza de la misma manera para:</p>
-<p>o       Downstream Hour
-o       CACHECDN Hour</p>
+<p>Este proceso se encarga de ejecutar la query en tráfico imple, en el siguiente paso se da formato a la fecha (DD/MM/YYYY) y para finalizar se cargan los datos en el template de Excel</p>
+<img alt="../_images/pag5.311.png" class="align-center" src="../_images/pag5.311.png" />
 </div>
 </div>
 <div class="section" id="controles">
@@ -288,10 +301,9 @@ o       CACHECDN Hour</p>
 <div class="section" id="reproceso-manual">
 <h2>8. REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
 <p><strong>No tiene reproceso.</strong></p>
-<p>Se envía vía email un archivo Excel con el nombre: Downstream Internet_20170309_15</p>
-<img alt="../_images/pag5.216.png" class="align-center" src="../_images/pag5.216.png" />
-<img alt="../_images/pag624.png" class="align-center" src="../_images/pag624.png" />
-<img alt="../_images/pag6.215.png" class="align-center" src="../_images/pag6.215.png" />
+<p>Se envía vía email un archivo Excel con el nombre: trafico_implantacion 03-2017</p>
+<img alt="../_images/pag625.png" class="align-center" src="../_images/pag625.png" />
+<img alt="../_images/pag6.216.png" class="align-center" src="../_images/pag6.216.png" />
 </div>
 </div>
 
@@ -305,10 +317,10 @@ o       CACHECDN Hour</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reporteimplantacion.html" class="btn btn-neutral float-right" title="Reporte Tráfico Mensual Implantación" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../proyectos.html" class="btn btn-neutral float-right" title="PROYECTOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reporteransharing.html" class="btn btn-neutral" title="Reporte Movistar Ran Sharing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="downstream.html" class="btn btn-neutral" title="Reporte Downstream Internet Wnn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
