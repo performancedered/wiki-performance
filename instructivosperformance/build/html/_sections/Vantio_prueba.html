@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>VANTIO SNMP &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>VANTIO SNMP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vantio-snmp">
+<h1>VANTIO SNMP<a class="headerlink" href="#vantio-snmp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El presente documento busca explicar y detallar el proceso que genera la carga de MIBs y de OID’s mediante el protocolo SNMP hacia el servidor Guerrero para la plataforma de VANTIO.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El servidor utilizado para levantar variables MIBS se llama guerrero.claro.amx</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>El protocolo SNMP pertenece a la capa de aplicación del modelo OSI y facilita el intercambio de información de administración entre dispositivos de red.
+Mediante el protocolo SNMP se puede acceder a un tipo de base de datos que contiene información jerárquica, estructurada en forma de árbol llamada MIB (MANAGEMENT INFORMATION BASE).</p>
+<p>Cada objeto que se encuentra en esa jerarquía de MIBS tiene un identificador de objeto llamado OID. Entonces la MIB se puede identificar por una OID o por un nombre de variable.</p>
+<p>Existen en la actualidad tres versiones de SNMP (SNMPv1, SNMPv2 y SNMPv3). Las más utilizadas son la 1 y la 2, aunque se está comenzando a utilizar la 3, una versión muy reciente, que presenta mejoras significativas, principalmente en aspectos relacionados con la seguridad.
+En SNMP la clave de acceso se denomina comunidad.</p>
+<p>Para poder extraer información de las MIBS es necesario contar con los siguientes datos:
+•       IP del servidor destino
+•       Versión
+•       Comunidad
+•       OID</p>
+<p>Para acceder a esas OID y a los datos necesarios existen ciertos comandos SNMP entre los que se encuentran:</p>
+<ul class="simple">
+<li>Snmpget: La orden snmpget se puede utilizar para obtener datos de un host remoto dado su nombre de host, la información y un OID.</li>
+</ul>
+<blockquote>
+<div>Ejemplo:
+snmpget -c [comunidad] -v[versión] [IP] [OID]</div></blockquote>
+<ul class="simple">
+<li>Snmtranslate: Esta órden es una herramiente muy poderosa que permite explorar el árbol MIB de diversas formas desde la línea de órdenes. Su forma más básica permite pasar de un OID a la variable que representa.</li>
+</ul>
+<blockquote>
+<div>Ejemplo
+snmptranslate [OID]</div></blockquote>
+<ul class="simple">
+<li>Snmpwalk: Lo que hace este comando es mostrar el árbol de MIBS desde la OID que se busca para abajo.</li>
+</ul>
+<blockquote>
+<div>snmpwalk –v[versión] –c [comunidad] [IP] [OID]</div></blockquote>
+<p>En el área de calidad y performance de red hay varios proyectos que levantan datos a partir de variables MIBS, uno de los cuales es VANTIO.
+Los VANTIO manejan los DNS (DOMAIN NAME SYSTEM) hacia Internet. Una de las funciones principales de los DNS es asignarle nombres a las direcciones IP como es en el caso de google cuya IP es  216.58.210.163 pero al sitio web se accede mediante la dirección www.google.com.ar.</p>
+<p>En Claro tenemos 16 VANTIOS, 1 en Asunción, 1 en Uruguay, y 14 en Argentina.</p>
+<p>Todos esos archivos se encuentran en guerrero y la ruta es /SMART/storage01/mibsFiles/vantio/vantio/cpu-interfaces-servercache.</p>
+<p>Dentro de esa ruta se alojan las variables MIBS transformadas en .TXT (Archivos de Texto).</p>
+<p>El usuario de guerrero es: calidad.
+El password de guerrero es: Josue2415.</p>
+<p>Si me quiero conectar a alguna de las MIBS mostradas a continuación tengo que entrar en guerrero y tirar por ejemplo el siguiente comando:</p>
+<img alt="../_images/image1.png" class="align-center" src="../_images/image1.png" />
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<p>No aplica sub-seccion.</p>
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen y Path:</li>
+</ul>
+<blockquote>
+<div>10.101.6.160 ,10.104.162.242 ,10.104.32.185
+10.104.32.187 ,10.104.32.189 ,10.104.32.191 ,10.104.33.236
+10.104.33.238 ,10.105.98.140 ,10.105.98.142 ,10.105.98.144 10.105.98.146 ,10.105.99.244 ,10.105.99.245 ,10.84.78.20
+10.92.25.20.
+El path en variables MIBS se traduce en OIDS así que paso las OIDS que se consultan lo que se detalla en el siguiente ítem.</div></blockquote>
+<ul class="simple">
+<li>Cantidad de archivos origen: Como se dijo anteriormente en SNMP no hay un path sino un árbol que tiene toda la información de lo que se necesita identificando cada información mediante una OID. Las OID usadas son:</li>
+</ul>
+<img alt="../_images/image2.png" class="align-center" src="../_images/image2.png" />
+<ul class="simple">
+<li>Frecuencia actualización: Son datos instantáneos</li>
+<li>Tipo de Archivo: OID</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: guerrero.claro.amx</li>
+<li>Conversión de Archivos: Si, convierte MIBS en archivos .txt.</li>
+<li>Tabla Files: [Indicar “Si” o “No” tiene tabla files]</li>
+<li>Tabla Auxiliar: [Indicar “Si” o “No” tiene tabla auxiliar]</li>
+<li>Frecuencia de corrida del proceso: cada 15 minutos levanta datos</li>
+<li>Regionales: NO</li>
+<li>RAW Si/No: SI</li>
+<li>Hour Si/No: Si pero en servidor perdido.claro.amx</li>
+<li>Day Si/No: Si pero en servidor perdido.claro.amx</li>
+<li>BH Si/No: Si pero en servidor perdido.claro.amx</li>
+<li>ISABH Si/No: Si pero en servidor perdido.claro.amx</li>
+<li>Países: Argentina</li>
+<li>Directorio Destino (File System): SMART/Storage01/mibsfiles/vantio/vantio/ (depende el KPI será el directorio).</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Los Scripts tienen las siguientes funciones:</p>
+<p>1-      Copiar los archivos</p>
+<p>2-      Ejecutar Pentaho:</p>
+<p>No aplica esta sub-seccion.</p>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son las siguientes:</p>
+<p><a class="reference external" href="mailto:CALIDAD_SNMP_RAW&#37;&#52;&#48;SSW">CALIDAD_SNMP_RAW<span>&#64;</span>SSW</a></p>
+<p>Las tablas utilizadas son las siguientes:</p>
+</div>
+<div class="section" id="pentaho">
+<h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>No aplica esta sub-seccion.</p>
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pendiente</strong></p>
+</div>
+<div class="section" id="smart">
+<h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
+<img alt="../_images/image4.png" class="align-center" src="../_images/image4.png" />
+<img alt="../_images/image5.png" class="align-center" src="../_images/image5.png" />
+<img alt="../_images/image6.png" class="align-center" src="../_images/image6.png" />
+</div>
+<div class="section" id="control-de-cambios">
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+ <style type="text/css">
+  table {
+     border:2px solid red;
+     border-collapse:separate;
+     }
+  th, td {
+     border:1px solid red;
+     padding:10px;
+     }
+</style>
+
+<table border="3">
+<tr>
+  <th>Fecha</th>
+  <th>Responsable</th>
+  <th>Ticket Jira</th>
+  <th>Detalle</th>
+  <th>Repositorio</th>
+</tr>
+<tr>
+  <td> 12/05/2017 </td>
+  <td> Franco Rinaldi </td>
+  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CD-140 </a></p>  </td>
+  <td> Creacion de documentación de Proyecto existente.
+       <br>Proyecto actual - Perdido.</br></td>
+  <td> Servidor: PERDIDO </td>
+</tr>
+</table></div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

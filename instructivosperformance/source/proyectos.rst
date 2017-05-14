@@ -25,3 +25,5 @@ PROYECTOS
    10. FIREWALL CHECKPOINT GRX BX <../../_sections/firewall>
 
    11. CISCO EPDG y SAMOG <../../_sections/cisco_epdg_samog>
+
+   12. VANTIO SNMP (PERDIDO) <../../_sections/Vantio>
