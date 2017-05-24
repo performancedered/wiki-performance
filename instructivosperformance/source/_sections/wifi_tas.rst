@@ -1,0 +1,256 @@
+
+Nokia WIFI (TAS)
+===========
+
+1.	OBJETIVO
+------------
+
+El presente documento buscar explicar y detallar el proceso que genera TAS.
+
+2.	ALCANCE 
+-----------
+
+Áreas involucradas: Performance de Red
+
+3.	DEFINICIONES
+----------------
+
+    • CORTADO: Servidor UNIX en donde se importan los archivos desde el proveedor. El nombre del servidor es cortado.claro.amx y la dirección IP física es 10.105.146.8
+
+4.	DESCRIPCION GENERAL 
+-----------------------
+
+Tas es una entidad perteneciente a la red CORE de LTE que junto con otros elementos como el AAA, el CSCF y el iNUM componen lo que se llama el IMS (Subsistema Multimedia IP) y son elementos destinados a manejar información sobre el nuevo servicio que ofrece LTE de VOLTE (Voz sobre LTE). En Claro tenemos por el momento dos TAS, uno en Córdoba y otro en Torcuato.
+La integración en SMART se realiza mediante la lectura de archivos XML que provienen del servidor de Netact (NOKIA) y cuyos KPI se encuentran en NETACT Regional Cluster 6 y la web es https://rc6login.rc6.netact.claro.amx/startpage/. 
+
+
+5.	MACRO FLUJO DEL PROCESO
+---------------------------
+
+.. image:: ../_static/images/wifi_tas/image1.png 
+  :align: center 
+
+6.	DESCRIPCIÓN DETALLADA
+--------------------------
+
+6.1.	Datos Origen
+********************
+
+•	Server Origen y Path: 10.105.39.140, 
+    /d/oss/global/var/mediation/north/pm/export/YYYYMMDDHH/etlexpmx_TAS*
+
+•	Cantidad de archivos origen: 5 archivos con distintos contadores cada uno.
+
+    ETLEXPMX_TAS_YYYYMMDDHHMMSS_NÚMERO.xml.gz
+
+.. image:: ../_static/images/wifi_tas/image2.png 
+  :align: center 
+
+•	Frecuencia actualización: Frecuencia Horaria
+•	Tipo de Archivo: XML
+
+
+6.2.	Datos Destino
+*********************
+
+•   Server Destino: Cortado
+•	Conversión de Archivos: NO
+•	Tabla Files: SI
+•	Tabla Auxiliar: NO
+•	Frecuencia de corrida del proceso: 1 vez por hora
+•	Regionales: Si
+•	RAW Si/No: Si
+•	Hour Si/No: Si
+•	Day Si/No: Si
+•	BH Si/No: Si
+•	ISABH Si/No: Si
+•	Países: Argentina
+•	Directorio Destino (File System): /calidad/NokiaWIFI
+
+
+6.3.	Shell Copiar Archivos Origen a Destino y limpieza de los mismos
+***********************************************************************
+
+Scripts tienen las siguientes funciones:
+
+    a- Copiar los archivos
+
+    b- Limpieza
+
+    c- Ejecutar Pentaho
+
+Los scripts son los siguientes:
+El Script NokiaWIFIEndToEnd.sh es la raíz del proceso.
+
+Los Scrips a utilizar son:
+•	NokiaWIFIEndToEnd.sh
+•	runAll.sh
+•	runNokiaWIFI.sh
+•	runParserNokiaWIFI.sh
+•	syncro_nokiawifi.sh
+•	syncro_nokiawifi_object.sh
+•	generarCsvAll.sh
+
+6.4.	Listado de Tablas Utilizadas
+************************************
+
+Las tablas utilizadas son las siguientes:  
+
+ .. image:: ../_static/images/wifi_tas/image3.png 
+   :align: center
+
+• TABLA LTE_C_NOKIA_TAS_HOUR
+
+ .. image:: ../_static/images/wifi_tas/image4.png 
+   :align: center
+
+• TABLA LTE_C_NOKIA_TAS_DAY
+
+ .. image:: ../_static/images/wifi_tas/image5.png 
+   :align: center
+
+• TABLA LTE_C_NOKIA_TAS_BH
+
+ .. image:: ../_static/images/wifi_tas/image6.png 
+   :align: center
+
+• TABLA LTE_C_NOKIA_TAS_IBHW
+
+ .. image:: ../_static/images/wifi_tas/image7.png 
+   :align: center
+
+6.5.	Pentaho
+***************
+
+ .. image:: ../_static/images/wifi_tas/image8.png 
+  :align: center
+
+•	Proceso Pentaho End to End
+
+ .. image:: ../_static/images/wifi_tas/image9.png 
+  :align: center
+
+•	Pentaho runParserNokiaWIFI
+
+ .. image:: ../_static/images/wifi_tas/image10.png 
+  :align: center
+
+•	Pentaho Get Files
+
+ .. image:: ../_static/images/wifi_tas/image11.png 
+  :align: center
+
+•	Pentaho Get FileName & Populate Raw
+
+ .. image:: ../_static/images/wifi_tas/image12.png 
+  :align: center
+
+•	Pentaho Update Table Files
+
+ .. image:: ../_static/images/wifi_tas/image13.png 
+  :align: center
+
+•	Pentaho Merge Table Hour
+
+ .. image:: ../_static/images/wifi_tas/image14.png 
+  :align: center
+
+•	Pentaho InsProcessToRunDAYBH
+
+ .. image:: ../_static/images/wifi_tas/image15.png 
+  :align: center
+
+6.6. Controles
+
+.. image:: ../_static/images/wifi_tas/image16.png 
+  :align: center
+
+7.	REPROCESO MANUAL
+--------------------
+
+PROCESO DE REWORK END TO END
+
+.. image:: ../_static/images/wifi_tas/image17.png 
+  :align: center
+
+Ubicación de los scripts en la carpeta: /calidad/NokiaWIFI/Scripts
+
+Ubicación del Rework de ejecución en Pentaho: /calidad/NokiaWIFI/Rework
+
+El formato de fecha para el Rework sería el siguiente:
+
+DDMMYYYYHH24
+YYYYMMDDHH24
+
+Por consola se utiliza de la siguiente manera: 
+
+.. image:: ../_static/images/wifi_tas/image18.png 
+  :align: center
+
+Donde tenemos tres parámetros:
+
+• RUTA: /calidad/NokiaWIFI/Scripts/NokiaWIFIEndToEndRework.sh
+• FECHA_PROC: DDMMYYYYHH24
+• HORA_PROC: YYYYMMDDHH24
+
+Ejecutando el siguiente script:
+
+• sh /calidad/NokiaWIFI/Scripts/NokiaWIFIEndToEndRework.sh DDMMYYYYHH24 YYYYMMDDHH24
+
+
+8.	SMART
+---------
+
+Los reportes en la herramienta Smart se muestran de la siguiente manera: 
+
+.. image:: ../_static/images/wifi_tas/image19.png 
+  :align: center
+
+.. image:: ../_static/images/wifi_tas/image20.png 
+  :align: center
+
+.. image:: ../_static/images/wifi_tas/image21.png 
+  :align: center
+
+.. image:: ../_static/images/wifi_tas/image22.png 
+  :align: center
+
+.. image:: ../_static/images/wifi_tas/image23.png 
+  :align: center
+
+Nota: Los valores mostrados en SMART no deben presentar picos horarios de más del 50% de una hora respecto de la otra.
+En SMART se muestran todos los KPI que se pidieron analizar con su nombre correspondiente.
+
+
+9. CONTROL DE CAMBIOS
+---------------------
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th>Ticket Jira</th>
+    <th>Detalle</th>
+    <th>Repositorio</th>
+  </tr>
+  <tr>
+    <td> 23/05/2017 </td>
+    <td> Franco Rinaldi </td>
+    <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-740" </a></p>  </td>
+    <td> Creacion de documentación de Proyecto.
+         <br>Proyecto actual - CORTADO.</br></td>
+    <td> Servidor: CORTADO </td>
+  </tr>
+  </table>

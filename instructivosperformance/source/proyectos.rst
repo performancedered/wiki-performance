@@ -27,3 +27,5 @@ PROYECTOS
    11. CISCO EPDG y SAMOG <../../_sections/cisco_epdg_samog>
 
    12. VANTIO SNMP (PERDIDO) <../../_sections/Vantio>
+
+   13. WIFI TAS (CORTADO) <../../_sections/wifi_tas>
