@@ -31,3 +31,7 @@ PROYECTOS
    13. WIFI TAS (CORTADO) <../../_sections/wifi_tas>
 
    14. CISCO PNR PCP (PERDIDO) <../../_sections/ciscopnrpcp>
+
+   15. CISCO PNR CSVs (CORTADO) <../../_sections/ciscopnrcsvs>
+
+   16. NOKIA MME - MIGRACION (CORTADO) <../../_sections/nokiamme>
