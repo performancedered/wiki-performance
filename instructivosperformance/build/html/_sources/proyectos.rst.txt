@@ -35,3 +35,10 @@ PROYECTOS
    15. CISCO PNR CSVs (CORTADO) <../../_sections/ciscopnrcsvs>
 
    16. NOKIA MME - MIGRACION (CORTADO) <../../_sections/nokiamme>
+
+   17. Alcatel IPRAN (XML) (CORTADO) <../../_sections/Alcatelipranxml>
+
+   18. MOVISTAR RAN SHARING (CORTADO) <../../_sections/Alcatelransharing>
+   
+
+   

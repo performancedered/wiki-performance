@@ -236,11 +236,11 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
-    <td> 12/05/2017 </td>
+    <td> 19/05/2017 </td>
     <td> Franco Rinaldi </td>
     <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-38"> CL-38 </a></p>  </td>
     <td> Creacion de documentación de Proyecto existente.
-         <br>Proyecto actual - Cortadp.</br></td>
+         <br>Proyecto actual - Cortad0.</br></td>
     <td> Servidor: CORTADO </td>
   </tr>
   </table>

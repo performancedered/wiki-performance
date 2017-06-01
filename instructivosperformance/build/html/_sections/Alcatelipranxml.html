@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Alcatel IPRAN (XML) &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="next" title="PROCESOS" href="../procesos.html"/>
+        <link rel="prev" title="NOKIA MME" href="nokiamme.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../proyectos.html">PROYECTOS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ciscoprime.html">1. CISCO PRIME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="abmcisco.html">2. MANUAL DE USUARIO ABM CISCO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lteregional.html">3. LTE REGIONAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wapZte.html">4. WAP ZTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobileum.html">5. ANTISPAMMING MOBILEUM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnotree.html">6. TECNOTREE COMMERCIAL ENGINE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referenciatableroparticipacion.html">7. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referenciatablerofemtocell.html">8. ALCATEL FEMTOCELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enodb.html">9. ALCATEL LTE URUGUAY - ENODB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">10. FIREWALL CHECKPOINT GRX BX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cisco_epdg_samog.html">11. CISCO EPDG y SAMOG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vantio.html">12. VANTIO SNMP (PERDIDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_tas.html">13. WIFI TAS (CORTADO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ciscopnrpcp.html">14. CISCO PNR PCP (PERDIDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ciscopnrcsvs.html">15. CISCO PNR CSVs (CORTADO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nokiamme.html">16. NOKIA MME - MIGRACION (CORTADO)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">17. Alcatel IPRAN (XML) (CORTADO)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#controles">7.  CONTROLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">8.      REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smart">8.      SMART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../proyectos.html">PROYECTOS</a> &raquo;</li>
+        
+      <li>Alcatel IPRAN (XML)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="alcatel-ipran-xml">
+<h1>Alcatel IPRAN (XML)<a class="headerlink" href="#alcatel-ipran-xml" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo del documento será el de presentar y explicar los procesos que genera IPRAN.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Áreas involucradas: Performance de Red</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<p>Cortado: Servidor UNIX en donde se importan los archivos desde el proveedor. El nombre del servidor es cortado.claro.amx y la dirección IP física es 10.105.146.8.
+Falda: Servidor de desarrollo en donde se desarrollan todos los proyectos antes de su pasaje a producción.</p>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>El IPRAN abarca todos los routers Alcatel que tiene instalado Claro. Estos equipos se encuentran en Argentina, Uruguay y Paraguay.
+Los IPRAN se conectan a tramas E1, SDH, topología en anillo, a celdas, entre otros.
+Hay dos gestores que se utilizan: uno se llama SAM y otro se llama PNM.</p>
+</div>
+<div class="section" id="macro-flujo-del-proceso">
+<h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<p>En IPRAN hay cuatro macroflujos.</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p class="first">IpranSyncroXML.sh</p>
+<blockquote>
+<div><p>Este Script corre cada 5 minutos copiando los XML que existan, los parsea y los inserta en la raw.
+Los Macroflujos de las tablas raw se muestran a continuación.</p>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<img alt="../_images/image115.png" class="align-center" src="../_images/image115.png" />
+<img alt="../_images/image25.png" class="align-center" src="../_images/image25.png" />
+<img alt="../_images/image32.png" class="align-center" src="../_images/image32.png" />
+<img alt="../_images/image44.png" class="align-center" src="../_images/image44.png" />
+<img alt="../_images/image54.png" class="align-center" src="../_images/image54.png" />
+<p>De la última tabla RAW tenemos varios procesos macroflujos que le suceden:</p>
+<blockquote>
+<div><ol class="loweralpha simple" start="2">
+<li>SumIPRAN_HourEndToEnd.kjb</li>
+</ol>
+</div></blockquote>
+<img alt="../_images/image82.png" class="align-center" src="../_images/image82.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6.      DESCRIPCIÓN DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.    Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen: 10.84.92.20</li>
+<li>Path Origen: /opt/5620sam/server/xml_output</li>
+<li>Usuario: nokia</li>
+<li>Password: claro123</li>
+<li>Cantidad de archivos origen y formato: vienen diferentes archivos de acuerdo a la medición. Ver documento de requerimiento.</li>
+<li>Frecuencia de actualización: Cada 15 minutos.</li>
+<li>Tipo de archivo: XML</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2.    Datos Destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: cortado.claro.amx</li>
+<li>Tabla Files: SI</li>
+<li>Tabla Auxiliar: Si</li>
+<li>Frecuencia de corrida del proceso: 1 vez por hora y cada 5 minutos para la raw.</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: Si</li>
+<li>Hour Si/No: Si</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: Si</li>
+<li>ISABH Si/No: Si</li>
+<li>Países: Argentina, Uruguay y Paraguay</li>
+<li>Directorio Destino (File System): /calidad/NokiaAluIPRAN</li>
+</ul>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>Scripts tienen las siguientes funciones:
+1- Copiar los archivos
+2- Limpieza
+3- Ejecutar Pentaho</p>
+<p>Los scripts son los siguientes:
+El Script NokiaWIFIEndToEnd.sh es la raíz del proceso.
+Los Scrips a utilizar son:</p>
+<img alt="../_images/image92.png" class="align-center" src="../_images/image92.png" />
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<p>Las tablas utilizadas son las siguientes:</p>
+<ul>
+<li><p class="first">Tablas RAW</p>
+<p>alc_lags_ipran_scneolr_raw</p>
+</li>
+</ul>
+<img alt="../_images/image102.png" class="align-center" src="../_images/image102.png" />
+<ul>
+<li><p class="first">Tabla OBJETOS</p>
+<p>alc_cardslot_ipran_obj</p>
+</li>
+</ul>
+<img alt="../_images/image131.png" class="align-center" src="../_images/image131.png" />
+<p>Sumarizaciones</p>
+<img alt="../_images/image141.png" class="align-center" src="../_images/image141.png" />
+<img alt="../_images/image151.png" class="align-center" src="../_images/image151.png" />
+</div>
+<div class="section" id="pentaho">
+<h3>6.5.    Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/image161.png" class="align-center" src="../_images/image161.png" />
+</div>
+</div>
+<div class="section" id="controles">
+<h2>7.  CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/image171.png" class="align-center" src="../_images/image171.png" />
+</div>
+<div class="section" id="reproceso-manual">
+<h2>8.      REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p>No aplica esta sub-seccion.</p>
+</div>
+<div class="section" id="smart">
+<h2>8.      SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h2>
+<p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
+<img alt="../_images/image181.png" class="align-center" src="../_images/image181.png" />
+</div>
+<div class="section" id="control-de-cambios">
+<h2>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+ <style type="text/css">
+  table {
+     border:2px solid red;
+     border-collapse:separate;
+     }
+  th, td {
+     border:1px solid red;
+     padding:10px;
+     }
+</style>
+
+<table border="3">
+<tr>
+  <th>Fecha</th>
+  <th>Responsable</th>
+  <th>Ticket Jira</th>
+  <th>Detalle</th>
+  <th>Repositorio</th>
+</tr>
+<tr>
+  <td> 29/05/2017 </td>
+  <td> Franco Rinaldi </td>
+  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-1184"> CL-1184 </a></p>  </td>
+  <td> Creacion de documentación de Proyecto existente.
+       <br>Proyecto actual - Cortado.</br></td>
+  <td> Servidor: CORTADO </td>
+</tr>
+</table></div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../procesos.html" class="btn btn-neutral float-right" title="PROCESOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nokiamme.html" class="btn btn-neutral" title="NOKIA MME" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
