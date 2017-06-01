@@ -44,6 +44,8 @@ PROYECTOS
 
    20. GESTION DE RECLAMOS - REPORTE (CORTADO) <../../_sections/gestionreclamos>
 
-   
+   21. GESTION DE RECLAMOS - SMART (CORTADO) <../../_sections/gestionreclamossmart>
+
+  
 
    
