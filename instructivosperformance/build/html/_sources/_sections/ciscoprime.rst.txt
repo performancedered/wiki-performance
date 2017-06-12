@@ -334,6 +334,7 @@ Los campos de las tablas utilizadas son las siguientes:
 .. image:: ../_static/images/ciscoprime/pag23.2.png
   :align: center
 
+
 7.	REPROCESO MANUAL
 --------------------
 

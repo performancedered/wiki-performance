@@ -23,3 +23,5 @@ REPORTES
    	8. Reporte Tráfico Mensual Implantación <../../_sections/reporteimplantacion>
 
    	9. Reporte CGNAT <../../_sections/reportecgnat>
+
+    10. Reporte Automatico VLR <../../_sections/reportevlr>
