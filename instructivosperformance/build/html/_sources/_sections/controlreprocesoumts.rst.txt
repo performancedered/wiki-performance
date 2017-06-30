@@ -35,24 +35,31 @@ Ingresar al programa PL/SQL Developer   -->Ingresar Username
 .. image:: ../_static/images/instructivo-umts/pag3.2.png
   :align: center
 
+3.1. CONTROLES
+****************
+
+
 Aquí se referenciarán las consultas presentes en los scripts: 
 
-•	Control 1 UMTS.sql
-•	Control 2 UMTS.sql
+•	Control_1_UMTS.RAW.sql
+•	Control_2_UMTS.HOUR.sql
+•	Control_3_UMTS.DAY.sql
+•	Control_4_UMTS.BH.sql
 
-Procedimiento Controles Hour:
+1.  Procedimiento Controles RAW:
 .............................
 
-1.	Se controla las  tablas de counters raw de las diferentes plataformas, que se insertan los datos desde los puntos csv.all que se extraen desde los .xml. Estas tablas son las primeras tablas que traen los datos crudos desde el proceso parser. Los datos que aquí no se encuentren pueden ser por problemas de origen (es decir, desde el RC se generaron mal o no) o problemas en el proceso de parsing. Se muestra sólo la primera técnica de reproceso, pero para mayores problemas referenciarse al documento de Troubleshooting proceso parser.doc
 
-a.	Control 1 UMTS.sql 
-......................
+Se controla las  tablas de counters raw de las diferentes plataformas, que se insertan los datos desde los puntos csv.all que se extraen desde los .xml. Estas tablas son las primeras tablas que traen los datos crudos desde el proceso parser. Los datos que aquí no se encuentren pueden ser por problemas de origen (es decir, desde el RC se generaron mal o no) o problemas en el proceso de parsing. Se muestra sólo la primera técnica de reproceso, pero para mayores problemas referenciarse al documento de Troubleshooting proceso parser.doc
+
+Control 1 UMTS.sql 
+~~~~~~~~~~~~~~~~~~~~~~
 
 Se ejecuta la consulta Control 1 UMTS.sql.
 
-.. _Control_1_UMTS: ../_static/images/instructivo-umts/Control1-UMTS.sql
+.. _Control_1_UMTS_RAW.sql: ../_static/images/instructivo-umts/Control1-UMTS.sql
 
-+	Control_1_UMTS_
++	Control_1_UMTS_RAW.sql_
 
 
 La misma recibe los siguientes parámetros:
@@ -73,6 +80,8 @@ La busqueda a traves de las variables ingresadas muestra como resultado:
 .. image:: ../_static/images/instructivo-umts/pag7.2.png
   :align: center
 
+
+
 En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta, en donde deberemos ajustar el FILENAME según el RC que nos interese, y la fecha/hora que nos importe:
 
 
@@ -89,6 +98,9 @@ Los valores en Status pueden ser tres posibles:
 	•	1: Procesado
 	•	5: En procesamiento, con lo cual ese archivo está tratándose para insertar los datos a la BD.
 
+REPROCESO
+~~~~~~~~~~~~~
+
 Nótese que hay 13 elementos, que corresponden a las 13 mediciones diferentes, para el RC seleccionado, en la hora seleccionada.
 
 En caso de que necesitar reprocesar lo único que se debe hacer el dejar el archivo en estado PENDIENTE. Para ello ejecutar la siguiente sentencia, siempre ajustando el valor del RC y de la fecha/hora:
@@ -103,8 +115,11 @@ Luego presiona commit --> Yes
 .. image:: ../_static/images/instructivo-umts/pag9.2.png
   :align: center
 
-b.	Control 2 UMTS.sql.
-.......................
+2.  Procedimiento Controles Hour:
+.............................
+
+Control 2 UMTS.sql.
+~~~~~~~~~~~~~~~~~~~~~~~~
 
  Aquí se revisan las tablas hour, pero del denominado “modelo nuevo de UMTS”, el cual consiste en un conjunto de tablas maestro/detalle, separadas por medición, y agrupadas en tablas de celda (WCELL) y demás elementos (NE). Este modelo carga sus datos mediante un sistema de colas de procesamiento. 
 Las mediciones que se utilizan son:
@@ -120,9 +135,9 @@ La consulta recibe los siguientes parámetros:
 •	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
 •	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)
 
-.. _Control_2_UMTS: ../_static/images/instructivo-umts/Control2-UMTS.sql
+.. _Control_2_UMTS_HOUR.sql: ../_static/images/instructivo-umts/Control2-UMTS.sql
 
-+	Control_2_UMTS_
++	Control_2_UMTS_HOUR.sql_
 
 Debe Ingresar:
 
@@ -136,6 +151,9 @@ La Busqueda a traves de las variables ingresadas muestra como resultado:
 
 .. image:: ../_static/images/instructivo-umts/pag13.png
   :align: center
+
+REPROCESO
+~~~~~~~~~~~~~~~~~~
 
 Si tenemos diferencias o faltantes pero tenemos datos en dichas horas en las tablas raw, debemos ingresar manualmente “nuevos pedidos de procesamiento” en las colas. Para ello, tenemos un script que permite generar la llamada a esos pedidos. 
 Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:
@@ -206,20 +224,32 @@ A modo ejemplo ejecutamos  la siguiente consulta: ReportUmtsNsnHourlyServiceDeta
   :align: center
 
 
-2.	Procedimiento Controles Daily/Busy Hour – Controles Semanales:
-..................................................................
+3.	Procedimiento Controles Daily/Busy Hour – Controles Diarios:
+................................................................
 
-1.	Se controla las tablas del modelo viejo de UMTS a nivel day. Para ello corremos la consulta CheckDailyUMTS.sql
+Control UMTS 3.DAY & Control UMTS 4.BH
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Se controla las tablas del modelo viejo de UMTS a nivel daily y busy hour. Para ello corremos la consulta Control_3_UMTS.DAY.sql / Control_4_UMTS.BH.sql (El procedimiento es el mismo para los dos controles)
 La misma recibe los siguientes parámetros:
 
-	•	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
-	•	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015) 
+
+.. _Control_3_UMTS_DAY.sql: ../_static/images/instructivo-umts/Control_UMTS_3.DAY.sql
+
++	Control_3_UMTS_DAY.sql_
+
+.. _Control_4_UMTS_BH.sql: ../_static/images/instructivo-umts/Control_UMTS_4.BH.sql
+
++	Control_4_UMTS_BH.sql_ 
+
+.. raw:: html 
+
+
+•	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
+•	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015) 
 
 .. image:: ../_static/images/instructivo-umts/pag18.2.png
   :align: center
-
-
-[No adjuntamos la consulta dado que es muy extensa y se utiliza ocasionalmente].
 
 
 .. image:: ../_static/images/instructivo-umts/pag19.png
@@ -227,20 +257,19 @@ La misma recibe los siguientes parámetros:
 
 Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs. 
 
+REPROCESO
+~~~~~~~~~~
+
 Para reprocesar debemos ir a la carpeta /calidad/nokia/umts/daily/, y ejecutar los siguientes scripts:
 	
-	•	Tablas day:  nokia_umts_day_rec.sh
-	•	Tablas busy hour (BH): nokia_umts_bh_rec.sh
-
-
-.. image:: ../_static/images/instructivo-umts/pag19.2.png
-  :align: center
+	•	Tablas day:  recoveryNokiaUmtsDay.sh
+	•	Tablas busy hour (BH): recoveryNokiaUmtsBusyHour.sh
 
 Estos scripts reciben 3 parámetros:
 
 	•	$1 : Fecha Desde, en formato DD.MM.YYYY
 	•	$2 : Fecha Hasta, en formato DD.MM.YYYY
-	•	$3: Medición, que puede ser: ho, service, hsdpa, macd ó noc.
+	•	$3: Medición, que puede ser: ho, service, hsdpa, macd, noc, cpucor o wbtsmon.
 
 .. image:: ../_static/images/instructivo-umts/pag20.png
   :align: center
@@ -279,8 +308,64 @@ Para reprocesar los tableros semanales ejecutar los siguientes scripts:
  
 Si se han recuperado tablas a nivel day/bh del mes anterior, es necesario reprocesar DAY_MONTH y todos los tableros mensuales.
 
+4.	Procedimiento Controles DayW / ISABHW – Controles Semanal:
+..................................................................
 
-Reinserción de tablas UMTS
+Control UMTS 5.DAYW & Control UMTS 6.ISABHW
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Se controla las tablas de UMTS a nivel DAYWEEK y ISABHW. Para ello corremos la consulta Control_5_UMTS.DAYW.sql / Control_4_UMTS.ISABHW.sql (El procedimiento es el mismo para los dos controles)
+La misma recibe los siguientes parámetros:
+
+.. _Control_5_UMTS_DAYW.sql: ../_static/images/instructivo-umts/Control_UMTS_5.DAYW.sql
+
++	Control_5_UMTS_DAYW.sql_
+
+.. _Control_6_UMTS_ISABHW.sql: ../_static/images/instructivo-umts/Control_UMTS_6.ISABHW.sql
+
++	Control_6_UMTS_ISABHW.sql_ 
+
+.. raw:: html 
+
+
+•	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
+•	&2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015) 
+
+.. image:: ../_static/images/instructivo-umts/pag25.png
+  :align: center
+
+.. image:: ../_static/images/instructivo-umts/pag26.png
+  :align: center
+
+Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs. 
+
+REPROCESO
+~~~~~~~~~
+
+Para reprocesar debemos ir a la carpeta /calidad/nokia/umts/summary/, y ejecutar los siguientes scripts:
+	
+	•	Tablas WAYW & ISABHW:  recoveryNokiaUmtsDay.sh
+
+Estos scripts reciben 1 parámetros:
+
+	•	Numero que representa la semana anterior.
+
+Para saber a que semana corresponde dicho numero se ejecuta las siguientes funciones(incorporadas en el bash):
+
+	•	f_primer_dia_semana
+	•	f_ultimo_dia_semana
+
+.. image:: ../_static/images/instructivo-umts/pag27.png
+  :align: center
+
+Luego ejecutar el script recoveryNokiaUmtsDay.sh (numeroSemana)
+
+.. image:: ../_static/images/instructivo-umts/pag28.png
+  :align: center
+
+
+
+4. REINCERSION DE TABLAS UMTS
 --------------------------
 
 Este proceso es semiautomático y se deben realizar los siguientes pasos para reinsertar datos: 

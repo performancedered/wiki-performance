@@ -225,11 +225,16 @@
 </dl>
 <img alt="../_images/pag32.png" class="align-center" src="../_images/pag32.png" />
 <img alt="../_images/pag3.21.png" class="align-center" src="../_images/pag3.21.png" />
-<div class="section" id="pasos-para-los-controles-necesarios-en-los-datos-de-lte-a-nivel-raw">
-<h3>Pasos para los controles necesarios en los datos de LTE a nivel RAW<a class="headerlink" href="#pasos-para-los-controles-necesarios-en-los-datos-de-lte-a-nivel-raw" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="controles">
+<h3>4.1. CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="procedimiento-controles-raw">
+<h4>1.  Procedimiento Controles RAW:<a class="headerlink" href="#procedimiento-controles-raw" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-lte-1-raw-sql">
+<h5>Control_LTE_1.RAW.sql<a class="headerlink" href="#control-lte-1-raw-sql" title="Permalink to this headline">¶</a></h5>
 <p>El especialista debe ejecutar la siguiente queries:</p>
-<img alt="../_images/pag41.png" class="align-center" src="../_images/pag41.png" />
-<img alt="../_images/pag52.png" class="align-center" src="../_images/pag52.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-lte/Control_LTE_1.RAW.sql">Control_LTE_1.RAW.sql</a></li>
+</ul>
 <p>Luego de ejecutar la queries se debe ingresar los siguientes datos:</p>
 <blockquote>
 <div><ul class="simple">
@@ -237,7 +242,7 @@
 <li>FH: Fecha Hasta</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag63.png" class="align-center" src="../_images/pag63.png" />
+<img alt="../_images/pag62.png" class="align-center" src="../_images/pag62.png" />
 <p>Se muestra como resultado:</p>
 <img alt="../_images/pag6.21.png" class="align-center" src="../_images/pag6.21.png" />
 <p>Observación: de Esta consulta se podrá validar si para alguna tabla Raw  y para alguna hora no se registraron datos  o tenemos datos insuficientes. En promedio los valores normales de cantidad de registros por tabla son los que se muestran en las capturas de ejemplo.
@@ -249,15 +254,15 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <p>Luego se debe actualizar el estado del procesamiento de los .all (mediciones), ejecutando la siguiente queries:</p>
 <img alt="../_images/pag7.3.png" class="align-center" src="../_images/pag7.3.png" />
 </div>
-<div class="section" id="pasos-para-los-controles-necesarios-en-los-datos-de-lte-a-nivel-hour">
-<h3>Pasos para los controles necesarios en los datos de LTE a nivel HOUR<a class="headerlink" href="#pasos-para-los-controles-necesarios-en-los-datos-de-lte-a-nivel-hour" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="procedimiento-controles-hour">
+<h4>2.  Procedimiento Controles HOUR:<a class="headerlink" href="#procedimiento-controles-hour" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-lte-1-hour-sql">
+<h5>Control_LTE_1.HOUR.sql<a class="headerlink" href="#control-lte-1-hour-sql" title="Permalink to this headline">¶</a></h5>
 <p>El especialista debe ejecutar la siguiente queries:</p>
-<img alt="../_images/pag82.png" class="align-center" src="../_images/pag82.png" />
-<img alt="../_images/pag92.png" class="align-center" src="../_images/pag92.png" />
-<img alt="../_images/pag103.png" class="align-center" src="../_images/pag103.png" />
-<img alt="../_images/pag112.png" class="align-center" src="../_images/pag112.png" />
-<img alt="../_images/pag123.png" class="align-center" src="../_images/pag123.png" />
-<img alt="../_images/pag132.png" class="align-center" src="../_images/pag132.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-lte/Control_LTE_1.RAW.sql">Control_LTE_1.HOUR.sql</a></li>
+</ul>
 <p>El especialista debe ingresar:</p>
 <blockquote>
 <div><ul class="simple">
@@ -275,6 +280,8 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <li>Reproceso con replay</li>
 </ul>
 </div></blockquote>
+</div>
+</div>
 </div>
 </div>
 </div>

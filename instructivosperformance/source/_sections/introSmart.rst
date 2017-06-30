@@ -63,15 +63,15 @@ En los OSS Regional Cluster los paths donde se encuentran los archivos de CM/PM 
 
 CM-Configuration Management: /var/opt/nokia/oss/global/racops/export
 
-PM-Performance Management: /d/oss/global/var/mediation/north/pm/export/yyyymmddhh
+PM-Performance Management: /var/opt/nokia/oss/global/mediation/north/pm/export/yyyymmddhh
 
-+	Netact RC5 rc5vm5 10.105.39.12
++	Netact RC5 rc6vm5.rc6.netact.claro.amx
 
-+	Netact RC6 rc6vm5 10.105.39.140
++	Netact RC6 rc6vm5.rc6.netact.claro.amx
 
-+	Netact RC7 rc6vm5 10.105.44.142
++	Netact RC7 rc7vm5.rc7.netact.claro.amx
 
-+	Netact RC8 rc8vm5 10.105.44.140
++	Netact RC8 rc8vm5.rc8.netact.claro.amx
 
 El nombre genérico de un archivo de PM es: etlexpmx_<MEAS>yymmddhhmmss<SN>.xml.gz donde:
 
@@ -81,6 +81,7 @@ El nombre genérico de un archivo de PM es: etlexpmx_<MEAS>yymmddhhmmss<SN>.xml.
 
 Nomenclatura de los Sitios y Radiobases
 ........................................
+
 Nomenclatura actual
 ^^^^^^^^^^^^^^^^^^^
 La nomenclatura actual de las radio bases está descripta en el documento Cell ID UMTS_V10.xls

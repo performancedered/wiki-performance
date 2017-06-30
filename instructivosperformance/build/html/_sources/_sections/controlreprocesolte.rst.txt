@@ -39,16 +39,21 @@ Ingresar al programa PL/SQL Developer --> Ingresar Username
 .. image:: ../_static/images/instructivo-lte/pag3.2.png
   :align: center
 
-Pasos para los controles necesarios en los datos de LTE a nivel RAW
-...................................................................
+4.1. CONTROLES
+****************
+
+1.  Procedimiento Controles RAW:
+.............................
+
+Control_LTE_1.RAW.sql
+~~~~~~~~~~~~~~~~~~~~~
 
 El especialista debe ejecutar la siguiente queries:
 
-.. image:: ../_static/images/instructivo-lte/pag4.png
-  :align: center
 
-.. image:: ../_static/images/instructivo-lte/pag5.png
-  :align: center
+.. _Control_LTE_1.RAW.sql: ../_static/images/instructivo-lte/Control_LTE_1.RAW.sql
+
++ Control_LTE_1.RAW.sql_
 
 
 Luego de ejecutar la queries se debe ingresar los siguientes datos:
@@ -83,30 +88,19 @@ Luego se debe actualizar el estado del procesamiento de los .all (mediciones), e
 .. image:: ../_static/images/instructivo-lte/pag7.3.png
   :align: center
 
-Pasos para los controles necesarios en los datos de LTE a nivel HOUR
-....................................................................
+2.  Procedimiento Controles HOUR:
+.............................
+
+Control_LTE_1.HOUR.sql
+~~~~~~~~~~~~~~~~~~~~~
+
+El especialista debe ejecutar la siguiente queries:
+
+
+.. _Control_LTE_1.HOUR.sql: ../_static/images/instructivo-lte/Control_LTE_1.RAW.sql
+
++ Control_LTE_1.HOUR.sql_
 	
-El especialista debe ejecutar la siguiente queries: 
-
-
-.. image:: ../_static/images/instructivo-lte/pag8.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-lte/pag9.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-lte/pag10.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-lte/pag11.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-lte/pag12.png
-  :align: center
-
-
-.. image:: ../_static/images/instructivo-lte/pag13.png
-  :align: center
 
 El especialista debe ingresar: 
 

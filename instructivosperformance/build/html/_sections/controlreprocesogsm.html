@@ -229,15 +229,19 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 </dl>
 <img alt="../_images/pag3.1.png" class="align-center" src="../_images/pag3.1.png" />
 <img alt="../_images/pag3.2.png" class="align-center" src="../_images/pag3.2.png" />
-<div class="section" id="control-1-gsm-gprs-sql">
-<h3>Control 1 GSM/GPRS.sql<a class="headerlink" href="#control-1-gsm-gprs-sql" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="controles">
+<h3>4.1. CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="procedimiento-controles-raw">
+<h4>1.  Procedimiento Controles RAW:<a class="headerlink" href="#procedimiento-controles-raw" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-gsm-gprs-1-raw-sql">
+<h5>Control_GSM-GPRS_1.RAW.sql<a class="headerlink" href="#control-gsm-gprs-1-raw-sql" title="Permalink to this headline">¶</a></h5>
 <p>Pasos para los controles necesarios en los datos de GSM y GPRS:</p>
 <ol class="arabic simple">
-<li>Ejecutar la primera consulta en el archivo Control GSM/GPRS.sql. para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.</li>
+<li>Ejecutar la primera consulta en el archivo Control_GSM-GPRS_1.RAW.sql para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.</li>
 </ol>
-<img alt="../_images/pag4.png" class="align-center" src="../_images/pag4.png" />
-<img alt="../_images/pag51.png" class="align-center" src="../_images/pag51.png" />
-<img alt="../_images/pag62.png" class="align-center" src="../_images/pag62.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-gsm/Control_GSM-GPRS_1.RAW.sql">Control_GSM_GPRS_1_RAW.sql</a></li>
+</ul>
 <p>Esta consulta recibe los siguientes parámetros:</p>
 <ul class="simple">
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
@@ -256,6 +260,9 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <img alt="../_images/pag7.1.png" class="align-center" src="../_images/pag7.1.png" />
 <p>La consulta muestra el siguiente resultado:</p>
 <img alt="../_images/pag7.21.png" class="align-center" src="../_images/pag7.21.png" />
+</div>
+<div class="section" id="reproceso">
+<h5>REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h5>
 <p>En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta (se encuentra en Controles adicionales GSM/GPRS.sql):</p>
 <p>Aquí, ajustamos el FILENAME según el RC que nos interese, y la fecha/hora que nos importe.</p>
 <p>Ejecutamos la consulta:</p>
@@ -276,11 +283,16 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <img alt="../_images/pag9.1.png" class="align-center" src="../_images/pag9.1.png" />
 <p>Ingresamos la fecha y hora:</p>
 <img alt="../_images/pag9.21.png" class="align-center" src="../_images/pag9.21.png" />
-<ol class="arabic simple" start="2">
-<li>Ejecutar las consultas en las tablas hour de GSM y GPRS (presentes en Control GSM/GPRS.sql).</li>
-</ol>
-<img alt="../_images/pag102.png" class="align-center" src="../_images/pag102.png" />
-<img alt="../_images/pag11.1.png" class="align-center" src="../_images/pag11.1.png" />
+</div>
+</div>
+<div class="section" id="procedimiento-controles-hour">
+<h4>2.  Procedimiento Controles HOUR:<a class="headerlink" href="#procedimiento-controles-hour" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-gsm-gprs-2-hour-sql">
+<h5>Control_GSM-GPRS_2.HOUR.sql<a class="headerlink" href="#control-gsm-gprs-2-hour-sql" title="Permalink to this headline">¶</a></h5>
+<p>Ejecutar las consultas en las tablas hour de GSM y GPRS (presentes en Control GSM/GPRS.sql).</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-gsm/Control_GSM-GPRS_2.HOUR.sql">Control_GSM_GPRS_2_HOUR.sql</a></li>
+</ul>
 <p>Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:</p>
 <ul class="simple">
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
@@ -289,6 +301,9 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <img alt="../_images/pag11.2.png" class="align-center" src="../_images/pag11.2.png" />
 <p>La consulta nos muestra como resultado:</p>
 <img alt="../_images/pag122.png" class="align-center" src="../_images/pag122.png" />
+</div>
+<div class="section" id="id3">
+<h5>REPROCESO<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
 <p>En caso de que haya faltante por regional, ejecutar en Perdido las siguientes instrucciones:</p>
 <ol class="arabic simple" start="2">
 <li><ol class="first loweralpha">
@@ -311,21 +326,6 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <img alt="../_images/pag13.1.png" class="align-center" src="../_images/pag13.1.png" />
 <p>Nos muestra:</p>
 <img alt="../_images/pag13.2.png" class="align-center" src="../_images/pag13.2.png" />
-<ol class="arabic simple" start="3">
-<li>Ejecutar las consultas en las tablas a nivel de mercado, presentes en Control GSM/GPRS.sql:</li>
-</ol>
-<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
-<img alt="../_images/pag152.png" class="align-center" src="../_images/pag152.png" />
-<p>Esta consulta recibe los siguientes parámetros:</p>
-<ul class="simple">
-<li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
-<li>&amp;2 : Hora Desde, en formato HH24, desde 00 hasta 23</li>
-<li>&amp;3 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
-<li>&amp;4 : Hora Hasta, en formato HH24, desde 00 hasta 23</li>
-</ul>
-<img alt="../_images/pag15.2.png" class="align-center" src="../_images/pag15.2.png" />
-<p>La consulta nos muestra como resultado:</p>
-<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
 <p>En caso de haber faltante por tipo de mercado, se corren las siguientes consultas en Perdido:</p>
 <p>cd /calidad/multivendor/gsm/hourly</p>
 <blockquote>
@@ -341,6 +341,63 @@ Aquí se referenciarán las consultas presentes en los scripts: Control GSM/GPRS
 <img alt="../_images/pag172.png" class="align-center" src="../_images/pag172.png" />
 <p>Nos muestra como resultado:</p>
 <img alt="../_images/pag182.png" class="align-center" src="../_images/pag182.png" />
+</div>
+</div>
+<div class="section" id="procedimiento-controles-day-daybh">
+<h4>3.  Procedimiento Controles DAY &amp; DAYBH:<a class="headerlink" href="#procedimiento-controles-day-daybh" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-gsm-gprs-3-day-bh-sql">
+<h5>Control_GSM-GPRS_3.DAY-BH.sql<a class="headerlink" href="#control-gsm-gprs-3-day-bh-sql" title="Permalink to this headline">¶</a></h5>
+<p>Ejecutar las consultas en las tablas DAY BH de GSM y GPRS (presentes en Control GSM/GPRS.sql).</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-gsm/Control_GSM-GPRS_3.DAY-BH.sql">Control_GSM_GPRS_3_DAYBH.sql</a></li>
+</ul>
+<p>Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:</p>
+<ul class="simple">
+<li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
+<li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
+</ul>
+<img alt="../_images/pag11.2.png" class="align-center" src="../_images/pag11.2.png" />
+<p>La consulta nos muestra como resultado:</p>
+<img alt="../_images/pag196.png" class="align-center" src="../_images/pag196.png" />
+</div>
+<div class="section" id="id4">
+<h5>REPROCESO<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<p>En caso de que haya faltante por regional, Ejecutar el siguiente comando en la consola:</p>
+<p><strong>GSM</strong></p>
+<p>cd /calidad/multivendor/gsm/daily</p>
+<p>Luego se deben ejecutar los siguientes scripts:</p>
+<p>nohup multivendor_day_rec.sh 27.06.2017 27.06.2017 B &amp;      (done)</p>
+<p><strong>GPRS</strong></p>
+<p>/calidad/multivendor/gprs/daily</p>
+<p>Luego se deben ejecutar los siguientes scripts:</p>
+<p>nohup multivendor_gprs_rec.sh 27.06.2017 27.06.2017 &amp;     (done)</p>
+</div>
+</div>
+<div class="section" id="procedimiento-controles-isabhw">
+<h4>4.  Procedimiento Controles ISABHW:<a class="headerlink" href="#procedimiento-controles-isabhw" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="control-gsm-gprs-5-isabhw-sql">
+<h5>Control_GSM-GPRS_5.ISABHW.sql<a class="headerlink" href="#control-gsm-gprs-5-isabhw-sql" title="Permalink to this headline">¶</a></h5>
+<p>Ejecutar las consultas en las tablas ISABHW de GSM y GPRS (presentes en Control GSM/GPRS.sql).</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-gsm/Control_GSM-GPRS_5.ISABHW.sql">Control_GSM_GPRS_5_ISABHW.sql</a></li>
+</ul>
+<p>Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:</p>
+<ul class="simple">
+<li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
+<li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
+</ul>
+<img alt="../_images/pag11.2.png" class="align-center" src="../_images/pag11.2.png" />
+<p>La consulta nos muestra como resultado:</p>
+<img alt="../_images/pag206.png" class="align-center" src="../_images/pag206.png" />
+</div>
+<div class="section" id="id6">
+<h5>REPROCESO<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<p>En caso de que haya faltante por regional, Ejecutar el siguiente comando en la consola:</p>
+<p>cd /calidad/multivendor/gsm/summary</p>
+<p>Luego se deben ejecutar los siguientes scripts:</p>
+<p>multivendor_week_rec.sh 1             (done)</p>
+</div>
+</div>
 </div>
 </div>
 </div>

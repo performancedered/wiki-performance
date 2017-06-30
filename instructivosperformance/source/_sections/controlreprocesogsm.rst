@@ -46,22 +46,24 @@ Ingresar al programa PL/SQL Developer 	--> Ingresar Username
 .. image:: ../_static/images/instructivo-gsm/pag3.2.png
   :align: center
 
-Control 1 GSM/GPRS.sql
-......................
+4.1. CONTROLES
+****************
+
+1.  Procedimiento Controles RAW:
+.............................
+
+
+Control_GSM-GPRS_1.RAW.sql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pasos para los controles necesarios en los datos de GSM y GPRS:
 
-1.	Ejecutar la primera consulta en el archivo Control GSM/GPRS.sql. para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.
+1.	Ejecutar la primera consulta en el archivo Control_GSM-GPRS_1.RAW.sql para verificar si están todos los datos provenientes desde los XML ya insertados en la base de datos.
 
 
-.. image:: ../_static/images/instructivo-gsm/pag4.png
-  :align: center
+.. _Control_GSM_GPRS_1_RAW.sql: ../_static/images/instructivo-gsm/Control_GSM-GPRS_1.RAW.sql
 
-.. image:: ../_static/images/instructivo-gsm/pag5.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-gsm/pag6.png
-  :align: center
++ Control_GSM_GPRS_1_RAW.sql_
 
 Esta consulta recibe los siguientes parámetros:
 
@@ -87,6 +89,9 @@ La consulta muestra el siguiente resultado:
 
 .. image:: ../_static/images/instructivo-gsm/pag7.2.png
   :align: center
+
+REPROCESO
+~~~~~~~~~
 
 En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta (se encuentra en Controles adicionales GSM/GPRS.sql):
 
@@ -128,13 +133,18 @@ Ingresamos la fecha y hora:
 .. image:: ../_static/images/instructivo-gsm/pag9.2.png
   :align: center
 
-2.	Ejecutar las consultas en las tablas hour de GSM y GPRS (presentes en Control GSM/GPRS.sql). 
+2.  Procedimiento Controles HOUR:
+.............................
 
-.. image:: ../_static/images/instructivo-gsm/pag10.png
-  :align: center
 
-.. image:: ../_static/images/instructivo-gsm/pag11.1.png
-  :align: center
+Control_GSM-GPRS_2.HOUR.sql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ejecutar las consultas en las tablas hour de GSM y GPRS (presentes en Control GSM/GPRS.sql). 
+
+.. _Control_GSM_GPRS_2_HOUR.sql: ../_static/images/instructivo-gsm/Control_GSM-GPRS_2.HOUR.sql
+
++ Control_GSM_GPRS_2_HOUR.sql_
 
 Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:
 
@@ -150,6 +160,8 @@ La consulta nos muestra como resultado:
 .. image:: ../_static/images/instructivo-gsm/pag12.png
   :align: center
 
+REPROCESO
+~~~~~~~~~
 
 En caso de que haya faltante por regional, ejecutar en Perdido las siguientes instrucciones:
 
@@ -184,30 +196,6 @@ Nos muestra:
   :align: center
 
 
-3.	Ejecutar las consultas en las tablas a nivel de mercado, presentes en Control GSM/GPRS.sql:
-
-.. image:: ../_static/images/instructivo-gsm/pag14.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-gsm/pag15.png
-  :align: center
-
-
-Esta consulta recibe los siguientes parámetros:
-
-•	&1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
-•	&2 : Hora Desde, en formato HH24, desde 00 hasta 23
-•	&3 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)
-•	&4 : Hora Hasta, en formato HH24, desde 00 hasta 23
-
-.. image:: ../_static/images/instructivo-gsm/pag15.2.png
-  :align: center
-
-La consulta nos muestra como resultado:
-
-.. image:: ../_static/images/instructivo-gsm/pag16.png
-  :align: center
-
 En caso de haber faltante por tipo de mercado, se corren las siguientes consultas en Perdido:
 
 cd /calidad/multivendor/gsm/hourly
@@ -238,6 +226,84 @@ Nos muestra como resultado:
   :align: center
 
 
+3.  Procedimiento Controles DAY & DAYBH:
+.............................
 
+Control_GSM-GPRS_3.DAY-BH.sql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Ejecutar las consultas en las tablas DAY BH de GSM y GPRS (presentes en Control GSM/GPRS.sql). 
 
+.. _Control_GSM_GPRS_3_DAYBH.sql: ../_static/images/instructivo-gsm/Control_GSM-GPRS_3.DAY-BH.sql
+
++ Control_GSM_GPRS_3_DAYBH.sql_
+
+Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:
+
+• &1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
+• &2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015) 
+
+.. image:: ../_static/images/instructivo-gsm/pag11.2.png
+  :align: center
+
+La consulta nos muestra como resultado: 
+
+.. image:: ../_static/images/instructivo-gsm/pag19.png
+  :align: center
+
+REPROCESO
+~~~~~~~~~
+
+En caso de que haya faltante por regional, Ejecutar el siguiente comando en la consola:
+
+**GSM**
+
+cd /calidad/multivendor/gsm/daily
+
+Luego se deben ejecutar los siguientes scripts:
+
+nohup multivendor_day_rec.sh 27.06.2017 27.06.2017 B &      (done)
+
+**GPRS**
+
+/calidad/multivendor/gprs/daily
+
+Luego se deben ejecutar los siguientes scripts:
+
+nohup multivendor_gprs_rec.sh 27.06.2017 27.06.2017 &     (done)
+
+4.  Procedimiento Controles ISABHW:
+.............................
+
+Control_GSM-GPRS_5.ISABHW.sql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ejecutar las consultas en las tablas ISABHW de GSM y GPRS (presentes en Control GSM/GPRS.sql). 
+
+.. _Control_GSM_GPRS_5_ISABHW.sql: ../_static/images/instructivo-gsm/Control_GSM-GPRS_5.ISABHW.sql
+
++ Control_GSM_GPRS_5_ISABHW.sql_
+
+Cuando se ejecutan ambas consultas, reciben los siguientes parámetros:
+
+• &1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)
+• &2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015) 
+
+.. image:: ../_static/images/instructivo-gsm/pag11.2.png
+  :align: center
+
+La consulta nos muestra como resultado: 
+
+.. image:: ../_static/images/instructivo-gsm/pag20.png
+  :align: center
+
+REPROCESO
+~~~~~~~~~
+
+En caso de que haya faltante por regional, Ejecutar el siguiente comando en la consola:
+
+cd /calidad/multivendor/gsm/summary
+
+Luego se deben ejecutar los siguientes scripts:
+
+multivendor_week_rec.sh 1             (done)
