@@ -330,12 +330,57 @@
 <p>1-      Copiar los archivos</p>
 <p>2-      Limpieza</p>
 <p>3-      Ejecutar Pentaho</p>
-<p>El Script .sh es la raíz de proceso</p>
 <p>Los scripts son los siguientes:</p>
+<p><strong>Busy Hour, Day, ISHW</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_BHDayISHW_EndToEnd.sh">CiscoUCS_BHDayISHW_EndToEnd</a></li>
+</ul>
+<p>Ejecuta el proyecto en pentaho</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_BHDayISHW_Rework.sh">CiscoUCS_BHDayISHW_Rework</a></li>
+</ul>
+<p>Ejecuta el proyecto de recupero de datos.</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_BHDayISHWDiario.sh">CiscoUCS_BHDayISHWDiario</a></li>
+</ul>
+<p>Limpia y ejecuta el proyecto en pentaho</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_BHDayISHWRun.sh">CiscoUCS_BHDayISHWRun</a></li>
+</ul>
+<p>Llama a CiscoUCS_BHDayISHW_EndToEnd y ejecuta el proyecto en pentaho</p>
+<p><strong>Hour</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_Hour_EndToEnd.sh">CiscoUCS_Hour_EndToEnd</a></li>
+</ul>
+<p>Ejecuta el proyecto en pentajo</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_Hour_Rework.sh">CiscoUCS_Hour_Rework</a></li>
+</ul>
+<p>Ejecuta el proyecto de recupero de datos.</p>
+<ul class="simple">
+<li><a href="#id2"><span class="problematic" id="id3">CiscoUCS_HourDiario_</span></a></li>
+</ul>
+<p>Limpia y ejecuta el proyecto en pentaho</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_HourRun.sh">CiscoUCS_HourRun</a></li>
+</ul>
+<p>Llama a CiscoUCS_Hour_EndToEnd y ejecuta el proyecto en pentaho</p>
+<p><strong>Reporte</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/ciscoucs/reporteHourCiscoUCSRun.sh">reporteHourCiscoUCSRun</a></li>
+<li><a class="reference external" href="../_static/images/ciscoucs/CiscoUCS_HourRun.sh">reporteNivelHourCiscoUCS</a></li>
+</ul>
+<p><strong>Limpieza</strong></p>
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/ciscoucs/cleanupLogs.sh">cleanupLogs</a></li>
+</ul>
+<p>Saca lineas innecesarias de los logs antes de ser enviados via email
+Params: RUTA = &lt;PROYECTO&gt;/PentahoLogs</p>
+<ul class="simple">
 <li><a class="reference external" href="../_static/images/ciscoucs/deleteEmptyLogs.sh">deleteEmptyLogs</a></li>
 </ul>
+<p>Borra los logs de la carpeta &lt;PROYECTO&gt;/PentahoLogs cuyo tamaño es 0
+o tiene una sola linea que no representa error</p>
 </div>
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
@@ -360,8 +405,11 @@
 <ul class="simple">
 <li>Pentaho Calculo Sumarizaciones</li>
 </ul>
+<p><strong>Busy Hour, Day, ISHW</strong></p>
 <p>Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento
 G_CISCO_UCS.P_SUM_DAY_BH_IBHW_CISCOUCS.</p>
+<p><strong>Hour</strong></p>
+<p>Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento G_CISCO_UCS.P_Calcular_hour</p>
 </div>
 </div>
 <div class="section" id="controles">

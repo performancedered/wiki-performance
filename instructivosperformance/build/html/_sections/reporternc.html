@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>REPORTE RNC &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="REPORTES" href="../reportes.html"/>
+        <link rel="next" title="PROYECTOS" href="../proyectos.html"/>
+        <link rel="prev" title="Reporte Automatico VLR" href="reportevlr.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reportes.html">REPORTES</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="reportefilesystem.html"> 1. Reporte File System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteraw.html"> 2. Reporte Raw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportehour.html"> 3. Reporte Hour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportebhday.html"> 4. Reporte Bh Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportetablespace.html"> 5. Reporte Table Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteransharing.html"> 6. Reporte Movistar Ran Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="downstream.html"> 7. Reporte Downstream Internet Wnn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reporteimplantacion.html">     8. Reporte Tráfico Mensual Implantación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportecgnat.html">     9. Reporte CGNAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reportevlr.html"> 10. Reporte Automatico VLR</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> 11. Reporte RNC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1.OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">2.DESCRIPCIÓN GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#origen-de-datos">3.ORIGEN DE DATOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#consultas-sql">CONSULTAS SQL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#proceso-pentaho">4.PROCESO PENTAHO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#principal">Principal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#presentacion">5.PRESENTACION</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reportes.html">REPORTES</a> &raquo;</li>
+        
+      <li>REPORTE RNC</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reporte-rnc">
+<h1>REPORTE RNC<a class="headerlink" href="#reporte-rnc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>-Tener un reporte semanal con el tráfico por RNC por hora de manera automatica
+ALCANCE</p>
+<p>-Áreas involucradas: Gerencia de calidad y performance</p>
+<p><strong>DEFINICIONES</strong></p>
+<ul class="simple">
+<li>OSSRC: Un regional cluster es el controlador de NETAC</li>
+<li>Un RNC es el controlador de las celdas UMTS</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>2.DESCRIPCIÓN GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>Se muestra el tráfico por RNC hora por hora diferenciados por OSSRC
+El informe está dirigido al equipo de calidad y performance a fin de optimizar los tiempos de análisis del comportamiento de la red.</p>
+<p>En el reporte figuran cuatro gráficos detallando el tráfico de cada RNC separado por OSSRC</p>
+</div>
+<div class="section" id="origen-de-datos">
+<h2>3.ORIGEN DE DATOS<a class="headerlink" href="#origen-de-datos" title="Permalink to this headline">¶</a></h2>
+<p><strong>Reporte OSSRC 5 DD.MM.YYYY</strong></p>
+<p><strong>Tablas</strong>:</p>
+<blockquote>
+<div>OBJECTS_SP_UMTS_NE
+UMTS_NSN_SERVICE_NE_HOUR</div></blockquote>
+<p><strong>Base de datos</strong>: Willy en perdido.claro.amx</p>
+<p><strong>Reporte OSSRC 6 DD.MM.YYYY</strong></p>
+<p><strong>Tablas</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div>OBJECTS_SP_UMTS_NE
+UMTS_NSN_SERVICE_NE_HOUR</div></blockquote>
+<p><strong>Base de datos</strong>: Willy en perdido.claro.amx</p>
+</div></blockquote>
+<p><strong>Reporte OSSRC 7 DD.MM.YYYY</strong></p>
+<p><strong>Tablas</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div>OBJECTS_SP_UMTS_NE
+UMTS_NSN_SERVICE_NE_HOUR</div></blockquote>
+<p><strong>Base de datos</strong>: Willy en perdido.claro.amx</p>
+</div></blockquote>
+<p><strong>Reporte OSSRC 8 DD.MM.YYYY</strong></p>
+<p><strong>Tablas</strong>:</p>
+<blockquote>
+<div><blockquote>
+<div>OBJECTS_SP_UMTS_NE
+UMTS_NSN_SERVICE_NE_HOUR</div></blockquote>
+<p><strong>Base de datos</strong>: Willy en perdido.claro.amx</p>
+</div></blockquote>
+<div class="section" id="consultas-sql">
+<h3>CONSULTAS SQL<a class="headerlink" href="#consultas-sql" title="Permalink to this headline">¶</a></h3>
+<p>Reporte OSSRC 5 DD.MM.YYYY</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reporternc/ReporteOSSRC5.txt">ReporteOSSRC5</a></li>
+</ul>
+<p>Reporte OSSRC 6 DD.MM.YYYY</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reporternc/ReporteOSSRC6.txt">ReporteOSSRC6</a></li>
+</ul>
+<p>Reporte OSSRC 7 DD.MM.YYYY</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reporternc/ReporteOSSRC7.txt">ReporteOSSRC7</a></li>
+</ul>
+<p>Reporte OSSRC 8 DD.MM.YYYY</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reporternc/ReporteOSSRC8.txt">ReporteOSSRC8</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="proceso-pentaho">
+<h2>4.PROCESO PENTAHO<a class="headerlink" href="#proceso-pentaho" title="Permalink to this headline">¶</a></h2>
+<p><strong>Reporte RNC DD:MM:YYYY</strong></p>
+<p><strong>Variable HOME</strong>: REPORTERNC-HOME
+<strong>Parámetros de entrada:</strong></p>
+<dl class="docutils">
+<dt>FECHA (DD.MM.YYYY): Fecha tomada por la consulta SQL para filtrar los datos a un rango de tiempo. FECHA se Trunca dentro de la consulta al día Domingo</dt>
+<dd>FECHA_REPORTE (DD-MM-YYYY): fecha se usa para título del</dd>
+</dl>
+<img alt="../_images/image125.png" class="align-center" src="../_images/image125.png" />
+<div class="section" id="principal">
+<h3>Principal<a class="headerlink" href="#principal" title="Permalink to this headline">¶</a></h3>
+<p>Se divide en cuatro secciones similares en cuanto a la estructura cada uno específico para cada OSSRC</p>
+<img alt="../_images/image213.png" class="align-center" src="../_images/image213.png" />
+<ul class="simple">
+<li>En caso de existir un error en alguna de las transformaciones se guarda en el log una marca de error y luego se envía por email</li>
+</ul>
+<p><strong>Envió de Informe</strong></p>
+<p>En este proceso se realiza el envío del informe en Excel adjunto, se implementó un control por si falla el envío del email esperando 10 minutos y volviéndolo a intentar</p>
+<p><strong>Captura de errores</strong></p>
+<p>En esta sección se captura cualquier error que haya ocurrido en los JOB y transformaciones principales y se informa por email adjuntado el log</p>
+</div>
+</div>
+<div class="section" id="presentacion">
+<h2>5.PRESENTACION<a class="headerlink" href="#presentacion" title="Permalink to this headline">¶</a></h2>
+<p>Se envía por Email</p>
+<p>El &#8220;Reporte Reporte RNC Week YYYY&#8221; se envía los domingos a las 7 am por email.</p>
+<p>Adjunto:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/reporternc/ReporteRNC.xlsx">ReporteRNC</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../proyectos.html" class="btn btn-neutral float-right" title="PROYECTOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reportevlr.html" class="btn btn-neutral" title="Reporte Automatico VLR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

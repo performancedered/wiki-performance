@@ -25,3 +25,5 @@ REPORTES
    	9. Reporte CGNAT <../../_sections/reportecgnat>
 
     10. Reporte Automatico VLR <../../_sections/reportevlr>
+
+    11. Reporte RNC <../../_sections/reporternc>

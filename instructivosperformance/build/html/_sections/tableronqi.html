@@ -130,10 +130,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#tablero-qda-qdr-configuracion-nqi-hourly"><strong>TABLERO QDA/QDR/Configuración (NQI HOURLY)</strong></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id5">5.  MACRO FLUJO DEL PROCESO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">6.  DESCRIPCIÓN DETALLADA</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">7.  REPROCESO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">8. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.  MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">6.  DESCRIPCIÓN DETALLADA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">7. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +229,7 @@
 <li>FD: Fecha desde, en formato DD.MM.YYYY</li>
 <li>FH: Fecha hasta, en formato DD.MM.YYYY</li>
 <li>Smart: Base de datos Oracle donde se encuentran las tablas de datos para la red de acceso, incluido GSM y GPRS</li>
-<li>Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.  El nombre es perdido.claro.amx y la dirección ip física es 10.92.50.83</li>
+<li>Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra DSmart2.  El nombre es falda.claro.amx y la dirección ip física es 10.92.56.198</li>
 </ul>
 <div class="section" id="tablero-nqi-day">
 <h2><strong>TABLERO_NQI DAY</strong><a class="headerlink" href="#tablero-nqi-day" title="Permalink to this headline">¶</a></h2>
@@ -284,7 +283,7 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <div class="section" id="logueo-del-proceso">
 <h3>Logueo del proceso:<a class="headerlink" href="#logueo-del-proceso" title="Permalink to this headline">¶</a></h3>
 <p>El logueo del proceso se realiza en el archivo nqi_day_ins.log (ubicado en el path /calidad/tablero/nqi/daily/)</p>
-<img alt="../_images/pag417.png" class="align-center" src="../_images/pag417.png" />
+<img alt="../_images/pag4.png" class="align-center" src="../_images/pag4.png" />
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h3>
@@ -339,11 +338,11 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <div class="section" id="smart">
 <h3>8.SMART<a class="headerlink" href="#smart" title="Permalink to this headline">¶</a></h3>
 <p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
-<img alt="../_images/pag619.png" class="align-center" src="../_images/pag619.png" />
+<img alt="../_images/pag63.png" class="align-center" src="../_images/pag63.png" />
 <img alt="../_images/pag716.png" class="align-center" src="../_images/pag716.png" />
-<img alt="../_images/pag814.png" class="align-center" src="../_images/pag814.png" />
-<img alt="../_images/pag912.png" class="align-center" src="../_images/pag912.png" />
-<img alt="../_images/pag1013.png" class="align-center" src="../_images/pag1013.png" />
+<img alt="../_images/pag811.png" class="align-center" src="../_images/pag811.png" />
+<img alt="../_images/pag99.png" class="align-center" src="../_images/pag99.png" />
+<img alt="../_images/pag103.png" class="align-center" src="../_images/pag103.png" />
 </div>
 <div class="section" id="control-de-cambios">
 <h3>9. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h3>
@@ -370,31 +369,40 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
   <td> 12/01/2017 </td>
   <td> Monica Pellegrini </td>
   <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-462"> CL-462 </a></p>  </td>
-  <td> Se creo el proceso para insertar datos en tabla auxiliar. </td>
+  <td> Se creo el proceso para insertasr datos en tabla auxiliar. </td>
   <td> </td>
 </tr>
 </table></div>
 </div>
 <div class="section" id="tablero-qda-qdr-configuracion-nqi-hourly">
 <h2><strong>TABLERO QDA/QDR/Configuración (NQI HOURLY)</strong><a class="headerlink" href="#tablero-qda-qdr-configuracion-nqi-hourly" title="Permalink to this headline">¶</a></h2>
-<p>El tablero_nqi_hours contiene información diaria sobre el tráfico de voz y datos, de las tecnologías umts y lte, agrupado por mercado y país.</p>
-<p>Para ver el tablero, una vez conectados a la base de datos Smart, con el PL/SQL se debe ejecutar lo siguiente:</p>
+<p>El tablero NQI se puede consultar por nivel de sumarizacion y por elemento de red.
+Los niveles de sumarizacion son: Horarios, Diarios y Semanales.
+Los elementos de red disponibles son: Celda, Sitio, Elemento Controlador, Alm, Mercado, Pais.</p>
+<p>Estos valores son iniciales.</p>
+<p>La informacion que muestra el tablero de NQI es del lado de ACCESO y esto incluye tanto la parte de voz como la de datos.
+El tablero NQI esta compuesta de algunas secciones: Trafico de Voz, Trafico de Datos (Tanto UpLink, DownLink como tambien discriminado por HSPA y por R99), Fallas en el establecimiento de las fallas (RAB y RRC), Indicador de Traffic Load y su apertura, Twmap y otros parametros de configuracion solo disponibles a nivel de celda (la gran mayoria).</p>
+<p>Hoy por hoy, solamente se encuentra disponible el nivel de sumarizacion hour y a nivel del celda.</p>
+<p>El nombre de la tabla con la info del tablero es TABLERO_NQI_HOUR.</p>
+<p>Para ver el tablero, una vez conectados a la base de datos DSmart2, con el PL/SQL se debe ejecutar lo siguiente:</p>
 <blockquote>
 <div><ul class="simple">
 <li>SELECT * FROM tablero_nqi_hour</li>
 </ul>
 </div></blockquote>
 <p>Contiene los siguientes campos:</p>
-<img alt="../_images/pag418.png" class="align-center" src="../_images/pag418.png" />
+<img alt="../_images/pag41.png" class="align-center" src="../_images/pag41.png" />
 <img alt="../_images/pag4.28.png" class="align-center" src="../_images/pag4.28.png" />
+<img alt="../_images/pag4.36.png" class="align-center" src="../_images/pag4.36.png" />
+<img alt="../_images/pag4.41.png" class="align-center" src="../_images/pag4.41.png" />
 <ul class="simple">
 <li>Server:</li>
 </ul>
-<p>perdido.claro.amx (10.92.50.83).</p>
+<p>falda.claro.amx (10.92.56.198).</p>
 <ul class="simple">
 <li>Base de Datos:</li>
 </ul>
-<p>Oracle 10G. Instancia WILLY</p>
+<p>Oracle 12C. Instancia DSmart2</p>
 <ul class="simple">
 <li>Frecuencia del proceso:</li>
 </ul>
@@ -402,82 +410,27 @@ La ejecución entonces se realiza el minuto 15, de la hora 09, todos los días d
 <ul class="simple">
 <li>Proceso que genera el tablero:</li>
 </ul>
-<p>El proceso tiene nombre” pre_tablero_nqi_hourly.sh” y actualiza la tabla diariamente y se lo puede encontrar en el crontab del equipo perdido, a continuación se lo transcribe: 45 * * * * /calidad/tablero/radar/ pre_tablero_nqi_hourly.sh &gt; /dev/null 2&gt;&amp;1 La ejecución entonces se realiza el minuto 45, todos los días del año, todos los meses del año, todos los días de la semana (45 * * * <a href="#id3"><span class="problematic" id="id4">*</span></a>)</p>
+<p>El tablero se procesa mediante un JOB en la BD, no contiene codigo script shell, ni tampoco Java, ni Pentaho. La insercion, mantenimiento y reprocesos de datos se hace pura y exclusivamente desde la BD.
+El JOB se llama TABLERONQIHOURAUX, corre todas las horas y ejecuta el siguiente bloque PLSQL.</p>
+<p>En la parte declarativa tenemos dos cursores y algunas variables.
+El cursor FECHAS divide en ciclos predefinidos la ventana de procesamiento, cualquier sea su tamaño. Ejemplo: Si quiero procesar una ventana de 12 horas y el ciclo esta definido en 4 horas. El cursor devolvera tres periodos de tiempo de 4 horas cada uno que en total representarian la ventana de tiempo definida por el usuario para reprocesar.
+Y el segundo cursor, llamado ELEMENTOS, detalla cada uno de los regionales que se tienen en cuanta para recolectar los valores e insertarlos en el tablero final.</p>
+<p>Ambos cursores define la ventana de procesamiento... por cada regional se procesa un periodo de tiempo a la vez.</p>
+<p>Cada ventana de procesamiento ejecuta dos procedimientos: P_AUX_TABLERO_NQI_HOUR_INS y P_TABLERO_NQI_HOUR_INS.
+Todos los procedimientos y funciones invocadas durante todo el tratamiento del tablero NQI, se encuentra dentro del package G_TABLERONQIHOUR.</p>
 <ul class="simple">
 <li>Duración del proceso:</li>
 </ul>
-<p>20 minutos aproximadamente</p>
-<ul class="simple">
-<li>Ubicación del proceso:</li>
-</ul>
-<p>calidad/tablero/radar/ pre_tablero_nqi_hourly.sh
-Para poder ver el proceso se sugiere conectarse vía ftp al server perdido, con el usuario “calidad”,</p>
-<ul class="simple">
-<li>Logueo del proceso:</li>
-</ul>
-<p>El logueo del proceso se realiza en el archivo nqi_hourly_ins.log (ubicado en el path /calidad/tablero/radar)</p>
+<p>20 miutos aproximadamente</p>
+<div class="section" id="id3">
+<h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/pag1010.png" class="align-center" src="../_images/pag1010.png" />
+</div>
+<div class="section" id="id4">
+<h3>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</div>
 <div class="section" id="id5">
-<h3>5.  MACRO FLUJO DEL PROCESO<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<img alt="../_images/pag620.png" class="align-center" src="../_images/pag620.png" />
-</div>
-<div class="section" id="id6">
-<h3>6.  DESCRIPCIÓN DETALLADA<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Shell Script <a class="reference external" href="../_static/images/tableronqihourly/tablero_nqi_hourly.sh">tablero_nqi_hourly</a></li>
-<li>La función denominada f_tablero_nqi_hourly:</li>
-</ul>
-<dl class="docutils">
-<dt>f_Tablero_Nqi_Hourly () {</dt>
-<dd><p class="first"># Autor: Monica Pellegrini. Fecha: 23.09.2016.
-# Actualizacion: Monica Pellegrini. Fecha:02.11.2016
-fechaDesde=&#8221;$1 $2&#8221;
-fechaHasta=&#8221;$3 $4&#8221;
-log=$5</p>
-<p class="last">f_log &#8216;Start NQI Hourly Ins&#8217; $LOG</p>
-</dd>
-</dl>
-<p>for k in <cite>f_MDT_Customize $fechaDesde $fechaHasta 2</cite>
-do
-l=`echo $k | sed &#8216;s/_/ /g&#8217;`
-sqlplus -S / &#64;${WorkDirNqiHourly}nqi_umts_hour_ins.sql $l
-sqlplus -S / &#64;${WorkDirNqiHourly}nqi_umts_hour_in2.sql  $l
-sqlplus -S / &#64;${WorkDirNqiHourly}nqi_lte_hour_ins.sql $l
-f_log &#8216;Finish NQI Hourly Ins&#8217; $LOG
-f_log &#8216;Start Tablero NQI Hourly&#8217; $LOG
-sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
-<blockquote>
-<div>done</div></blockquote>
-<p>f_log &#8216;Finish Tablero NQI Hourly &#8216; $LOG
-}</p>
-<ul>
-<li><p class="first">El logueo del proceso se realiza en el archivo <a class="reference external" href="../_static/images/tableronqihourly/nqi_hourly_ins.log">nqi_hourly_ins</a> (ubicado en el path calidad/tablero/minutos/)</p>
-</li>
-<li><p class="first">El proceso .sql está conformado de la siguiente manera:</p>
-<blockquote>
-<div><ul class="simple">
-<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_umts_hour_ins.sql">nqi_umts_hour_ins</a></li>
-<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_umts_hour_in2.sql">nqi_umts_hour_in2</a></li>
-<li><a class="reference external" href="../_static/images/tableronqihourly/nqi_lte_hour_ins.sql">nqi_lte_hour_ins</a></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li>Los procedimientos  de las queries nqi_umts_hour_ins, nqi_umts_hour_in2,nqi_lte_hour_ins son los siguientes:</li>
-</ul>
-</li>
-</ul>
-<img alt="../_images/pag815.png" class="align-center" src="../_images/pag815.png" />
-<img alt="../_images/pag913.png" class="align-center" src="../_images/pag913.png" />
-</div>
-<div class="section" id="id7">
-<h3>7.  REPROCESO<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Para el reproceso del tablero nqi a nivel hour, se debe conectar al equipo unix, en la carpeta:</p>
-<img alt="../_images/pag9.27.png" class="align-center" src="../_images/pag9.27.png" />
-<p>Formato de la fecha:  DD.MM.YYYY HH24</p>
-<p>Ejemplo:</p>
-<img alt="../_images/pag9.31.png" class="align-center" src="../_images/pag9.31.png" />
-</div>
-<div class="section" id="id8">
-<h3>8. CONTROL DE CAMBIOS<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>7. CONTROL DE CAMBIOS<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
  <style type="text/css">
   table {
      border:2px solid red;
@@ -498,10 +451,10 @@ sqlplus -S / &#64;${WorkDirNqiHourly}tablero_nqi_ne_hour.sql $l</p>
   <th>Repositorio</th>
 </tr>
 <tr>
-  <td> 01/02/2017</td>
-  <td>  Monica Pellegrini</td>
-  <td> <p><a href="http://jira.harriague.com.ar/jira/browse/CL-728"> CL-728 </a></p>  </td>
-  <td> RFC- Se agrego el proceso de recuperación de datos. </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
   <td> </td>
 </tr>
 </table></div>

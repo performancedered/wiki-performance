@@ -196,18 +196,85 @@ Los Scripts tienen las siguientes funciones:
 
 3-	Ejecutar Pentaho
 
-El Script .sh es la raíz de proceso 
-
 Los scripts son los siguientes:
+
+.. _CiscoUCS_BHDayISHW_EndToEnd: ../_static/images/ciscoucs/CiscoUCS_BHDayISHW_EndToEnd.sh 
+
+.. _CiscoUCS_BHDayISHW_Rework: ../_static/images/ciscoucs/CiscoUCS_BHDayISHW_Rework.sh 
+
+.. _CiscoUCS_BHDayISHWDiario: ../_static/images/ciscoucs/CiscoUCS_BHDayISHWDiario.sh 
+
+.. _CiscoUCS_BHDayISHWRun: ../_static/images/ciscoucs/CiscoUCS_BHDayISHWRun.sh 
+
+.. _CiscoUCS_Hour_EndToEnd: ../_static/images/ciscoucs/CiscoUCS_Hour_EndToEnd.sh 
+
+.. _CiscoUCS_Hour_Rework: ../_static/images/ciscoucs/CiscoUCS_Hour_Rework.sh 
+
+.. _staticCiscoUCS_HourDiario: ../_static/images/ciscoucs/CiscoUCS_HourDiario.sh 
+
+.. _CiscoUCS_HourRun: ../_static/images/ciscoucs/CiscoUCS_HourRun.sh 
+
+.. _reporteHourCiscoUCSRun: ../_static/images/ciscoucs/reporteHourCiscoUCSRun.sh 
+
+.. _reporteNivelHourCiscoUCS: ../_static/images/ciscoucs/CiscoUCS_HourRun.sh 
 
 .. _cleanupLogs: ../_static/images/ciscoucs/cleanupLogs.sh 
 
 .. _deleteEmptyLogs:  ../_static/images/ciscoucs/deleteEmptyLogs.sh
 
+**Busy Hour, Day, ISHW**
+
+* CiscoUCS_BHDayISHW_EndToEnd_ 
+
+Ejecuta el proyecto en pentaho
+
+* CiscoUCS_BHDayISHW_Rework_ 
+
+Ejecuta el proyecto de recupero de datos.
+
+* CiscoUCS_BHDayISHWDiario_ 
+
+Limpia y ejecuta el proyecto en pentaho
+
+* CiscoUCS_BHDayISHWRun_ 
+
+Llama a CiscoUCS_BHDayISHW_EndToEnd y ejecuta el proyecto en pentaho
+
+**Hour**
+
+* CiscoUCS_Hour_EndToEnd_ 
+
+Ejecuta el proyecto en pentajo
+
+* CiscoUCS_Hour_Rework_ 
+
+Ejecuta el proyecto de recupero de datos.
+
+* CiscoUCS_HourDiario_ 
+
+Limpia y ejecuta el proyecto en pentaho
+
+* CiscoUCS_HourRun_ 
+
+Llama a CiscoUCS_Hour_EndToEnd y ejecuta el proyecto en pentaho
+
+**Reporte**
+
+* reporteHourCiscoUCSRun_ 
+
+* reporteNivelHourCiscoUCS_
+
+**Limpieza**
 
 *	cleanupLogs_ 
 
+Saca lineas innecesarias de los logs antes de ser enviados via email
+Params: RUTA = <PROYECTO>/PentahoLogs
+
 *	deleteEmptyLogs_
+
+Borra los logs de la carpeta <PROYECTO>/PentahoLogs cuyo tamaño es 0 
+o tiene una sola linea que no representa error
 
 
 6.4.	Listado de Tablas Utilizadas
@@ -246,8 +313,14 @@ Tenemos el Shell CiscoUCS_HourRun.sh que trae datos para el servidor Cortado. Lu
 
 •	Pentaho Calculo Sumarizaciones
 
+**Busy Hour, Day, ISHW**
+
 Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento
 G_CISCO_UCS.P_SUM_DAY_BH_IBHW_CISCOUCS.
+
+**Hour**
+
+Las sumarizaciones se calculan a día vencido (el día anterior al actual), para dicho cálculo se debe llamar al procedimiento G_CISCO_UCS.P_Calcular_hour
 
 6.6.	Controles 
 .................
