@@ -1,0 +1,28 @@
+POLITICA DE LIMPIEZA DE PROCESOS
+=================================
+
+basicamente lo que hace el proceso de limpieza de logs de archivos .logs es cross a todos los proyecto sin importar como se llame va a la carpeta /.logs y busca todos los archivos que alla anteriores a 3 dias osea todo archivo mayores a 3 dias de antiguedad(los borra), todo en la carpeta /PentahoLogs. busca en kettleproperties (estan declarados todos los proyectos activos que estan corriendo(cisco prime, alcatelfemtocell,nokia wifi, etc(hora por hora y diarios)))por ejemplo /calidad/ciscoprime. se queda unicamente con los nombre de los proyectos. basicamente barre y busca todo eso, va aa carpeta pentahologs, agarra y se fija todo lo que tenga > 3 dias de antiguedad, arma una lista y genera dos archivos uno que contiene los archivos que se van a borrar(cumplen condicion) y los que no. delete /calidad/ciscoprime/pentahologs/rzin_scn.log  lo destruye...
+
+HOME-PROJECTS.txt: Listado de proyectos activos a los cuales hay que hacerles limpieza(no quiere decir que todos tengan logs)
+NONE-HOME-PROJECTS.txt: Listado de todo lo que no se toma en cuenta para la limpieza de logs.
+TRUE.csv : Todos los archivos que se van a borrar.
+FALSE.csv: todos los archivos que no se van a borrar.
+logs_borrados_20170130.zip : se manda por correo al borrarse los logs.
+
+
+Este proceso corre todos los lunes alas 4 de la mañana.
+
+
+La limpieza de particiones corre todos los dias alas 4:50 de la mañana.
+
+Las particiones raw se limpias a las 4:50 de la mañana
+Busca tablas particionadas raw, y utiiliza la misma logica. se dejan 3 dias de informacion. todo lo > 3 de borra.
+Para las particiones hour, lo que cambias es el tiempo de informacion, se dejan 8 semanas(2 meses)
+Busca todas las tablas particiones Hour y busca todas las particiones > 8 semanas y las borra.
+El dia corriente no se toma en consideracion
+DAY BH ISABHWEEK ISABHMONTH se matienten eternamente. 
+esta informacion se mantiene eternamente hasta que digan, hoy vamos a borrar las particiones de laño por ejemplo 2013.
+si se la elimina, esta informacion se manda a un wherehouse,
+
+La informacion borrada sobre raw y hour, se pueden recomponer utilizando los archivos fuentes y con el reproceso para ese dia.
+

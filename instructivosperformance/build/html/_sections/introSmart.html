@@ -217,8 +217,8 @@
 <h3>OSS Propietario<a class="headerlink" href="#oss-propietario" title="Permalink to this headline">¶</a></h3>
 <p>Todos y cada uno de los elementos de la red de telecomunicaciones móviles (radiobases y controladores, bts, bsc, nodeb, rnc, etc) son gerenciados por el sistema centralizado de gestión que brinda el proveedor de la tecnología (OSS-Operational Support System).  Este sistema brinda el control de inventario, control de configuración, provisión de servicios, monitoreo de fallas y el monitoreo de las estadísticas de desempeño; para una mejor administración de los numerosos elementos de red, los mismos son distribuidos entre diferentes OSS.</p>
 <img alt="../_images/pag38.png" class="align-center" src="../_images/pag38.png" />
-<img alt="../_images/pag45.png" class="align-center" src="../_images/pag45.png" />
-<img alt="../_images/pag58.png" class="align-center" src="../_images/pag58.png" />
+<img alt="../_images/pag41.png" class="align-center" src="../_images/pag41.png" />
+<img alt="../_images/pag52.png" class="align-center" src="../_images/pag52.png" />
 </div>
 <div class="section" id="sistema-de-estadisticas-smart">
 <h3>Sistema de Estadísticas Smart<a class="headerlink" href="#sistema-de-estadisticas-smart" title="Permalink to this headline">¶</a></h3>
@@ -290,7 +290,7 @@
 <div class="section" id="agrupaciones-logicas-de-gsm">
 <h4>Agrupaciones lógicas de GSM<a class="headerlink" href="#agrupaciones-logicas-de-gsm" title="Permalink to this headline">¶</a></h4>
 <p>Para GSM las agrupaciones lógicas o de topología, relacionan varias BTS en una misma BCF, y varias BCF en una misma BSC.</p>
-<img alt="../_images/pag127.png" class="align-center" src="../_images/pag127.png" />
+<img alt="../_images/pag123.png" class="align-center" src="../_images/pag123.png" />
 </div>
 <div class="section" id="agrupaciones-logicas-de-umts">
 <h4>Agrupaciones lógicas de UMTS<a class="headerlink" href="#agrupaciones-logicas-de-umts" title="Permalink to this headline">¶</a></h4>
@@ -309,7 +309,7 @@
 <div class="section" id="tablas-hour">
 <h3>Tablas HOUR<a class="headerlink" href="#tablas-hour" title="Permalink to this headline">¶</a></h3>
 <p>Cada uno de las radio bases o celdas, generan estadísticas cada una hora.  Esta información es guardada en las tablas HOUR de la base de datos.  Así, para un elemento en particular, ej: UCO008A, tenemos 24 valores hour en un día en la tabla UMTS_NSN_SERVICE_WCEL_HOU2</p>
-<img alt="../_images/pag137.png" class="align-center" src="../_images/pag137.png" />
+<img alt="../_images/pag133.png" class="align-center" src="../_images/pag133.png" />
 </div>
 <div class="section" id="tablas-day">
 <h3>Tablas DAY<a class="headerlink" href="#tablas-day" title="Permalink to this headline">¶</a></h3>
@@ -341,7 +341,10 @@ El comienzo de semana es el día domingo, y el fin de la semana es el día sába
 </div>
 <div class="section" id="tablas-isabh-month">
 <h3>Tablas ISABH MONTH<a class="headerlink" href="#tablas-isabh-month" title="Permalink to this headline">¶</a></h3>
-<p>Se define como ISABH MONTH el “Individual Sector Average Busy Hour Month”.  O sea es el promedio de las horas pico del mes, de los sectores individuales (celdas).  Se toman los 7 busy hour más altos del mes, de una celda, y se los promedia.</p>
+<p>Criterio de ISABH MONTH</p>
+<p>Este algoritmo se calcula Mensualmente partiendo de una muestra de 15 valores en orden descendente de los días con mayor tráfico.
+Ahora se toman como muestra los primeros 15 valores se descartan los 2 más altos y los 13 restantes se promedian entre sí.
+Una vez realizado el promedio de tráfico de los 13 valores se verifica que dicho promedio no sea 2.5 veces mayor al dato de tráfico del día 2. De no ser mayor el valor 2 se incluye en el promedio total. Se repite el proceso para el dato 1 y con esto se puede tener un promedio por célula de 13, 14 ó 15 días dependiendo el caso.</p>
 </div>
 </div>
 <div class="section" id="tabla-objetos-umts">
@@ -373,9 +376,9 @@ El comienzo de semana es el día domingo, y el fin de la semana es el día sába
 </div>
 <div class="section" id="ejemplo-de-formulas-de-kpi">
 <h2>Ejemplo de fórmulas de KPI<a class="headerlink" href="#ejemplo-de-formulas-de-kpi" title="Permalink to this headline">¶</a></h2>
-<img alt="../_images/pag157.png" class="align-center" src="../_images/pag157.png" />
-<img alt="../_images/pag15.23.png" class="align-center" src="../_images/pag15.23.png" />
-<img alt="../_images/pag168.png" class="align-center" src="../_images/pag168.png" />
+<img alt="../_images/pag153.png" class="align-center" src="../_images/pag153.png" />
+<img alt="../_images/pag15.2.png" class="align-center" src="../_images/pag15.2.png" />
+<img alt="../_images/pag164.png" class="align-center" src="../_images/pag164.png" />
 </div>
 <div class="section" id="ejemplo-de-kpi-en-la-documentacion-nokia">
 <h2>Ejemplo de KPI en la documentación Nokia<a class="headerlink" href="#ejemplo-de-kpi-en-la-documentacion-nokia" title="Permalink to this headline">¶</a></h2>

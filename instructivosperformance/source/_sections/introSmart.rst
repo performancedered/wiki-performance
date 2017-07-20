@@ -199,8 +199,11 @@ El comienzo de semana es el día domingo, y el fin de la semana es el día sába
 Tablas ISABH MONTH
 ..................
 
-Se define como ISABH MONTH el “Individual Sector Average Busy Hour Month”.  O sea es el promedio de las horas pico del mes, de los sectores individuales (celdas).  Se toman los 7 busy hour más altos del mes, de una celda, y se los promedia.
-
+Criterio de ISABH MONTH
+ 
+Este algoritmo se calcula Mensualmente partiendo de una muestra de 15 valores en orden descendente de los días con mayor tráfico.
+Ahora se toman como muestra los primeros 15 valores se descartan los 2 más altos y los 13 restantes se promedian entre sí.
+Una vez realizado el promedio de tráfico de los 13 valores se verifica que dicho promedio no sea 2.5 veces mayor al dato de tráfico del día 2. De no ser mayor el valor 2 se incluye en el promedio total. Se repite el proceso para el dato 1 y con esto se puede tener un promedio por célula de 13, 14 ó 15 días dependiendo el caso.
 
 Tabla Objetos UMTS
 ------------------
