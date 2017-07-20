@@ -91,7 +91,7 @@ Es un tablero de resumen que muestra la cantidad de celdas y sitios que están e
 5.1.		MACROFLUJO 
 **********************
 
-.. image:: ../_static/images/tableroamxloadlte/pag4.png
+.. image:: ../_static/images/tableroamxloadlte/pag6.png
   :align: center
 
 
