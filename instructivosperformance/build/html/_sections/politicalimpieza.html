@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>POLITICA DE LIMPIEZA DE PROCESOS &mdash; WIKI-PERFORMANCE  documentation</title>
+  <title>POLITICA DE LIMPIEZA DENTRO DEL PROCESO &mdash; WIKI-PERFORMANCE  documentation</title>
   
 
   
@@ -118,7 +118,15 @@
 <li class="toctree-l2 current"><a class="reference internal" href="aseguramientodedatos.html">2. ASEGURAMIENTO DE DATOS</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="preventivo.html">1. PREVENTIVO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="correctivo.html">2. CORRECTIVO</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">3. POLITICA DE LIMPIEZA DENTRO DE PROCESOS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. POLITICA DE LIMPIEZA DE PROCESOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macroflujo">5.      MACROFLUJO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-de-cambios">6. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="procesodereportes.html">3. PROCESO DE REPORTES</a></li>
@@ -172,7 +180,7 @@
         
           <li><a href="aseguramientodedatos.html">ASEGURAMIENTO DE DATOS</a> &raquo;</li>
         
-      <li>POLITICA DE LIMPIEZA DE PROCESOS</li>
+      <li>POLITICA DE LIMPIEZA DENTRO DEL PROCESO</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,25 +197,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="politica-de-limpieza-de-procesos">
-<h1>POLITICA DE LIMPIEZA DE PROCESOS<a class="headerlink" href="#politica-de-limpieza-de-procesos" title="Permalink to this headline">¶</a></h1>
-<p>basicamente lo que hace el proceso de limpieza de logs de archivos .logs es cross a todos los proyecto sin importar como se llame va a la carpeta /.logs y busca todos los archivos que alla anteriores a 3 dias osea todo archivo mayores a 3 dias de antiguedad(los borra), todo en la carpeta /PentahoLogs. busca en kettleproperties (estan declarados todos los proyectos activos que estan corriendo(cisco prime, alcatelfemtocell,nokia wifi, etc(hora por hora y diarios)))por ejemplo /calidad/ciscoprime. se queda unicamente con los nombre de los proyectos. basicamente barre y busca todo eso, va aa carpeta pentahologs, agarra y se fija todo lo que tenga &gt; 3 dias de antiguedad, arma una lista y genera dos archivos uno que contiene los archivos que se van a borrar(cumplen condicion) y los que no. delete /calidad/ciscoprime/pentahologs/rzin_scn.log  lo destruye...</p>
-<p>HOME-PROJECTS.txt: Listado de proyectos activos a los cuales hay que hacerles limpieza(no quiere decir que todos tengan logs)
-NONE-HOME-PROJECTS.txt: Listado de todo lo que no se toma en cuenta para la limpieza de logs.
-TRUE.csv : Todos los archivos que se van a borrar.
-FALSE.csv: todos los archivos que no se van a borrar.
-logs_borrados_20170130.zip : se manda por correo al borrarse los logs.</p>
-<p>Este proceso corre todos los lunes alas 4 de la mañana.</p>
-<p>La limpieza de particiones corre todos los dias alas 4:50 de la mañana.</p>
-<p>Las particiones raw se limpias a las 4:50 de la mañana
-Busca tablas particionadas raw, y utiiliza la misma logica. se dejan 3 dias de informacion. todo lo &gt; 3 de borra.
-Para las particiones hour, lo que cambias es el tiempo de informacion, se dejan 8 semanas(2 meses)
-Busca todas las tablas particiones Hour y busca todas las particiones &gt; 8 semanas y las borra.
-El dia corriente no se toma en consideracion
-DAY BH ISABHWEEK ISABHMONTH se matienten eternamente.
-esta informacion se mantiene eternamente hasta que digan, hoy vamos a borrar las particiones de laño por ejemplo 2013.
-si se la elimina, esta informacion se manda a un wherehouse,</p>
-<p>La informacion borrada sobre raw y hour, se pueden recomponer utilizando los archivos fuentes y con el reproceso para ese dia.</p>
+  <div class="section" id="politica-de-limpieza-dentro-del-proceso">
+<h1>POLITICA DE LIMPIEZA DENTRO DEL PROCESO<a class="headerlink" href="#politica-de-limpieza-dentro-del-proceso" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo del proceso de limpieza de logs de archivos (.logs) es recorrer todos los proyectos sin importar como se llame, acceder a la carpeta /PentahoLogs y buscar todos los archivos que cumplan la condicion de antiguedad y borrarlos.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2.      ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Alcanza a todo el equipo de Performance de Red.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso busca en limpia.properties donde estan declarados todos los proyectos activos que estan corriendo y se queda unicamente con los nombre de los proyectos. Arma una lista y genera dos archivos uno que contiene los archivos que se van a borrar (cumplen condicion) TRUE.csv y los que no FALSE.csv.
+Este proceso corre todos los lunes alas 4 de la mañana.
+Las tablas particionadas raw que tengan mas de 3 dias de antiguadad se borran.
+Las tablas particionadas hour que tengan mas de 8 semanas (2 meses) de antiguedad se borran.
+La informacion borrada sobre raw y hour, se pueden recomponer utilizando los archivos fuentes y con el reproceso para ese dia.
+Las tablas DAY BH ISABHWEEK ISABHMONTH se mantiene eternamente hasta que se decida borrar una fecha determinada, si se decide eliminarse esta informacion se manda a un wherehouse.</p>
+<p>Servidor: falda.claro.amx.</p>
+<p><strong>Estructura de carpetas</strong></p>
+<img alt="../_images/image38.png" class="align-center" src="../_images/image38.png" />
+<p><strong>Carpeta Data</strong></p>
+<img alt="../_images/image49.png" class="align-center" src="../_images/image49.png" />
+<p>HOME-PROJECTS.txt: Listado de proyectos activos a los cuales hay que hacerles limpieza(no quiere decir que todos tengan logs).</p>
+<p>NONE-HOME-PROJECTS.txt: Listado de todo lo que no se toma en cuenta para la limpieza de logs.</p>
+<p>TRUE.csv : Todos los archivos que se van a borrar.</p>
+<p>FALSE.csv: todos los archivos que no se van a borrar.</p>
+<p>logs_borrados_20170130.zip : Se manda por correo al borrarse los logs.</p>
+</div>
+<div class="section" id="macroflujo">
+<h2>5.      MACROFLUJO<a class="headerlink" href="#macroflujo" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/image126.png" class="align-center" src="../_images/image126.png" />
+</div>
+<div class="section" id="control-de-cambios">
+<h2>6. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h2>
+  <style type="text/css">
+   table {
+      border:2px solid red;
+      border-collapse:separate;
+      }
+   th, td {
+      border:1px solid red;
+      padding:10px;
+      }
+ </style>
+
+ <table border="3">
+ <tr>
+   <th>Fecha</th>
+   <th>Responsable</th>
+   <th>Ticket Jira</th>
+   <th>Detalle</th>
+   <th>Repositorio</th>
+ </tr>
+ <tr>
+
+ </tr>
+</table></div>
 </div>
 
 
