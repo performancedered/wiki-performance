@@ -118,7 +118,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#descripcion-general">3.DESCRIPCION GENERAL:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#macro-flujo-del-proceso">4.  MACRO FLUJO DEL PROCESO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#descripcion-detallada">5.  DESCRIPCIÓN DETALLADA</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#control-de-cambios">6. CONTROL DE CAMBIOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso">6. REPROCESO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-de-cambios">7. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
 </ul>
@@ -324,8 +325,21 @@ Todos los procedimientos y funciones invocadas durante todo el tratamiento del t
 <blockquote>
 <div><a class="reference external" href="../_static/images/tableronqihourly/seis.sql">P_UMTS_CLDD_NQI_TWP_AUX_INS</a></div></blockquote>
 </div>
+<div class="section" id="reproceso">
+<h3>6. REPROCESO<a class="headerlink" href="#reproceso" title="Permalink to this headline">¶</a></h3>
+<p>El reproceso se realiza ejecutando el siguiente bloque PL/SQL:</p>
+<blockquote>
+<div><a class="reference external" href="../_static/images/tableronqihourly/blockRecovery.sql">blockRecovery.sql</a></div></blockquote>
+<p>Ingresando los siguientes campos:</p>
+<ul class="simple">
+<li>Numero de RC : OSSRC&lt;1|2|3|5&gt;</li>
+<li>Formato de la fecha desde : DD.MM.YYYY HH24</li>
+<li>Formato de la fecha hasta : DD.MM.YYYY HH24</li>
+</ul>
+<img alt="../_images/pag127.png" class="align-center" src="../_images/pag127.png" />
+</div>
 <div class="section" id="control-de-cambios">
-<h3>6. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h3>
+<h3>7. CONTROL DE CAMBIOS<a class="headerlink" href="#control-de-cambios" title="Permalink to this headline">¶</a></h3>
  <style type="text/css">
   table {
      border:2px solid red;

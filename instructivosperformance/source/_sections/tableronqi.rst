@@ -154,10 +154,26 @@ Todos los procedimientos y funciones invocadas durante todo el tratamiento del t
 
  P_UMTS_CLDD_NQI_TWP_AUX_INS_
 
+6. REPROCESO
+............
 
 
+El reproceso se realiza ejecutando el siguiente bloque PL/SQL:
 
-6. CONTROL DE CAMBIOS
+.. _blockRecovery.sql: ../_static/images/tableronqihourly/blockRecovery.sql
+
+ blockRecovery.sql_
+
+Ingresando los siguientes campos:
+
++ Numero de RC : OSSRC<1|2|3|5>
++ Formato de la fecha desde : DD.MM.YYYY HH24
++ Formato de la fecha hasta : DD.MM.YYYY HH24
+
+.. image:: ../_static/images/tableronqihourly/pag12.png
+  :align: center
+
+7. CONTROL DE CAMBIOS
 .....................
 
 .. raw:: html 
