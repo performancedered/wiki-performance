@@ -308,4 +308,4 @@ Ruta del reporte: Core Switch / MSS / CGR
   :align: center
 
 
-Describir los KPIs que muestra cada reporte y qué significa
+
