@@ -12,7 +12,7 @@ El objetivo del documento será el de presentar y explicar los procesos que gene
 Áreas involucradas: Performance de red
 
 3.	DEFINICIONES
-------------
+----------------
 
 Cortado: Servidor UNIX en donde se importan los archivos desde el proveedor. El nombre del servidor es cortado.claro.amx y la dirección IP física es 10.105.146.8.
 Falda: Servidor de desarrollo en donde se desarrollan todos los proyectos antes de su pasaje a producción.

@@ -1,0 +1,22 @@
+
+f_Msc_Cgr_Hourly () {
+
+  FECHA_DESDE="$1 $2"
+  FECHA_HASTA="$3 $4"
+  LOG=$5
+
+  f_log 'Start Cgr Hour' $LOG
+
+  f_log 'Cgr Hour' $LOG
+  for i in `echo $dblinksOss2g`
+  do
+
+  sqlplus -S / @${WorkDirMscCgrHourly}nokia_msc_cgr_hour.sql $FECHA_DESDE $FECHA_HASTA $i
+
+  done
+
+  f_log 'Market Cgr Hour' $LOG
+  sqlplus -S / @${WorkDirMscCgrHourly}nokia_msc_cgr_mk_hour.sql $FECHA_DESDE $FECHA_HASTA
+
+  f_log 'Finish Cgr Hour' $LOG
+}

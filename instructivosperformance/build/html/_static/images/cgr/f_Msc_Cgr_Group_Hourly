@@ -1,0 +1,14 @@
+
+f_Msc_Cgr_Group_Hourly () {
+
+  FECHA_DESDE="$1 $2"
+  FECHA_HASTA="$3 $4"
+  LOG=$5
+
+  f_log 'Start Cgr Group Hour' $LOG
+
+  f_log 'Cgr Group Hour' $LOG
+  sqlplus -S / @${WorkDirMscCgrHourly}nokia_msc_cgr_group_hour.sql $FECHA_DESDE $FECHA_HASTA
+
+  f_log 'Finish Cgr Group Hour' $LOG
+}
