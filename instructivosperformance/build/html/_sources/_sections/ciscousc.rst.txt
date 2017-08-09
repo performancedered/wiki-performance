@@ -4,19 +4,38 @@ CISCO UCS
 
 1.	OBJETIVO
 ------------
+
 El presente documento buscar explicar y detallar el proceso que genera el CISCO UCS.
 
 2.	ALCANCE 
 -----------
+
 Áreas involucradas: Performance de Red
 
 3.	DEFINICIONES
 ----------------
-•	Cortado: Servidor LINUX en donde se importan las MBI desde el proveedor.
-El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8
+
+.. _ToplogiaUCS:  ../_static/images/ciscoucs/DCCordobav2.ppt
+
++	Cortado: Servidor LINUX en donde se importan las MBI desde el proveedor. El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8
+
++ Topologia de la red UCS: ToplogiaUCS_
+
 
 4.	DESCRIPCION GENERAL 
 -----------------------
+
+U.C.S : Unified Computing System
+
+Es una plataforma de servidores fisicos utilizados para la virtualizacion de diferentes plataformas que se utilizan en claro tales como Voicemail ZTE, PNR/PCP, Spidercloud, entre otras.
+El objetivo de la virtualizacion es entre otros la asignacion dinamica de recursos tales como espacio en disco.
+Esta plataforma consta de varios servidores ubicados en cordoba, garay y torcuato.
+
+De cisco prime se mide el throughput de las interfaces que interconectan los equipos, estos datos vienen en archivos csv.
+Por otro lado tambien medimos KPIs de CPU load, memoria y utilizacion de discos. Estos KPIs provienen de MIBs que se toman de cada uno de los equipos mostrados a continuacion :
+
+.. image:: ../_static/images/ciscoucs/equipos.png
+  :align: center 
 
 Campos de la tabla TABLE UCS_VM_STORAGE_HOUR: 
 

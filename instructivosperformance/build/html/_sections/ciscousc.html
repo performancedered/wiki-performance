@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
-        <link rel="next" title="PROCESOS" href="../procesos.html"/>
+        <link rel="next" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" href="cgr.html"/>
         <link rel="prev" title="GESTION DE RECLAMOS - SMART" href="gestionreclamossmart.html"/> 
 
   
@@ -157,6 +157,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cgr.html">23. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nokiaims.html">24. Nokia IMS (AAA)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
@@ -236,12 +238,19 @@
 <div class="section" id="definiciones">
 <h2>3.      DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Cortado: Servidor LINUX en donde se importan las MBI desde el proveedor.</li>
+<li>Cortado: Servidor LINUX en donde se importan las MBI desde el proveedor. El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</li>
+<li>Topologia de la red UCS: <a class="reference external" href="../_static/images/ciscoucs/DCCordobav2.ppt">ToplogiaUCS</a></li>
 </ul>
-<p>El nombre es cortado.claro.amx y la dirección IP física es 10.105.146.8</p>
 </div>
 <div class="section" id="descripcion-general">
 <h2>4.      DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>U.C.S : Unified Computing System</p>
+<p>Es una plataforma de servidores fisicos utilizados para la virtualizacion de diferentes plataformas que se utilizan en claro tales como Voicemail ZTE, PNR/PCP, Spidercloud, entre otras.
+El objetivo de la virtualizacion es entre otros la asignacion dinamica de recursos tales como espacio en disco.
+Esta plataforma consta de varios servidores ubicados en cordoba, garay y torcuato.</p>
+<p>De cisco prime se mide el throughput de las interfaces que interconectan los equipos, estos datos vienen en archivos csv.
+Por otro lado tambien medimos KPIs de CPU load, memoria y utilizacion de discos. Estos KPIs provienen de MIBs que se toman de cada uno de los equipos mostrados a continuacion :</p>
+<img alt="../_images/equipos.png" class="align-center" src="../_images/equipos.png" />
 <p>Campos de la tabla TABLE UCS_VM_STORAGE_HOUR:</p>
 <img alt="../_images/image123.png" class="align-center" src="../_images/image123.png" />
 <p>Campos de la tabla UCS_VM_INTERFACES_HOUR:</p>
@@ -503,7 +512,7 @@ G_CISCO_UCS.P_SUM_DAY_BH_IBHW_CISCOUCS.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../procesos.html" class="btn btn-neutral float-right" title="PROCESOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cgr.html" class="btn btn-neutral float-right" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="gestionreclamossmart.html" class="btn btn-neutral" title="GESTION DE RECLAMOS - SMART" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

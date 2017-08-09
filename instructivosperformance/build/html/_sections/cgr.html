@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="PROYECTOS" href="../proyectos.html"/>
-        <link rel="next" title="PROCESOS" href="../procesos.html"/>
+        <link rel="next" title="Nokia IMS (AAA)" href="nokiaims.html"/>
         <link rel="prev" title="CISCO UCS" href="ciscousc.html"/> 
 
   
@@ -152,6 +152,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="nokiaims.html">24. Nokia IMS (AAA)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
@@ -231,12 +232,14 @@
 <div class="section" id="definiciones">
 <h2>3. DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>MSC: Los MSS son switches o conmutadores que pertenecen a las tecnologías móviles 2G y 3G y se encargan de conmutar las llamadas de voz de ambas tecnologías para todos los usuarios. A demás de esto permite separar la señalización del plano de usuario lo que garantiza una mejor ubicación de los elementos de red.</li>
+<li>MSS: Los MSS son switches o conmutadores que pertenecen a las tecnologías móviles 2G y 3G y se encargan de conmutar las llamadas de voz de ambas tecnologías para todos los usuarios. A demás de esto permite separar la señalización del plano de usuario lo que garantiza una mejor ubicación de los elementos de red.</li>
 <li>CGR: Son troncales o canales de comunicación q se definen entre los elementos de la red.</li>
 <li>CGR_GROUP: Troncales agrupados.</li>
 <li>Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.</li>
 <li>OSS: Servidor propuesto por nokia para la obtencion de informacion.</li>
+<li>Diagrama de topologia MSS:</li>
 </ul>
+<img alt="../_images/topologia.png" class="align-center" src="../_images/topologia.png" />
 </div>
 <div class="section" id="descripcion-general">
 <h2>4. DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
@@ -245,6 +248,13 @@ Las comunicaciones entre los switches se implementa atraves de los troncales.
 Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar los troncales en grupos (Troncales agrupados: CGR_GROUP).</p>
 <p>A continuacion se muestran los MSS existentes:</p>
 <img alt="../_images/mss.png" class="align-center" src="../_images/mss.png" />
+<p><strong>CGR Type</strong> : Servicio al cual se conecta el CGR.</p>
+<p>Existen diferentes tipos :</p>
+<img alt="../_images/cgrtype.png" class="align-center" src="../_images/cgrtype.png" />
+<p><strong>Nomenclatura CGR Individual y CGR Grupal</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/cgr/170802_TG-LIST.xlsx">Nomenclatura</a></li>
+</ul>
 </div>
 <div class="section" id="macroflujo-del-proceso">
 <h2>5. MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
@@ -333,6 +343,22 @@ Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar
 <li><a class="reference external" href="../_static/images/cgr/consulta_tres.sql">consulta_nokia_msc_cgr_day</a></li>
 </ul>
 </div>
+<div class="section" id="ejemplos-cgr-individuales-y-agrupados">
+<h4>Ejemplos CGR individuales y agrupados<a class="headerlink" href="#ejemplos-cgr-individuales-y-agrupados" title="Permalink to this headline">¶</a></h4>
+<p>Aqui se muestran ejemplos de los CGR agrupados con los CGR Individuales que lo componen, cómo aparecen los mismos en las tablas objetos y cómo aparecen en las tablas de KPI/Counters. Tambien se muestra que la suma del tráfico en Erlangs de los CGR Individuales da lo mismo que el tráfico en Erlangs del CGR Agrupado.</p>
+<ul class="simple">
+<li>Tabla CGR Individual Group Aguada01 MON02 Dia 09/08 a las 05:00:00 am</li>
+</ul>
+<img alt="../_images/ejemplo1.png" class="align-center" src="../_images/ejemplo1.png" />
+<ul class="simple">
+<li>Tabla CGR Agrupada Group Aguada01 MON02 Dia 09/08 a las 05 am</li>
+</ul>
+<img alt="../_images/ejemplo2.png" class="align-center" src="../_images/ejemplo2.png" />
+<ul class="simple">
+<li>Objeto</li>
+</ul>
+<img alt="../_images/ejemplo3.png" class="align-center" src="../_images/ejemplo3.png" />
+</div>
 </div>
 <div class="section" id="shell-copiar-archivos-origen-a-destino">
 <h3>6.4 Shell Copiar Archivos Origen a Destino<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino" title="Permalink to this headline">¶</a></h3>
@@ -367,6 +393,8 @@ Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar
 <ul class="simple">
 <li><a class="reference external" href="../_static/images/cgr/nokia_msc_cgr_group_hour.sql">nokia_msc_cgr_group_hour.sql</a></li>
 </ul>
+<p>CGR Type
+Type.: Servicio al cual se conecta el CGR.</p>
 </div>
 <div class="section" id="reproceso-automatico-y-manual">
 <h3>7. Reproceso Automático y Manual<a class="headerlink" href="#reproceso-automatico-y-manual" title="Permalink to this headline">¶</a></h3>
@@ -388,26 +416,31 @@ Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar
 <h3>8. Reportes de Smart<a class="headerlink" href="#reportes-de-smart" title="Permalink to this headline">¶</a></h3>
 <p>La visualización de CGR en la herramienta Smart se realiza desde los siguientes reportes:</p>
 <p>Ruta del reporte: Core Switch / MSS / CGR</p>
+<img alt="../_images/ruta.png" class="align-center" src="../_images/ruta.png" />
 <p><strong>Reportes disponibles:</strong></p>
 <p><strong>CGR Individual Principales KPI Diario / Histórico</strong></p>
 <p><strong>Diario</strong></p>
 <img alt="../_images/reporte1.png" class="align-center" src="../_images/reporte1.png" />
 <p><strong>Historico</strong></p>
 <img alt="../_images/reporte2.png" class="align-center" src="../_images/reporte2.png" />
+<img alt="../_images/reporte10.png" class="align-center" src="../_images/reporte10.png" />
 <p><strong>CGR Individual Principales KPI(NEW) Diario/ Histórico</strong></p>
 <p><strong>Diario</strong></p>
 <img alt="../_images/reporte3.png" class="align-center" src="../_images/reporte3.png" />
 <p><strong>Historico</strong></p>
 <img alt="../_images/reporte4.png" class="align-center" src="../_images/reporte4.png" />
+<img alt="../_images/reporte11.png" class="align-center" src="../_images/reporte11.png" />
+<img alt="../_images/reporte12.png" class="align-center" src="../_images/reporte12.png" />
 <p><strong>CGR Agrupado Principales KPI Diario / Histórico</strong></p>
 <p><strong>Diario</strong></p>
 <img alt="../_images/reporte5.png" class="align-center" src="../_images/reporte5.png" />
 <p><strong>Historico</strong></p>
 <img alt="../_images/reporte6.png" class="align-center" src="../_images/reporte6.png" />
+<img alt="../_images/reporte13.png" class="align-center" src="../_images/reporte13.png" />
+<img alt="../_images/reporte14.png" class="align-center" src="../_images/reporte14.png" />
 <p><strong>Huawei CGRs Diario / Histórico</strong></p>
 <p><strong>Tablero Utilizacion POI Tablero</strong></p>
 <img alt="../_images/reporte9.png" class="align-center" src="../_images/reporte9.png" />
-<p>Describir los KPIs que muestra cada reporte y qué significa</p>
 </div>
 </div>
 </div>
@@ -422,7 +455,7 @@ Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../procesos.html" class="btn btn-neutral float-right" title="PROCESOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="nokiaims.html" class="btn btn-neutral float-right" title="Nokia IMS (AAA)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ciscousc.html" class="btn btn-neutral" title="CISCO UCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

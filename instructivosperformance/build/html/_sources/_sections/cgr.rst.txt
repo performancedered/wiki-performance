@@ -14,7 +14,7 @@ Este documento alcanza al área Performance de Red.
 3. DEFINICIONES
 ----------------
 
-+	MSC: Los MSS son switches o conmutadores que pertenecen a las tecnologías móviles 2G y 3G y se encargan de conmutar las llamadas de voz de ambas tecnologías para todos los usuarios. A demás de esto permite separar la señalización del plano de usuario lo que garantiza una mejor ubicación de los elementos de red.
++	MSS: Los MSS son switches o conmutadores que pertenecen a las tecnologías móviles 2G y 3G y se encargan de conmutar las llamadas de voz de ambas tecnologías para todos los usuarios. A demás de esto permite separar la señalización del plano de usuario lo que garantiza una mejor ubicación de los elementos de red.
 
 +	CGR: Son troncales o canales de comunicación q se definen entre los elementos de la red.
 
@@ -23,6 +23,11 @@ Este documento alcanza al área Performance de Red.
 +	Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.
 
 +	OSS: Servidor propuesto por nokia para la obtencion de informacion.
+
++   Diagrama de topologia MSS:
+
+.. image:: ../_static/images/cgr/topologia.png
+  :align: center
 
 4. DESCRIPCION GENERAL
 -----------------------
@@ -35,6 +40,19 @@ A continuacion se muestran los MSS existentes:
 
 .. image:: ../_static/images/cgr/mss.png
   :align: center
+
+**CGR Type** : Servicio al cual se conecta el CGR.
+
+Existen diferentes tipos :
+
+.. image:: ../_static/images/cgr/cgrtype.png
+  :align: center
+
+**Nomenclatura CGR Individual y CGR Grupal**
+
+.. _Nomenclatura: ../_static/images/cgr/170802_TG-LIST.xlsx
+
+*	Nomenclatura_ 
 
 5. MACROFLUJO DEL PROCESO
 --------------------------
@@ -78,10 +96,8 @@ Los datos origen a nivel inicial se toman del OSS.
 6.3 Listado de Tablas Utilizadas
 ********************************
 
-
 Tablas CGR Individuales
 +++++++++++++++++++++++
-
 
 nokia_msc_cgr_hour
 
@@ -130,7 +146,6 @@ nokia_msc_cgr_group_day_mh_obj
 
 .. image:: ../_static/images/cgr/table9.png
   :align: center 
-
 
 Tablas mk
 +++++++++++
@@ -186,6 +201,26 @@ Consulta sobre tabla nokia_msc_cgr_day:
 
 *	consulta_nokia_msc_cgr_day_ 
 
+Ejemplos CGR individuales y agrupados
++++++++++++++++++++++++++++++++++++++
+
+Aqui se muestran ejemplos de los CGR agrupados con los CGR Individuales que lo componen, cómo aparecen los mismos en las tablas objetos y cómo aparecen en las tablas de KPI/Counters. Tambien se muestra que la suma del tráfico en Erlangs de los CGR Individuales da lo mismo que el tráfico en Erlangs del CGR Agrupado.
+
++ Tabla CGR Individual Group Aguada01 MON02 Dia 09/08 a las 05:00:00 am
+
+.. image:: ../_static/images/cgr/ejemplo1.png
+  :align: center
+
++ Tabla CGR Agrupada Group Aguada01 MON02 Dia 09/08 a las 05 am
+
+.. image:: ../_static/images/cgr/ejemplo2.png
+  :align: center
+
++ Objeto
+
+.. image:: ../_static/images/cgr/ejemplo3.png
+  :align: center
+
 6.4 Shell Copiar Archivos Origen a Destino 
 ******************************************
 
@@ -233,6 +268,10 @@ Esta funcion lo que hace es llamar a las siguentes funciones:
 *	nokia_msc_cgr_group_hour.sql_
 
 
+CGR Type
+Type.: Servicio al cual se conecta el CGR.
+
+
 7. Reproceso Automático y Manual
 *********************************
 
@@ -261,6 +300,9 @@ La visualización de CGR en la herramienta Smart se realiza desde los siguientes
 
 Ruta del reporte: Core Switch / MSS / CGR
 
+.. image:: ../_static/images/cgr/ruta.png
+  :align: center
+
 **Reportes disponibles:**
 
 **CGR Individual Principales KPI Diario / Histórico**
@@ -275,6 +317,9 @@ Ruta del reporte: Core Switch / MSS / CGR
 .. image:: ../_static/images/cgr/reporte2.png
   :align: center
 
+.. image:: ../_static/images/cgr/reporte10.png
+  :align: center
+
 **CGR Individual Principales KPI(NEW) Diario/ Histórico**
 
 **Diario**
@@ -285,6 +330,12 @@ Ruta del reporte: Core Switch / MSS / CGR
 **Historico**
 
 .. image:: ../_static/images/cgr/reporte4.png
+  :align: center
+
+.. image:: ../_static/images/cgr/reporte11.png
+  :align: center
+
+.. image:: ../_static/images/cgr/reporte12.png
   :align: center
 
 **CGR Agrupado Principales KPI Diario / Histórico**
@@ -299,6 +350,12 @@ Ruta del reporte: Core Switch / MSS / CGR
 .. image:: ../_static/images/cgr/reporte6.png
   :align: center
 
+.. image:: ../_static/images/cgr/reporte13.png
+  :align: center
+
+.. image:: ../_static/images/cgr/reporte14.png
+  :align: center
+
 
 **Huawei CGRs Diario / Histórico**
 
@@ -308,4 +365,4 @@ Ruta del reporte: Core Switch / MSS / CGR
   :align: center
 
 
-Describir los KPIs que muestra cada reporte y qué significa
+
