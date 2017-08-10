@@ -149,7 +149,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4 Listado de Tablas Utilizadas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5. Pentaho</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#controles">6.6. Controles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reproceso-automatico-y-manual">7. Reproceso Automático y Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reproceso-manual">7. Reproceso Manual</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#reportes-de-smart">8. Reportes de Smart</a></li>
 </ul>
 </li>
@@ -294,12 +294,9 @@
 </ol>
 </li>
 </ul>
-<p>Los scripts son los siguientes: runNokiaWIFI.sh es la raíz del proceso.</p>
+<p>Los scripts son los siguientes: runNokia3A.sh es la raíz del proceso.</p>
 <p>Los Scrips a utilizar son:</p>
-<ul class="simple">
-<li>NokiaWIFIEndToEnd.sh</li>
-<li>runNokiaWIFI.sh</li>
-</ul>
+<img alt="../_images/image144.png" class="align-center" src="../_images/image144.png" />
 </div>
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.4 Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
@@ -335,15 +332,83 @@
 <li>Proceso Pentaho End To End:</li>
 </ul>
 <img alt="../_images/image127.png" class="align-center" src="../_images/image127.png" />
+<ul class="simple">
+<li>Pentaho RunParser</li>
+</ul>
+<img alt="../_images/image95.png" class="align-center" src="../_images/image95.png" />
+<ul class="simple">
+<li>Pentaho Get Files</li>
+</ul>
+<img alt="../_images/image105.png" class="align-center" src="../_images/image105.png" />
 </div>
 <div class="section" id="controles">
 <h3>6.6. Controles<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/image1111.png" class="align-center" src="../_images/image1111.png" />
 </div>
-<div class="section" id="reproceso-automatico-y-manual">
-<h3>7. Reproceso Automático y Manual<a class="headerlink" href="#reproceso-automatico-y-manual" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="reproceso-manual">
+<h3>7. Reproceso Manual<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h3>
+<p>PROCESO DE REWORK END TO END</p>
+<img alt="../_images/image128.png" class="align-center" src="../_images/image128.png" />
+<p>Ubicación de los scripts en la carpeta: /calidad/Nokia3A/Scripts</p>
+<img alt="../_images/image134.png" class="align-center" src="../_images/image134.png" />
+<img alt="../_images/image144.png" class="align-center" src="../_images/image144.png" />
+<p>Ubicación del Rework de ejecución en Pentaho: /calidad/Nokia3A/Rework</p>
+<img alt="../_images/image154.png" class="align-center" src="../_images/image154.png" />
+<img alt="../_images/image163.png" class="align-center" src="../_images/image163.png" />
+<p>Por consola se utiliza de la siguiente manera:</p>
+<p>sh Nokia3AEndToEndRework.sh RUTA FECHA_PROC HORA_PROC</p>
+<p>Donde tenemos tres parámetros:</p>
+<ul class="simple">
+<li>RUTA: /calidad/NokiaWIFI/Scripts/NokiaWIFIEndToEndRework.sh</li>
+<li>FECHA_PROC: DDMMYYYYHH24</li>
+<li>HORA_PROC: YYYYMMDDHH24+1</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia 09/08/2017 hora 10 se ejecuta de ésta forma: sh Nokia3AEndToEndRework.sh /calidad/Nokia3A 0908201710 201708091</p>
 </div>
 <div class="section" id="reportes-de-smart">
 <h3>8. Reportes de Smart<a class="headerlink" href="#reportes-de-smart" title="Permalink to this headline">¶</a></h3>
+<p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
+<img alt="../_images/image173.png" class="align-center" src="../_images/image173.png" />
+<ul class="simple">
+<li><strong>Resources</strong></li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image183.png" class="align-center" src="../_images/image183.png" />
+<p><strong>HISTORICO</strong></p>
+<img alt="../_images/image192.png" class="align-center" src="../_images/image192.png" />
+<img alt="../_images/image202.png" class="align-center" src="../_images/image202.png" />
+<img alt="../_images/image215.png" class="align-center" src="../_images/image215.png" />
+<ul class="simple">
+<li><strong>Messages</strong></li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image222.png" class="align-center" src="../_images/image222.png" />
+<p><strong>HISTORICO</strong></p>
+<img alt="../_images/image232.png" class="align-center" src="../_images/image232.png" />
+<img alt="../_images/image242.png" class="align-center" src="../_images/image242.png" />
+<img alt="../_images/image252.png" class="align-center" src="../_images/image252.png" />
+<img alt="../_images/image262.png" class="align-center" src="../_images/image262.png" />
+<ul class="simple">
+<li><strong>Transactions</strong></li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image272.png" class="align-center" src="../_images/image272.png" />
+<p><strong>HISTORICO</strong></p>
+<img alt="../_images/image282.png" class="align-center" src="../_images/image282.png" />
+<img alt="../_images/image292.png" class="align-center" src="../_images/image292.png" />
+<img alt="../_images/image301.png" class="align-center" src="../_images/image301.png" />
+<img alt="../_images/image312.png" class="align-center" src="../_images/image312.png" />
+<ul class="simple">
+<li><strong>Sessions</strong></li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image322.png" class="align-center" src="../_images/image322.png" />
+<p><strong>HISTORICO</strong></p>
+<img alt="../_images/image331.png" class="align-center" src="../_images/image331.png" />
+<img alt="../_images/image341.png" class="align-center" src="../_images/image341.png" />
+<img alt="../_images/image351.png" class="align-center" src="../_images/image351.png" />
+<img alt="../_images/image361.png" class="align-center" src="../_images/image361.png" />
 </div>
 </div>
 </div>

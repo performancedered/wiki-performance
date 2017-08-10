@@ -71,12 +71,12 @@ Scripts tienen las siguientes funciones:
 
 + c) Ejecutar Pentaho
 
-Los scripts son los siguientes: runNokiaWIFI.sh es la raíz del proceso.
+Los scripts son los siguientes: runNokia3A.sh es la raíz del proceso.
 
 Los Scrips a utilizar son: 
 
-• NokiaWIFIEndToEnd.sh 
-• runNokiaWIFI.sh 
+.. image:: ../_static/images/nokiaims/image14.png
+  :align: center
 
 6.4 Listado de Tablas Utilizadas
 ********************************
@@ -122,13 +122,147 @@ Las tablas utilizadas son las siguientes:
 .. image:: ../_static/images/nokiaims/image1.png
   :align: center
 
++ Pentaho RunParser
+
+.. image:: ../_static/images/nokiaims/image9.png
+  :align: center
+
++ Pentaho Get Files
+
+.. image:: ../_static/images/nokiaims/image10.png
+  :align: center
+
 
 6.6. Controles 
 ***************
 
-7. Reproceso Automático y Manual
+.. image:: ../_static/images/nokiaims/image11.png
+  :align: center
+
+7. Reproceso Manual
 *********************************
+
+PROCESO DE REWORK END TO END
+
+.. image:: ../_static/images/nokiaims/image12.png
+  :align: center
+
+Ubicación de los scripts en la carpeta: /calidad/Nokia3A/Scripts
+
+.. image:: ../_static/images/nokiaims/image13.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image14.png
+  :align: center
+
+Ubicación del Rework de ejecución en Pentaho: /calidad/Nokia3A/Rework
+
+.. image:: ../_static/images/nokiaims/image15.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image16.png
+  :align: center
+
+Por consola se utiliza de la siguiente manera:
+
+sh Nokia3AEndToEndRework.sh RUTA FECHA_PROC HORA_PROC
+
+Donde tenemos tres parámetros:
+
++ RUTA: /calidad/NokiaWIFI/Scripts/NokiaWIFIEndToEndRework.sh
++ FECHA_PROC: DDMMYYYYHH24
++ HORA_PROC: YYYYMMDDHH24+1
+
+Ejemplo:
+
+Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia 09/08/2017 hora 10 se ejecuta de ésta forma: sh Nokia3AEndToEndRework.sh /calidad/Nokia3A 0908201710 201708091
 
 8. Reportes de Smart
 *********************
 
+Los reportes en la herramienta Smart se muestran de la siguiente manera:
+
+.. image:: ../_static/images/nokiaims/image17.png
+  :align: center
+
+
++ **Resources**
+
+**DIARIO**
+
+.. image:: ../_static/images/nokiaims/image18.png
+  :align: center
+
+**HISTORICO**
+
+.. image:: ../_static/images/nokiaims/image19.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image20.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image21.png
+  :align: center
+
++ **Messages**
+
+**DIARIO**
+
+.. image:: ../_static/images/nokiaims/image22.png
+  :align: center
+
+**HISTORICO**
+
+.. image:: ../_static/images/nokiaims/image23.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image24.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image25.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image26.png
+  :align: center
+
++ **Transactions**
+
+**DIARIO**
+
+.. image:: ../_static/images/nokiaims/image27.png
+  :align: center
+
+**HISTORICO**
+
+.. image:: ../_static/images/nokiaims/image28.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image29.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image30.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image31.png
+  :align: center
+
++ **Sessions**
+
+**DIARIO**
+
+.. image:: ../_static/images/nokiaims/image32.png
+  :align: center
+
+**HISTORICO**
+
+.. image:: ../_static/images/nokiaims/image33.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image34.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image35.png
+  :align: center
+
+.. image:: ../_static/images/nokiaims/image36.png
+  :align: center
