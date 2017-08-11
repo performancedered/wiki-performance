@@ -111,6 +111,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="femtoalcatel.html">     4. ALCATEL FEMTOCELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lteregional.html">     5. LTE REGIONAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referenciatableroparticipacion.html">     6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enodb.html">     7. ALCATEL LTE URUGUAY - ENODB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Alcatelransharing.html">     8. LTE HUAWEI (MOVISTAR RAN SHARING (CORTADO))</a></li>
 </ul>
 </li>
 </ul>
@@ -223,8 +227,8 @@
 <dt>Ingresar al programa PL/SQL Developer &#8211;&gt; Ingresar Username</dt>
 <dd>&#8211;&gt; Ingresa Password</dd>
 </dl>
-<img alt="../_images/pag32.png" class="align-center" src="../_images/pag32.png" />
-<img alt="../_images/pag3.21.png" class="align-center" src="../_images/pag3.21.png" />
+<img alt="../_images/pag33.png" class="align-center" src="../_images/pag33.png" />
+<img alt="../_images/pag3.22.png" class="align-center" src="../_images/pag3.22.png" />
 <div class="section" id="controles">
 <h3>4.1. CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="procedimiento-controles-raw">
@@ -248,9 +252,9 @@
 <p>Observación: de Esta consulta se podrá validar si para alguna tabla Raw  y para alguna hora no se registraron datos  o tenemos datos insuficientes. En promedio los valores normales de cantidad de registros por tabla son los que se muestran en las capturas de ejemplo.
 En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <p>Se debemos ejecutar la siguiente queries para verificar el estado  de los procesos del xml:</p>
-<img alt="../_images/pag72.png" class="align-center" src="../_images/pag72.png" />
+<img alt="../_images/pag73.png" class="align-center" src="../_images/pag73.png" />
 <p>Nos muestra como resultado:</p>
-<img alt="../_images/pag7.22.png" class="align-center" src="../_images/pag7.22.png" />
+<img alt="../_images/pag7.23.png" class="align-center" src="../_images/pag7.23.png" />
 <p>Luego se debe actualizar el estado del procesamiento de los .all (mediciones), ejecutando la siguiente queries:</p>
 <img alt="../_images/pag7.3.png" class="align-center" src="../_images/pag7.3.png" />
 </div>
@@ -270,7 +274,7 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <li>Fecha_hasta</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag143.png" class="align-center" src="../_images/pag143.png" />
+<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
 <p>La queries muestra como resultado:</p>
 <img alt="../_images/pag14.2.png" class="align-center" src="../_images/pag14.2.png" />
 <p>En caso de que los datos sean incorrectos se debe reprocesar, existen dos tipos de reprocesos:</p>
@@ -291,7 +295,7 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <img alt="../_images/pag15.jpg" class="align-center" src="../_images/pag15.jpg" />
 <p>La ejecución de las funciones de reproceso tiene dependencias de ejecución (Las funciones deben ejecutarse en el mismo orden que se encuentran listadas.), en un ciclo completo, cuando el error está a nivel de celda/hour, tendrá el siguiente orden:</p>
 <p>Las siguientes funciones se ejecutan para recuperar datos que nos devuelve la base de datos.</p>
-<img alt="../_images/pag163.png" class="align-center" src="../_images/pag163.png" />
+<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
 <p>Todas las funciones retornan un valor:</p>
 <blockquote>
 <div><ul class="simple">
@@ -304,7 +308,7 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 <img alt="../_images/pag17.21.png" class="align-center" src="../_images/pag17.21.png" />
 <img alt="../_images/pag183.png" class="align-center" src="../_images/pag183.png" />
 <p>En paralelo se puede ejecutar la siguiente queries: LTE_NSN_REWORK_STATUS, en esta queries se verifica que la función este siendo correctamente ejecutada.</p>
-<img alt="../_images/pag191.png" class="align-center" src="../_images/pag191.png" />
+<img alt="../_images/pag192.png" class="align-center" src="../_images/pag192.png" />
 <p>Esta queries puede devolver dos valores:</p>
 <blockquote>
 <div><ul class="simple">

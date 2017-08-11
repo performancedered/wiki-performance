@@ -112,6 +112,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
 <li class="toctree-l2"><a class="reference internal" href="femtoalcatel.html">     4. ALCATEL FEMTOCELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lteregional.html">     5. LTE REGIONAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referenciatableroparticipacion.html">     6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enodb.html">     7. ALCATEL LTE URUGUAY - ENODB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Alcatelransharing.html">     8. LTE HUAWEI (MOVISTAR RAN SHARING (CORTADO))</a></li>
 </ul>
 </li>
 </ul>
@@ -222,8 +226,8 @@
 <dt>Ingresar al programa PL/SQL Developer   &#8211;&gt;Ingresar Username</dt>
 <dd>&#8211;&gt;  Ingresa Password</dd>
 </dl>
-<img alt="../_images/pag33.png" class="align-center" src="../_images/pag33.png" />
-<img alt="../_images/pag3.22.png" class="align-center" src="../_images/pag3.22.png" />
+<img alt="../_images/pag34.png" class="align-center" src="../_images/pag34.png" />
+<img alt="../_images/pag3.23.png" class="align-center" src="../_images/pag3.23.png" />
 <div class="section" id="controles">
 <h3>3.1. CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
 <p>Aquí se referenciarán las consultas presentes en los scripts:</p>
@@ -256,9 +260,9 @@
 <li>Fecha hasta</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag73.png" class="align-center" src="../_images/pag73.png" />
+<img alt="../_images/pag74.png" class="align-center" src="../_images/pag74.png" />
 <p>La busqueda a traves de las variables ingresadas muestra como resultado:</p>
-<img alt="../_images/pag7.23.png" class="align-center" src="../_images/pag7.23.png" />
+<img alt="../_images/pag7.24.png" class="align-center" src="../_images/pag7.24.png" />
 <p>En caso de faltante de datos, verificar si se encuentran los XML, y si estos ya han sido procesados o no. Para ello, se debe ejecutar la siguiente consulta, en donde deberemos ajustar el FILENAME según el RC que nos interese, y la fecha/hora que nos importe:</p>
 <img alt="../_images/pag83.png" class="align-center" src="../_images/pag83.png" />
 <img alt="../_images/pag8.22.png" class="align-center" src="../_images/pag8.22.png" />
@@ -334,13 +338,13 @@ Existen 8 scripts que hay correr, dependiendo de la clase de tabla que falte:</p
 </div></blockquote>
 <p>De ahí que, en dicho script, se comente/descomente la línea de DBMS_OUTPUT, para lograr la salida deseada, para la tabla que necesitamos.
 En general, siempre procesar primero tablas detail wcell, luego master master wcell, y luego ídem con tablas NE.</p>
-<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
+<img alt="../_images/pag143.png" class="align-center" src="../_images/pag143.png" />
 <p>Este script genera la siguiente salida:</p>
 <img alt="../_images/pag14.21.png" class="align-center" src="../_images/pag14.21.png" />
 <p>Copiamos estos comandos, y los debemos ejecutar en Perdido, en la ruta /calidad/nokia/umts/aq/hourly/enqueue.</p>
 <img alt="../_images/pag152.png" class="align-center" src="../_images/pag152.png" />
 <p>Luego presiona &#8211;&gt; Open</p>
-<img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
+<img alt="../_images/pag163.png" class="align-center" src="../_images/pag163.png" />
 <p>En dicha ruta existen a modo de ejemplo los siguientes scripts, los cuales pueden servir de referencia</p>
 <img alt="../_images/pag16.21.png" class="align-center" src="../_images/pag16.21.png" />
 <p>Luego, se deben controlar el estado de dichas colas, para ello ejecutar las consultas:</p>
@@ -384,7 +388,7 @@ La misma recibe los siguientes parámetros:</p>
 <li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 </ul>
 <img alt="../_images/pag18.21.png" class="align-center" src="../_images/pag18.21.png" />
-<img alt="../_images/pag192.png" class="align-center" src="../_images/pag192.png" />
+<img alt="../_images/pag193.png" class="align-center" src="../_images/pag193.png" />
 <p>Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs.</p>
 </div>
 <div class="section" id="id2">
@@ -404,7 +408,7 @@ La misma recibe los siguientes parámetros:</p>
 <li>$3: Medición, que puede ser: ho, service, hsdpa, macd, noc, cpucor o wbtsmon.</li>
 </ul>
 </div></blockquote>
-<img alt="../_images/pag202.png" class="align-center" src="../_images/pag202.png" />
+<img alt="../_images/pag203.png" class="align-center" src="../_images/pag203.png" />
 <p>El script nos da como resultado:</p>
 <img alt="../_images/pag211.png" class="align-center" src="../_images/pag211.png" />
 <p>Si se han recuperado tablas a nivel day/bh, es necesario reprocesar los tableros diarios ejecutando los scripts ubicados en:</p>
@@ -448,8 +452,8 @@ La misma recibe los siguientes parámetros:</p>
 <li>&amp;1 : Fecha Desde, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 <li>&amp;2 : Fecha Hasta, en formato DD.MM.YYYY (ej: 29.12.2015)</li>
 </ul>
-<img alt="../_images/pag253.png" class="align-center" src="../_images/pag253.png" />
-<img alt="../_images/pag262.png" class="align-center" src="../_images/pag262.png" />
+<img alt="../_images/pag251.png" class="align-center" src="../_images/pag251.png" />
+<img alt="../_images/pag261.png" class="align-center" src="../_images/pag261.png" />
 <p>Reprocesamos cuando hemos reprocesado a nivel hour y llevamos más de 3 días de retraso, ya que por default en Perdido hay una tarea sincronizada que corre todos los días la carga de datos de tablas day de las últimas 72 hs.</p>
 </div>
 <div class="section" id="id3">
@@ -475,7 +479,7 @@ La misma recibe los siguientes parámetros:</p>
 </div></blockquote>
 <img alt="../_images/pag271.png" class="align-center" src="../_images/pag271.png" />
 <p>Luego ejecutar el script recoveryNokiaUmtsDay.sh (numeroSemana)</p>
-<img alt="../_images/pag281.png" class="align-center" src="../_images/pag281.png" />
+<img alt="../_images/pag28.png" class="align-center" src="../_images/pag28.png" />
 </div>
 </div>
 </div>
