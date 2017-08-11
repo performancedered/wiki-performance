@@ -38,8 +38,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="index.html"/>
-        <link rel="next" title="CORE DATOS" href="coreDatos.html"/>
-        <link rel="prev" title="ALCATEL FEMTOCELL" href="_sections/femtoalcatel.html"/> 
+        <link rel="next" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" href="_sections/cgr.html"/>
+        <link rel="prev" title="LTE HUAWEI - MOVISTAR RAN SHARING" href="_sections/Alcatelransharing.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -98,7 +98,10 @@
 <li class="toctree-l1"><a class="reference internal" href="acceso.html">ACCESO</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CORE SWITCH</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CORE SWITCH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html">     1. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html">     2. Nokia IMS (AAA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html">     3. WIFI TAS (CORTADO)</a></li>
 </ul>
 </li>
 </ul>
@@ -179,6 +182,70 @@
   <div class="section" id="core-switch">
 <h1>CORE SWITCH<a class="headerlink" href="#core-switch" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_sections/cgr.html">     1. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#alcance">2. ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#descripcion-general">4. DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#macroflujo-del-proceso">5. MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cgr.html#descripcion-detallada">6. DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#datos-origen">6.1 Datos origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#datos-destino">6.2 Datos destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#listado-de-tablas-utilizadas">6.3 Listado de Tablas Utilizadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_sections/cgr.html#tablas-cgr-individuales">Tablas CGR Individuales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/cgr.html#tablas-cgr-grupo">Tablas CGR Grupo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/cgr.html#tablas-mk">Tablas mk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/cgr.html#tablas-objetos">Tablas Objetos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/cgr.html#ejemplos-cgr-individuales-y-agrupados">Ejemplos CGR individuales y agrupados</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#shell-copiar-archivos-origen-a-destino">6.4 Shell Copiar Archivos Origen a Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#reproceso-automatico-y-manual">7. Reproceso Automático y Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cgr.html#reportes-de-smart">8. Reportes de Smart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/nokiaims.html">     2. Nokia IMS (AAA)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#alcance">2. ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#descripcion-general">4. DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#macroflujo-del-proceso">5. MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiaims.html#descripcion-detallada">6. DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#datos-origen">6.1 Datos origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#datos-destino">6.2 Datos destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismo">6.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#listado-de-tablas-utilizadas">6.4 Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#pentaho">6.5. Pentaho</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#controles">6.6. Controles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#reproceso-manual">7. Reproceso Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiaims.html#reportes-de-smart">8. Reportes de Smart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/wifi_tas.html">     3. WIFI TAS (CORTADO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/wifi_tas.html#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/wifi_tas.html#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/wifi_tas.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/wifi_tas.html#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/wifi_tas.html#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#smart">8.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/wifi_tas.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -192,10 +259,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="coreDatos.html" class="btn btn-neutral float-right" title="CORE DATOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="_sections/cgr.html" class="btn btn-neutral float-right" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="_sections/femtoalcatel.html" class="btn btn-neutral" title="ALCATEL FEMTOCELL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="_sections/Alcatelransharing.html" class="btn btn-neutral" title="LTE HUAWEI - MOVISTAR RAN SHARING" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

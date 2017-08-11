@@ -4,7 +4,7 @@ CGR : TRONCALES INDIVIDUALES Y AGRUPADOS
 1. OBJETIVO
 ------------
 
-Contar con información en la herramienta Smart sobre el tráfico de los troncales de tráfico individuales y agrupados
+El objetivo de este documento es describir el proceso de recolección de KPIs que realiza la herramienta Smart sobre los Circuit Groups (CGR) de equipos MSS Nokia, la nomenclatura utilizada y el procedimiento manual de agrupación de CGR.
 
 2. ALCANCE
 -----------
@@ -14,11 +14,45 @@ Este documento alcanza al área Performance de Red.
 3. DEFINICIONES
 ----------------
 
-+	MSS: Los MSS son switches o conmutadores que pertenecen a las tecnologías móviles 2G y 3G y se encargan de conmutar las llamadas de voz de ambas tecnologías para todos los usuarios. A demás de esto permite separar la señalización del plano de usuario lo que garantiza una mejor ubicación de los elementos de red.
++ CGR – Circuit Group
 
-+	CGR: Son troncales o canales de comunicación q se definen entre los elementos de la red.
+Es el circuito que se utiliza para conectar diferentes equipos MSS.  También conocido como línea troncal.  En lenguaje técnico de telefonía, una línea troncal es un enlace que interconecta las llamadas externas de una central telefónica, concentrando y unificando varias comunicaciones simultáneas en una sola señal para un transporte y transmisión a distancia más eficiente (generalmente digital) y poder establecer comunicaciones con otra central o una red entera de ellas.
 
-+	CGR_GROUP: Troncales agrupados.
++ MSC – Mobile Switching Center
+
+El MSC (Central de Conmutación Móvil) es una sofisticada Central Teléfónica la cual proporciona conmutación de llamadas, Administración de movilidad y Servicios de GSM para los teléfonos móviles dentro de su área de servicio. En otras palabras, trasmisión de voz, datos y servicios de fax así como Servicios de Mensajes Cortos o SMS y desvío de llamadas.
+En el sistema de teléfonos móviles GSM, en contraste con los iniciales servicios analógicos, la información de datos y fax es enviada codificada digitalmente directamente al MSC. únicamente en la MSC esta señal es convertida en una señal "analógica" (estrictamente se debería decir que es convertida en una señal PCM, a una cadencia de 64 kbit/s, conocida como DS0 en USA y el resto del mundo).
+Hay diferentes nombres para la MSC en diferentes contextos lo cual refleja la complejidad de sus funciones dentro de la red, es así como los siguientes términos pueden hacer referencia a la MSC pero en diferentes momentos y dependiendo de la actividad que realice en ese momento.
+
+Gateway MSC, es la MSC que determina cual es la MSC que "visita" al suscriptor que está siendo llamado, es también las interfaz en la Red de Conmutada de Telefonía Pública. Todas las llamadas de Móvil a Móvil y PSTN a Móvil son enrutadas a través del GMSC.
+
+Visited MSC, es la MSC donde el suscriptor está actualmente ubicado. El VLR asociado a dicha MSC tendrá los datos del suscriptor en ella.
+
+Anchor MSC, es la MSC desde la cual un handover ha sido iniciado.
+
+Target MSC, es la MSC hacia donde el Handover deberá dirigirse.
+
+El MSC se conecta con:
+
++	el HLR para obtener datos sobre el SIM y el MSISDN
++	las BSS que realizan la comunicación radio con los terminales 2G y 2.5G
++	las UTRAN que realizan la comunicación radio con los terminales 3G
++	el VLR para determinar qué suscriptores tiene bajo su control
++	otros MSC (e.g. para handover)
+
+
+* MSS – Mobile Switching Server Centre 
+
+MSS – Mobile Switching Server Centre 
+El Mobile Switching Centre Server o MSS no es sino una variante sencilla de un MSC, que proporciona conmutación de circuitos, gestión de movilidad y servicios GSM a los terminales 
+
+El Mobile Switching Centre Server o MSS no es sino una variante sencilla de un MSC, que proporciona conmutación de circuitos, gestión de movilidad y servicios GSM a los terminales móviles que pululan por el área que éste sirve. La funcionalidad de un MSS permite separar el control (señalización) y el plano de usuario, lo que garantiza una mejor ubicación de los elementos de la red.
+Los MSS y los MGW (Media Gateway) hacen posible la interconexión entre circuitos que usan IP, ATM AAL2 y TDM.
+
++ HLR –Home Location Register
+
+El HLR (Home Location Register, o registro de ubicación base) es una base de datos que almacena la posición del usuario dentro de la red, si está conectado o no y las características de su abono (servicios que puede y no puede usar, tipo de terminal, etcétera). Es de carácter más bien permanente; cada número de teléfono móvil está adscrito a un HLR determinado y único, que administra su operador móvil.
+
 
 +	Perdido: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart.
 
@@ -32,14 +66,188 @@ Este documento alcanza al área Performance de Red.
 4. DESCRIPCION GENERAL
 -----------------------
 
-Se miden cantidad de paquetes enviados y recibidos, todo a nivel de troncales. A los troncales individuales se los llama CGR, es un componente del core.
-Las comunicaciones entre los switches se implementa atraves de los troncales.
-Cuando existen muchos switches que estan relacionados, lo que se hace es agrupar los troncales en grupos (Troncales agrupados: CGR_GROUP).
+Para las diferentes líneas troncales o CGR se miden los siguientes KPIs:
 
-A continuacion se muestran los MSS existentes:
++	Tráfico de entrada
 
-.. image:: ../_static/images/cgr/mss.png
-  :align: center
++	Tráfico de salida
+
++	Tráfico total
+
++	Porcentaje de utilización del circuito en relación a su capacidad
+
++	Capacidad
+
+Nomenclatura
+
+.. _Nomenclatura_Argentina: ../_static/images/cgr/NomenclaturaArgentina.xlsx
+
+.. _Nomenclatura_de_Centrales_Telecom: ../_static/images/cgr/NomenclaturadeCentralesTelecom.xlsx
+
+.. _Nomenclatura_Paraguay: ../_static/images/cgr/NomenclaturaParaguay.xlsx
+
+.. _Nomenclatura_Uruguay: ../_static/images/cgr/NomenclaturaUruguay.xlsx
+
+.. _ListadodeTroncalesExistentes: ../_static/images/cgr/ListadodeTroncalesExistentes.xlsx
+
+A continuacion se muestran el listado de equipos - MSS existentes:
+
+
+.. raw:: html 
+
+   <style type="text/css">
+    table {
+       border:2px solid red;
+       border-collapse:separate;
+       }
+    th, td {
+       border:1px solid red;
+       padding:10px;
+       }
+  </style>
+
+  <table border="3">
+  <tr>
+    <th>Numero</th>
+    <th>MSS</th>
+  </tr>
+  <tr>
+    <td> 1 </td>
+    <td> MSSASU02 </td>
+  </tr>
+  <tr>
+    <td> 2 </td>
+    <td> MSSASU03 </td>
+  </tr>
+  <tr>
+    <td> 3 </td>
+    <td> MSSBAH03 </td>
+  </tr>
+  <tr>
+    <td> 4 </td>
+    <td> MSSBAH01 </td>
+  </tr>
+  <tr>
+    <td> 5 </td>
+    <td> MSSCOM02 </td>
+  </tr>
+  <tr>
+    <td> 6 </td>
+    <td> MSSCON02 </td>
+  </tr>
+  <tr>
+    <td> 7 </td>
+    <td> MSSCOR04 </td>
+  </tr>
+  <tr>
+    <td> 8 </td>
+    <td> MSSCOR05 </td>
+  </tr>
+  <tr>
+    <td> 9 </td>
+    <td> MSSCRR03 </td>
+  </tr>
+  <tr>
+    <td> 10 </td>
+    <td> MSSGRA01 </td>
+  </tr>
+  <tr>
+    <td> 11 </td>
+    <td> MSSJON03 </td>
+  </tr>
+  <tr>
+    <td> 12 </td>
+    <td> MSSLAU02 </td>
+  </tr>
+  <tr>
+    <td> 13 </td>
+    <td> MSSMAR02 </td>
+  </tr>
+  <tr>
+    <td> 14 </td>
+    <td> MSSMEN03 </td>
+  </tr>
+  <tr>
+    <td> 15 </td>
+    <td> MSSMON02 </td>
+  </tr>
+  <tr>
+    <td> 16 </td>
+    <td> MSSMON03 </td>
+  </tr>
+  <tr>
+    <td> 17 </td>
+    <td> MSSMON04 </td>
+  </tr>
+  <tr>
+    <td> 18 </td>
+    <td> MSSMON05 </td>
+  </tr>
+  <tr>
+    <td> 19 </td>
+    <td> MSSNEU02 </td>
+  </tr>
+  <tr>
+    <td> 20 </td>
+    <td> MSSOLL01 </td>
+  </tr>
+  <tr>
+    <td> 21 </td>
+    <td> MSSPOS01 </td>
+  </tr>
+  <tr>
+    <td> 22 </td>
+    <td> MSSROS04 </td>
+  </tr>
+  <tr>
+    <td> 23 </td>
+    <td> MSSROS05 </td>
+  </tr>
+  <tr>
+    <td> 24 </td>
+    <td> MSSSAL02 </td>
+  </tr>
+  <tr>
+    <td> 25 </td>
+    <td> MSSSAN03 </td>
+  </tr>
+  <tr>
+    <td> 26 </td>
+    <td> MSSTOR03 </td>
+  </tr>
+  <tr>
+    <td> 27 </td>
+    <td> MSSTRE01 </td>
+  </tr>
+  <tr>
+    <td> 28 </td>
+    <td> MSSTUC03 </td>
+  </tr>
+  <tr>
+    <td> 29 </td>
+    <td> MSSUSH01 </td>
+  </tr>
+  <tr>
+    <td> 30 </td>
+    <td> MSSVIC02 </td>
+  </tr>
+  </table>
+
+La nomenclatura usada en Claro Argentina, Paraguay y Uruguay es: (poner el link a los archivos adjuntos)
+
+*	Nomenclatura_Argentina_ 
+
+*	Nomenclatura_Uruguay_ 
+
+*	Nomenclatura_Paraguay_ 
+
+La nomenclatura de las centrales de Telecom es: (poner el link a los archivos adjuntos)
+
+*	Nomenclatura_de_Centrales_Telecom_ 
+
+Listado de Troncales - CGR
+
+El listado completo de troncales es: ListadodeTroncalesExistentes_
 
 **CGR Type** : Servicio al cual se conecta el CGR.
 
@@ -47,12 +255,6 @@ Existen diferentes tipos :
 
 .. image:: ../_static/images/cgr/cgrtype.png
   :align: center
-
-**Nomenclatura CGR Individual y CGR Grupal**
-
-.. _Nomenclatura: ../_static/images/cgr/170802_TG-LIST.xlsx
-
-*	Nomenclatura_ 
 
 5. MACROFLUJO DEL PROCESO
 --------------------------

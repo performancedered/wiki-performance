@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="index.html"/>
         <link rel="next" title="OCUDR" href="_sections/ocudr.html"/>
-        <link rel="prev" title="CORE SWITCH" href="coreSwitch.html"/> 
+        <link rel="prev" title="Nokia WIFI (TAS)" href="_sections/wifi_tas.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -103,6 +103,12 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">CORE DATOS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_sections/ocudr.html">1. OCUDR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html">2. CISCO EPDG y SAMOG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html">3. FIREWALL CHECKPOINT GRX BX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html">4. CISCO UCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html">5. CISCO PNR PCP (PERDIDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html">6. CISCO PNR CSVs (CORTADO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html">7. NOKIA MME - MIGRACION (CORTADO)</a></li>
 </ul>
 </li>
 </ul>
@@ -198,6 +204,133 @@
 <li class="toctree-l2"><a class="reference internal" href="_sections/ocudr.html#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/cisco_epdg_samog.html">2. CISCO EPDG y SAMOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#alcance">2. ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#descripcion-general">4. DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#macroflujo">5. MACROFLUJO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#descripcion-detallada">6. DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cisco_epdg_samog.html#datos-origen">6.1. Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cisco_epdg_samog.html#datos-destino">6.2. Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cisco_epdg_samog.html#tablas-utilizadas">6.3.    Tablas Utilizadas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#reproceso">7.      REPROCESO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cisco_epdg_samog.html#administracion-de-particiones">7.1 Administración de particiones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/cisco_epdg_samog.html#procedimiento-de-reproceso-manual-paso-a-paso">7.2 Procedimiento de reproceso manual paso a paso</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#smart">8.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/cisco_epdg_samog.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/firewall.html">3. FIREWALL CHECKPOINT GRX BX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#alcance">2. ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#descripcon-general">4. DESCRIPCÓN GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#macro-flujo-del-proceso">5. MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#descripcion-detallada">6. DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/firewall.html#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/firewall.html#datos-destino">6.2.    Datos Destino</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#listado-de-tablas-utilizadas">6.3.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#reproceso-manual">7. REPROCESO MANUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#smart">8.  SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/firewall.html#control-de-cambios">8. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/ciscousc.html">4. CISCO UCS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#descripcion-detallada">6.      DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#datos-de-origen">6.1.  Datos de Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#pentaho">6.5.    Pentaho</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_sections/ciscousc.html#bhdayishw">BHDayISHW</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/ciscousc.html#hour">Hour</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#controles">6.6.    Controles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#reproceso-manual">7.      REPROCESO MANUAL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscousc.html#procedimiento-de-reproceso-manual-paso-a-paso">7.1 Procedimiento de reproceso manual paso a paso:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_sections/ciscousc.html#id1">HOUR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="_sections/ciscousc.html#bh-day-e-ibhw">BH, DAY e IBHW</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#smart">8.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscousc.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/ciscopnrpcp.html">5. CISCO PNR PCP (PERDIDO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrpcp.html#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrpcp.html#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrpcp.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrpcp.html#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrpcp.html#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#smart">8.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrpcp.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/ciscopnrcsvs.html">6. CISCO PNR CSVs (CORTADO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrcsvs.html#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrcsvs.html#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrcsvs.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrcsvs.html#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/ciscopnrcsvs.html#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#reproceso-manual">7.      REPROCESO MANUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#smart">8.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/ciscopnrcsvs.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_sections/nokiamme.html">7. NOKIA MME - MIGRACION (CORTADO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#objetivo">1.      OBJETIVO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#alcance">2.      ALCANCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#definiciones">3.      DEFINICIONES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#descripcion-general">4.      DESCRIPCION GENERAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#macro-flujo-del-proceso">5.      MACRO FLUJO DEL PROCESO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#descripcion-detallada">6.      DESCRIPCIÓN DETALLADA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiamme.html#datos-origen">6.1.    Datos Origen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiamme.html#datos-destino">6.2.    Datos Destino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiamme.html#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismos">6.3.    Shell Copiar Archivos Origen a Destino y limpieza de los mismos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiamme.html#listado-de-tablas-utilizadas">6.4.    Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_sections/nokiamme.html#pentaho">6.5.    Pentaho</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#controles">7.      CONTROLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#reproceso-manual">8.      REPROCESO MANUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#smart">9.      SMART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_sections/nokiamme.html#control-de-cambios">9. CONTROL DE CAMBIOS</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -215,7 +348,7 @@
         <a href="_sections/ocudr.html" class="btn btn-neutral float-right" title="OCUDR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="coreSwitch.html" class="btn btn-neutral" title="CORE SWITCH" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="_sections/wifi_tas.html" class="btn btn-neutral" title="Nokia WIFI (TAS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
