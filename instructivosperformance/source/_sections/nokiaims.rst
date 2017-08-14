@@ -4,7 +4,7 @@ Nokia IMS (AAA)
 1. OBJETIVO
 ------------
 
-El presente documento busca explicar y detallar el proceso que genera IMS (AAA)
+El objetivo de este documento es describir el proceso de recolección de KPIs que realiza la herramienta Smart sobre la plataforma AAA de Nokia IMS, como se almacena la información en la base de datos, los controles, los reportes en Smart que utilizará el usuario final.
 
 2. ALCANCE
 -----------
