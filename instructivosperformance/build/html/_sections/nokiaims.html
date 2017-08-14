@@ -204,7 +204,7 @@
 <h1>Nokia IMS (AAA)<a class="headerlink" href="#nokia-ims-aaa" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>1. OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
-<p>El presente documento busca explicar y detallar el proceso que genera IMS (AAA)</p>
+<p>El objetivo de este documento es describir el proceso de recolección de KPIs que realiza la herramienta Smart sobre la plataforma AAA de Nokia IMS, como se almacena la información en la base de datos, los controles, los reportes en Smart que utilizará el usuario final.</p>
 </div>
 <div class="section" id="alcance">
 <h2>2. ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
@@ -214,11 +214,63 @@
 <h2>3. DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Cortado: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es cortado.claro.amx y la dirección ip física es 10.105.146.8.</li>
+<li>Subsistema Multimedia IP (IMS) o (IP Multimedia Subsystem) es un conjunto de especificaciones que describen la arquitectura de las redes de siguiente generación (Next Generation Network, NGN), para soportar telefonía y servicios multimedia a través de IP.</li>
 </ul>
 </div>
 <div class="section" id="descripcion-general">
 <h2>4. DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
 <p>EL AAA (Authentication, Authorization and Accounting) es un equipo que pertenece al IMS(IP Multimedia Subsystem) ubicado en la red core o nucleo de LTE el cual se encarga de autenticar, autorizar y manejar la contabilidad de los usuarios de VOLTE y VOWIFI.</p>
+<p><strong>ARQUITECTURA IMS</strong></p>
+<ol class="arabic simple">
+<li>ORGANICACIÓN DE LA ARQUITECTURA</li>
+</ol>
+<p>El grupo 3GPP fue el desarrollador de la tecnología 3G basadas en el estándar GSM y GPRS, y definió IMS como parte de su arquitectura de red. El grupo 3GPP2 en tanto, se ha encargado de desarrollar dicha tecnología, basada en estándares CDMA2000 e IS-41, y a sí mismo desarrolla el sistema IMS en sus redes, en función de lo establecido por el grupo 3GPP. Por lo mismo existen dos arquitecturas IMS similares, cada una desarrollada por uno de estos grupos.</p>
+<p>La arquitectura genérica del IMS soporta la comunicación entre equipos que utilizan SIP para la señalización y la administración de sesiones, además de los protocolos ‘Diameter’ y Megaco/H.248’ para operaciones y manejo de recursos multimedia respectivamente. Parte fundamental de la arquitectura IMS está compuesta por los servidores de aplicación, quienes se encargan de: invocar los servicios, identificar qué señalización es requerida y de qué forma los servicios interactúan ente sí.</p>
+<p>Básicamente está organizada en tres capas:</p>
+<ul class="simple">
+<li>Capa de aplicaciones: contiene las plataformas de servicios (ej.: PoC, SMSC, servicios de localización LBS, servicios de mensajería, servicios de video, etc.).</li>
+<li>Capa de control: responsable del control de las sesiones, incluyendo su establecimiento. El Soft Switch es el elemento principal en esta capa.</li>
+<li>Capa de acceso: es la que incluye los diversos medios de acceso a la red, incluyendo interfaces wireless (UMTS, WIFI, GPRS) y cableadas (xDSL, dialup).</li>
+</ul>
+<p>En la figura que se presenta a continuación se representa el modelo de capas descrito arriba. Se intenta dejar claro las diferencias entre cada una de las capas mencionadas.</p>
+<img alt="../_images/image421.png" class="align-center" src="../_images/image421.png" />
+<ol class="arabic simple" start="2">
+<li>COMPONENTES EN DETALLE DE LA ARQUITECTURA</li>
+</ol>
+<p>A continuación se representa la arquitectura del IP Multimedia Subsystem tal y como se establece en el estándar del 3GPP. Se muestran las funciones e interfaces más importantes.</p>
+<img alt="../_images/image431.png" class="align-center" src="../_images/image431.png" />
+<p>2.1. Call Session Control Function (CSCF)</p>
+<p>El elemento Serving CSCF gerencia las sesiones SIP y coordina con otros elementos de la red el control de las llamadas/sesiones. El S-CSCF es responsable por las seguientes funciones:</p>
+<ul class="simple">
+<li>Registro SIP – procesa solicitaciones de registro SIP (SIP REGe de datos y condición de suscriptores durante la duración de la sesión de registro;</li>
+<li>Control de la Sesión – ejecuta el establecimiento de la llamada/sesión, modificación y terminación;</li>
+<li>Control de Servicio – interactúa con los Servidores de Aplicación (Application Server) para soporte de servicios y aplicaciones;</li>
+<li>Monitoreo de la llamada y generación de registros de tarifación (billetes);</li>
+<li>Provee seguridad para la sesión.</li>
+</ul>
+<p>El Proxy CSCF es el primer contacto para que un móvil SIP obtenga acceso a la red IMS a partir de una red orientada a paquetes. El elemento P-CSCF:</p>
+<ul class="simple">
+<li>Provee el roteamiento SIP entre los móviles SIP y la red IMS;</li>
+<li>Ejecuta la política de control definida por la operadora de la red;</li>
+<li>Coordina con la red de acceso, autorizando el control de recursos y calidad de las llamadas/sesiones (QoS);</li>
+<li>Adicionalmente, operadores pueden ofrecer localmente servicios controlados por el PCSCF. Para servicios que son ofrecidos por la red IMS de origen ( Home Network ), el PCSCF repasa la señalización SIP para el servidor IMS en la red de origen.</li>
+</ul>
+<p>El Interrogating-CSCF es el punto de contacto en la red de un operador para todas las conexiones destinadas a un suscriptor de la red de este operador, o para un suscriptor visitando su
+red.
+Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-CSCF son:</p>
+<ul class="simple">
+<li>Designar un S-CSCF para un usuario ejecutando un registro SIP;</li>
+<li>Rotear una requisición SIP recebida de otra red en dirección al S-CSCF;</li>
+<li>Obtener del HSS (Home Subscriber Subsystem) la dirección del S-CSCF;</li>
+<li>Encaminar la requisición SIP o respuesta al S-CSCF determinada en el estagio arriba;</li>
+<li>Encaminar la requisición SIP o respuesta para la designación óptima del MGW ( Home Control of roamers).</li>
+<li>Enviar requisiciones/respuestas SIP al I-CSCF en una red de otro operador para designación óptima de un Media Gateway (MGW), para terminación de una llamada en la red pública conmutada (STFC).</li>
+</ul>
+<p>Al ejecutar estas funciones citadas arriba, el operador puede usar el I-CSCF u otras técnicas para ocultar la configuración, capacidad y topología de su propia red del mundo externo. Cuando el I-CSCF es escogido para ocultar la configuración de la red, entonces para sesiones cruzando diferentes redes, el I-CSCF puede enviar requisiciones/respuestas SIP para otro I-CSCF (permitiendo la independencia de configuración entre redes).</p>
+<p>2.2. Breakout Gateway Control Function (BGCF)</p>
+<p>El BGCF selecciona la red en la cual el acceso a la red pública conmutada (STFC) debe ocurrir. Si el BGCF determina que el acceso va a ocurrir en la misma red en donde el BGCF está localizado, entonces el BGCF selecciona un MGCF. El MGCF será responsable por el interfuncionamiento con la red STFC. Si el punto de acceso está en otra red, el BGCF enviará la señalización de esta sesión a un BGCF o MGCF (dependiendo de la configuración) en la otra red. El objetivo final es minimizar el recorrido de la llamada/sesión.</p>
+<p>2.3. Multimedia Resource Function Controller (MRFC)</p>
+<p>El MFRC controla los recursos de media del elemento MultiMedia Resource Function Processor (MRFP). Por ejemplo, recursos necesarios para proveer tonos, anuncios y conferencia.</p>
 </div>
 <div class="section" id="macroflujo-del-proceso">
 <h2>5. MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
@@ -232,11 +284,10 @@
 <li>Server Origen y Path: 10.105.39.140 , /d/oss/global/var/mediation/north/pm/export/</li>
 <li>Cantidad de archivos origen: 5 a 8 archivos</li>
 </ul>
-<p>etlexpmx_TAS_20170526091624_2000185.xml</p>
-<img alt="../_images/image213.png" class="align-center" src="../_images/image213.png" />
+<p>etlexpmx_AAAOAM_20170526091624_2000185.xml.gz</p>
 <ul class="simple">
 <li>Frecuencia actualización: Frecuencia Horaria</li>
-<li>Tipo de Archivo: CSV</li>
+<li>Tipo de Archivo: XML</li>
 </ul>
 </div>
 <div class="section" id="datos-destino">
@@ -253,7 +304,7 @@
 <li>BH Si/No: Si</li>
 <li>IBHW Si/No: Si</li>
 <li>Países: No</li>
-<li>Directorio Destino (File System): /calidad/NokiaWIFI</li>
+<li>Directorio Destino (File System): /calidad/Nokia</li>
 </ul>
 </div>
 <div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismo">
@@ -281,25 +332,25 @@
 <h3>6.4 Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
 <p>Las tablas utilizadas son las siguientes:</p>
 <ul class="simple">
-<li>LTE_C_NOKIA_TAS_RAW</li>
+<li>IMS_C_NOKIA_3A_RAW</li>
 </ul>
 <img alt="../_images/image57.png" class="align-center" src="../_images/image57.png" />
 <ul class="simple">
-<li>LTE_C_NOKIA_TAS_HOUR</li>
-</ul>
-<img alt="../_images/image36.png" class="align-center" src="../_images/image36.png" />
-<ul class="simple">
-<li>LTE_C_NOKIA_TAS_BH</li>
-</ul>
-<img alt="../_images/image48.png" class="align-center" src="../_images/image48.png" />
-<ul class="simple">
-<li>LTE_C_NOKIA_TAS_DAY</li>
+<li>IMS_C_NOKIA_3A_HOUR</li>
 </ul>
 <img alt="../_images/image66.png" class="align-center" src="../_images/image66.png" />
 <ul class="simple">
-<li>LTE_C_NOKIA_TAS_DAY</li>
+<li>IMS_C_NOKIA_3A_BH</li>
 </ul>
 <img alt="../_images/image75.png" class="align-center" src="../_images/image75.png" />
+<ul class="simple">
+<li>IMS_C_NOKIA_3A_DAY</li>
+</ul>
+<img alt="../_images/image36.png" class="align-center" src="../_images/image36.png" />
+<ul class="simple">
+<li>IMS_C_NOKIA_3A_IBHW</li>
+</ul>
+<img alt="../_images/image48.png" class="align-center" src="../_images/image48.png" />
 </div>
 <div class="section" id="pentaho">
 <h3>6.5. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
@@ -319,6 +370,26 @@
 <li>Pentaho Get Files</li>
 </ul>
 <img alt="../_images/image103.png" class="align-center" src="../_images/image103.png" />
+<ul class="simple">
+<li>Pentaho Get FileName &amp; Populate Raw</li>
+</ul>
+<img alt="../_images/image371.png" class="align-center" src="../_images/image371.png" />
+<ul class="simple">
+<li>Pentaho Update Table Files</li>
+</ul>
+<img alt="../_images/image381.png" class="align-center" src="../_images/image381.png" />
+<ul class="simple">
+<li>Pentaho Merge Table Hour</li>
+</ul>
+<img alt="../_images/image391.png" class="align-center" src="../_images/image391.png" />
+<ul class="simple">
+<li>Pentaho InsProcessToRunDAYBH</li>
+</ul>
+<img alt="../_images/image40.png" class="align-center" src="../_images/image40.png" />
+<ul class="simple">
+<li>Pentaho Set Variables</li>
+</ul>
+<img alt="../_images/image411.png" class="align-center" src="../_images/image411.png" />
 </div>
 <div class="section" id="controles">
 <h3>6.6. Controles<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
@@ -343,7 +414,10 @@
 <li>HORA_PROC: YYYYMMDDHH24+1</li>
 </ul>
 <p>Ejemplo:</p>
-<p>Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia 09/08/2017 hora 10 se ejecuta de ésta forma: sh Nokia3AEndToEndRework.sh /calidad/Nokia3A 0908201710 201708091</p>
+<p>Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia 09/08/2017 hora 10 se ejecuta de ésta forma:</p>
+<ul class="simple">
+<li>sh Nokia3AEndToEndRework.sh /calidad/Nokia3A 0908201710 201708091</li>
+</ul>
 </div>
 <div class="section" id="reportes-de-smart">
 <h3>8. Reportes de Smart<a class="headerlink" href="#reportes-de-smart" title="Permalink to this headline">¶</a></h3>
@@ -357,7 +431,7 @@
 <p><strong>HISTORICO</strong></p>
 <img alt="../_images/image192.png" class="align-center" src="../_images/image192.png" />
 <img alt="../_images/image201.png" class="align-center" src="../_images/image201.png" />
-<img alt="../_images/image214.png" class="align-center" src="../_images/image214.png" />
+<img alt="../_images/image213.png" class="align-center" src="../_images/image213.png" />
 <ul class="simple">
 <li><strong>Messages</strong></li>
 </ul>
