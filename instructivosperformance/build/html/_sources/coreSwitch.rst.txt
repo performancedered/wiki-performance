@@ -8,6 +8,6 @@ CORE SWITCH
 
 	1. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS <../../_sections/cgr>
 
-	2. Nokia IMS (AAA) <../../_sections/nokiaims>
+	2. Nokia AAA (IMS) <../../_sections/nokiaims>
 
-	3. WIFI TAS (CORTADO) <../../_sections/wifi_tas>
+	3. Nokia TAS (IMS) <../../_sections/wifi_tas>

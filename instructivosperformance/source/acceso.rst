@@ -20,3 +20,5 @@ ACCESO
 	7. ALCATEL LTE URUGUAY - ENODB<../../_sections/enodb>
 
 	8. LTE HUAWEI (MOVISTAR RAN SHARING (CORTADO)) <../../_sections/Alcatelransharing>
+
+	9. ALTIOSTAR CELLS <../../_sections/altiostarcells>

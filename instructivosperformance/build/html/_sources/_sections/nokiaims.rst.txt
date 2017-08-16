@@ -1,4 +1,4 @@
-Nokia IMS (AAA)
+Nokia AAA (IMS)
 ================
 
 1. OBJETIVO
@@ -142,6 +142,26 @@ Los Scrips a utilizar son:
 .. image:: ../_static/images/nokiaims/image14.png
   :align: center
 
+.. _runNokia3A.sh: ../_static/images/nokiaims/runNokia3A.sh
+
+.. _runParserNokia3A.sh: ../_static/images/nokiaims/runParserNokia3A.sh
+
+.. _Nokia3AEndToEnd.sh: ../_static/images/nokiaims/Nokia3AEndToEnd.sh
+
+.. _GenerarCsvAll.sh: ../_static/images/nokiaims/GenerarCsvAll.sh
+
+.. _syncro_nokia3a.sh: ../_static/images/nokiaims/syncro_nokia3a.sh
+
+• runNokia3A.sh_
+
+• runParserNokia3A.sh_
+
+• Nokia3AEndToEnd.sh_
+
+• GenerarCsvAll.sh_
+
+• syncro_nokia3a.sh_
+
 6.4 Listado de Tablas Utilizadas
 ********************************
 
@@ -260,6 +280,10 @@ Donde tenemos tres parámetros:
 + RUTA: /calidad/NokiaWIFI/Scripts/NokiaWIFIEndToEndRework.sh
 + FECHA_PROC: DDMMYYYYHH24
 + HORA_PROC: YYYYMMDDHH24+1
+
+.. _Nokia3AEndToEndRework.sh: ../_static/images/nokiaims/Nokia3AEndToEndRework.sh
+
+• Nokia3AEndToEndRework.sh_
 
 Ejemplo:
 

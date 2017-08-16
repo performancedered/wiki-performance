@@ -238,6 +238,15 @@ En este proceso se filtran los datos de las tablas Raw para ser insertados en la
 .. image:: ../_static/images/enodb/pag17.bis.png
   :align: center 
 
+6.5.  Control
+***************
+ 
+Para realizar el control sobre las tablas HOUR, DAY, BH, IBHW se ejecutan los siguientes bloques sql.
+
+.. _ControlENODEB.sql: ../_static/images/enodb/ControlENODEB.sql
+
+• ControlENODEB.sql_
+
 7.	REPROCESO MANUAL
 --------------------
 

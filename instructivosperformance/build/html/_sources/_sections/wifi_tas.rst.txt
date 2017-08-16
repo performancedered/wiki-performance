@@ -1,5 +1,5 @@
 
-Nokia WIFI (TAS)
+Nokia TAS (IMS)
 ===========
 
 1.	OBJETIVO
@@ -90,7 +90,7 @@ El BGCF selecciona la red en la cual el acceso a la red pública conmutada (STFC
 2.3. Multimedia Resource Function Controller (MRFC)
 
 El MFRC controla los recursos de media del elemento MultiMedia Resource Function Processor (MRFP). Por ejemplo, recursos necesarios para proveer tonos, anuncios y conferencia.
-
+s
 
 5.	MACRO FLUJO DEL PROCESO
 ---------------------------
@@ -151,13 +151,34 @@ Los scripts son los siguientes:
 El Script NokiaWIFIEndToEnd.sh es la raíz del proceso.
 
 Los Scrips a utilizar son:
-•	NokiaWIFIEndToEnd.sh
-•	runAll.sh
-•	runNokiaWIFI.sh
-•	runParserNokiaWIFI.sh
-•	syncro_nokiawifi.sh
-•	syncro_nokiawifi_object.sh
-•	generarCsvAll.sh
+
+.. _NokiaWIFIEndToEnd.sh: ../_static/images/wifi_tas/NokiaWIFIEndToEnd.sh
+
+.. _runAll.sh: ../_static/images/wifi_tas/runAll.sh
+
+.. _runNokiaWIFI.sh: ../_static/images/wifi_tas/runNokiaWIFI.sh
+
+.. _runParserNokiaWIFI.sh: ../_static/images/wifi_tas/runParserNokiaWIFI.sh
+
+.. _syncro_nokiawifi.sh: ../_static/images/wifi_tas/syncro_nokiawifi.sh
+
+.. _syncro_nokiawifi_object.sh: ../_static/images/wifi_tas/syncro_nokiawifi_object.sh
+
+.. _generarCsvAll.sh: ../_static/images/wifi_tas/generarCsvAll.sh
+
+•	NokiaWIFIEndToEnd.sh_
+
+•	runAll.sh_
+
+•	runNokiaWIFI.sh_
+
+•	runParserNokiaWIFI.sh_
+
+•	syncro_nokiawifi.sh_
+
+•	syncro_nokiawifi_object.sh_
+
+•	generarCsvAll.sh_
 
 6.4.	Listado de Tablas Utilizadas
 ************************************

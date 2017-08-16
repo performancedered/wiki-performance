@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Nokia IMS (AAA) &mdash; WIKI-PERFORMANCE  documentation</title>
+  <title>Nokia AAA (IMS) &mdash; WIKI-PERFORMANCE  documentation</title>
   
 
   
@@ -39,7 +39,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="CORE SWITCH" href="../coreSwitch.html"/>
-        <link rel="next" title="Nokia WIFI (TAS)" href="wifi_tas.html"/>
+        <link rel="next" title="Nokia TAS (IMS)" href="wifi_tas.html"/>
         <link rel="prev" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" href="cgr.html"/> 
 
   
@@ -101,7 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cgr.html">     1. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">     2. Nokia IMS (AAA)</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     2. Nokia AAA (IMS)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1. OBJETIVO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alcance">2. ALCANCE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3. DEFINICIONES</a></li>
@@ -120,7 +120,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="wifi_tas.html">     3. WIFI TAS (CORTADO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi_tas.html">     3. Nokia TAS (IMS)</a></li>
 </ul>
 </li>
 </ul>
@@ -183,7 +183,7 @@
         
           <li><a href="../coreSwitch.html">CORE SWITCH</a> &raquo;</li>
         
-      <li>Nokia IMS (AAA)</li>
+      <li>Nokia AAA (IMS)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,8 +200,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nokia-ims-aaa">
-<h1>Nokia IMS (AAA)<a class="headerlink" href="#nokia-ims-aaa" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="nokia-aaa-ims">
+<h1>Nokia AAA (IMS)<a class="headerlink" href="#nokia-aaa-ims" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>1. OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
 <p>El objetivo de este documento es describir el proceso de recolección de KPIs que realiza la herramienta Smart sobre la plataforma AAA de Nokia IMS, como se almacena la información en la base de datos, los controles, los reportes en Smart que utilizará el usuario final.</p>
@@ -327,6 +327,13 @@ Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-C
 <p>Los scripts son los siguientes: runNokia3A.sh es la raíz del proceso.</p>
 <p>Los Scrips a utilizar son:</p>
 <img alt="../_images/image143.png" class="align-center" src="../_images/image143.png" />
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/nokiaims/runNokia3A.sh">runNokia3A.sh</a></li>
+<li><a class="reference external" href="../_static/images/nokiaims/runParserNokia3A.sh">runParserNokia3A.sh</a></li>
+<li><a class="reference external" href="../_static/images/nokiaims/Nokia3AEndToEnd.sh">Nokia3AEndToEnd.sh</a></li>
+<li><a class="reference external" href="../_static/images/nokiaims/GenerarCsvAll.sh">GenerarCsvAll.sh</a></li>
+<li><a class="reference external" href="../_static/images/nokiaims/syncro_nokia3a.sh">syncro_nokia3a.sh</a></li>
+</ul>
 </div>
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.4 Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
@@ -413,6 +420,9 @@ Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-C
 <li>FECHA_PROC: DDMMYYYYHH24</li>
 <li>HORA_PROC: YYYYMMDDHH24+1</li>
 </ul>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/nokiaims/Nokia3AEndToEndRework.sh">Nokia3AEndToEndRework.sh</a></li>
+</ul>
 <p>Ejemplo:</p>
 <p>Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia 09/08/2017 hora 10 se ejecuta de ésta forma:</p>
 <ul class="simple">
@@ -476,7 +486,7 @@ Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-C
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wifi_tas.html" class="btn btn-neutral float-right" title="Nokia WIFI (TAS)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wifi_tas.html" class="btn btn-neutral float-right" title="Nokia TAS (IMS)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cgr.html" class="btn btn-neutral" title="CGR : TRONCALES INDIVIDUALES Y AGRUPADOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

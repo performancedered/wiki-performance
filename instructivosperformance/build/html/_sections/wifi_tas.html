@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Nokia WIFI (TAS) &mdash; WIKI-PERFORMANCE  documentation</title>
+  <title>Nokia TAS (IMS) &mdash; WIKI-PERFORMANCE  documentation</title>
   
 
   
@@ -40,7 +40,7 @@
     <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
         <link rel="up" title="CORE SWITCH" href="../coreSwitch.html"/>
         <link rel="next" title="CORE DATOS" href="../coreDatos.html"/>
-        <link rel="prev" title="Nokia IMS (AAA)" href="nokiaims.html"/> 
+        <link rel="prev" title="Nokia AAA (IMS)" href="nokiaims.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -101,8 +101,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cgr.html">     1. CGR: TRONCALES INDIVIDUALES Y AGRUPADOS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nokiaims.html">     2. Nokia IMS (AAA)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">     3. WIFI TAS (CORTADO)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nokiaims.html">     2. Nokia AAA (IMS)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     3. Nokia TAS (IMS)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#objetivo">1.      OBJETIVO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#alcance">2.      ALCANCE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#definiciones">3.      DEFINICIONES</a></li>
@@ -183,7 +183,7 @@
         
           <li><a href="../coreSwitch.html">CORE SWITCH</a> &raquo;</li>
         
-      <li>Nokia WIFI (TAS)</li>
+      <li>Nokia TAS (IMS)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,8 +200,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nokia-wifi-tas">
-<h1>Nokia WIFI (TAS)<a class="headerlink" href="#nokia-wifi-tas" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="nokia-tas-ims">
+<h1>Nokia TAS (IMS)<a class="headerlink" href="#nokia-tas-ims" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>1.      OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
 <p>El presente documento buscar explicar y detallar el proceso que genera TAS.</p>
@@ -273,7 +273,8 @@ Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-C
 <p>2.2. Breakout Gateway Control Function (BGCF)</p>
 <p>El BGCF selecciona la red en la cual el acceso a la red pública conmutada (STFC) debe ocurrir. Si el BGCF determina que el acceso va a ocurrir en la misma red en donde el BGCF está localizado, entonces el BGCF selecciona un MGCF. El MGCF será responsable por el interfuncionamiento con la red STFC. Si el punto de acceso está en otra red, el BGCF enviará la señalización de esta sesión a un BGCF o MGCF (dependiendo de la configuración) en la otra red. El objetivo final es minimizar el recorrido de la llamada/sesión.</p>
 <p>2.3. Multimedia Resource Function Controller (MRFC)</p>
-<p>El MFRC controla los recursos de media del elemento MultiMedia Resource Function Processor (MRFP). Por ejemplo, recursos necesarios para proveer tonos, anuncios y conferencia.</p>
+<p>El MFRC controla los recursos de media del elemento MultiMedia Resource Function Processor (MRFP). Por ejemplo, recursos necesarios para proveer tonos, anuncios y conferencia.
+s</p>
 </div>
 <div class="section" id="macro-flujo-del-proceso">
 <h2>5.      MACRO FLUJO DEL PROCESO<a class="headerlink" href="#macro-flujo-del-proceso" title="Permalink to this headline">¶</a></h2>
@@ -327,14 +328,16 @@ Pueden existir múltiplos I-CSCF en una red. Las funciones ejecutadas por el I-C
 </div></blockquote>
 <p>Los scripts son los siguientes:
 El Script NokiaWIFIEndToEnd.sh es la raíz del proceso.</p>
-<p>Los Scrips a utilizar son:
-•       NokiaWIFIEndToEnd.sh
-•       runAll.sh
-•       runNokiaWIFI.sh
-•       runParserNokiaWIFI.sh
-•       syncro_nokiawifi.sh
-•       syncro_nokiawifi_object.sh
-•       generarCsvAll.sh</p>
+<p>Los Scrips a utilizar son:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/wifi_tas/NokiaWIFIEndToEnd.sh">NokiaWIFIEndToEnd.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/runAll.sh">runAll.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/runNokiaWIFI.sh">runNokiaWIFI.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/runParserNokiaWIFI.sh">runParserNokiaWIFI.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/syncro_nokiawifi.sh">syncro_nokiawifi.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/syncro_nokiawifi_object.sh">syncro_nokiawifi_object.sh</a></li>
+<li><a class="reference external" href="../_static/images/wifi_tas/generarCsvAll.sh">generarCsvAll.sh</a></li>
+</ul>
 </div>
 <div class="section" id="listado-de-tablas-utilizadas">
 <h3>6.4.    Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
@@ -496,7 +499,7 @@ En SMART se muestran todos los KPI que se pidieron analizar con su nombre corres
         <a href="../coreDatos.html" class="btn btn-neutral float-right" title="CORE DATOS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nokiaims.html" class="btn btn-neutral" title="Nokia IMS (AAA)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nokiaims.html" class="btn btn-neutral" title="Nokia AAA (IMS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
