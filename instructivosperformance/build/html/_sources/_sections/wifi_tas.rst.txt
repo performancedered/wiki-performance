@@ -48,10 +48,6 @@ A continuación se representa la arquitectura del IP Multimedia Subsystem tal y 
 
 .. image:: ../_static/images/wifi_tas/image43.png
   :align: center
-
-.. image:: ../_static/images/wifi_tas/image44.png
-  :align: center
-
 2.1. Call Session Control Function (CSCF)
 
 El elemento Serving CSCF gerencia las sesiones SIP y coordina con otros elementos de la red el control de las llamadas/sesiones. El S-CSCF es responsable por las seguientes funciones:

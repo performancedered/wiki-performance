@@ -27,3 +27,5 @@ REPORTES
     10. Reporte Automatico VLR <../../_sections/reportevlr>
 
     11. Reporte RNC <../../_sections/reporternc>
+
+    12. Reporte LTE Interference <../../_sections/reportelteinterference>

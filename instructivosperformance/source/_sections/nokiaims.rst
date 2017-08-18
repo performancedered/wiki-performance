@@ -38,14 +38,14 @@ Básicamente está organizada en tres capas:
 
 En la figura que se presenta a continuación se representa el modelo de capas descrito arriba. Se intenta dejar claro las diferencias entre cada una de las capas mencionadas.
 
-.. image:: ../_static/images/nokiaims/image42.png
+.. image:: ../_static/images/nokiaims/image2.png
   :align: center
 
 2. COMPONENTES EN DETALLE DE LA ARQUITECTURA
 
 A continuación se representa la arquitectura del IP Multimedia Subsystem tal y como se establece en el estándar del 3GPP. Se muestran las funciones e interfaces más importantes.
 
-.. image:: ../_static/images/nokiaims/image43.png
+.. image:: ../_static/images/nokiaims/image1.png
   :align: center
 
 2.1. Call Session Control Function (CSCF)
