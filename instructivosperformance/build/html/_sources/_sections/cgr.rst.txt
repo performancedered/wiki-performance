@@ -475,7 +475,7 @@ Type.: Servicio al cual se conecta el CGR.
 
 
 7. Reproceso Automático y Manual
-*********************************
+-----------------------------------
 
 Para el hour se debe ejecutar el siguiente script:
 
@@ -496,7 +496,7 @@ Para el gruplal se realizan los mismos pasos.
 *	nokia_msc_cgr_group_rec.sh_
 
 8. Reportes de Smart
-*********************
+--------------------
 
 La visualización de CGR en la herramienta Smart se realiza desde los siguientes reportes:
 

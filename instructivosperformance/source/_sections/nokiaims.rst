@@ -248,7 +248,7 @@ Las tablas utilizadas son las siguientes:
   :align: center
 
 7. Reproceso Manual
-*********************************
+-------------------
 
 PROCESO DE REWORK END TO END
 
@@ -292,7 +292,7 @@ Si se quiere reprocesar la hora 10, tirar como parametro 1 hora mas. Para el dia
 + sh Nokia3AEndToEndRework.sh /calidad/Nokia3A 0908201710 201708091
 
 8. Reportes de Smart
-*********************
+--------------------
 
 Los reportes en la herramienta Smart se muestran de la siguiente manera:
 

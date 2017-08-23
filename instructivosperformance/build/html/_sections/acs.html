@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SONUS - AcS &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="SVA" href="../sva.html"/>
+        <link rel="next" title="PREPAGO" href="../prepago.html"/>
+        <link rel="prev" title="ANTISPAMMING MOBILEUM" href="mobileum.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../acceso.html">ACCESO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../sva.html">SVA</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="voicemailzte.html">1. VOICEMAIL ZTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wapZte.html">2. WAP ZTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnotree.html">3. TECNOTREE COMMERCIAL ENGINE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ztemmsc.html">4. ZTE MMSC (CORTADO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobileum.html">5. ANTISPAMMING MOBILEUM</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. SONUS AcS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2. ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4. DESCRIPCION GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo-del-proceso">5. MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6. DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1 Datos origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2 Datos destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismo">6.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.4 Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentaho">6.5. Pentaho</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controles">6.6. Controles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7. Reproceso Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reportes-de-smart">8. Reportes de Smart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../sva.html">SVA</a> &raquo;</li>
+        
+      <li>SONUS - AcS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sonus-acs">
+<h1>SONUS - AcS<a class="headerlink" href="#sonus-acs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1. OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo de este documento es describir el proceso de recolección de KPIs que realiza la herramienta Smart sobre la plataforma AcS de SONUS, como se almacena la información en la base de datos, los controles, los reportes en Smart que utilizará el usuario final.</p>
+</div>
+<div class="section" id="alcance">
+<h2>2. ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>Areas involucradas: Performance de Red.</p>
+</div>
+<div class="section" id="definiciones">
+<h2>3. DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cortado: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es cortado.claro.amx y la dirección ip física es 10.105.146.8.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4. DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>AcS SONUS es una plataforma que se encarga de autenticar todos los usuarios de VOWIFI que se instalaron alguna vez el cliente SONUS. El cliente SONUS se debe instalar en todo celular que no tenga el cliente VOWIFI nativo como por ejemplo IPHONE que si lo tiene.</p>
+<p>Sus funciones más importantes son:</p>
+<ul class="simple">
+<li>CHECKEA QUE EL USUARIO QUE SE CONECTA ES QUIEN DICE SER Y QUE ESTA AUTORIZADO PARA EL USO DEL SERVICIO.</li>
+<li>PROVEE CONFIGURACIÓN DE LAS CREDENCIALES DE DATOS Y USUARIOS PARA LA APLICACIÓN DE VOWIFI.</li>
+<li>ADMINISTRA LA BASE DE DATOS DE USUARIO.</li>
+<li>REALIZA LA RECONFIGURACIÓN DE LA APLICACIÓN CUANDO LA CONFIGURACIÓN DE DATOS ES MODIFICADA.</li>
+</ul>
+<p>Diseño detallado de AcS:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/S9_AcS_Detailed_Design_v4.pptx">S9_AcS_Detailed_Design_v4</a></li>
+</ul>
+</div>
+<div class="section" id="macroflujo-del-proceso">
+<h2>5. MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/image136.png" class="align-center" src="../_images/image136.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6. DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1 Datos origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen y Path: 10.104.8.20, /var/www/reports</li>
+<li>Cantidad de archivos origen: 5 a 8 archivos</li>
+<li>Frecuencia actualización: Frecuencia diaria</li>
+<li>Tipo de Archivo: CSV</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2 Datos destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Server Destino: cortado.claro.amx</li>
+<li>Conversión de Archivos: No</li>
+<li>Tabla Auxiliar: No</li>
+<li>Frecuencia de corrida del proceso: 1 por dia</li>
+<li>Regionales: No</li>
+<li>RAW Si/No: Si</li>
+<li>Hour Si/No: No</li>
+<li>Day Si/No: Si</li>
+<li>BH Si/No: No</li>
+<li>IBHW Si/No: No</li>
+<li>Países: No</li>
+<li>Directorio Destino (File System): /calidad/AcsVOWIFI</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismo">
+<h3>6.3. Shell Copiar Archivos Origen a Destino y limpieza de los mismo<a class="headerlink" href="#shell-copiar-archivos-origen-a-destino-y-limpieza-de-los-mismo" title="Permalink to this headline">¶</a></h3>
+<p>Scripts tienen las siguientes funciones:</p>
+<ul class="simple">
+<li><ol class="first loweralpha">
+<li>Copiar los archivos</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="2">
+<li>Limpieza</li>
+</ol>
+</li>
+<li><ol class="first loweralpha" start="3">
+<li>Ejecutar Pentaho</li>
+</ol>
+</li>
+</ul>
+<p>Los scripts son los siguientes: AcS_RAW_EndToEnd.sh, este shellscript esta croneado para correr todos los dias a las 6 AM, una vez llena la tabla RAW se corre automaticamente el shellscript AcS_DAY_EndToEnd.sh que llena la tabla DAY.</p>
+<p>Los Scrips a utilizar son:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/AcS_DAY_EndToEnd.sh">AcS_DAY_EndToEnd.sh</a></li>
+<li><a class="reference external" href="../_static/images/acs/AcS_DAY_Diario.sh">AcS_DAY_Diario.sh</a></li>
+<li><a class="reference external" href="../_static/images/acs/AcS_RAW_Diario.sh">AcS_RAW_Diario.sh</a></li>
+<li><a class="reference external" href="../_static/images/acs/AcS_RAW_EndToEnd.sh">AcS_RAW_EndToEnd.sh</a></li>
+<li><a class="reference external" href="../_static/images/acs/cleanupLogs.sh">cleanupLogs.sh</a></li>
+<li><a class="reference external" href="../_static/images/acs/deleteEmptyLogs.sh">deleteEmptyLogs.sh</a></li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.4 Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ACS_VOWIFI_SONUS_RAW</li>
+</ul>
+<img alt="../_images/image1113.png" class="align-center" src="../_images/image1113.png" />
+<ul class="simple">
+<li>ACS_VOWIFI_SONUS_DAY</li>
+</ul>
+<img alt="../_images/image1211.png" class="align-center" src="../_images/image1211.png" />
+</div>
+<div class="section" id="pentaho">
+<h3>6.5. Pentaho<a class="headerlink" href="#pentaho" title="Permalink to this headline">¶</a></h3>
+<p>Estructura del proyecto :</p>
+<img alt="../_images/image315.png" class="align-center" src="../_images/image315.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End Raw</li>
+</ul>
+<img alt="../_images/image136.png" class="align-center" src="../_images/image136.png" />
+<ul class="simple">
+<li>Pentaho Set Environment</li>
+</ul>
+<img alt="../_images/image415.png" class="align-center" src="../_images/image415.png" />
+<ul class="simple">
+<li>Pentaho delete rows</li>
+</ul>
+<img alt="../_images/image511.png" class="align-center" src="../_images/image511.png" />
+<ul class="simple">
+<li>Pentaho Extraer CSV</li>
+</ul>
+<img alt="../_images/image611.png" class="align-center" src="../_images/image611.png" />
+<ul class="simple">
+<li>Proceso Pentaho End to End DAY</li>
+</ul>
+<img alt="../_images/image224.png" class="align-center" src="../_images/image224.png" />
+</div>
+<div class="section" id="controles">
+<h3>6.6. Controles<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<p>Para realizar el control sobre las tablas RAW y DAY se ejecutan los siguientes bloques sql.</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/ControlRAW.sql">ControlRAW.sql</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/ControlDAY.sql">ControlDAY.sql</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7. Reproceso Manual<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p>Se debe ejecutar el script AcS_RAW_Rework.sh , el cual debe recibir por parámetro la Fecha solicitada, para realizar la limpieza, para luego ejecutar el AcSVOWIFI_RAW_EndToEnd.kjb en Pentaho de manera manual.</p>
+<p>Ubicación de los scripts en la carpeta /home/calidad/AcSVOWIFI/Scripts</p>
+<p>El Formato de la fecha es el siguiente:</p>
+<p>YYYYMMDD</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/AcS_RAW_Rework.sh">AcS_RAW_Rework.sh</a></li>
+</ul>
+<p>Para realizar el reproceso a nivel DAY se debe ejecutar el siguiente script AcS_DAY_Rework.sh</p>
+<p>El Formato de la fecha es el siguiente:</p>
+<p>DD.MM.YYYY</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/acs/AcS_DAY_Rework.sh">AcS_DAY_Rework.sh</a></li>
+</ul>
+</div>
+<div class="section" id="reportes-de-smart">
+<h2>8. Reportes de Smart<a class="headerlink" href="#reportes-de-smart" title="Permalink to this headline">¶</a></h2>
+<p>Los reportes en la herramienta Smart se muestran de la siguiente manera:</p>
+<img alt="../_images/image710.png" class="align-center" src="../_images/image710.png" />
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image107.png" class="align-center" src="../_images/image107.png" />
+<p><strong>HISTORICO</strong></p>
+<img alt="../_images/image87.png" class="align-center" src="../_images/image87.png" />
+<img alt="../_images/image97.png" class="align-center" src="../_images/image97.png" />
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../prepago.html" class="btn btn-neutral float-right" title="PREPAGO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mobileum.html" class="btn btn-neutral" title="ANTISPAMMING MOBILEUM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
