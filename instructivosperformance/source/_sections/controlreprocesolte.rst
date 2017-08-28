@@ -1,5 +1,5 @@
 
-Instructivo Control y Reproceso de tablas LTE_ENODEB  
+Instructivo Control y Reproceso de tablas NOKIA LTE 
 ====================================================
 
 1.	OBJETIVO

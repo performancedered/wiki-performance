@@ -111,6 +111,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2 Datos destino</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3 Listado de Tablas Utilizadas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#shell-copiar-archivos-origen-a-destino">6.4 Shell Copiar Archivos Origen a Destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proceso-manual">6.5 Proceso Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proceso-automatico">6.6 Proceso Automatico</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#reproceso-automatico-y-manual">7. Reproceso Automático y Manual</a></li>
@@ -426,9 +428,9 @@ Los MSS y los MGW (Media Gateway) hacen posible la interconexión entre circuito
 <ul class="simple">
 <li>Servidor origen: OSS</li>
 <li>Frecuencia actualización: Frecuencia Horaria</li>
-<li>Tablas Origen - Destino:</li>
+<li>Tablas Origen:</li>
 </ul>
-<img alt="../_images/tableorigendestino.png" class="align-center" src="../_images/tableorigendestino.png" />
+<img alt="../_images/tablaorigen.png" class="align-center" src="../_images/tablaorigen.png" />
 </div>
 <div class="section" id="datos-destino">
 <h3>6.2 Datos destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
@@ -553,6 +555,84 @@ Los MSS y los MGW (Media Gateway) hacen posible la interconexión entre circuito
 </ul>
 <p>CGR Type
 Type.: Servicio al cual se conecta el CGR.</p>
+</div>
+<div class="section" id="proceso-manual">
+<h3>6.5 Proceso Manual<a class="headerlink" href="#proceso-manual" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/tableorigendestino.png" class="align-center" src="../_images/tableorigendestino.png" />
+</div>
+<div class="section" id="proceso-automatico">
+<h3>6.6 Proceso Automatico<a class="headerlink" href="#proceso-automatico" title="Permalink to this headline">¶</a></h3>
+<p><strong>Paso 1 - Conseguir Información:</strong>  Los troncales se agrupan por tipo.  Para saber cuáles troncales individuales deben agruparse, se debe recibir la información por parte de Ingeniería de Conmutación, indicando los grupos, las altas, bajas, modificaciones.  Esto se hace mediante un correo de asunto “TRK”.  La información es por ejemplo:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="16%" />
+<col width="12%" />
+<col width="12%" />
+<col width="10%" />
+<col width="16%" />
+<col width="12%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SW</th>
+<th class="head">OPC</th>
+<th class="head">DCS</th>
+<th class="head">ECP</th>
+<th class="head">TG</th>
+<th class="head">NTG</th>
+<th class="head">PLF</th>
+<th class="head">OPERATOR</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>MSSBAR01</td>
+<td>1053</td>
+<td>1</td>
+<td>87</td>
+<td>1260</td>
+<td>VTO11BL1</td>
+<td>VOIC_GSM</td>
+<td>CTI</td>
+</tr>
+<tr class="row-odd"><td>MSSBAR01</td>
+<td>10537</td>
+<td>1</td>
+<td>87</td>
+<td>1262</td>
+<td>VTO11BL1</td>
+<td>VOIC_GSM</td>
+<td>CTI</td>
+</tr>
+<tr class="row-even"><td>MSSCOM02</td>
+<td>10760</td>
+<td>1</td>
+<td>83</td>
+<td>1260</td>
+<td>VTO11BL1</td>
+<td>VOIC_GSM</td>
+<td>CTI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Paso 2 - Modificar tabla CGR_RELATIONS</strong>: con la información recibida, modificar la tabla CGR_RELATIONS</p>
+<p><strong>Paso 3 - Modificar el CGR_GROUP en las tablas de KPI:</strong>  Una vez que se sabe el nombre del grupo, se debe modificarlo en la tabla CGR_HOUR y CGR_GROUP_HOUR.  Ya que hasta ese momento el nombre CGR y CGR_GROUP era el mismo.  Para esto se utiliza una herramienta instalada en el servidor Perdido que se llama “Recovery”.
+Para acceder a la herramienta Recovery se necesita acceder al equipo Perdido por consola y ejecutar Recovery.sh desde el path://calidad/recovery.sh
+La herramienta Recovery es una herramienta de entorno Unix que a través de ciertos menúes permite reprocesar las tablas de KPI insertándole el nuevo nombre CGR_GROUP.</p>
+<p>Por ejemplo, para hacer reproceso de las tablas cgr hourly en adelante se hacen los siguientes pasos:</p>
+<img alt="../_images/recovery1.png" class="align-center" src="../_images/recovery1.png" />
+<img alt="../_images/recovery2.png" class="align-center" src="../_images/recovery2.png" />
+<img alt="../_images/recovery3.png" class="align-center" src="../_images/recovery3.png" />
+<img alt="../_images/recovery4.png" class="align-center" src="../_images/recovery4.png" />
+<img alt="../_images/recovery5.png" class="align-center" src="../_images/recovery5.png" />
+<img alt="../_images/recovery6.png" class="align-center" src="../_images/recovery6.png" />
+<img alt="../_images/recovery7.png" class="align-center" src="../_images/recovery7.png" />
+<img alt="../_images/recovery8.png" class="align-center" src="../_images/recovery8.png" />
+<img alt="../_images/recovery9.png" class="align-center" src="../_images/recovery9.png" />
+<img alt="../_images/recovery11.png" class="align-center" src="../_images/recovery11.png" />
+<img alt="../_images/recovery12.png" class="align-center" src="../_images/recovery12.png" />
+<img alt="../_images/recovery13.png" class="align-center" src="../_images/recovery13.png" />
+<p><strong>Paso 4 – Verificación:</strong>  Una vez que la herramienta Recovery terminó de reprocesar las tablas de KPI poniéndole el nombre correcto, se debe verificar que en Smart el reporte de CGR Agrupados permite ver el grupo correcto.</p>
 </div>
 </div>
 <div class="section" id="reproceso-automatico-y-manual">

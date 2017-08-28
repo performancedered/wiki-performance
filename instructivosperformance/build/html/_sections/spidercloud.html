@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spider Cloud &mdash; WIKI-PERFORMANCE  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icono_pag.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="WIKI-PERFORMANCE  documentation" href="../index.html"/>
+        <link rel="up" title="ACCESO" href="../acceso.html"/>
+        <link rel="next" title="CORE SWITCH" href="../coreSwitch.html"/>
+        <link rel="prev" title="ALTIOSTAR CELLS" href="altiostarcells.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> WIKI-PERFORMANCE
+          
+
+          
+            
+            <img src="../_static/Logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduccion.html">INTRODUCCIÓN</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../acceso.html">ACCESO</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tecnologia2g.html">     1. INSTRUCTIVOS TECNOLOGIA 2G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia3g.html">     2. INSTRUCTIVOS TECNOLOGIA 3G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tecnologia4g.html">     3. INSTRUCTIVOS TECNOLOGIA 4G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="femtoalcatel.html">     4. ALCATEL FEMTOCELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lteregional.html">     5. LTE REGIONAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referenciatableroparticipacion.html">     6. TABLERO PARTICIPACIÓN 4G MERCADO/CIUDAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enodb.html">     7. ALCATEL LTE URUGUAY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Alcatelransharing.html">     8. LTE HUAWEI (MOVISTAR RAN SHARING (CORTADO))</a></li>
+<li class="toctree-l2"><a class="reference internal" href="altiostarcells.html">     9. ALTIOSTAR CELLS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     10. SPIDER CLOUD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#objetivo">1. OBJETIVO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">2. ALCANCE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#definiciones">3. DEFINICIONES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-general">4. DESCRIPCION GENERAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macroflujo-del-proceso">5. MACROFLUJO DEL PROCESO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#descripcion-detallada">6. DESCRIPCION DETALLADA</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datos-origen">6.1.  Datos Origen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#datos-destino">6.2 Datos destino</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listado-de-tablas-utilizadas">6.3 Listado de Tablas Utilizadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#proceso-pentaho">6.4. Proceso Pentaho</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#archivos-origen-a-destino-y-limpieza-de-los-mismos">6.5. ARCHIVOS ORIGEN A DESTINO Y LIMPIEZA DE LOS MISMOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controles">6.6. Controles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproceso-manual">7. REPROCESO MANUAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reportes-de-smart">8. REPORTES DE SMART</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreSwitch.html">CORE SWITCH</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreDatos.html">CORE DATOS</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enlacesIp.html">ENLACES IP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sva.html">SVA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prepago.html">PREPAGO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tableros.html">TABLEROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gestion.html">GESTIÓN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapa.html">MAPA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reportes.html">REPORTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../proyectos.html">PROYECTOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procesos.html">  PROCESOS</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">WIKI-PERFORMANCE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../acceso.html">ACCESO</a> &raquo;</li>
+        
+      <li>Spider Cloud</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spider-cloud">
+<h1>Spider Cloud<a class="headerlink" href="#spider-cloud" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objetivo">
+<h2>1. OBJETIVO<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Tener las datos en las tablas raw,para poder calcular las sumarizaciones hour,bh,day,ibhw y luego poder graficarlos en Smart</li>
+<li>Facilitar al usuario a través de Smart mediciones de nodos y celdas cisco small cell</li>
+</ul>
+</div>
+<div class="section" id="alcance">
+<h2>2. ALCANCE<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Áreas involucradas: Calidad y Performance de Red</li>
+</ul>
+</div>
+<div class="section" id="definiciones">
+<h2>3. DEFINICIONES<a class="headerlink" href="#definiciones" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Falda: Servidor UNIX en donde se importan los XML desde el proveedor, y en donde se encuentra Smart. El nombre es falda.claro.amx.</li>
+</ul>
+</div>
+<div class="section" id="descripcion-general">
+<h2>4. DESCRIPCION GENERAL<a class="headerlink" href="#descripcion-general" title="Permalink to this headline">¶</a></h2>
+<p>Se divide el proyecto en dos partes,una que se encarga de ejecutar el parser y cargar las tablas raw y hour,luego realiza un insert sobre la segunda parte del proyecto para automatizarlo, en la segunda parte se realizan las sumarizaciones y se cargan las tablas BH,DAY e IBHW.</p>
+</div>
+<div class="section" id="macroflujo-del-proceso">
+<h2>5. MACROFLUJO DEL PROCESO<a class="headerlink" href="#macroflujo-del-proceso" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/image137.png" class="align-center" src="../_images/image137.png" />
+</div>
+<div class="section" id="descripcion-detallada">
+<h2>6. DESCRIPCION DETALLADA<a class="headerlink" href="#descripcion-detallada" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datos-origen">
+<h3>6.1.  Datos Origen<a class="headerlink" href="#datos-origen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Origen y Path: 10.84.105.143, path : /home/data/PM/</li>
+<li>Cantidad de archivos origen: 4 archivos por nodo.</li>
+<li>Frecuencia actualización: Frecuencia 15 mintos</li>
+<li>Tipo de Archivo: XML</li>
+</ul>
+</div>
+<div class="section" id="datos-destino">
+<h3>6.2 Datos destino<a class="headerlink" href="#datos-destino" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Server Destino: cortado.claro.amx</li>
+<li>Tabla Auxiliar: Si</li>
+<li>Frecuencia de corrida del proceso: 1 vez por hora</li>
+<li>Regionales: No</li>
+<li>Sumarizacions disponibles segun tablas:</li>
+</ul>
+<img alt="../_images/sumarizaciones1.png" class="align-center" src="../_images/sumarizaciones1.png" />
+<ul class="simple">
+<li>Directorio Destino (File System): /calidad/CiscoSmallCell</li>
+</ul>
+</div>
+<div class="section" id="listado-de-tablas-utilizadas">
+<h3>6.3 Listado de Tablas Utilizadas<a class="headerlink" href="#listado-de-tablas-utilizadas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>UMTS_CSC_SYSTEM_HOUR</li>
+</ul>
+<img alt="../_images/table15.png" class="align-center" src="../_images/table15.png" />
+<ul class="simple">
+<li>UMTS_CSC_SYSTEM_DAY</li>
+</ul>
+<img alt="../_images/table21.png" class="align-center" src="../_images/table21.png" />
+<ul class="simple">
+<li>UMTS_CSC_SYSTEM_BH</li>
+</ul>
+<img alt="../_images/table31.png" class="align-center" src="../_images/table31.png" />
+<ul class="simple">
+<li>UMTS_CSC_SYSTEM_IBHW</li>
+</ul>
+<img alt="../_images/table41.png" class="align-center" src="../_images/table41.png" />
+<ul class="simple">
+<li>LTE_CSC_SYSTEM_HOUR</li>
+</ul>
+<img alt="../_images/table51.png" class="align-center" src="../_images/table51.png" />
+<ul class="simple">
+<li>LTE_CSC_SYSTEM_DAY</li>
+</ul>
+<img alt="../_images/table61.png" class="align-center" src="../_images/table61.png" />
+<ul class="simple">
+<li>LTE_CSC_SYSTEM_BH</li>
+</ul>
+<img alt="../_images/table71.png" class="align-center" src="../_images/table71.png" />
+<ul class="simple">
+<li>LTE_CSC_SYSTEM_IBHW</li>
+</ul>
+<img alt="../_images/table81.png" class="align-center" src="../_images/table81.png" />
+<ul class="simple">
+<li>UMTS_CSC_CELL_HOUR</li>
+</ul>
+<img alt="../_images/table91.png" class="align-center" src="../_images/table91.png" />
+<ul class="simple">
+<li>UMTS_CSC_CELL_DAY</li>
+</ul>
+<img alt="../_images/table101.png" class="align-center" src="../_images/table101.png" />
+<ul class="simple">
+<li>UMTS_CSC_CELL_BH</li>
+</ul>
+<img alt="../_images/table111.png" class="align-center" src="../_images/table111.png" />
+<ul class="simple">
+<li>UMTS_CSC_CELL_IBHW</li>
+</ul>
+<img alt="../_images/table121.png" class="align-center" src="../_images/table121.png" />
+<ul class="simple">
+<li>LTE_CSC_CELL_HOUR</li>
+</ul>
+<img alt="../_images/table131.png" class="align-center" src="../_images/table131.png" />
+<ul class="simple">
+<li>LTE_CSC_CELL_DAY</li>
+</ul>
+<img alt="../_images/table141.png" class="align-center" src="../_images/table141.png" />
+<ul class="simple">
+<li>LTE_CSC_CELL_BH</li>
+</ul>
+<img alt="../_images/table151.png" class="align-center" src="../_images/table151.png" />
+<ul class="simple">
+<li>LTE_CSC_CELL_IBHW</li>
+</ul>
+<img alt="../_images/table16.png" class="align-center" src="../_images/table16.png" />
+<ul class="simple">
+<li>LTE_C_Cisco_Small_Cell_RAW</li>
+</ul>
+<img alt="../_images/table17.png" class="align-center" src="../_images/table17.png" />
+<img alt="../_images/table18.png" class="align-center" src="../_images/table18.png" />
+<p>Al ser muy extensa la cantidad de campos de la tabla se adjunta el principio y final de los campos.</p>
+<ul class="simple">
+<li>UMTS_C_Cisco_Small_Cell_RAW</li>
+</ul>
+<img alt="../_images/table19.png" class="align-center" src="../_images/table19.png" />
+<img alt="../_images/table20.png" class="align-center" src="../_images/table20.png" />
+<p>Al ser muy extensa la cantidad de campos de la tabla se adjunta el principio y final de los campos.</p>
+</div>
+<div class="section" id="proceso-pentaho">
+<h3>6.4. Proceso Pentaho<a class="headerlink" href="#proceso-pentaho" title="Permalink to this headline">¶</a></h3>
+<p><strong>Proyecto Spider Cloud YYYY MM DD</strong></p>
+<blockquote>
+<div><strong>Variable HOME</strong>: CSC-HOME</div></blockquote>
+<img alt="../_images/image225.png" class="align-center" src="../_images/image225.png" />
+<p><strong>Descripción</strong></p>
+<p>Dentro de Set Variables se levantan las variables</p>
+<img alt="../_images/image316.png" class="align-center" src="../_images/image316.png" />
+<p>Se realiza la carga de la tabla RAW y  HOUR en Ins. Process To Run DAY &amp; BH se realiza un insert para ejecutar automáticamente el proceso de sumarizacion de las tablas BH, DAY e IBHW.</p>
+<img alt="../_images/image416.png" class="align-center" src="../_images/image416.png" />
+<p><strong>Variable HOME</strong>: CSC-HOME</p>
+<img alt="../_images/image512.png" class="align-center" src="../_images/image512.png" />
+<p><strong>Descripción</strong></p>
+<p>Dentro de Calc Sum BH, DAY, IBHW, se divide en Get P_FECHA Variable se levanta una variable que viene por parámetro y Call G_CISCO_SMALL_CELL.P_CALCULAR_SUMARY_CSC_FC se realiza la sumarizacion de la tabla HOUR para el cálculo de la tabla BH,DAY,IBHW.</p>
+<img alt="../_images/image612.png" class="align-center" src="../_images/image612.png" />
+<p>Dentro de Write InsProcess se levantan variables que vienen por parámetro</p>
+<img alt="../_images/image711.png" class="align-center" src="../_images/image711.png" />
+</div>
+<div class="section" id="archivos-origen-a-destino-y-limpieza-de-los-mismos">
+<h3>6.5. ARCHIVOS ORIGEN A DESTINO Y LIMPIEZA DE LOS MISMOS<a class="headerlink" href="#archivos-origen-a-destino-y-limpieza-de-los-mismos" title="Permalink to this headline">¶</a></h3>
+<p>La extracción de los archivos xml del servidor origen se realiza mediante una librería de java llamada SFTP, la limpieza de los archivos xml se realiza con procesos establecidos que borran los xml de acuerdo a la fecha de la carpeta DATA de cada proyecto</p>
+<p>El script que llena las tablas raiz del proceso es runCSCEndToEnd.sh</p>
+<p>El path donde se encuentran los scripts en cortado es :</p>
+<p>/calidad/CiscoSmallCell/Scripts</p>
+<p>Los Scrips a utilizar son:</p>
+<img alt="../_images/image98.png" class="align-center" src="../_images/image98.png" />
+</div>
+<div class="section" id="controles">
+<h3>6.6. Controles<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<p>Actualmente este control se realiza mediante la tabla CONTROL_FILES que controla la diferencia de cantidad de registros que se insertaron en la tabla raw con la cantidad de registros que se procesaron en el parser.</p>
+</div>
+</div>
+<div class="section" id="reproceso-manual">
+<h2>7. REPROCESO MANUAL<a class="headerlink" href="#reproceso-manual" title="Permalink to this headline">¶</a></h2>
+<p>Para realizar el reproceso se debe ejecutar el script runCSCEndToEndRework.sh con la fecha que se desea reprocesar con el formato YYYYMMDD.HH24 (EJ:20170813.12).</p>
+<img alt="../_images/image88.png" class="align-center" src="../_images/image88.png" />
+<p>Ubicación de los scripts: CiscoSmallCell/Scripts</p>
+<p>Para realizar el reproceso se debe ingresar los siguientes parámetros:</p>
+<p>Fecha yyyyMMdd.HH</p>
+</div>
+<div class="section" id="reportes-de-smart">
+<h2>8. REPORTES DE SMART<a class="headerlink" href="#reportes-de-smart" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/smart.png" class="align-center" src="../_images/smart.png" />
+<img alt="../_images/smart1.png" class="align-center" src="../_images/smart1.png" />
+<ul class="simple">
+<li>Principales KPI Celda Diario/ Histórico</li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image108.png" class="align-center" src="../_images/image108.png" />
+<p><strong>HISTOICO</strong></p>
+<img alt="../_images/image1114.png" class="align-center" src="../_images/image1114.png" />
+<img alt="../_images/image1212.png" class="align-center" src="../_images/image1212.png" />
+<ul class="simple">
+<li>Principales KPI Nodo Diario/ Histórico</li>
+</ul>
+<p><strong>DIARIO</strong></p>
+<img alt="../_images/image138.png" class="align-center" src="../_images/image138.png" />
+<p><strong>HISTOICO</strong></p>
+<img alt="../_images/image146.png" class="align-center" src="../_images/image146.png" />
+<img alt="../_images/image156.png" class="align-center" src="../_images/image156.png" />
+<img alt="../_images/image165.png" class="align-center" src="../_images/image165.png" />
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../coreSwitch.html" class="btn btn-neutral float-right" title="CORE SWITCH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="altiostarcells.html" class="btn btn-neutral" title="ALTIOSTAR CELLS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Claro.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

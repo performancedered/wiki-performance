@@ -274,10 +274,9 @@ Los datos origen a nivel inicial se toman del OSS.
 
 •	Servidor origen: OSS
 •	Frecuencia actualización: Frecuencia Horaria
-•	Tablas Origen - Destino:
+•	Tablas Origen:
 
-
-.. image:: ../_static/images/cgr/tableorigendestino.png
+.. image:: ../_static/images/cgr/tablaorigen.png
   :align: center
 
 6.2 Datos destino
@@ -472,6 +471,71 @@ Esta funcion lo que hace es llamar a las siguentes funciones:
 
 CGR Type
 Type.: Servicio al cual se conecta el CGR.
+
+6.5 Proceso Manual
+******************
+
+.. image:: ../_static/images/cgr/tableorigendestino.png
+  :align: center
+
+6.6 Proceso Automatico 
+**********************
+
+**Paso 1 - Conseguir Información:**  Los troncales se agrupan por tipo.  Para saber cuáles troncales individuales deben agruparse, se debe recibir la información por parte de Ingeniería de Conmutación, indicando los grupos, las altas, bajas, modificaciones.  Esto se hace mediante un correo de asunto “TRK”.  La información es por ejemplo:
+
+============  ==================  ==============  ==============  ============  ==================  ==============  ==============  
+SW            OPC                 DCS             ECP             TG            NTG                 PLF             OPERATOR
+============  ==================  ==============  ==============  ============  ==================  ==============  ==============
+MSSBAR01      1053                1               87              1260          VTO11BL1            VOIC_GSM        CTI
+MSSBAR01      10537               1               87              1262          VTO11BL1            VOIC_GSM        CTI
+MSSCOM02      10760               1               83              1260          VTO11BL1            VOIC_GSM        CTI
+============  ==================  ==============  ==============  ============  ==================  ==============  ==============
+
+**Paso 2 - Modificar tabla CGR_RELATIONS**: con la información recibida, modificar la tabla CGR_RELATIONS
+
+**Paso 3 - Modificar el CGR_GROUP en las tablas de KPI:**  Una vez que se sabe el nombre del grupo, se debe modificarlo en la tabla CGR_HOUR y CGR_GROUP_HOUR.  Ya que hasta ese momento el nombre CGR y CGR_GROUP era el mismo.  Para esto se utiliza una herramienta instalada en el servidor Perdido que se llama “Recovery”.  
+Para acceder a la herramienta Recovery se necesita acceder al equipo Perdido por consola y ejecutar Recovery.sh desde el path://calidad/recovery.sh
+La herramienta Recovery es una herramienta de entorno Unix que a través de ciertos menúes permite reprocesar las tablas de KPI insertándole el nuevo nombre CGR_GROUP.
+
+Por ejemplo, para hacer reproceso de las tablas cgr hourly en adelante se hacen los siguientes pasos:
+
+.. image:: ../_static/images/cgr/recovery1.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery2.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery3.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery4.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery5.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery6.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery7.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery8.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery9.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery11.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery12.png
+  :align: center
+
+.. image:: ../_static/images/cgr/recovery13.png
+  :align: center
+
+**Paso 4 – Verificación:**  Una vez que la herramienta Recovery terminó de reprocesar las tablas de KPI poniéndole el nombre correcto, se debe verificar que en Smart el reporte de CGR Agrupados permite ver el grupo correcto.
 
 
 7. Reproceso Automático y Manual
