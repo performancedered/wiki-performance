@@ -42,24 +42,33 @@ Ingresar al programa PL/SQL Developer --> Ingresar Username
 4.1. CONTROLES
 ****************
 
+Aquí se referenciarán las consultas presentes en los scripts:
+
++ LTE_Control_01.RAW.sql
+
++ LTE_Control_02.HOUR.sql
+
++ LTE_Control_03.DAY.sql
+
 1.  Procedimiento Controles RAW:
 .............................
 
-Control_LTE_1.RAW.sql
+LTE_Control_01.RAW.sql
 ~~~~~~~~~~~~~~~~~~~~~
 
 El especialista debe ejecutar la siguiente queries:
 
 
-.. _Control_LTE_1.RAW.sql: ../_static/images/instructivo-lte/Control_LTE_1.RAW.sql
+.. _LTE_Control_01.RAW.sql: ../_static/images/instructivo-lte/LTE_Control_01.RAW.sql
 
-+ Control_LTE_1.RAW.sql_
++ LTE_Control_01.RAW.sql_
 
 
 Luego de ejecutar la queries se debe ingresar los siguientes datos:
 
 	•	FD: Fecha Desde
 	•	FH: Fecha Hasta 
+
 
 .. image:: ../_static/images/instructivo-lte/pag6.png
   :align: center
@@ -91,15 +100,15 @@ Luego se debe actualizar el estado del procesamiento de los .all (mediciones), e
 2.  Procedimiento Controles HOUR:
 .............................
 
-Control_LTE_1.HOUR.sql
+LTE_Control_02.HOUR.sql
 ~~~~~~~~~~~~~~~~~~~~~
 
 El especialista debe ejecutar la siguiente queries:
 
 
-.. _Control_LTE_1.HOUR.sql: ../_static/images/instructivo-lte/Control_LTE_1.RAW.sql
+.. _LTE_Control_02.HOUR.sql: ../_static/images/instructivo-lte/LTE_Control_02.HOUR.sql
 
-+ Control_LTE_1.HOUR.sql_
++ LTE_Control_02.HOUR.sql_
 	
 
 El especialista debe ingresar: 
@@ -110,71 +119,104 @@ El especialista debe ingresar:
 .. image:: ../_static/images/instructivo-lte/pag14.png
   :align: center
 
-La queries muestra como resultado:
+La queries muestra el siguiente resultado donde se puede controlar a nivel celda(LCEL) o nivel de NETWORKELEMENT(NE):
 
-.. image:: ../_static/images/instructivo-lte/pag14.2.png
+**CELDA**
+
+.. image:: ../_static/images/instructivo-lte/celda.png
   :align: center
 
+**NETWORKELEMENT**
 
-En caso de que los datos sean incorrectos se debe reprocesar, existen dos tipos de reprocesos:
+.. image:: ../_static/images/instructivo-lte/ne.png
+  :align: center
 
-	•	Reproceso  sin replay
-	•	Reproceso con replay 
+2.  Procedimiento Controles DAY:
+................................
+
+LTE_Control_03.DAY.sql
+~~~~~~~~~~~~~~~~~~~~~
+
+El especialista debe ejecutar la siguiente queries:
+
+
+.. _LTE_Control_03.DAY.sql: ../_static/images/instructivo-lte/LTE_Control_03.DAY.sql
+
++ LTE_Control_03.DAY.sql_
+	
+
+El especialista debe ingresar: 
+
+	•	Fecha_desde
+	•	Fecha_hasta
+
+.. image:: ../_static/images/instructivo-lte/pag14.png
+  :align: center
+
+La queries muestra el siguiente resultado:
+
+.. image:: ../_static/images/instructivo-lte/day.png
+  :align: center
 
 REPROCESO DE DATOS
 ==================
 
-REPROCESO  DE DATOS  SIN REPLAY
-...............................
+Si existe faltante de datos en las tablas RAW se debe ejecutar el siguiente paquete que contiene los procedimientos PL/SQL para el reroceso de las mismas, el reproceso se hace nivel a LCEL(celda) y NETWORKELEMENT(NE):
 
-Si no existen faltantes de datos en las tablas RAW pero tenemos en Smart estadísticas erróneas (picos fuera de rango en el tráfico, la cantidad de fallas sean mayor a la cantidad de intentos, ect.) para alguna medición se deberá ejecutar según corresponda las siguientes funciones pl/sql.
++ g_lte_access_* : Paquete PL/SQL.
+
++ P_LTE_NSN_LCEL_REWORK_* : Procedimiento PL/SQL a nicel LCEL(celda).
+
++ P_LTE_NSN_NE_REWORK_* : Procedimiento PL/SQL a nicel NE(NETWORKELEMENT).
+
+* HOUR
+
+::
+
+	g_lte_access_hourly.P_LTE_NSN_LCEL_REWORK_HOUR(TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY HH24'), TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY HH24')); 
+	g_lte_access_hourly.P_LTE_NSN_NE_REWORK_HOURLY(TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY HH24'), TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY HH24'));
+
+Si no existen faltantes de datos en las tablas RAW pero tenemos en Smart estadísticas erróneas (picos fuera de rango en el tráfico, la cantidad de fallas sean mayor a la cantidad de intentos, ect.) para alguna medición, existen paquetes que contienen procedimientos pl/sql para cada sumarizacion: 
 
 
-.. image:: ../_static/images/instructivo-lte/pag15.jpg
-  :align: center
++ DAY
+
+::
+
+	g_lte_access_daily.P_LTE_NSN_LCEL_REWORK_DAY(TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY'));  
+	g_lte_access_daily.P_LTE_NSN_NE_REWORK_DAILY(TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY HH24', 'DD.MM.YYYY'));
+
++ BH
+
+::
+
+	g_lte_access_daily.P_LTE_NSN_LCEL_REWORK_BH(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'));  
+	g_lte_access_daily.P_LTE_NSN_NE_REWORK_BH(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'));
+
++ IBHW
+
+::
+
+	g_lte_access_weekly.p_lte_nsn_lcel_rework_ibhw(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'));  
+	g_lte_access_weekly.p_lte_nsn_ne_rework_ibhw(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'));
+
++ DAYM
+
+::
+
+	g_lte_access_monthly.P_LTE_NSN_LCEL_REWORK_DAYM(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY')); 
+	g_lte_access_monthly.P_LTE_NSN_NE_REWORK_DAYM(TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'),TO_CHAR('DD.MM.YYYY', 'DD.MM.YYYY'));
+
+
+**EJEMPLO DEL FORMATO**
+
++ DD.MM.YYYY HH24 
+
++ DD.MM.YYYY
 
 La ejecución de las funciones de reproceso tiene dependencias de ejecución (Las funciones deben ejecutarse en el mismo orden que se encuentran listadas.), en un ciclo completo, cuando el error está a nivel de celda/hour, tendrá el siguiente orden:
 
 Las siguientes funciones se ejecutan para recuperar datos que nos devuelve la base de datos.
 
 .. image:: ../_static/images/instructivo-lte/pag16.png
-  :align: center
-
-
-Todas las funciones retornan un valor:
-
-	•	0  El reproceso termino exitosamente.
-	•  -1 El reproceso termino con error.
-	•	1  El reproceso se está ejecutando.
-
-
-.. image:: ../_static/images/instructivo-lte/pag17.jpg
-  :align: center
-
-
-.. image:: ../_static/images/instructivo-lte/pag17.2.png
-  :align: center
-
-.. image:: ../_static/images/instructivo-lte/pag18.png
-  :align: center
-
-
-En paralelo se puede ejecutar la siguiente queries: LTE_NSN_REWORK_STATUS, en esta queries se verifica que la función este siendo correctamente ejecutada.
-
-.. image:: ../_static/images/instructivo-lte/pag19.png
-  :align: center
-
-Esta queries puede devolver dos valores: 
-
-	•	WORKING : La función  está ejecutándose 
-	•	STOPPED : La función termino de ejecutarse
-
-Cuando ejecutamos la queries, nos devuelve el siguiente resultado: 
-
-.. image:: ../_static/images/instructivo-lte/pag19.2.png
-  :align: center
-
-En caso de que la función se esté ejecutando y sea detenida manualmente ejecutar la siguiente queries para actualizar el estado de dicha función: 
-
-.. image:: ../_static/images/instructivo-lte/pag19.3.png
   :align: center

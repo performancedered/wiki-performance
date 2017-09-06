@@ -116,6 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="enodb.html">     7. ALCATEL LTE URUGUAY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Alcatelransharing.html">     8. LTE HUAWEI (MOVISTAR RAN SHARING (CORTADO))</a></li>
 <li class="toctree-l2"><a class="reference internal" href="altiostarcells.html">     9. ALTIOSTAR CELLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spidercloud.html">     10. SPIDER CLOUD</a></li>
 </ul>
 </li>
 </ul>
@@ -232,13 +233,19 @@
 <img alt="../_images/pag3.22.png" class="align-center" src="../_images/pag3.22.png" />
 <div class="section" id="controles">
 <h3>4.1. CONTROLES<a class="headerlink" href="#controles" title="Permalink to this headline">¶</a></h3>
+<p>Aquí se referenciarán las consultas presentes en los scripts:</p>
+<ul class="simple">
+<li>LTE_Control_01.RAW.sql</li>
+<li>LTE_Control_02.HOUR.sql</li>
+<li>LTE_Control_03.DAY.sql</li>
+</ul>
 <div class="section" id="procedimiento-controles-raw">
 <h4>1.  Procedimiento Controles RAW:<a class="headerlink" href="#procedimiento-controles-raw" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="control-lte-1-raw-sql">
-<h5>Control_LTE_1.RAW.sql<a class="headerlink" href="#control-lte-1-raw-sql" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="lte-control-01-raw-sql">
+<h5>LTE_Control_01.RAW.sql<a class="headerlink" href="#lte-control-01-raw-sql" title="Permalink to this headline">¶</a></h5>
 <p>El especialista debe ejecutar la siguiente queries:</p>
 <ul class="simple">
-<li><a class="reference external" href="../_static/images/instructivo-lte/Control_LTE_1.RAW.sql">Control_LTE_1.RAW.sql</a></li>
+<li><a class="reference external" href="../_static/images/instructivo-lte/LTE_Control_01.RAW.sql">LTE_Control_01.RAW.sql</a></li>
 </ul>
 <p>Luego de ejecutar la queries se debe ingresar los siguientes datos:</p>
 <blockquote>
@@ -262,11 +269,11 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 </div>
 <div class="section" id="procedimiento-controles-hour">
 <h4>2.  Procedimiento Controles HOUR:<a class="headerlink" href="#procedimiento-controles-hour" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="control-lte-1-hour-sql">
-<h5>Control_LTE_1.HOUR.sql<a class="headerlink" href="#control-lte-1-hour-sql" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="lte-control-02-hour-sql">
+<h5>LTE_Control_02.HOUR.sql<a class="headerlink" href="#lte-control-02-hour-sql" title="Permalink to this headline">¶</a></h5>
 <p>El especialista debe ejecutar la siguiente queries:</p>
 <ul class="simple">
-<li><a class="reference external" href="../_static/images/instructivo-lte/Control_LTE_1.RAW.sql">Control_LTE_1.HOUR.sql</a></li>
+<li><a class="reference external" href="../_static/images/instructivo-lte/LTE_Control_02.HOUR.sql">LTE_Control_02.HOUR.sql</a></li>
 </ul>
 <p>El especialista debe ingresar:</p>
 <blockquote>
@@ -276,15 +283,31 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 </ul>
 </div></blockquote>
 <img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
-<p>La queries muestra como resultado:</p>
-<img alt="../_images/pag14.2.png" class="align-center" src="../_images/pag14.2.png" />
-<p>En caso de que los datos sean incorrectos se debe reprocesar, existen dos tipos de reprocesos:</p>
+<p>La queries muestra el siguiente resultado donde se puede controlar a nivel celda(LCEL) o nivel de NETWORKELEMENT(NE):</p>
+<p><strong>CELDA</strong></p>
+<img alt="../_images/celda.png" class="align-center" src="../_images/celda.png" />
+<p><strong>NETWORKELEMENT</strong></p>
+<img alt="../_images/ne.png" class="align-center" src="../_images/ne.png" />
+</div>
+</div>
+<div class="section" id="procedimiento-controles-day">
+<h4>2.  Procedimiento Controles DAY:<a class="headerlink" href="#procedimiento-controles-day" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="lte-control-03-day-sql">
+<h5>LTE_Control_03.DAY.sql<a class="headerlink" href="#lte-control-03-day-sql" title="Permalink to this headline">¶</a></h5>
+<p>El especialista debe ejecutar la siguiente queries:</p>
+<ul class="simple">
+<li><a class="reference external" href="../_static/images/instructivo-lte/LTE_Control_03.DAY.sql">LTE_Control_03.DAY.sql</a></li>
+</ul>
+<p>El especialista debe ingresar:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Reproceso  sin replay</li>
-<li>Reproceso con replay</li>
+<li>Fecha_desde</li>
+<li>Fecha_hasta</li>
 </ul>
 </div></blockquote>
+<img alt="../_images/pag142.png" class="align-center" src="../_images/pag142.png" />
+<p>La queries muestra el siguiente resultado:</p>
+<img alt="../_images/day.png" class="align-center" src="../_images/day.png" />
 </div>
 </div>
 </div>
@@ -292,35 +315,56 @@ En caso de faltantes de datos se debe reprocesar de la siguiente manera:</p>
 </div>
 <div class="section" id="reproceso-de-datos">
 <h1>REPROCESO DE DATOS<a class="headerlink" href="#reproceso-de-datos" title="Permalink to this headline">¶</a></h1>
-<p>Si no existen faltantes de datos en las tablas RAW pero tenemos en Smart estadísticas erróneas (picos fuera de rango en el tráfico, la cantidad de fallas sean mayor a la cantidad de intentos, ect.) para alguna medición se deberá ejecutar según corresponda las siguientes funciones pl/sql.</p>
-<img alt="../_images/pag15.jpg" class="align-center" src="../_images/pag15.jpg" />
+<p>Si existe faltante de datos en las tablas RAW se debe ejecutar el siguiente paquete que contiene los procedimientos PL/SQL para el reroceso de las mismas, el reproceso se hace nivel a LCEL(celda) y NETWORKELEMENT(NE):</p>
+<ul class="simple">
+<li>g_lte_access_* : Paquete PL/SQL.</li>
+<li>P_LTE_NSN_LCEL_REWORK_* : Procedimiento PL/SQL a nicel LCEL(celda).</li>
+<li>P_LTE_NSN_NE_REWORK_* : Procedimiento PL/SQL a nicel NE(NETWORKELEMENT).</li>
+</ul>
+<ul class="simple">
+<li>HOUR</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">g_lte_access_hourly</span><span class="o">.</span><span class="n">P_LTE_NSN_LCEL_REWORK_HOUR</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">),</span> <span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">));</span>
+<span class="n">g_lte_access_hourly</span><span class="o">.</span><span class="n">P_LTE_NSN_NE_REWORK_HOURLY</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">),</span> <span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Si no existen faltantes de datos en las tablas RAW pero tenemos en Smart estadísticas erróneas (picos fuera de rango en el tráfico, la cantidad de fallas sean mayor a la cantidad de intentos, ect.) para alguna medición, existen paquetes que contienen procedimientos pl/sql para cada sumarizacion:</p>
+<ul class="simple">
+<li>DAY</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">g_lte_access_daily</span><span class="o">.</span><span class="n">P_LTE_NSN_LCEL_REWORK_DAY</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+<span class="n">g_lte_access_daily</span><span class="o">.</span><span class="n">P_LTE_NSN_NE_REWORK_DAILY</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY HH24&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>BH</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">g_lte_access_daily</span><span class="o">.</span><span class="n">P_LTE_NSN_LCEL_REWORK_BH</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+<span class="n">g_lte_access_daily</span><span class="o">.</span><span class="n">P_LTE_NSN_NE_REWORK_BH</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>IBHW</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">g_lte_access_weekly</span><span class="o">.</span><span class="n">p_lte_nsn_lcel_rework_ibhw</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+<span class="n">g_lte_access_weekly</span><span class="o">.</span><span class="n">p_lte_nsn_ne_rework_ibhw</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>DAYM</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">g_lte_access_monthly</span><span class="o">.</span><span class="n">P_LTE_NSN_LCEL_REWORK_DAYM</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+<span class="n">g_lte_access_monthly</span><span class="o">.</span><span class="n">P_LTE_NSN_NE_REWORK_DAYM</span><span class="p">(</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">),</span><span class="n">TO_CHAR</span><span class="p">(</span><span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">,</span> <span class="s1">&#39;DD.MM.YYYY&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p><strong>EJEMPLO DEL FORMATO</strong></p>
+<ul class="simple">
+<li>DD.MM.YYYY HH24</li>
+<li>DD.MM.YYYY</li>
+</ul>
 <p>La ejecución de las funciones de reproceso tiene dependencias de ejecución (Las funciones deben ejecutarse en el mismo orden que se encuentran listadas.), en un ciclo completo, cuando el error está a nivel de celda/hour, tendrá el siguiente orden:</p>
 <p>Las siguientes funciones se ejecutan para recuperar datos que nos devuelve la base de datos.</p>
 <img alt="../_images/pag162.png" class="align-center" src="../_images/pag162.png" />
-<p>Todas las funciones retornan un valor:</p>
-<blockquote>
-<div><ul class="simple">
-<li>0  El reproceso termino exitosamente.</li>
-<li>-1 El reproceso termino con error.</li>
-<li>1  El reproceso se está ejecutando.</li>
-</ul>
-</div></blockquote>
-<img alt="../_images/pag17.jpg" class="align-center" src="../_images/pag17.jpg" />
-<img alt="../_images/pag17.21.png" class="align-center" src="../_images/pag17.21.png" />
-<img alt="../_images/pag183.png" class="align-center" src="../_images/pag183.png" />
-<p>En paralelo se puede ejecutar la siguiente queries: LTE_NSN_REWORK_STATUS, en esta queries se verifica que la función este siendo correctamente ejecutada.</p>
-<img alt="../_images/pag192.png" class="align-center" src="../_images/pag192.png" />
-<p>Esta queries puede devolver dos valores:</p>
-<blockquote>
-<div><ul class="simple">
-<li>WORKING : La función  está ejecutándose</li>
-<li>STOPPED : La función termino de ejecutarse</li>
-</ul>
-</div></blockquote>
-<p>Cuando ejecutamos la queries, nos devuelve el siguiente resultado:</p>
-<img alt="../_images/pag19.21.png" class="align-center" src="../_images/pag19.21.png" />
-<p>En caso de que la función se esté ejecutando y sea detenida manualmente ejecutar la siguiente queries para actualizar el estado de dicha función:</p>
-<img alt="../_images/pag19.31.png" class="align-center" src="../_images/pag19.31.png" />
 </div>
 
 

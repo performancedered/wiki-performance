@@ -182,11 +182,11 @@ Los reportes en la herramienta Smart se muestran de la siguiente manera:
     <th>Repositorio</th>
   </tr>
   <tr>
+    <td>  19.07.2017 </td>
+    <td> Monica Pellegrini </td>
     <td>  </td>
-    <td> </td>
+    <td> Se cambia la tabla de amx_load y se apunta a tabla que esta en base de dato cortado. </td>
     <td>  </td>
-    <td>  </td>
-    <td> </td>
   </tr>
 
  </table>
